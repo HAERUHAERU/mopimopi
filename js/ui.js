@@ -400,10 +400,8 @@ function copyObject(obj) {
 function jsColorUpdate(jscolor) {
     init.Color[jscolor.valueElement.id] = jscolor.valueElement.value
     toggleRaidMode(init.q.preview24)
-    //그래프 처리 
     ui()
 }
-// 파일 업로드 
 function loadPreview(el_img) {
     var path = el_img.value
     var ext = path.substring(path.lastIndexOf('.') + 1).toLowerCase();
@@ -451,12 +449,10 @@ function liReload() {
     jscolor.installByClassName("jscolor");
     $('li').unbind("click").bind("click", function () {
         var id = $(this).attr('id')
-        //체크박스 
         if ($(this).find('input').prop('type') == 'checkbox') {
             if (!$(this).find('.switch').hasClass('hover')) {
                 $(this).find('.switch').addClass('hover');
                 $(this).find('input').prop('checked', true);
-                //init에 값 변경
                 if (id.indexOf('DPS-') > -1 || id.indexOf('HPS-') > -1) {
                     init.ColData[id.split('-')[1]][id.split('-')[0]] = 1
                     init.Order[id.split('-')[0]].push(id.split('-')[1])
@@ -465,22 +461,18 @@ function liReload() {
             } else {
                 $(this).find('.switch').removeClass('hover');
                 $(this).find('input').prop('checked', false);
-                //init에 값 변경
                 if (id.indexOf('DPS-') > -1 || id.indexOf('HPS-') > -1) {
                     init.ColData[id.split('-')[1]][id.split('_')[0]] = 0
                     init.Order[id.split('-')[0]].splice(init.Order[id.split('-')[0]].indexOf(id.split('-')[1]), 1);
                 } else
                     init.q[id] = 0
             }
-            //드롭다운에서 바로 데이터를 적용해야 하는 체크값들 
             if ((id == 'pets' || id == 'hideName' || id == 'view24') && view != 'settings') {
                 if (lastCombat != null)
                     update(lastDPS, lastHPS)
             }
-            //중복체크 필터값 텍스트 변경 //직업필터 모서리 
             else if (id.indexOf('DPS_') > -1 || id.indexOf('HPS_') > -1) {
                 duCheckMsg(id.slice(0, -2), 'format', id.slice(0, -2))
-                //프리뷰값
             } else if (id == 'preview') {
                 togglePreview()
             } else if (id == 'view24' && view == 'settings') {
@@ -488,7 +480,7 @@ function liReload() {
             }
             else {
                 if (id == 'ani') {
-                    barSize.length = 0;  //초기화 
+                    barSize.length = 0;  
                     barSize = new Array();
                     view = 'ani'
                 }
@@ -496,15 +488,12 @@ function liReload() {
             }
             return
         }
-        //드롭다운 라디오
         else if ($(this).find('input').prop('type') == 'radio') {
             $(this).parent().find('li .switch').removeClass('hover')
             $(this).find('.switch').addClass('hover');
-            //init 값 변경
             init.q[$(this).find(':radio').attr('name')] = $(this).find(':radio').val()
             $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text($(this).text())
 
-            // 언어 변경부 
             if ($(this).find(':radio').attr('name') == 'Lang') {
                 lang = init.q.Lang
                 createDOM('page', l.Settings)
@@ -516,7 +505,6 @@ function liReload() {
             toggleRaidMode(init.q.preview24)
             return
         }
-        //이동
         else {
             if ($(this).hasClass('radio')) {
                 $('.dropdown').fadeIn(0);
@@ -526,7 +514,6 @@ function liReload() {
                 else if ($(this).attr('p').indexOf('_') > -1) {
                     var parent = $(this).attr('p').split('_')[0]
                     var tabName = $(this).attr('p').split('_')[1]
-                    //탭 내부의 라디오 버튼 처리 
                     var obj = l[parent]['tab_' + tabName].inner[id]
                 } else
                     var obj = l[$(this).attr('p')][id]
@@ -536,7 +523,6 @@ function liReload() {
             return
         }
     });
-    //프리뷰 버튼
     $('#preview24').unbind('click').bind('click', function () {
         if (!$(this).find('.switch').hasClass('hover')) {
             $(this).find('.switch').addClass('hover')
@@ -553,7 +539,6 @@ function liReload() {
         resizeWindow(view)
         return
     });
-    //CSS
     $('[name=swapBtn], .UBtn, .DBtn, .sendBtn, .removeBtn, .tab_box, button').on({
         mouseover: function () {
             $(this).css({ color: '#' + init.Color.accent })
@@ -562,7 +547,6 @@ function liReload() {
             $(this).css({ color: '' })
         }
     })
-    //파일 업로드 
     $('button').unbind("click").bind("click", function () {
         $('input[type=file]').click()
     })
@@ -570,7 +554,6 @@ function liReload() {
         loadPreview(this)
         return
     });
-    //모바일 키보드 처리 
     $('.jscolor').unbind("click").bind('click', function () {
         if (init.q.keyboard) {
             $(this).blur()
@@ -581,7 +564,6 @@ function liReload() {
     $('.jscolor').unbind("focusout").bind('focusout', function () {
         ctrlPreview(1)
     });
-    //탭버튼 처리 
     $('.tab_box').unbind("click").bind("click", function () {
         $('.tabArea').find('.tab_title').removeClass('on')
         $('.tabArea').find('.tab_underBar').removeClass('on_bar')
@@ -589,24 +571,21 @@ function liReload() {
         $(this).find('.tab_title').addClass('on')
         $(this).find('.tab_underBar').addClass('on_bar')
         $('.scrollArea').scrollTop(0)
-        //탭 페이지 처리 
         button($(this).attr('name'), $(this).attr('p'))
         return
     });
-    //줄임말 삭제
     $('.removeBtn').unbind("click").bind("click", function () {
         delete init.Alias[$(this).parents('li').attr('name')]
         $(this).parents('li').remove()
         return
     });
-    //줄임말 인풋 두개 등록
     $('.gTitle.sendBtn').unbind("click").bind("click", function () {
         var key = $('#in_abbOld').val()
         var val = $('#in_abbNew').val()
         if (key != '' && val != '' && key != undefined && val != undefined) {
             init.Alias[key] = val
             $('ul.remove').append(createElement('li_remove_list', null, key, val))
-            $('#in_abbOld, #in_abbNew').val('')    //등록 후 입력필드 초기화 
+            $('#in_abbOld, #in_abbNew').val('')   
             liReload()
             callToast('ok', 500, 3000)
         } else
@@ -614,7 +593,6 @@ function liReload() {
         ui()
         return
     });
-    //입력필드 전송버튼 
     $('.ft.sendBtn').unbind("click").bind("click", function () {
         var input = $(this).parent().find('.inputEff')
         var id = $(this).parent().find('.inputEff').attr('id').split('_')[1]
@@ -634,17 +612,15 @@ function liReload() {
         ui()
         return
     });
-    //전체 선택
     $("#in_share").unbind("click").bind("click", function () {
         $(this).select()
     });
-    //입력필드 엔터로 전송 
     $(".inputEff:not(.jscolor)").unbind("keydown").bind("keydown", function (e) {
         if (e.keyCode == 13) {
             var id = $(this).attr('id').split('_')[1]
             var input = $(this).val()
 
-            if (id == 'abbOld' || id == 'abbNew') {  //줄임말 입력시 
+            if (id == 'abbOld' || id == 'abbNew') {  
                 var key = $('#in_abbOld').val()
                 var val = $('#in_abbNew').val()
                 if (key != '' && val == '') {
@@ -658,13 +634,13 @@ function liReload() {
                 else if (key != '' && val != '') {
                     init.Alias[key] = val
                     $('ul.remove').append(createElement('li_remove_list', null, key, val))
-                    $('#in_abbOld,#in_abbNew').val('')    //등록 후 입력필드 초기화 
+                    $('#in_abbOld,#in_abbNew').val('')   
                     liReload()
                     callToast('ok', 500, 3000)
                 } else
                     callToast('noInput', 500, 3000)
             }
-            else if (id.indexOf('f') > -1) {     //폰트 입력 시 
+            else if (id.indexOf('f') > -1) {    
                 if (input != '') {
                     init.q[id] = input;
                     $('[name=' + id + ']').find('.gVal').text(input)
@@ -675,7 +651,7 @@ function liReload() {
                 } else
                     callToast('noInput', 500, 3000)
             }
-            else if (id == 'apply') {         //커스텀 입력시 
+            else if (id == 'apply') {        
                 applyKeys(input)
                 $(this).blur()
                 $(this).val('')
@@ -684,7 +660,6 @@ function liReload() {
         ui()
         return
     });
-    //슬라이더 처리 
     $('input[type=range]').unbind("input").bind("input", function (e) {
         var id = $(this).parents('li').attr('id')
         init.Range[id] = parseInt($(this).val())
@@ -702,7 +677,6 @@ function liReload() {
         e.preventDefault()
         return
     });
-    //업버튼 처리 
     $(".UBtn").unbind("click").bind("click", function () {
         var srcDiv = $(this).parents(".listBox");
         var tgtDiv = srcDiv.prev();
@@ -712,7 +686,6 @@ function liReload() {
         update(previewDPS, previewHPS)
         return
     });
-    //다운버튼 처리 
     $(".DBtn").unbind("click").bind("click", function () {
         var srcDiv = $(this).parents(".listBox");
         var tgtDiv = srcDiv.next();
@@ -735,7 +708,7 @@ function button(id, direction) {
                     Mopi2.q.Lang = tmpLang
                     localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
                     init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
-                    lang = init.q.Lang   //언어
+                    lang = init.q.Lang  
                     button('settings')
                     $('.scrollArea').scrollTop(0)
                 }, 100)
@@ -763,16 +736,13 @@ function button(id, direction) {
                 }, 100)
             }
             break
-        //메인으로 돌아가기 
         case 'home':
             button('Back', 'main')
             $('.dropdown, #blackBg').fadeOut(0);
             break
-        //전체화면모드
         case 'fullscreen':
             toggleFullScreen()
             break
-        //캡처, 전투집계종료
         case 'Capture':
         case 'RequestEnd':
             $('[name=' + id + '] i').removeClass('flash animated').addClass('flash animated').one('animationend', function () {
@@ -797,7 +767,6 @@ function button(id, direction) {
             else
                 webs.overlayAPI(id)
             break
-        //히스토리 진입
         case 'History':
             view = 'history'
             $('[name=main], [name=notice]').fadeOut(0)
@@ -806,22 +775,17 @@ function button(id, direction) {
             $('nav[name=history]').find('table td').text(l.NAV.history.tt[lang])
             $('.ac').css('color', '#' + init.Color.accent)
             break
-        //뒤로 가기
         case 'Back':
-            //메인을 향해 뒤로 가기
             if (direction == 'main') {
                 view = 'main'
-                //이전 설정 페이지의 스크롤 위치 초기화 
                 sVal.old = 0; sVal.pre = 0
                 $('[name=history], [name=settings]').fadeOut(0)
                 if (lastCombat != null)
                     $('[name=main]').fadeIn(0)
                 else
                     $('nav[name=main],[name=notice]').fadeIn(0)
-                //배경 화살표    
                 if (init.q.arrow)
                     $('#wrap').css({ 'background-image': 'url(./images/handle.svg)' })
-                //init 값 로컬 스토리지에 저장, 프리뷰, 스크롤락 재시작시 0으로 
                 ctrlPreview(0)
                 localStorage.setItem('Mopi2_HAERU', JSON.stringify(init))
                 $('.previewArea, .tabArea, .scrollArea').html('') // 초기화 
@@ -829,15 +793,13 @@ function button(id, direction) {
                     update(lastDPS, lastHPS)
                     hiddenTable()
                 } else {
-                    //데이터가 없다면 설정으로 변경된 정보 다시 초기화
                     initOverlay()
                 }
             } break
-        //설정 진입
         case 'settings':
             ctrlPreview(0)
             sVal.pre = 0
-            view = 'settings'//스크롤 영역 처리     
+            view = 'settings' 
             $('#wrap').css({ 'background-image': '' })
             $('nav[name=settings]').find('table td').text(l.NAV.settings.tt[lang])
             $('nav[name=settings] [name=Back]').attr('onclick', "button('Back', 'main')")
@@ -848,10 +810,8 @@ function button(id, direction) {
             $('.scrollArea').scrollTop(sVal.old)
             resizeWindow(view)
             break
-        //페이지 처리 
         case 'Data': case 'Design': case 'Overlay': case 'Tool':
             ctrlPreview(0)
-            //첫 진입시에만 스크롤값 저장 
             if (direction != 'Back')
                 sVal.old = sVal.now
             $('.scrollArea').scrollTop(0)
@@ -863,7 +823,6 @@ function button(id, direction) {
                 $('#backup .gVal').html(init.q.backupDate)
             resizeWindow(view)
             break
-        //세부 페이지 생성
         case 'abbset': case 'font': case 'custom':
             ctrlPreview(0)
             sVal.pre = sVal.now
@@ -878,7 +837,6 @@ function button(id, direction) {
             }
             resizeWindow(view)
             break;
-        //탭 페이지 생성 
         case 'format': case 'order': case 'color': case 'opacity': case 'size': case 'advanced': case 'cells': case 'shape':
             if (id != 'format')
                 ctrlPreview(1)
@@ -889,7 +847,6 @@ function button(id, direction) {
             button(createDOM('tab', l[id]), id)
             resizeWindow(view)
             break
-        //탭 버튼 클릭 처리
         case 'tab_DPS': case 'tab_HPS': case 'tab_nav': case 'tab_table': case 'tab_graph': case 'tab_width': case 'tab_align': case 'tab_padding':
             if (id == "tab_graph" && direction == "color")
                 createDOM('page', l.Graph[init.q.palette], id)
@@ -901,7 +858,6 @@ function button(id, direction) {
                     duCheckMsg(id.split('_')[1], direction, id.split('_')[1])
             }
             break
-        //중복 체크 처리 
         case 'DPSfilter': case 'HPSfilter':
             $('.dropdown').fadeIn(0);
             $('#blackBg').fadeIn(150);
@@ -941,9 +897,9 @@ function createDOM(type, obj, id) {
             break
         case 'page':
             if (id != undefined && id.indexOf('tab_') > -1)
-                $('.scrollArea').html('') // 초기화 
+                $('.scrollArea').html('') 
             else
-                $('.tabArea, .scrollArea').html('') // 초기화 
+                $('.tabArea, .scrollArea').html('') 
             var ul = ''
             for (var i in obj) {
                 if (obj[i].ul == 1) {
@@ -958,10 +914,9 @@ function createDOM(type, obj, id) {
             $('.scrollArea').append(ul)
             break
         case 'tab':
-            $('.tabArea, .scrollArea').html('') // 초기화 
+            $('.tabArea, .scrollArea').html('') 
             for (var i in obj)
                 $('.tabArea').append(createElement(obj[i].e, obj[i], i))
-            //진입 시 첫 탭 열리도록
             $('.tabArea :first-child').find('.tab_title').addClass('on')
             $('.tabArea :first-child').find('.tab_underBar').addClass('on_bar')
             return $('.tabArea :first-child').attr('name')
@@ -973,7 +928,7 @@ function createDOM(type, obj, id) {
             $('.scrollArea').append(ul)
             break
         case 'list_order':
-            $('.scrollArea').html('') // 초기화 
+            $('.scrollArea').html('') 
             var ul = $('<ul class="group shadow">')
             for (var i in init.Order[id]) {
                 var a = init.Order[id][i]
