@@ -1,7 +1,7 @@
 var lastDPS = null,
     lastHPS = null,
     firstCombat = false,
-    _ = '' //프리뷰 테이블 플래그 
+    _ = '' 
 var barSize = new Array(),
     encounterArray = new Array(),
     encounterCount = 1;
@@ -9,9 +9,7 @@ var barSize = new Array(),
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
-    //설정이 아닐 때만 전투 갱신
     if (view != 'settings' && localStorage.getItem("Mopi2_HAERU") != null) {
-        //첫 전투 플래그 
         if (!firstCombat) {
             $('[name=notice], [name=history]').fadeOut(0)
             $('[name=main]').fadeIn(0)
@@ -26,7 +24,6 @@ function onOverlayDataUpdate(e) {
     }
 }
 function update(lastDPS, lastHPS) {
-    // 프리뷰 구분 위함
     if (lastDPS.zone == 'HAERU') {
         _ = '_P'
         if (myName != '' && lastDPS.persons['Eos (YOU)'] != undefined) {
@@ -38,7 +35,6 @@ function update(lastDPS, lastHPS) {
         }
     } else
         _ = ''
-    //합산 처리
     if (init.q.pets == 0) {
         lastDPS.summonerMerge = false;
         lastDPS.DetachPets();
@@ -54,7 +50,6 @@ function update(lastDPS, lastHPS) {
         lastHPS.AttachPets();
         lastHPS.resort("mergedHealed", 1)
     }
-    //타이틀바 구조 
     if (init.q.act == 2) {
         $('nav table[name=ACT_2line]').fadeIn(0)
         $('nav table[name=ACT_1line]').fadeOut(0)
@@ -62,7 +57,6 @@ function update(lastDPS, lastHPS) {
         $('nav table[name=ACT_2line]').fadeOut(0)
         $('nav table[name=ACT_1line]').fadeIn(0)
     }
-    //타이틀바 내용
     $('[name=target]').text(lastDPS.Encounter.title)
     $('[name=time]').text(lastDPS.Encounter.duration)
 
@@ -70,9 +64,7 @@ function update(lastDPS, lastHPS) {
         $('div[name=main' + _ + ']').html('<div id="DPSHeader' + _ + '"><div id="DPSoldHeader' + _ + '"></div></div><div id="DPSBody' + _ + '"><div id="DPSoldBody' + _ + '"></div></div><div id="HPSHeader' + _ + '"><div id="HPSoldHeader' + _ + '"></div></div><div id="HPSBody' + _ + '"><div id="HPSoldBody' + _ + '"></div></div>')
     else
         $('div[name=main' + _ + ']').html('<div id="HPSHeader' + _ + '"><div id="HPSoldHeader' + _ + '"></div></div><div id="HPSBody' + _ + '"><div id="HPSoldBody' + _ + '"></div></div><div id="DPSHeader' + _ + '"><div id="DPSoldHeader' + _ + '"></div></div><div id="DPSBody' + _ + '"><div id="DPSoldBody' + _ + '"></div></div>')
-    //전투가 시작됐는데 나는 아직 시작을 안 했다면?
     if (lastDPS.Combatant["YOU"] == undefined || lastDPS.Combatant["YOU"] == null) {
-        //테이블 초기화
         $('[name=rps]').text(l.NAV.main.tt.rps[lang])
     } else {
         var rd = "RD " + addComma(lastDPS.Encounter.ENCDPS) + "　"
@@ -100,7 +92,6 @@ function update(lastDPS, lastHPS) {
                 } else {
                     init.q.swap = 0
                 }
-                //init 값 로컬 스토리지에 저장 및 테이블 갱신
                 localStorage.setItem('Mopi2_HAERU', JSON.stringify(init))
                 update(lastDPS, lastHPS)
             },
@@ -118,14 +109,12 @@ function update(lastDPS, lastHPS) {
             if (init.q.viewHPS == 1)
                 onRaidCombatDataUpdate('HPS', lastHPS)
         } else {
-            //테이블 생성 및 갱신
             if (init.q.viewDPS == 1)
                 onCombatDataUpdate('DPS', lastDPS)
             if (init.q.viewHPS == 1)
                 onCombatDataUpdate('HPS', lastHPS)
         }
     }
-    //css 적용
     ui()
 }
 
@@ -180,7 +169,6 @@ function createRaidTableBody(flag, a, userName) {
 }
 function onCombatDataUpdate(flag, last) {
     if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {
-        //헤더 생성
         var Height = 0;
         var tableHeader = document.getElementById(flag + "Header" + _);
         var oldHeader = document.getElementById(flag + "oldHeader" + _);
@@ -188,7 +176,6 @@ function onCombatDataUpdate(flag, last) {
         createTableHeader(flag, newHeader);
         tableHeader.replaceChild(newHeader, oldHeader);
         newHeader.id = flag + 'oldHeader' + _;
-        //바디 생성
         var tableBody = document.getElementById(flag + "Body" + _);
         var oldBody = document.getElementById(flag + "oldBody" + _);
         var newBody = document.createElement("div");
@@ -218,11 +205,9 @@ function onCombatDataUpdate(flag, last) {
         }
         tableBody.replaceChild(newBody, oldBody);
         newBody.id = flag + 'oldBody' + _;
-        //테이블에 띄울 것이 아무 것도 없을 때 
         if (Height == 0)
             $('#' + flag + 'Header' + _).html('<div id="' + flag + 'oldHeader' + _ + '"></div>')
 
-        //그래프 생성
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
@@ -333,12 +318,9 @@ function addData(colName, a, p) {
             else return ''
         case 'Name':
             var name = ''
-            //이름 볼 때 
             if (init.q.hideName == false) {
-                //내 캐릭터인데 내 이름으로 볼 경우  
                 if (a == "YOU" && init.q.myName == false && myName != '' && myName != null)
                     name = cutName(myName);
-                //모든 캐릭터, 내 이름으로 안 볼 경우 
                 else {
                     if ((p.petOwner == myName || p.petOwner == 'YOU') && init.q.myName == true)
                         name = petName(p.Job, a)
@@ -349,14 +331,11 @@ function addData(colName, a, p) {
             // 이름 안 볼 때
             else {
                 if (a == "YOU") {
-                    //그냥 나를 YOU로 표시 
                     name = cutName(a);
                 }
                 else {
-                    //내 펫 처리
                     if (p.petOwner == myName || p.petOwner == 'YOU')
                         petName(p.Job, a)
-                    //나머지 파티원 처리               
                     else {
                         if (p.Job == "LMB")
                             name = 'Limit Break'
@@ -449,15 +428,13 @@ function addComma(num, dd, ds) {
     else {
         if (dd == null) dd = 1
         if (ds == null) ds = 0
-        //소수 처리
         num = (num / dd).toFixed(ds)
 
-        //소수점 기호 
         if (init.q.ds == '_')
             num = num.toString().replace('.', ' ')
         else
             num = num.toString().replace('.', init.q.ds)
-        //자릿수 기호 
+        
         if (init.q.gs == 0)
             num = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '')
         else if (init.q.gs == '_')
@@ -607,7 +584,7 @@ function saveLog() {
                 else historyAddRow()
             } else historyAddRow()
         }
-        barSize.length = 0; //초기화   
+        barSize.length = 0;  
     }
 }
 function historyAddRow() {
