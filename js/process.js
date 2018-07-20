@@ -24,16 +24,9 @@ function onOverlayDataUpdate(e) {
     }
 }
 function update(lastDPS, lastHPS) {
-    if (lastDPS.zone == 'HAERU') {
+    if (lastDPS.zone == 'HAERU')
         _ = '_P'
-        if (myName != '' && lastDPS.persons['Eos (YOU)'] != undefined) {
-            lastDPS.persons['Eos (YOU)'].name = 'Eos (' + myName + ')'
-            lastHPS.persons['Eos (YOU)'].name = 'Eos (' + myName + ')'
-        } else if (myName != '' && lastDPS.persons['Eos (' + myName + ')'] != undefined) {
-            lastDPS.persons['Eos (' + myName + ')'].name = 'Eos (' + myName + ')'
-            lastHPS.persons['Eos (' + myName + ')'].name = 'Eos (' + myName + ')'
-        }
-    } else
+    else
         _ = ''
     if (init.q.pets == 0) {
         lastDPS.summonerMerge = false;
@@ -50,6 +43,15 @@ function update(lastDPS, lastHPS) {
         lastHPS.AttachPets();
         lastHPS.resort("mergedHealed", 1)
     }
+   if (lastDPS.zone == 'HAERU') {
+        if (myName != '' && lastDPS.persons['Eos (YOU)'] != undefined) {
+            lastDPS.persons['Eos (YOU)'].name = 'Eos (' + myName + ')'
+            lastHPS.persons['Eos (YOU)'].name = 'Eos (' + myName + ')'
+        } else if (myName != '' && lastDPS.persons['Eos (' + myName + ')'] != undefined) {
+            lastDPS.persons['Eos (' + myName + ')'].name = 'Eos (' + myName + ')'
+            lastHPS.persons['Eos (' + myName + ')'].name = 'Eos (' + myName + ')'
+        }
+    }    
     if (init.q.act == 2) {
         $('nav table[name=ACT_2line]').fadeIn(0)
         $('nav table[name=ACT_1line]').fadeOut(0)
