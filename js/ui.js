@@ -299,6 +299,7 @@ function duCheckMsg(flag, tab1, tab2) {
 
     $('li#' + flag + 'filter .gVal').text(tmp)
     update(previewDPS, previewHPS)
+    resizeWindow(view)
 }
 //---------------------------------------------------------------------------------------------------------------- 데이터 출력 순서 얻기
 function getOrder(selector, container) {
