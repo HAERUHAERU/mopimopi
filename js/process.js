@@ -394,9 +394,9 @@ function addData(colName, a, p) {
             else if (a >= 10000 && init.q.unit == 1) return addComma(a, 1000, init.q.ns * init.q.dmgType)
             else return addComma(a);
         case 'MaxHit':
-        case 'MaxHeal':
-            var val = colName.toLowerCase() + 'val'
-            var str = colName.toLowerCase() + 'str'
+        case 'MaxHeal':            
+            var val = 'merged' + colName + 'val'
+            var str = 'merged' + colName + 'str'
             var abb = p[str]
             for (var i in init.Alias) {
                 if (p[str] == i) {
