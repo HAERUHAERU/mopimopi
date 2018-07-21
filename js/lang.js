@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
-            EN: '<div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
         }
     },
     msg: {
@@ -4728,13 +4728,13 @@ l = {
                     p: "advanced_graph",
                     ul: 0
                 },
-                bar_position: {
+                bar_position_DPS: {
                     tt: {
-                        KR: "그래프 정렬",
-                        JP: "グラフ整列",
-                        EN: "Graph Align",
-                        DE: "Graph Align",
-                        CN: "图形对齐",
+                        KR: "DPS 그래프 정렬",
+                        JP: "DPSグラフ整列",
+                        EN: "DPS Graph Align",
+                        DE: "DPS Graph Align",
+                        CN: "DPS 图形对齐",
                     },
                     m: {
                         left: {
@@ -4756,6 +4756,35 @@ l = {
                     i: "format_align_center",
                     p: "advanced_graph",
                     ul: 1
+                },
+                bar_position: {
+                    tt: {
+                        KR: "HPS 그래프 정렬",
+                        JP: "HPSグラフ整列",
+                        EN: "HPS Graph Align",
+                        DE: "HPS Graph Align",
+                        CN: "HPS 图形对齐",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "advanced_graph",
+                    ul: 0
                 },
                 bar_pet: {
                     tt: {
