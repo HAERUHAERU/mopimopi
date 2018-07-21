@@ -454,7 +454,7 @@ function liReload() {
                 $(this).find('.switch').removeClass('hover');
                 $(this).find('input').prop('checked', false);
                 if (id.indexOf('DPS-') > -1 || id.indexOf('HPS-') > -1) {
-                    init.ColData[id.split('-')[1]][id.split('_')[0]] = 0
+                    init.ColData[id.split('-')[1]][id.split('-')[0]] = 0
                     init.Order[id.split('-')[0]].splice(init.Order[id.split('-')[0]].indexOf(id.split('-')[1]), 1);
                 } else
                     init.q[id] = 0
