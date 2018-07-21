@@ -14,10 +14,16 @@ $().ready(function () {
         localStorage.clear();
         localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
     }
-    init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
+    init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))    
+    addOption()
     lang = init.q.Lang   //언어
     initOverlay()
 });
+function addOption(){
+    if(init.q.bar_position_DPS == undefined)
+        init.q.bar_position_DPS = Mopi2.q.bar_position_DPS 
+    localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
+}
 function initOverlay(val) {
     if (val != undefined) {
         init.q.Lang = val;
@@ -1271,8 +1277,11 @@ function ui() {
         height: parseFloat(init.Range.sizeBody / 10) + 'rem',
         'margin-top': parseFloat((init.Range.sizeBody - init.Range.sizeBody) / 10) + 'rem',
     })
-    $('.pet, .ds, .oh').css({
+    $('#HPSBody, #HPSBody_P').find('.pet, .ds, .oh').css({
         float: init.q.bar_position
+    })
+    $('#DPSBody, #DPSBody_P').find('.pet').css({
+        float: init.q.bar_position_DPS
     })
     for (var i = 0; i < 7; i++) {
         $('.cell_' + i).css({
