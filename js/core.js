@@ -1,17 +1,19 @@
+//미리보기 데이터 
 var xhr = new XMLHttpRequest();
-xhr.onload = function(){
-    if(xhr.status === 200){
-        responseObject = JSON.parse(xhr.responseText);  
+xhr.onload = function () {
+    if (xhr.status === 200) {
+        responseObject = JSON.parse(xhr.responseText);
         previewDPS = new Combatant({
             detail: responseObject
-        }, 'encdps');  
+        }, 'encdps');
         previewHPS = new Combatant({
             detail: responseObject
-        }, 'enchps');   
-    }    
+        }, 'enchps');
+    }
 }
 xhr.open('GET', 'js/previewLog.json', true);
 xhr.send(null);
+
 var webs = null;
 var QueryString = function () {
     var query_string = {};
@@ -30,6 +32,8 @@ var QueryString = function () {
     }
     return query_string
 }();
+
+/*
 var host_port = QueryString.HOST_PORT;
 while (host_port.endsWith('/')) {
     host_port = host_port.substring(0, host_port.length - 1)
@@ -51,6 +55,8 @@ if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
         wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
     }
 }
+*/
+
 class ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
         this.uri = uri;
@@ -313,7 +319,7 @@ function onRecvMessage(e) {
 
 function onBroadcastMessage(e) {
     if (e.detail.msgtype == "CombatData") {
-        lastCombatRaw = e.detail.msg; 
+        lastCombatRaw = e.detail.msg;
         lastCombat = new Combatant({
             detail: lastCombatRaw
         }, sortKey);
@@ -433,7 +439,7 @@ function Person(e, p) {
             this.Class = "WHM";
             this.isLower = !0;
             break
-        case "CRP": case "BSM": case "ARM": case "GSM": case "LTW": case "WVR": case "ALC": case "CUL": 
+        case "CRP": case "BSM": case "ARM": case "GSM": case "LTW": case "WVR": case "ALC": case "CUL":
             this.role = "Crafter"
             break;
         case "BTN": case "MIN": case "FSH":
@@ -483,6 +489,8 @@ function Person(e, p) {
     try {
         this.maxhitstr = this.maxhit.split('-')[0];
         this.maxhitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
+        this.mergedMaxHitstr = this.maxhit.split('-')[0];
+        this.mergedMaxHitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
     } catch (ex) {
         this.maxhit = "?-0";
         this.maxhitstr = "No Data";
@@ -490,7 +498,9 @@ function Person(e, p) {
     }
     try {
         this.maxhealstr = this.maxheal.split('-')[0];
-        this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))
+        this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))        
+        this.mergedMaxHealstr = this.maxheal.split('-')[0];
+        this.mergedMaxHealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))
     } catch (ex) {
         this.maxheal = "?-0";
         this.maxhealstr = "No Data";
@@ -526,7 +536,7 @@ function Person(e, p) {
         var matches = this.name.match(regex);
         if (regex.test(this.name)) // do not use Array.length 
         {
-            if(this.Job == "0" || this.Job == "AVA")
+            if (this.Job == "0" || this.Job == "AVA")
                 this.petOwner = matches[1];
         }
     }
@@ -544,17 +554,17 @@ function Person(e, p) {
     for (var i in this.original) {
         if (i.indexOf("Last") > -1)
             this["merged" + i] = this[i];
-        else if (i == "CritDirectHitCount" || i == "DirectHitCount")	
+        else if (i == "CritDirectHitCount" || i == "DirectHitCount")
             this["merged" + i] = this[i];
         else this["merged" + i] = this[i.substr(0, 1).toLowerCase() + i.substr(1)]
     }
-    this.pets = {}  
+    this.pets = {}
 }
 Person.prototype.returnOrigin = function () {
     for (var i in this.original) {
         if (i.indexOf("Last") > -1)
             this["merged" + i] = this[i];
-        else if (i == "CritDirectHitCount" || i == "DirectHitCount")	
+        else if (i == "CritDirectHitCount" || i == "DirectHitCount")
             this["merged" + i] = this[i];
         else this["merged" + i] = this[i.substr(0, 1).toLowerCase() + i.substr(1)]
     }
@@ -630,7 +640,7 @@ function Combatant(e, sortkey) {
             var tmp = parseFloat(e.detail.Encounter[i].replace(/[,%]+/ig, "")).nanFix().toFixed(underDot);
             if (e.detail.Encounter[i].indexOf("%") > 0)
                 this.Encounter[i] = parseFloat(tmp);
-            else if(Math.floor(tmp) != tmp || e.detail.Encounter[i].indexOf(".") > 0)
+            else if (Math.floor(tmp) != tmp || e.detail.Encounter[i].indexOf(".") > 0)
                 this.Encounter[i] = parseFloat(tmp);
             else this.Encounter[i] = parseInt(tmp).nanFix()
         }
@@ -699,20 +709,20 @@ Combatant.prototype.sort = function (vector) {
     }
     for (var i in tmpUser) {
         for (var j in tmpOwner) {
-            if (tmpUser[i] == tmpOwner[j]){   
+            if (tmpUser[i] == tmpOwner[j]) {
                 delete tmpOwner[j];
             }
         }
     }
-    tmpMyName = ""; 
-    for(var i = 0 ; i<tmpOwner.length; i++){
-        if(tmpOwner[i] != undefined){
+    tmpMyName = "";
+    for (var i = 0; i < tmpOwner.length; i++) {
+        if (tmpOwner[i] != undefined) {
             tmpMyName = tmpOwner[i];
         }
     }
     for (var i in this.Combatant) {
         if (this.Combatant[i].isPet && this.summonerMerge) {
-            if (this.Combatant["YOU"] != undefined) {                
+            if (this.Combatant["YOU"] != undefined) {
                 if (tmpMyName == this.Combatant[i].petOwner)
                     this.Combatant["YOU"].merge(this.Combatant[i]);
             }
@@ -743,7 +753,7 @@ Combatant.prototype.sort = function (vector) {
     var tmpMax = 0;
     for (var i in tmp) {
         if (this.summonerMerge == true) {
-            if (tmp[i].val.Job != "AVA") { 
+            if (tmp[i].val.Job != "AVA") {
                 if (tmpMax < tmp[i].val[this.sortkey])
                     tmpMax = tmp[i].val[this.sortkey];
             }
@@ -766,6 +776,7 @@ Combatant.prototype.sort = function (vector) {
     this.partys = r
     this.persons = this.Combatant
 };
+
 Combatant.prototype.AttachPets = function () {
     this.summonerMerge = !0;
     for (var i in this.Combatant) {
@@ -846,7 +857,7 @@ function hexColor(str) {
 }
 function oHexColor(str, opacity) {
     var data = hexColor(str);
-    return 'rgba('+ data[0] + ',' + data[1] + ',' + data[2] + ',' + opacity + ')'
+    return 'rgba(' + data[0] + ',' + data[1] + ',' + data[2] + ',' + opacity + ')'
 }
 function pFloat(num) {
     return parseFloat(num.nanFix().toFixed(underDot))
