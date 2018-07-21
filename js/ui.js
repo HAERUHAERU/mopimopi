@@ -21,7 +21,7 @@ $().ready(function () {
 });
 function addOption(){
     var qVal=['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6'] 
-    var sizeVal=['tableLineVer, sizeLineVer']
+    var sizeVal=['tableLineVer', 'sizeLineVer']
     var colorVal=['tableLineVer']
 
     putValue(qVal, 'q')
