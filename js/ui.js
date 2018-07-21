@@ -298,6 +298,7 @@ function duCheckMsg(flag, tab1, tab2) {
         tmp = tmp.slice(0, -2)
 
     $('li#' + flag + 'filter .gVal').text(tmp)
+    update(previewDPS, previewHPS)
 }
 //---------------------------------------------------------------------------------------------------------------- 데이터 출력 순서 얻기
 function getOrder(selector, container) {
