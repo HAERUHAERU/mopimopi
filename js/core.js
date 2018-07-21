@@ -766,13 +766,22 @@ Combatant.prototype.sort = function (vector) {
     this.partys = r
     this.persons = this.Combatant
 };
-
 Combatant.prototype.AttachPets = function () {
     this.summonerMerge = !0;
     for (var i in this.Combatant) {
         this.Combatant[i].returnOrigin();
         this.Combatant[i].recalculate();
         this.Combatant[i].parent = this
+        if (this.Combatant[i].Job == "AVA") {
+            if (this.Combatant[i].maxhitval > this.Combatant[this.Combatant[i].petOwner].maxhitval) {
+                this.Combatant[this.Combatant[i].petOwner].mergedMaxHitval = this.Combatant[i].maxhitval
+                this.Combatant[this.Combatant[i].petOwner].mergedMaxHitstr = this.Combatant[i].maxhitstr
+            }
+            if (this.Combatant[i].maxhealval > this.Combatant[this.Combatant[i].petOwner].maxhealval) {
+                this.Combatant[this.Combatant[i].petOwner].mergedMaxHealval = this.Combatant[i].maxhealval
+                this.Combatant[this.Combatant[i].petOwner].mergedMaxHealstr = this.Combatant[i].maxhealstr
+            }
+        }
     }
 }
 Combatant.prototype.DetachPets = function () {
@@ -781,6 +790,10 @@ Combatant.prototype.DetachPets = function () {
         this.Combatant[i].returnOrigin();
         this.Combatant[i].recalculate();
         this.Combatant[i].parent = this
+        this.Combatant[i].mergedMaxHitval = this.Combatant[i].maxhitval
+        this.Combatant[i].mergedMaxHitstr = this.Combatant[i].maxhitstr
+        this.Combatant[i].mergedMaxHealval = this.Combatant[i].maxhealval
+        this.Combatant[i].mergedMaxHealstr = this.Combatant[i].maxhealstr
     }
 }
 Combatant.prototype.sortkeyChange = function (key) {
