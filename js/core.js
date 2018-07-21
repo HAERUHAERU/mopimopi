@@ -33,6 +33,7 @@ var QueryString = function () {
     return query_string
 }();
 
+
 var host_port = QueryString.HOST_PORT;
 while (host_port.endsWith('/')) {
     host_port = host_port.substring(0, host_port.length - 1)
@@ -54,6 +55,7 @@ if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
         wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
     }
 }
+
 
 class ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
@@ -492,7 +494,9 @@ function Person(e, p) {
     } catch (ex) {
         this.maxhit = "?-0";
         this.maxhitstr = "No Data";
-        this.maxhitval = 0
+        this.maxhitval = 0;        
+        this.mergedMaxHitstr = "No Data";
+        this.mergedMaxHitval = 0
     }
     try {
         this.maxhealstr = this.maxheal.split('-')[0];
@@ -502,7 +506,9 @@ function Person(e, p) {
     } catch (ex) {
         this.maxheal = "?-0";
         this.maxhealstr = "No Data";
-        this.maxhealval = 0
+        this.maxhealval = 0;        
+        this.mergedMaxHealstr = "No Data";
+        this.mergedMaxHealval = 0
     }
     this.effHealed = this.healed - this.overHeal - this.damageShield;
     this.visible = !0;
@@ -781,16 +787,23 @@ Combatant.prototype.AttachPets = function () {
         this.Combatant[i].returnOrigin();
         this.Combatant[i].recalculate();
         this.Combatant[i].parent = this
+                
         if (this.Combatant[i].Job == "AVA") {
-            if (this.Combatant[i].maxhitval > this.Combatant[this.Combatant[i].petOwner].maxhitval) {
-                this.Combatant[this.Combatant[i].petOwner].mergedMaxHitval = this.Combatant[i].maxhitval
-                this.Combatant[this.Combatant[i].petOwner].mergedMaxHitstr = this.Combatant[i].maxhitstr
+            if(this.Combatant[i].petOwner == myName)
+            var owner = this.Combatant['YOU']
+            else
+            var owner = this.Combatant[this.Combatant[i].petOwner]
+
+            if (this.Combatant[i].maxhitval > owner.maxhitval) {
+                owner.mergedMaxHitval = this.Combatant[i].maxhitval
+                owner.mergedMaxHitstr = this.Combatant[i].maxhitstr
             }
-            if (this.Combatant[i].maxhealval > this.Combatant[this.Combatant[i].petOwner].maxhealval) {
-                this.Combatant[this.Combatant[i].petOwner].mergedMaxHealval = this.Combatant[i].maxhealval
-                this.Combatant[this.Combatant[i].petOwner].mergedMaxHealstr = this.Combatant[i].maxhealstr
+            if (this.Combatant[i].maxhealval > owner.maxhealval) {
+                owner.mergedMaxHealval = this.Combatant[i].maxhealval
+                owner.mergedMaxHealstr = this.Combatant[i].maxhealstr
             }
         }
+        
     }
 }
 Combatant.prototype.DetachPets = function () {
