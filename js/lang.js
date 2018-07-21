@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
-            EN: '<div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
+            KR: '<div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
+            EN: '<div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
         }
     },
     msg: {
@@ -454,11 +454,11 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.2.0.180710',
-                JP: 'MopiMopi ver.2.0.180710',
-                EN: 'MopiMopi ver.2.0.180710',
-                DE: 'MopiMopi ver.2.0.180710',
-                CN: "MopiMopi ver.2.0.180710",
+                KR: 'MopiMopi ver.2.1.180710',
+                JP: 'MopiMopi ver.2.1.180710',
+                EN: 'MopiMopi ver.2.1.180710',
+                DE: 'MopiMopi ver.2.1.180710',
+                CN: "MopiMopi ver.2.1.180710",
             },
             i: "new_releases",
             e: "li_2line",
