@@ -1,7 +1,7 @@
 var lastDPS = null,
     lastHPS = null,
     firstCombat = false,
-    _ = '' 
+    _ = ''
 var barSize = new Array(),
     encounterArray = new Array(),
     encounterCount = 1;
@@ -24,9 +24,9 @@ function onOverlayDataUpdate(e) {
     }
 }
 function update(lastDPS, lastHPS) {
-    if (lastDPS.zone == 'HAERU')
+    if (lastDPS.zone == 'HAERU') {
         _ = '_P'
-    else
+    } else
         _ = ''
     if (init.q.pets == 0) {
         lastDPS.summonerMerge = false;
@@ -43,15 +43,6 @@ function update(lastDPS, lastHPS) {
         lastHPS.AttachPets();
         lastHPS.resort("mergedHealed", 1)
     }
-   if (lastDPS.zone == 'HAERU') {
-        if (myName != '' && lastDPS.persons['Eos (YOU)'] != undefined) {
-            lastDPS.persons['Eos (YOU)'].name = 'Eos (' + myName + ')'
-            lastHPS.persons['Eos (YOU)'].name = 'Eos (' + myName + ')'
-        } else if (myName != '' && lastDPS.persons['Eos (' + myName + ')'] != undefined) {
-            lastDPS.persons['Eos (' + myName + ')'].name = 'Eos (' + myName + ')'
-            lastHPS.persons['Eos (' + myName + ')'].name = 'Eos (' + myName + ')'
-        }
-    }    
     if (init.q.act == 2) {
         $('nav table[name=ACT_2line]').fadeIn(0)
         $('nav table[name=ACT_1line]').fadeOut(0)
@@ -325,19 +316,22 @@ function addData(colName, a, p) {
                     name = cutName(myName);
                 else {
                     if ((p.petOwner == myName || p.petOwner == 'YOU') && init.q.myName == true)
-                        name = petName(p.Job, a)
-                    else
-                        name = cutName(a);
+                        name = petName(p.Job, a)                    
+                    else{
+                        if(a == "Eos (YOU)")
+                            name = cutName ('Eos (' + myName + ')')
+                        else
+                            name = cutName(a);
+                    }
                 }
             }
-            // 이름 안 볼 때
             else {
                 if (a == "YOU") {
                     name = cutName(a);
                 }
                 else {
                     if (p.petOwner == myName || p.petOwner == 'YOU')
-                        petName(p.Job, a)
+                        petName(p.Job, a)   
                     else {
                         if (p.Job == "LMB")
                             name = 'Limit Break'
@@ -348,7 +342,7 @@ function addData(colName, a, p) {
             }
             if (init.q.rank == 1)
                 return (p.rank + 1) + '. ' + name
-            else
+            else 
                 return name
         case 'Time':
         case 'P.Time':
@@ -586,7 +580,7 @@ function saveLog() {
                 else historyAddRow()
             } else historyAddRow()
         }
-        barSize.length = 0;  
+        barSize.length = 0; 
     }
 }
 function historyAddRow() {
@@ -612,7 +606,7 @@ function historyAddRow() {
     var td = tr.insertCell();
     td.innerHTML = addComma(lastDPS.persons.YOU.ENCDPS)
     td.className = "cell_6 ac";
-    var td = tr.insertCell();    
+    var td = tr.insertCell();
     td.innerHTML = addComma(lastDPS.Encounter.ENCDPS)
     td.className = "cell_6";
     var td = tr.insertCell();
