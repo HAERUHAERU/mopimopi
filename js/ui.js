@@ -169,6 +169,7 @@ $('nav[name=main] div[name=More]').on({
 });
 $('nav[name=main] .btn_wrap').on({
     mouseleave: function () {
+        $(this).find('div i').removeClass('flash animated');
         var arr = ['Capture', 'RequestEnd', 'History']
         for (var i in arr) {
             if (init.q['btn_' + arr[i]] == 1)
