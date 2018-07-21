@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] 디자인 ❯ 크기  ❯ 세로 구분선</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
-            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] Design ❯ Size  ❯ Vertically Division Lines</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] Data ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] 디자인 ❯ 크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] Design ❯ Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] Data ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
         }
     },
     msg: {
@@ -3758,13 +3758,85 @@ l = {
             w: 33.4,
             p: "cells",
             inner: {
+                alignHeaderCell0: {
+                    tt: {
+                        KR: "Job<font class='ex'>　❙ 헤더</font>",
+                        JP: "Job<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "Job<font class='ex'>　❙ Header</font>",
+                        DE: "Job<font class='ex'>　❙ Kopf</font>",
+                        CN: "Job<font class='ex'>　❙ 头部</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 1
+                },
                 alignCell0: {
                     tt: {
-                        KR: "Job",
-                        JP: "Job",
-                        EN: "Job",
-                        DE: "Job",
-                        CN: "Job",
+                        KR: "Job<font class='ex'>　❙ 바디</font>",
+                        JP: "Job<font class='ex'>　❙ ボディ</font>",
+                        EN: "Job<font class='ex'>　❙ Body</font>",
+                        DE: "Job<font class='ex'>　❙ Körper</font>",
+                        CN: "Job<font class='ex'>　❙ 主体</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 0
+                },
+                alignHeaderCell1: {
+                    tt: {
+                        KR: "Name<font class='ex'>　❙ 헤더</font>",
+                        JP: "Name<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "Name<font class='ex'>　❙ Header</font>",
+                        DE: "Name<font class='ex'>　❙ Kopf</font>",
+                        CN: "Name<font class='ex'>　❙ 头部</font>",
                     },
                     m: {
                         left: {
@@ -3796,11 +3868,11 @@ l = {
                 },
                 alignCell1: {
                     tt: {
-                        KR: "Name",
-                        JP: "Name",
-                        EN: "Name",
-                        DE: "Name",
-                        CN: "Name",
+                        KR: "Name<font class='ex'>　❙ 바디</font>",
+                        JP: "Name<font class='ex'>　❙ ボディ</font>",
+                        EN: "Name<font class='ex'>　❙ Body</font>",
+                        DE: "Name<font class='ex'>　❙ Körper</font>",
+                        CN: "Name<font class='ex'>　❙ 主体</font>",
                     },
                     m: {
                         left: {
@@ -3829,14 +3901,50 @@ l = {
                     i: "format_align_center",
                     p: "cells_align",
                     ul: 0
+                },
+                alignHeaderCell2: {
+                    tt: {
+                        KR: "DPS, HPS 등<font class='ex'>　❙ 헤더</font>",
+                        JP: "DPS, HPSなど<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "DPS, HPS, etc.<font class='ex'>　❙ Header</font>",
+                        DE: "DPS, HPS, usw.<font class='ex'>　❙ Kopf</font>",
+                        CN: "DPS, HPS等<font class='ex'>　❙ 头部</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 1
                 },
                 alignCell2: {
                     tt: {
-                        KR: "DPS, HPS 등",
-                        JP: "DPS、HPSなど",
-                        EN: "DPS, HPS, etc.",
-                        DE: "DPS, HPS, usw.",
-                        CN: "DPS，HPS等",
+                        KR: "DPS, HPS 등<font class='ex'>　❙ 바디</font>",
+                        JP: "DPS, HPSなど<font class='ex'>　❙ ボディ</font>",
+                        EN: "DPS, HPS, etc.<font class='ex'>　❙ Body</font>",
+                        DE: "DPS, HPS, usw.<font class='ex'>　❙ Körper</font>",
+                        CN: "DPS, HPS等<font class='ex'>　❙ 主体</font>",
                     },
                     m: {
                         left: {
@@ -3865,14 +3973,50 @@ l = {
                     i: "format_align_center",
                     p: "cells_align",
                     ul: 0
+                },
+                alignHeaderCell3: {
+                    tt: {
+                        KR: "Damage, Healed 등<font class='ex'>　❙ 헤더</font>",
+                        JP: "Damage, Healedなど<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "Damage, Healed, etc.<font class='ex'>　❙ Header</font>",
+                        DE: "Damage, Healed, usw.<font class='ex'>　❙ Kopf</font>",
+                        CN: "Damage, Healed等<font class='ex'>　❙ 头部</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 1
                 },
                 alignCell3: {
                     tt: {
-                        KR: "Damage, Healed 등",
-                        JP: "Damage、Healedなど",
-                        EN: "Damage, Healed, etc.",
-                        DE: "Damage, Healed, usw.",
-                        CN: "Damage，Healed等",
+                        KR: "Damage, Healed 등<font class='ex'>　❙ 바디</font>",
+                        JP: "Damage, Healedなど<font class='ex'>　❙ ボディ</font>",
+                        EN: "Damage, Healed, etc.<font class='ex'>　❙ Body</font>",
+                        DE: "Damage, Healed, usw.<font class='ex'>　❙ Körper</font>",
+                        CN: "Damage, Healed等<font class='ex'>　❙ 主体</font>",
                     },
                     m: {
                         left: {
@@ -3901,14 +4045,50 @@ l = {
                     i: "format_align_center",
                     p: "cells_align",
                     ul: 0
+                },
+                alignHeaderCell5: {
+                    tt: {
+                        KR: "Swing, % 등<font class='ex'>　❙ 헤더</font>",
+                        JP: "Swing, %など<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "Swing, %, etc.<font class='ex'>　❙ Header</font>",
+                        DE: "Swing, %, usw.<font class='ex'>　❙ Kopf</font>",
+                        CN: "Swing, %等<font class='ex'>　❙ 头部</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 1
                 },
                 alignCell5: {
                     tt: {
-                        KR: "Swing, % 등",
-                        JP: "Swing、%など",
-                        EN: "Swing, %, etc.",
-                        DE: "Swing, %, usw.",
-                        CN: "Swing，%等",
+                        KR: "Swing, % 등<font class='ex'>　❙ 바디</font>",
+                        JP: "Swing, %など<font class='ex'>　❙ ボディ</font>",
+                        EN: "Swing, %, etc.<font class='ex'>　❙ Body</font>",
+                        DE: "Swing, %, usw.<font class='ex'>　❙ Körper</font>",
+                        CN: "Swing, %等<font class='ex'>　❙ 主体</font>",
                     },
                     m: {
                         left: {
@@ -3937,14 +4117,50 @@ l = {
                     i: "format_align_center",
                     p: "cells_align",
                     ul: 0
+                },
+                alignHeaderCell4: {
+                    tt: {
+                        KR: "MaxHit, MaxHeal<font class='ex'>　❙ 헤더</font>",
+                        JP: "MaxHit, MaxHeal<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "MaxHit, MaxHeal<font class='ex'>　❙ Header</font>",
+                        DE: "MaxHit, MaxHeal<font class='ex'>　❙ Kopf</font>",
+                        CN: "MaxHit, MaxHeal<font class='ex'>　❙ 头部</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 1
                 },
                 alignCell4: {
                     tt: {
-                        KR: "MaxHit, MaxHeal",
-                        JP: "MaxHit、MaxHeal",
-                        EN: "MaxHit, MaxHeal",
-                        DE: "MaxHit, MaxHeal",
-                        CN: "MaxHit，MaxHeal",
+                        KR: "MaxHit, MaxHeal<font class='ex'>　❙ 바디</font>",
+                        JP: "MaxHit, MaxHeal<font class='ex'>　❙ ボディ</font>",
+                        EN: "MaxHit, MaxHeal<font class='ex'>　❙ Body</font>",
+                        DE: "MaxHit, MaxHeal<font class='ex'>　❙ Körper</font>",
+                        CN: "MaxHit, MaxHeal<font class='ex'>　❙ 主体</font>",
                     },
                     m: {
                         left: {
@@ -3974,13 +4190,49 @@ l = {
                     p: "cells_align",
                     ul: 0
                 },
+                alignHeaderCell6: {
+                    tt: {
+                        KR: "RD, RH 등<font class='ex'>　❙ 히스토리, 헤더</font>",
+                        JP: "RD, RHなど<font class='ex'>　❙ ヒストリー、ヘッダー</font>",
+                        EN: "RD, RH, etc.<font class='ex'>　❙ History, Header</font>",
+                        DE: "RD, RH, usw.<font class='ex'>　❙ Historie, Kopf</font>",
+                        CN: "RD, RH等<font class='ex'>　❙ 历史，头部</font>",
+                    },
+                    m: {
+                        left: {
+                            KR: "왼쪽",
+                            JP: "左",
+                            EN: "Left",
+                            DE: "Links",
+                            CN: "左",
+                        },
+                        center: {
+                            KR: "가운데",
+                            JP: "真ん中",
+                            EN: "Center",
+                            DE: "Zentriert",
+                            CN: "居中",
+                        },
+                        right: {
+                            KR: "오른쪽",
+                            JP: "右",
+                            EN: "Right",
+                            DE: "Recht",
+                            CN: "右",
+                        }
+                    },
+                    e: "li_radio",
+                    i: "format_align_center",
+                    p: "cells_align",
+                    ul: 1
+                },
                 alignCell6: {
                     tt: {
-                        KR: "RD, RH 등<font class='ex'>　❙ 히스토리</font>",
-                        JP: "RD、RHなど<font class='ex'>　❙ ヒストリー</font>",
-                        EN: "RD, RH, etc.<font class='ex'>　❙ History</font>",
-                        DE: "RD, RH, usw.<font class='ex'>　❙ Historie</font>",
-                        CN: "RD，RH等<font class='ex'>　❙ 历史</font>",
+                        KR: "RD, RH 등<font class='ex'>　❙ 히스토리, 바디</font>",
+                        JP: "RD, RHなど<font class='ex'>　❙ ヒストリー、ボディ</font>",
+                        EN: "RD, RH, etc.<font class='ex'>　❙ History, Body</font>",
+                        DE: "RD, RH, usw.<font class='ex'>　❙ Historie, Körper</font>",
+                        CN: "RD, RH等<font class='ex'>　❙ 历史，主体</font>",
                     },
                     m: {
                         left: {
