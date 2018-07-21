@@ -312,14 +312,22 @@ function addData(colName, a, p) {
         case 'Name':
             var name = ''
             if (init.q.hideName == false) {
-                if (a == "YOU" && init.q.myName == false && myName != '' && myName != null)
-                    name = cutName(myName);
+                if (a == "YOU" && init.q.myName == false){
+                    if(myName != '')
+                        name = cutName(myName);
+                    else
+                        name = a
+                }
                 else {
-                    if ((p.petOwner == myName || p.petOwner == 'YOU') && init.q.myName == true)
+                    if ((p.petOwner == myName || p.petOwner == 'YOU') && p.petOwner != '' && init.q.myName == true)
                         name = petName(p.Job, a)                    
                     else{
-                        if(a == "Eos (YOU)")
-                            name = cutName ('Eos (' + myName + ')')
+                        if(a == "Eos (YOU)"){
+                            if(myName == "")
+                                name = a
+                            else
+                                name = 'Eos (' + myName + ')'
+                        }
                         else
                             name = cutName(a);
                     }
@@ -327,11 +335,11 @@ function addData(colName, a, p) {
             }
             else {
                 if (a == "YOU") {
-                    name = cutName(a);
+                    name = a
                 }
                 else {
                     if (p.petOwner == myName || p.petOwner == 'YOU')
-                        petName(p.Job, a)   
+                        name = petName(p.Job, a)
                     else {
                         if (p.Job == "LMB")
                             name = 'Limit Break'
