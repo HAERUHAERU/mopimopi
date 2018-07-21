@@ -20,7 +20,7 @@ $().ready(function () {
     initOverlay()
 });
 function addOption(){
-    var val=['bar_position_DPS', 'mhh_unit', 'dmgType']
+   var val=['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6']
     for (var i in val){
         if(init.q[val[i]] == undefined)
             init.q[val[i]] = Mopi2.q[val[i]]
@@ -1296,6 +1296,11 @@ function ui() {
             'width': parseFloat(init.Range['sizeCell' + i] / 10) + 'rem',
             'text-align': init.q['alignCell' + i],
             'padding': '0 ' + parseFloat(init.Range['sizePdCell' + i] / 10) + 'rem',
+        })
+    }
+    for (var i = 0; i < 7; i++) {
+        $('.tableHeader td.cell_' + i).css({
+            'text-align': init.q['alignHeaderCell' + i],
         })
     }
     $('#DPSHeader, #DPSHeader_P').css({
