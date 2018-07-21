@@ -21,7 +21,9 @@ $().ready(function () {
 });
 function addOption(){
     if(init.q.bar_position_DPS == undefined)
-        init.q.bar_position_DPS = Mopi2.q.bar_position_DPS 
+        init.q.bar_position_DPS = Mopi2.q.bar_position_DPS     
+    if(init.q.mhh_unit == undefined)
+        init.q.mhh_unit = Mopi2.q.mhh_unit
     localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
 }
 function initOverlay(val) {
