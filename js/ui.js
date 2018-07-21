@@ -20,10 +20,13 @@ $().ready(function () {
     initOverlay()
 });
 function addOption(){
-    if(init.q.bar_position_DPS == undefined)
-        init.q.bar_position_DPS = Mopi2.q.bar_position_DPS     
-    if(init.q.mhh_unit == undefined)
-        init.q.mhh_unit = Mopi2.q.mhh_unit
+    var val=['bar_position_DPS', 'mhh_unit', 'dmgType']
+    for (var i in val){
+        if(init.q[val[i]] == undefined)
+            init.q[val[i]] = Mopi2.q[val[i]]
+    }  
+    if(init.Range.sizeLineVer == undefined)
+        init.Range.sizeLineVer = Mopi2.Range.sizeLineVer   
     localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
 }
 function initOverlay(val) {
@@ -1219,6 +1222,9 @@ function ui() {
     $('#YOU .tableBody td .ex').css({
         color: '#' + init.Color.tableExYOU,
         opacity: parseFloat(init.Range.tableYOU / 100),
+    })
+    $('.tableBody td:not(:last-child)').css({
+        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100))
     })
     $(':not(#YOU).rCell').css({
         'font-weight': boldOther,
