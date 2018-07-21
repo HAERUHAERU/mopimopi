@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
-            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] 디자인 ❯ 크기  ❯ 세로 구분선</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] Design ❯ Size  ❯ Vertically Division Lines</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] Data ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
         }
     },
     msg: {
@@ -545,6 +545,35 @@ l = {
                 EN: "Data Type of %",
                 DE: "Datentyp der %",
                 CN: "% 数据类型",
+            },
+            m: {
+                0: {
+                    KR: "정수",
+                    JP: "整数",
+                    EN: "Integer",
+                    DE: "Integer",
+                    CN: "整数",
+                },
+                1: {
+                    KR: "소수",
+                    JP: "小数",
+                    EN: "Decimal",
+                    DE: "Dezimal",
+                    CN: "小数",
+                },
+            },
+            i: "edit",
+            e: "li_radio",
+            p: "Data",
+            ul: 0
+        },
+        dmgType: {
+            tt: {
+                KR: "Damage/Healed 데이터 유형",
+                JP: "Damage/Healedデータタイプ",
+                EN: "Data Type of Damage/Healed ",
+                DE: "Datentyp der Damage/Healed ",
+                CN: "Damage/Healed 数据类型",
             },
             m: {
                 0: {
@@ -3449,17 +3478,31 @@ l = {
                 },
                 sizeLine: {
                     tt: {
-                        KR: "구분선",
-                        JP: "区分線",
-                        EN: "Division Lines",
-                        DE: "Trennlinien",
-                        CN: "分界线",
+                        KR: "구분선<font class='ex'>　❙ 가로</font>",
+                        JP: "区分線<font class='ex'>　❙ 横</font>",
+                        EN: "Division Lines<font class='ex'>　❙ Horizontal</font>",
+                        DE: "Trennlinien<font class='ex'>　❙ Horizontal</font>",
+                        CN: "分界线<font class='ex'>　❙ 横</font>",
                     },
                     min: 0,
                     max: 10,
                     i: "border_bottom",
                     e: "li_slider",
                     ul: 1
+                },                
+                sizeLineVer: {
+                    tt: {
+                        KR: "구분선<font class='ex'>　❙ 세로</font>",
+                        JP: "区分線<font class='ex'>　❙ 縦</font>",
+                        EN: "Division Lines<font class='ex'>　❙ Vertical</font>",
+                        DE: "Trennlinien<font class='ex'>　❙ Vertical</font>",
+                        CN: "分界线<font class='ex'>　❙ 竖</font>",
+                    },
+                    min: 0,
+                    max: 10,
+                    i: "border_bottom",
+                    e: "li_slider",
+                    ul: 0
                 },
                 sizeHdGap: {
                     tt: {
