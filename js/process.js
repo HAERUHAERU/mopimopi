@@ -9,7 +9,7 @@ var barSize = new Array(),
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
-    if (view != 'settings' && localStorage.getItem("Mopi2_HAERU") != null) {
+    if (view != 'settings') {
         if (!firstCombat) {
             $('[name=notice], [name=history]').fadeOut(0)
             $('[name=main]').fadeIn(0)
