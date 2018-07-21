@@ -788,11 +788,11 @@ Combatant.prototype.AttachPets = function () {
         this.Combatant[i].recalculate();
         this.Combatant[i].parent = this
                 
-        if (this.Combatant[i].Job == "AVA") {
-            if(this.Combatant[i].petOwner == myName)
-            var owner = this.Combatant['YOU']
+        if (this.Combatant[i].Job == "AVA") {            
+            if(this.Combatant[i].petOwner == myName || this.Combatant[i].petOwner == tmpMyName)
+                var owner = this.Combatant['YOU']
             else
-            var owner = this.Combatant[this.Combatant[i].petOwner]
+                var owner = this.Combatant[this.Combatant[i].petOwner]
 
             if (this.Combatant[i].maxhitval > owner.maxhitval) {
                 owner.mergedMaxHitval = this.Combatant[i].maxhitval
