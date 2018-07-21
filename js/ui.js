@@ -13,49 +13,37 @@ $().ready(function () {
     if (localStorage.getItem("Mopi2_HAERU") == null) {
         localStorage.clear();
         localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
-        init = Mopi2
-        lang = init.q.Lang
-        initOverlay('init')
-    } else {
-        init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
-        lang = init.q.Lang   //언어
-        initOverlay()
     }
+    init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
+    lang = init.q.Lang   //언어
+    initOverlay()
 });
 function initOverlay(val) {
-    if (val != undefined && val != 'init') {
+    if (val != undefined) {
         init.q.Lang = val;
         lang = val;
         localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
         callToast('submit', 0, 3000)
-    } 
-    if (val == 'init') {
-        localStorage.clear();
-        $('.btn_wrap').hide()
-        $('#strong').html('<br>언어 / 言語 / 语言 / Language / Sprache<br><br><img src="./images/menu/KR.png" id="KR" onclick="initOverlay(this.id)"/><img src="./images/menu/JP.png" id="JP" onclick="initOverlay(this.id)"/><img src="./images/menu/CN.png" id="CN" onclick="initOverlay(this.id)"/><img src="./images/menu/EN.png" id="EN" onclick="initOverlay(this.id)"/><img src="./images/menu/DE.png" id="DE" onclick="initOverlay(this.id)"/><br><br>')
-        $('#strong img').css('padding-right', '.5rem')
-        $('#tip').html('Please select <b>your language.<b/>')
-    } else {
-        if (lastCombat == null) {
-            $('[name=time]').text('00:00')
-            $('[name=target]').text(l.NAV.main.tt.target[lang])
-            $('[name=rps]').text(l.NAV.main.tt.rps[lang])
-            $('.btn_wrap').show()
-            //공지사항
-            for (var i in l.Notice) {
-                if (lang == "KR")
-                    $('#' + i).html(l.Notice[i][lang])
-                else
-                    $('#' + i).html(l.Notice[i].EN)
-            }
-        } else  {            
-            $('[name=notice]').fadeOut(0)
-            $('.btn_wrap').show()
-            update(lastDPS, lastHPS)
-        }
-        resizeWindow(view)
-        hiddenTable()
     }
+    if (lastCombat == null) {
+        $('[name=time]').text('00:00')
+        $('[name=target]').text(l.NAV.main.tt.target[lang])
+        $('[name=rps]').text(l.NAV.main.tt.rps[lang])
+        $('.btn_wrap').show()
+        for (var i in l.Notice) {
+            if (lang == "KR")
+                $('#' + i).html(l.Notice[i][lang])
+            else
+                $('#' + i).html(l.Notice[i].EN)
+        }
+    } else {
+        $('[name=notice]').fadeOut(0)
+        $('.btn_wrap').show()
+        update(lastDPS, lastHPS)
+    }
+    resizeWindow(view)
+    hiddenTable()
+
     if (init.q.arrow)
         $('#wrap').css({ 'background-image': 'url(./images/handle.svg)' })
     ui()
