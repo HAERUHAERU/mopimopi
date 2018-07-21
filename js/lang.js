@@ -2192,15 +2192,27 @@ l = {
                 },
                 tableLine: {
                     tt: {
-                        KR: "구분선",
-                        JP: "区分線",
-                        EN: "Division Lines",
-                        DE: "Trennlinien",
-                        CN: "分界线",
+                        KR: "구분선<font class='ex'>　❙ 가로</font>",
+                        JP: "区分線<font class='ex'>　❙ 横</font>",
+                        EN: "Division Lines<font class='ex'>　❙ Horizontal</font>",
+                        DE: "Trennlinien<font class='ex'>　❙ Horizontal</font>",
+                        CN: "分界线<font class='ex'>　❙ 横</font>",
                     },
                     i: "border_color",
                     e: "li_color",
                     ul: 1
+                },                
+                tableLineVer: {
+                    tt: {
+                        KR: "구분선<font class='ex'>　❙ 세로</font>",
+                        JP: "区分線<font class='ex'>　❙ 縦</font>",
+                        EN: "Division Lines<font class='ex'>　❙ Vertical</font>",
+                        DE: "Trennlinien<font class='ex'>　❙ Vertical</font>",
+                        CN: "分界线<font class='ex'>　❙ 竖</font>",
+                    },
+                    i: "border_color",
+                    e: "li_color",
+                    ul: 0
                 }
             }
         },
@@ -3182,17 +3194,31 @@ l = {
                 },
                 tableLine: {
                     tt: {
-                        KR: "구분선",
-                        JP: "区分線",
-                        EN: "Division Lines",
-                        DE: "Trennlinien",
-                        CN: "分界线",
+                        KR: "구분선<font class='ex'>　❙ 가로</font>",
+                        JP: "区分線<font class='ex'>　❙ 横</font>",
+                        EN: "Division Lines<font class='ex'>　❙ Horizontal</font>",
+                        DE: "Trennlinien<font class='ex'>　❙ Horizontal</font>",
+                        CN: "分界线<font class='ex'>　❙ 横</font>",
                     },
                     min: 0,
                     max: 100,
                     i: "opacity",
                     e: "li_slider",
                     ul: 1
+                },                
+                tableLineVer: {
+                    tt: {
+                        KR: "구분선<font class='ex'>　❙ 세로</font>",
+                        JP: "区分線<font class='ex'>　❙ 縦</font>",
+                        EN: "Division Lines<font class='ex'>　❙ Vertical</font>",
+                        DE: "Trennlinien<font class='ex'>　❙ Vertical</font>",
+                        CN: "分界线<font class='ex'>　❙ 竖</font>",
+                     },
+                    min: 0,
+                    max: 100,
+                    i: "opacity",
+                    e: "li_slider",
+                    ul: 0
                 }
             }
         },
