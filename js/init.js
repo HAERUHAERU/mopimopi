@@ -133,6 +133,7 @@ Mopi2 = {
         tableYOU: "FFFFFF",          
         tableOther: "FFFFFF",
         tableLine: "FFFFFF",
+        tableLineVer: "FFFFFF", 
         tableExYOU: "BDBDBD",
         tableExOther: "BDBDBD",
 
@@ -195,6 +196,7 @@ Mopi2 = {
 
         tableOther: 100,
         tableLine: 10, 
+        tableLineVer: 10,
 
         bar: 75,
         pet: 50,
