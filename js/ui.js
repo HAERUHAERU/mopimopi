@@ -20,14 +20,21 @@ $().ready(function () {
     initOverlay()
 });
 function addOption(){
-   var val=['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6']
-    for (var i in val){
-        if(init.q[val[i]] == undefined)
-            init.q[val[i]] = Mopi2.q[val[i]]
-    }  
-    if(init.Range.sizeLineVer == undefined)
-        init.Range.sizeLineVer = Mopi2.Range.sizeLineVer   
+    var qVal=['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6'] 
+    var sizeVal=['tableLineVer, sizeLineVer']
+    var colorVal=['tableLineVer']
+
+    putValue(qVal, 'q')
+    putValue(sizeVal, 'Range')
+    putValue(colorVal, 'Color')
+
     localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
+}
+function putValue(arr, c){
+    for (var i in arr){
+        if(init[c][arr[i]] == undefined)
+            init[c][arr[i]] = Mopi2[c][arr[i]]
+    }
 }
 function initOverlay(val) {
     if (val != undefined) {
@@ -1224,7 +1231,10 @@ function ui() {
         opacity: parseFloat(init.Range.tableYOU / 100),
     })
     $('.tableBody td:not(:last-child)').css({
-        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100))
+        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableLineVer, parseFloat(init.Range.tableLineVer / 100))
+    })
+    $('.tableHeader td:not(:last-child)').css({
+        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableHd, parseFloat(init.Range.tableHd / 100))
     })
     $(':not(#YOU).rCell').css({
         'font-weight': boldOther,
