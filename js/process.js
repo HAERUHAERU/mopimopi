@@ -406,14 +406,14 @@ function addData(colName, a, p) {
             }
             if (init.q.mhh == 1) {
                 if (p[val] >= 100000 && init.q.unit == 1)
-                    return '<font class="ex">' + abb + '-</font>' + addComma(p[val], 1000)
+                    return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + addComma(p[val], 1000)
                 else
-                    return '<font class="ex">' + abb + '-</font>' + addComma(p[val])
+                    return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + addComma(p[val])
             } else if (init.q.mhh == 2) {
                 if (p[val] >= 100000 && init.q.unit == 1)
-                    return addComma(p[val], 1000) + '<font class="ex">-' + abb + '</font>'
+                    return addComma(p[val], 1000) + '<font class="ex"> ' + init.q.mhh_unit + ' ' + abb + '</font>'
                 else
-                    return addComma(p[val]) + '<font class="ex">-' + abb + '</font>'
+                    return addComma(p[val]) + '<font class="ex"> ' + init.q.mhh_unit + ' ' + abb + '</font>'
             } else if (init.q.mhh == 3) {
                 return abb
             } else {
