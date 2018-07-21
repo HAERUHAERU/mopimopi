@@ -6,6 +6,7 @@ Mopi2 = {
         pets: 1,
         dpsType: 0,
         perType: 1,
+        dmgType: 1,
         ds: ".",
         ns: 1,
         gs: ",",
@@ -210,6 +211,7 @@ Mopi2 = {
         sizeBodyText: 12,
         sizeBodyIcon: 20,
         sizeLine: 1,
+        sizeLineVer:0,
 
         sizeGraph_bar: 21,
         sizeGraph_pet: 21,
