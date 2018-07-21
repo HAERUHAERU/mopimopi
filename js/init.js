@@ -79,9 +79,16 @@ Mopi2 = {
         bar_pet: 1,
         bar_ds: 1,
         bar_oh: 1,
-        bar_position: 'right',    //HPS보조그래프 위치
-        bar_position_DPS: 'left',    //DPS보조그래프 위치
-
+        bar_position: 'right',   
+        bar_position_DPS: 'left',   
+        
+        alignHeaderCell0:'center',     
+        alignHeaderCell1:'left',     
+        alignHeaderCell2:'center',  
+        alignHeaderCell3:'center',     
+        alignHeaderCell4:'left',   
+        alignHeaderCell5:'center',     
+        alignHeaderCell6:'center',     
         alignCell0: 'center',
         alignCell1: 'left',
         alignCell2: 'center',
