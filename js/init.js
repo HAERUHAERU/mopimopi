@@ -68,6 +68,7 @@ Mopi2 = {
         viewDPS: 1,
         viewHPS: 1,
         view24: 1,
+        view24_Number: 10, 
         tableOrder: 1,
         boldYOU: 1,
         boldOther: 0,
