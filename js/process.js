@@ -606,19 +606,28 @@ function historyAddRow() {
     td.className = "cell_5";
     td.id = "viewIcon";
     var td = tr.insertCell();
-    td.innerHTML = lastDPS.title + '<span class="ex"> / ' + lastDPS.zone + '</span>';
+    if(lastDPS.title != 'Encounter')
+        td.innerHTML = lastDPS.title + '<span class="ex"> / ' + lastDPS.zone + '</span>';
+    else
+        td.innerHTML = 'No Data' + '<span class="ex"> / ' + lastDPS.zone + '</span>'; 
     td.className = "cell_1";
     var td = tr.insertCell();
     td.innerHTML = lastDPS.Encounter.duration;
     td.className = "cell_5";
     var td = tr.insertCell();
-    td.innerHTML = addComma(lastDPS.persons.YOU.ENCDPS)
+    if(lastDPS.persons.YOU != null)
+        td.innerHTML = addComma(lastDPS.persons.YOU.ENCDPS)
+    else 
+        td.innerHTML = 'No Data' 
     td.className = "cell_6 ac";
     var td = tr.insertCell();
     td.innerHTML = addComma(lastDPS.Encounter.ENCDPS)
     td.className = "cell_6";
     var td = tr.insertCell();
-    td.innerHTML = addComma(lastHPS.persons.YOU.ENCHPS)
+    if(lastHPS.persons.YOU != null)
+        td.innerHTML = addComma(lastHPS.persons.YOU.ENCHPS)    
+    else 
+        td.innerHTML = 'No Data' 
     td.className = "cell_6 ac";
     var td = tr.insertCell();
     td.innerHTML = addComma(lastHPS.Encounter.ENCHPS)
