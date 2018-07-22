@@ -1,9 +1,8 @@
-var init = new Object(), lang = null, parent = '', view = 'main', 
-    time = 0, toast = 0 
+var init = new Object(), lang = null, parent = '', view = 'main', time = 0, toast = 0 
 var sVal = {    
     now: 0,     
-    pre: 0,     
-    old: 0     
+    pre: 0,  
+    old: 0    
 }
 history.pushState(null, null, location.href);
 window.onpopstate = function () {
@@ -14,15 +13,15 @@ $().ready(function () {
         localStorage.clear();
         localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
     }
-    init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))    
+    init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
     addOption()
-    lang = init.q.Lang   //언어
+    lang = init.q.Lang  
     initOverlay()
 });
-function addOption(){
-    var qVal=['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6'] 
-    var sizeVal=['tableLineVer', 'sizeLineVer']
-    var colorVal=['tableLineVer']
+function addOption() {
+    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number']
+    var sizeVal = ['tableLineVer', 'sizeLineVer']
+    var colorVal = ['tableLineVer']
 
     putValue(qVal, 'q')
     putValue(sizeVal, 'Range')
@@ -30,9 +29,9 @@ function addOption(){
 
     localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
 }
-function putValue(arr, c){
-    for (var i in arr){
-        if(init[c][arr[i]] == undefined)
+function putValue(arr, c) {
+    for (var i in arr) {
+        if (init[c][arr[i]] == undefined)
             init[c][arr[i]] = Mopi2[c][arr[i]]
     }
 }
@@ -66,12 +65,9 @@ function initOverlay(val) {
         $('#wrap').css({ 'background-image': 'url(./images/handle.svg)' })
     ui()
 }
-//---------------------------------------------------------------------------------------------------------------- 실시간 스크롤 체크
 $('.scrollArea').scroll(function () {
     sVal.now = $('.scrollArea').scrollTop();
 });
-
-//---------------------------------------------------------------------------------------------------------------- 메뉴 드롭다운 
 $('.dropdown ul').scroll(function () {
     if ($(this)[0].childElementCount > 5) {
         if ($(this).scrollTop() == 0) {
@@ -109,12 +105,9 @@ $('#blackBg').unbind("click").bind("click", function () {
         update(lastDPS, lastHPS)
     resizeWindow(view)
 });
-//---------------------------------------------------------------------------------------------------------------- 스크롤 영역 조절
-//모바일 화면회전 시 스크롤 영역 재계산
 $(window).on("orientationchange", function () {
     resizeWindow(view)
 });
-//오버레이 크기 조절 시 스크롤 영역 재계산
 $(window).resize(function () {
     resizeWindow(view)
 });
@@ -136,7 +129,6 @@ function resizeWindow(flag) {
         $('#update').css('height', '-webkit-calc(100vh - ' + $('nav[name=main]')[0].offsetHeight + 'px - ' + $('#strong')[0].offsetHeight + 'px - ' + $('#tip')[0].offsetHeight + 'px)')
     }
 }
-//---------------------------------------------------------------------------------------------------------------- 모바일 전체 화면 모드
 function toggleFullScreen() {
     if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
         if (document.documentElement.requestFullscreen) {
@@ -156,7 +148,6 @@ function toggleFullScreen() {
         }
     }
 }
-//---------------------------------------------------------------------------------------------------------------- 내비게이션
 $('nav[name=main] div[name=More]').on({
     mouseover: function () {
         if ($(this).attr('name') == 'More') {
@@ -209,7 +200,6 @@ function callToast(id, start, end) {
         $('.toast').fadeOut(150);
     });
 }
-//---------------------------------------------------------------------------------------------------------------- 테이블 자동 숨기기
 $("html").unbind("click").bind("click", function () {
     if (init.q.autoHide && view != 'settings') {
         hiddenTable()
@@ -250,6 +240,7 @@ function hiddenTable() {
                 $('div[name=history]').fadeIn(0)
             else
                 $('div[name=notice]').fadeIn(0)
+            //타이머 체크 시작 
             time = setTimeout(function () {
                 if (view == 'history')
                     $('div[name=history]').fadeOut(150)
@@ -259,11 +250,10 @@ function hiddenTable() {
                     $('div[name=notice]').fadeOut(150)
                 }
                 callToast('hiddenTable', 0, 3000)
-            }, init.Range.autoHideTime * 60000)         
+            }, init.Range.autoHideTime * 60000)       
         }
     }
 }
-//---------------------------------------------------------------------------------------------------------------- Preview 화면 제어
 function ctrlPreview(flag) {
     if (flag == true) {
         init.q.preview = 1;
@@ -271,6 +261,9 @@ function ctrlPreview(flag) {
             createDOM('preview')
         else
             ui()
+
+        if (init.q.view24_Number == 1)
+            toggleRaidMode(1)
     } else {
         init.q.preview24 = 0;
         init.q.preview = 0;
@@ -278,13 +271,29 @@ function ctrlPreview(flag) {
         resizeWindow(view)
     }
 }
+function toggleRaidMode(val) {
+    if (val) {
+        $('#preview24 .switch').addClass('hover')
+        $('#preview24 td:first-child').css('color', '#' + init.Color.accent)
+        init.q.preview24 = 1
+        view = 'preview24'
+    } else {
+        $('#preview24 .switch').removeClass('hover')
+        $('#preview24 td:first-child').css('color', 'rgba(189,189,189,.5)')
+        init.q.preview24 = 0
+    }
+    if (init.q.preview) {
+        update(previewDPS, previewHPS)
+        view = 'settings'
+    } else
+        ui()
+}
 function togglePreview() {
     if (init.q.preview == 1)
         ctrlPreview(1)
     else
         ctrlPreview(0)
 }
-//---------------------------------------------------------------------------------------------------------------- 중복 체크박스 값 처리
 function duCheckMsg(flag, tab1, tab2) {
     var tmp = ''
     var obj = l[tab1]['tab_' + tab2].inner[flag + 'filter']
@@ -305,12 +314,11 @@ function duCheckMsg(flag, tab1, tab2) {
         tmp = tmp.slice(0, -2)
 
     $('li#' + flag + 'filter .gVal').text(tmp)
-    if(init.q.preview){
+    if (init.q.preview) {
         update(previewDPS, previewHPS)
         resizeWindow(view)
     }
 }
-//---------------------------------------------------------------------------------------------------------------- 데이터 출력 순서 얻기
 function getOrder(selector, container) {
     var order = [];
     $(selector, container).each(function () {
@@ -318,7 +326,6 @@ function getOrder(selector, container) {
     });
     return order;
 }
-//---------------------------------------------------------------------------------------------------------------- 공유키 생성
 function createKeys() {
     var ui = copyObject(init)
     var del = ['Lang', 'fTime', 'fTarget', 'fRPS', 'fHd', 'fBody', 'resolution', 'overlayBg', 'overlayBgImg', 'overlayBgSize', 'overlayBgRepeat', 'backupDate', 'autoHide', 'tooltips', 'toast']
@@ -356,7 +363,7 @@ function createKeys() {
         a++
     }
     return tmp
-}//---------------------------------------------------------------------------------------------------------------- 공유키 적용
+}
 function applyKeys(data) {
     try {
         var obj = JSON.parse(data)
@@ -369,7 +376,7 @@ function applyKeys(data) {
             return
         }
     }
-    var a = 0, b = 0, key = ''  //적용할 데이터 
+    var a = 0, b = 0, key = ''   
     var list = ["q", "Color", "Range"]
     for (var i in list) {
         key = Object.keys(init[list[i]])
@@ -407,10 +414,10 @@ function copyObject(obj) {
     }
     return copiedObj;
 }
-//---------------------------------------------------------------------------------------------------------------- 컬러 피커 함수
 function jsColorUpdate(jscolor) {
     init.Color[jscolor.valueElement.id] = jscolor.valueElement.value
     toggleRaidMode(init.q.preview24)
+    //그래프 처리 
     ui()
 }
 function loadPreview(el_img) {
@@ -438,24 +445,6 @@ function loadPreviewFile(file) {
         reader.readAsDataURL(file);
     }
 }
-function toggleRaidMode(val) {
-    if (val) {
-        $('#preview24 .switch').addClass('hover')
-        $('#preview24 td:first-child').css('color', '#' + init.Color.accent)
-        init.q.preview24 = 1
-        view = 'preview24'
-    } else {
-        $('#preview24 .switch').removeClass('hover')
-        $('#preview24 td:first-child').css('color', 'rgba(189,189,189,.5)')
-        init.q.preview24 = 0
-    }
-    if (init.q.preview) {
-        update(previewDPS, previewHPS)
-        view = 'settings'
-    } else
-        ui()
-}
-//---------------------------------------------------------------------------------------------------------------- 동적 생성된 요소 재적용
 function liReload() {
     jscolor.installByClassName("jscolor");
     $('li').unbind("click").bind("click", function () {
@@ -486,12 +475,10 @@ function liReload() {
                 duCheckMsg(id.slice(0, -2), 'format', id.slice(0, -2))
             } else if (id == 'preview') {
                 togglePreview()
-            } else if (id == 'view24' && view == 'settings') {
-                toggleRaidMode(init.q.view24)
             }
             else {
                 if (id == 'ani') {
-                    barSize.length = 0;  
+                    barSize.length = 0; 
                     barSize = new Array();
                     view = 'ani'
                 }
@@ -502,17 +489,24 @@ function liReload() {
         else if ($(this).find('input').prop('type') == 'radio') {
             $(this).parent().find('li .switch').removeClass('hover')
             $(this).find('.switch').addClass('hover');
+            //init 값 변경
             init.q[$(this).find(':radio').attr('name')] = $(this).find(':radio').val()
-            $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text($(this).text())
-
+            if ($(this).find(':radio').attr('name') == 'view24_Number') {
+                $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text(l.advanced.tab_table.inner.view24_Number.msg[lang].replace('★', $(this).text()))
+                if (init.q.view24_Number == 1) 
+                    toggleRaidMode(1)
+                else 
+                    toggleRaidMode(0)                
+            } else
+                $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text($(this).text())
             if ($(this).find(':radio').attr('name') == 'Lang') {
                 lang = init.q.Lang
                 createDOM('page', l.Settings)
                 $('nav[name=settings]').find('table td').text(l.NAV.settings.tt[lang])
+                $('#preview24 td:first-child').text(l.advanced.tab_table.inner.view24_Number.tt[lang])
             }
             else if ($(this).find(':radio').attr('name') == 'palette')
                 button('tab_graph', 'color')
-
             toggleRaidMode(init.q.preview24)
             return
         }
@@ -574,7 +568,7 @@ function liReload() {
     });
     $('.jscolor').unbind("focusout").bind('focusout', function () {
         ctrlPreview(1)
-    });
+    }); 
     $('.tab_box').unbind("click").bind("click", function () {
         $('.tabArea').find('.tab_title').removeClass('on')
         $('.tabArea').find('.tab_underBar').removeClass('on_bar')
@@ -596,7 +590,7 @@ function liReload() {
         if (key != '' && val != '' && key != undefined && val != undefined) {
             init.Alias[key] = val
             $('ul.remove').append(createElement('li_remove_list', null, key, val))
-            $('#in_abbOld, #in_abbNew').val('')   
+            $('#in_abbOld, #in_abbNew').val('')    
             liReload()
             callToast('ok', 500, 3000)
         } else
@@ -631,7 +625,7 @@ function liReload() {
             var id = $(this).attr('id').split('_')[1]
             var input = $(this).val()
 
-            if (id == 'abbOld' || id == 'abbNew') {  
+            if (id == 'abbOld' || id == 'abbNew') {  //줄임말 입력시 
                 var key = $('#in_abbOld').val()
                 var val = $('#in_abbNew').val()
                 if (key != '' && val == '') {
@@ -651,7 +645,7 @@ function liReload() {
                 } else
                     callToast('noInput', 500, 3000)
             }
-            else if (id.indexOf('f') > -1) {    
+            else if (id.indexOf('f') > -1) {   
                 if (input != '') {
                     init.q[id] = input;
                     $('[name=' + id + ']').find('.gVal').text(input)
@@ -662,7 +656,7 @@ function liReload() {
                 } else
                     callToast('noInput', 500, 3000)
             }
-            else if (id == 'apply') {        
+            else if (id == 'apply') {         
                 applyKeys(input)
                 $(this).blur()
                 $(this).val('')
@@ -707,7 +701,6 @@ function liReload() {
         return
     });
 }
-//---------------------------------------------------------------------------------------------------------------- 버튼 모음
 function button(id, direction) {
     switch (id) {
         case 'init':
@@ -719,7 +712,7 @@ function button(id, direction) {
                     Mopi2.q.Lang = tmpLang
                     localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
                     init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
-                    lang = init.q.Lang  
+                    lang = init.q.Lang   
                     button('settings')
                     $('.scrollArea').scrollTop(0)
                 }, 100)
@@ -741,6 +734,7 @@ function button(id, direction) {
                 callToast('restore', 500, 3000)
                 setTimeout(function () {
                     init = JSON.parse(localStorage.getItem("backup"))
+                    addOption()
                     lang = init.q.Lang
                     button('settings')
                     $('.scrollArea').scrollTop(0)
@@ -810,7 +804,7 @@ function button(id, direction) {
         case 'settings':
             ctrlPreview(0)
             sVal.pre = 0
-            view = 'settings' 
+            view = 'settings'
             $('#wrap').css({ 'background-image': '' })
             $('nav[name=settings]').find('table td').text(l.NAV.settings.tt[lang])
             $('nav[name=settings] [name=Back]').attr('onclick', "button('Back', 'main')")
@@ -877,15 +871,13 @@ function button(id, direction) {
 
     }
 }
-//---------------------------------------------------------------------------------------------------------------- dom 동적 생성
-
 function createDOM(type, obj, id) {
     var html = ''
     switch (type) {
         case 'preview':
             if (init.q.preview == 1) {
-                $('.previewArea').html('<div><nav name="main"><table name="ACT_2line"><tr><td rowspan="2" name="time">00:00</td><td name="target"></td></tr><tr><td name="rps"></td></tr></table><table name="ACT_1line" style="display:none;"><tr><td name="time">00:00</td><td name="target"></td><td name="rps"></td></tr></table><div class="right btn_wrap" style="top:0"><div name="Capture" class="btn flex" style="display: none"><i class="material-icons">camera</i></div><div name="History" class="btn flex" style="display: none" ><i class="material-icons">history</i></div><div name="RequestEnd" class="btn flex" style="display: none" ><i class="material-icons">timer_off</i></div><div name="More" class="btn flex"><input type="checkbox" /><i class="material-icons">more_vert</i></div></div></nav><div name="main_P"></div> <table id="preview24"><tr><td style="color:rgba(189,189,189,.5); font-size:1.2rem">' + l.advanced.tab_table.inner.view24.tt[lang] + '</td><td><div class="switch"><div class="toggle"></div></div><input type="checkbox"/></td></tr></table></div>')
-                update(previewDPS, previewHPS)
+                $('.previewArea').html('<div><nav name="main"><table name="ACT_2line"><tr><td rowspan="2" name="time">00:00</td><td name="target"></td></tr><tr><td name="rps"></td></tr></table><table name="ACT_1line" style="display:none;"><tr><td name="time">00:00</td><td name="target"></td><td name="rps"></td></tr></table><div class="right btn_wrap" style="top:0"><div name="Capture" class="btn flex" style="display: none"><i class="material-icons">camera</i></div><div name="History" class="btn flex" style="display: none" ><i class="material-icons">history</i></div><div name="RequestEnd" class="btn flex" style="display: none" ><i class="material-icons">timer_off</i></div><div name="More" class="btn flex"><input type="checkbox" /><i class="material-icons">more_vert</i></div></div></nav><div name="main_P"></div> <table id="preview24"><tr><td style="color:rgba(189,189,189,.5); font-size:1.2rem">' + l.advanced.tab_table.inner.view24_Number.tt[lang] + '</td><td><div class="switch"><div class="toggle"></div></div><input type="checkbox"/></td></tr></table></div>')
+                update(previewDPS, previewHPS) 
             }
             break
         case 'dr_nav':
@@ -952,7 +944,6 @@ function createDOM(type, obj, id) {
     liReload()
     ui()
 }
-//---------------------------------------------------------------------------------------------------------------- dom 요소 모음 
 function createElement(type, obj, id, flag) {
     var on = '', html = ''
     switch (type) {
@@ -960,24 +951,26 @@ function createElement(type, obj, id, flag) {
             if (init.q[id] != undefined && init.q[id] == true) on = 'hover'
             else on = ''
             return '<li id=' + id + '>' + obj.tt[lang] + '<input type="checkbox"/><div class="switch ' + on + '"><div class="toggle"></div></div></li>'
-        case 'dr_radio':         
+        case 'dr_radio':           
             for (var i in obj.m) {
                 if (i == init.q[id]) on = 'hover'
                 else on = ''
                 html += '<li>' + obj.m[i][lang] + '<input type="radio" name="' + id + '" value="' + i + '"/><div class="switch ' + on + '"><div class="toggle"></div></div></li>'
             } return html
-        case 'dr_link':             
+        case 'dr_link':            
             return '<li id=' + id + '>' + obj.tt[lang] + '</li>'
-        case 'tab_btn':          
+        case 'tab_btn':            
             return '<div name="' + id + '" p="' + obj.p + '" class="tab_box" style="width:' + obj.w + '%"><div class="tab_title">' + obj.tt[lang] + '</div><div class="tab_underBar"></div></div>'
-        case 'li_2line':            
+        case 'li_2line':           
             return '<li id="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + obj.m[lang] + '</td></tr></table></li>'
-        case 'li_2line_empty':      
+        case 'li_2line_empty':     
             return '<li id="' + id + '" p="' + obj.p + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac"></td></tr></table></li>'
-        case 'li_link':             
+        case 'li_link':           
             return '<li id="' + id + '"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td class="gIcon"><i class="material-icons">arrow_forward</i></td></tr></table></li>'
-        case 'li_radio':           
+        case 'li_radio':            
             return '<li id="' + id + '" class="radio" p="' + obj.p + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + obj.m[init.q[id]][lang] + '</td></tr></table></li>'
+        case 'li_radio_change':          
+            return '<li id="' + id + '" class="radio" p="' + obj.p + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + obj.msg[lang].replace('★', obj.m[init.q[id]][lang]) + '</td></tr></table></li>'
         case 'li_checkbox':         
             if (init.q[id] != undefined && init.q[id] == true) on = 'hover'
             else on = ''
@@ -986,32 +979,32 @@ function createElement(type, obj, id, flag) {
             if (init.ColData[id][flag] != undefined && init.ColData[id][flag] == true) on = 'hover'
             else on = ''
             return '<li id="' + flag + '-' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + obj.tt + '</td><td rowspan="2"  style="padding:0 1.4rem"><div class="switch ' + on + '"><div class="toggle"></div></div><input type="checkbox"/></td></tr><tr><td class="gVal ex">' + obj.m[lang] + '</td></tr></table></li>'
-        case 'li_2line_checkbox_normal':       
+        case 'li_2line_checkbox_normal':        
             if (init.q[id] != undefined && init.q[id] == true) on = 'hover'
             else on = ''
             return '<li id="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td rowspan="2"  style="padding:0 1.4rem"><div class="switch ' + on + '"><div class="toggle"></div></div></td></tr><tr><td class="gVal ac">' + obj.m[lang] + '</td></tr></table><input type="checkbox"/></li>'
-        case 'li_2btn':                 
+        case 'li_2btn':                
             return '<li style="cursor:default" id="' + id + '" flag="' + flag + '"class="listBox"><table><tr><td class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + obj.tt + '</td><td class="UBtn"><i class="material-icons">arrow_upward</i></td><td style="padding:0 1.4rem"></td><td class="DBtn"><i class="material-icons">arrow_downward</i></td></tr></table></li>'
-        case 'li_box':                
+        case 'li_box':                 
             return '<li class="li_box"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ex" style="padding-right:1.4rem; text-align:justify">' + obj.m[lang] + '</td></tr></table></li>'
-        case 'li_text':             
+        case 'li_text':                
             return '<li class="li_text" style="border:0"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td style="width:100%; padding-right:1.4rem"><div class="inputBox"><input class="inputEff" type="text" placeholder="' + obj.m[lang] + '" id="' + id + '"><span class="focus-border"></span></div></td></tr></table></li>'
-        case 'li_full_btn':            
+        case 'li_full_btn':             
             return '<li class="gTitle sendBtn" style="text-align:center; border-top:solid .1rem rgba(255,255,255,.07)">' + obj.tt[lang] + '</li>'
         case 'li_remove_list':         
             return '<li class="li_box" name="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + id + '</td><td rowspan="2" class="gIcon removeBtn"><i class="material-icons">remove_circle_outline</i></td></tr><tr><td class="gVal ac">= ' + flag + '</td></tr></table></li>'
-        case 'li_pn':             
+        case 'li_pn':                  
             if (id == 'share' || id == 'apply') var _ = obj.m[lang]
             else var _ = init.q[id]
             return '<li class="li_box" name="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + _ + '</td></tr></table></li>'
-        case 'li_text_inbtn':          
+        case 'li_text_inbtn':           
             return '<li class="li_text" style="border:0"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td style="width:100%;"><div class="inputBox"><input class="inputEff" type="text" placeholder="' + obj.m[lang] + '" id="' + id + '"><span class="focus-border"></span></div></td><td rowspan="2" class="gIcon ft sendBtn"><i class="material-icons">send</i></td></tr></table></li>'
-        case 'li_color':                
+        case 'li_color':              
             var input = $('<input id = "' + id + '" value="' + init.Color[id] + '" style="text-align:center; ime-mode:disabled" maxlength="6" onKeyUp="this.value=this.value.toUpperCase();">')
             input.addClass("shadow inputEff jscolor {onFineChange:'jsColorUpdate(this)', width:240, height:160, position:'bottom', borderColor:'#212121', insetColor:'#161616', backgroundColor:'#212121'}")
             var li = '<li id="' + id + '" class="li_box"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td style="padding:0 1.4rem">' + input.clone().wrapAll("<div/>").parent().html() + '</td></tr></table></li>'
             return li
-        case 'li_slider':              
+        case 'li_slider':               
             var unit = '%'
             if (id.indexOf('size') > -1) {
                 if (id == 'sizeDPSTable' || id == 'sizeHPSTable')
@@ -1059,7 +1052,7 @@ function ui() {
         bg = 'repeating-linear-gradient(135deg, ' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ' 0, ' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ' 5%, ' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' 0, ' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' 50%) 0'
     else
         bg = oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100))
-    
+
     $('nav[name=main], nav[name=history]').css({
         background: bg,
         color: oHexColor(init.Color.accent, parseFloat(init.Range.accent / 100)),
@@ -1082,7 +1075,7 @@ function ui() {
             right: 0,
             top: 0
         })
-    }
+    } 
     if (init.Range.sizeRadius != 0) {
         $('nav[name=main], nav[name=history]').css({
             'border-top-left-radius': parseFloat((init.q.rd_navTL * init.Range.sizeRadius) / 10) + 'rem ',
@@ -1121,7 +1114,6 @@ function ui() {
             })
         }
     }
-
     if (init.Range.sizeRadiusGraph != 0) {
         $('.bar, .mini div').css({
             'border-top-left-radius': parseFloat((init.q.rd_graphTL * init.Range.sizeRadiusGraph) / 10) + 'rem ',
@@ -1200,12 +1192,10 @@ function ui() {
             'padding-left': '1rem',
             'font-size': parseFloat(init.Range.sizeTarget / 10) + 'rem'
         })
-
     if (init.q.boldYOU) var boldYOU = 'bold'
     else var boldYOU = ''
     if (init.q.boldOther) var boldOther = 'bold'
     else var boldOther = ''
-
     $(':not(#YOU) .tableBody td, :not(#YOU).rCell .rName, :not(#YOU).rCell .rData').css({
         color: '#' + init.Color.tableOther,
         opacity: parseFloat(init.Range.tableOther / 100),
@@ -1268,7 +1258,6 @@ function ui() {
     $('.tableBody td .ex').css({
         'font-size': parseFloat((init.Range.sizeBodyText - 1) / 10) + 'rem'
     })
-
     $('.tableHeader').css({
         'margin': parseFloat(init.Range.sizeHdGap / 10) + 'rem 0'
     })
@@ -1320,8 +1309,7 @@ function ui() {
     $('#HPSHeader, #HPSHeader_P').css({
         'margin-top': parseFloat(init.Range.sizeHPSGap / 10) + 'rem',
     })
-
-    if (!init.q.preview24 && view == 'settings') {
+    if (!init.q.preview24 && init.q.view24_Number != 1 && view == 'settings') {
         var tmp = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
         if ($('#DPSBody_P').length != 0) {
             $('#DPSBody_P').css({
