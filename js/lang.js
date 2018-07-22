@@ -814,18 +814,18 @@ l = {
             },
             m: {
                 1: {
-                    KR: "기술명-데이터",
-                    JP: "技名-データ",
-                    EN: "Action's Name-Data",
-                    DE: "Fähigkeitsnamen-Daten",
-                    CN: "技能名-数据",
+                    KR: "기술명 + 데이터",
+                    JP: "技名 + データ",
+                    EN: "Action's Name + Data",
+                    DE: "Fähigkeitsnamen + Daten",
+                    CN: "技能名 + 数据",
                 },
                 2: {
-                    KR: "데이터-기술명",
-                    JP: "データ-技名",
-                    EN: "Data-Action's Name",
-                    DE: "Daten-Fähigkeitsnamen",
-                    CN: "数据-技能名",
+                    KR: "데이터 + 기술명",
+                    JP: "データ + 技名",
+                    EN: "Data + Action's Name",
+                    DE: "Daten + Fähigkeitsnamen",
+                    CN: "数据 + 技能名",
                 },
                 3: {
                     KR: "기술명",
