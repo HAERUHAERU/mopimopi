@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="b"></div><div class="m">[Reddit / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EB%B2%84%ED%94%8C%EB%A0%88%EC%96%B4" target="_blank">버플레어</a>] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div><div name="row"><div class="u"></div><div class="m">오버레이 ❯ 배경 이미지 (모바일에서도 배경 설정 가능)</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 글꼴, 색, 불투명도, 셀, 모서리, 크기, 고급 설정</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 구성 ❯ 직업 필터</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ 데이터 유형, 소수점/자릿수 기호, 단위, MaxHit, MaxHeal 표시 유형</div></div><div name="row"><div class="u"></div><div class="m">언어 ❯ 中國語 by China [紫水栈桥] Rapis</div></div>',
-            EN: '<div name="row"><div class="b"></div><div class="m">[Reddit / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EB%B2%84%ED%94%8C%EB%A0%88%EC%96%B4" target="_blank">버플레어</a>] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] Data ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div><div name="row"><div class="u"></div><div class="m">Overlay ❯ Background Image (NOW! You can also set a background on your mobile.)</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Font, Color, Opacity, Cell, Corner, Size, Advanced</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Formatting ❯ Job Filter</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type, Decimal/Digit Grouping Symbol, Unit, Display Type of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">Language ❯ 中國語 by China [紫水栈桥] Rapis</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Shadyblink" target="_blank">Shadyblink</a>] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EB%B2%84%ED%94%8C%EB%A0%88%EC%96%B4" target="_blank">버플레어</a>] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Shadyblink" target="_blank">Shadyblink</a>] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EB%B2%84%ED%94%8C%EB%A0%88%EC%96%B4" target="_blank">버플레어</a>] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%97%94%EC%A5%AC" target="_blank">엔쥬</a>] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=skotlex" target="_blank">skotlex</a>] Data ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / <a href="http://www.inven.co.kr/member/inventory/view_inventory.php?nick=%EC%BA%90%ED%94%84%EB%A6%AC%EC%BB%A8" target="_blank">캐프리컨</a>] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / <a href="https://www.reddit.com/user/Jinzhuu" target="_blank">Jinzhuu</a>] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -2201,7 +2201,7 @@ l = {
                     i: "border_color",
                     e: "li_color",
                     ul: 1
-                },                
+                },
                 tableLineVer: {
                     tt: {
                         KR: "구분선<font class='ex'>　❙ 세로</font>",
@@ -3166,11 +3166,11 @@ l = {
                 },
                 view24BgYOU: {
                     tt: {
-                        KR: "바디<font class='ex'>　❙ 레이드 모드 / 내 캐릭터 </font>",
-                        JP: "ボディ<font class='ex'>　❙ Raidモード / 自分のキャラクター</font>",
-                        EN: "Body<font class='ex'>　❙ Raid Mode / My Character</font>",
-                        DE: "Körper<font class='ex'>　❙ Raid Modus / Eigenen Charakter</font>",
-                        CN: "主体<font class='ex'>　❙ 副本模式 / 自己角色 </font>",
+                        KR: "바디<font class='ex'>　❙ 레이드 모드, 내 캐릭터 </font>",
+                        JP: "ボディ<font class='ex'>　❙ Raidモード、自分のキャラクター</font>",
+                        EN: "Body<font class='ex'>　❙ Raid Mode, My Character</font>",
+                        DE: "Körper<font class='ex'>　❙ Raid Modus, Eigenen Charakter</font>",
+                        CN: "主体<font class='ex'>　❙ 副本模式，自己角色 </font>",
                     },
                     min: 0,
                     max: 100,
@@ -3180,11 +3180,11 @@ l = {
                 },
                 view24BgOther: {
                     tt: {
-                        KR: "바디<font class='ex'>　❙ 레이드 모드 / 타 캐릭터</font>",
-                        JP: "ボディ<font class='ex'>　❙ Raidモード / 他のキャラクター</font>",
-                        EN: "Body<font class='ex'>　❙ Raid Mode / Other Character</font>",
-                        DE: "Körper<font class='ex'>　❙ Raid Modus / Andere Charakter</font>",
-                        CN: "主体<font class='ex'>　❙ 副本模式 / 其他角色 </font>",
+                        KR: "바디<font class='ex'>　❙ 레이드 모드, 타 캐릭터</font>",
+                        JP: "ボディ<font class='ex'>　❙ Raidモード、他のキャラクター</font>",
+                        EN: "Body<font class='ex'>　❙ Raid Mode, Other Character</font>",
+                        DE: "Körper<font class='ex'>　❙ Raid Modus, Andere Charakter</font>",
+                        CN: "主体<font class='ex'>　❙ 副本模式，其他角色 </font>",
                     },
                     min: 0,
                     max: 100,
@@ -3205,7 +3205,7 @@ l = {
                     i: "opacity",
                     e: "li_slider",
                     ul: 1
-                },                
+                },
                 tableLineVer: {
                     tt: {
                         KR: "구분선<font class='ex'>　❙ 세로</font>",
@@ -3213,7 +3213,7 @@ l = {
                         EN: "Division Lines<font class='ex'>　❙ Vertical</font>",
                         DE: "Trennlinien<font class='ex'>　❙ Vertical</font>",
                         CN: "分界线<font class='ex'>　❙ 竖</font>",
-                     },
+                    },
                     min: 0,
                     max: 100,
                     i: "opacity",
@@ -3515,7 +3515,7 @@ l = {
                     i: "border_bottom",
                     e: "li_slider",
                     ul: 1
-                },                
+                },
                 sizeLineVer: {
                     tt: {
                         KR: "구분선<font class='ex'>　❙ 세로</font>",
@@ -4993,7 +4993,7 @@ l = {
                     i: "format_bold",
                     ul: 0
                 },
-                view24: {
+                view24_Number: {
                     tt: {
                         KR: "레이드 모드",
                         JP: "Raidモード",
@@ -5001,15 +5001,39 @@ l = {
                         DE: "Raid Modus",
                         CN: "副本模式",
                     },
-                    m: {
-                        KR: "파티원이 10명 이상일 때 테이블을 간단히 표시",
-                        JP: "10人以上のパーティーでテーブルを簡略化する",
-                        EN: "Display table simply when there are 10 or more combatants.",
-                        DE: "Automatische Anpassung der Graphen, falls die Anzahl der Kämpfer > 10 beträgt.",
-                        CN: "当队伍有10人或更多时简化表格",
+                    msg: {
+                        KR: "파티원이 ★명 이상일 때 테이블을 간단히 표시",
+                        JP: "★人以上のパーティーでテーブルを簡略化する",
+                        EN: "Display table simply when there are ★ or more combatants.",
+                        DE: "Automatische Anpassung der Graphen, falls die Anzahl der Kämpfer > ★ beträgt.",
+                        CN: "当队伍有★人或更多时简化表格",
                     },
-                    e: "li_2line_checkbox_normal",
+                    m: {
+                        1: {
+                            KR: "1",
+                            JP: "1",
+                            EN: "1",
+                            DE: "1",
+                            CN: "1",
+                        },
+                        5: {
+                            KR: "5",
+                            JP: "5",
+                            EN: "5",
+                            DE: "5",
+                            CN: "5",
+                        },
+                        10: {
+                            KR: "10",
+                            JP: "10",
+                            EN: "10",
+                            DE: "10",
+                            CN: "10",
+                        }
+                    },
+                    e: "li_radio_change",
                     i: "grid_on",
+                    p: "advanced_table",
                     ul: 1
                 }
             }
@@ -5218,42 +5242,42 @@ l = {
                     KR: "75%",
                     JP: "75%",
                     EN: "75%",
-                    DE: "75%",                    
+                    DE: "75%",
                     CN: "75%",
                 },
                 '100%': {
                     KR: "100%",
                     JP: "100%",
                     EN: "100%",
-                    DE: "100%",                    
+                    DE: "100%",
                     CN: "100%",
                 },
                 '125%': {
                     KR: "125%",
                     JP: "125%",
                     EN: "125%",
-                    DE: "125%",                    
+                    DE: "125%",
                     CN: "125%",
                 },
                 '150%': {
                     KR: "150%",
                     JP: "150%",
                     EN: "150%",
-                    DE: "150%",                    
+                    DE: "150%",
                     CN: "150%",
                 },
                 '175%': {
                     KR: "175%",
                     JP: "175%",
                     EN: "175%",
-                    DE: "175%",                    
+                    DE: "175%",
                     CN: "175%",
                 },
                 '200%': {
                     KR: "200%",
                     JP: "200%",
                     EN: "200%",
-                    DE: "200%",                    
+                    DE: "200%",
                     CN: "200%",
                 }
             },
