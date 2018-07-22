@@ -9,7 +9,6 @@ var barSize = new Array(),
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
-    console.log (lastDPS)
     if (view != 'settings') {
         if (!firstCombat) {
             $('[name=notice], [name=history]').fadeOut(0)
