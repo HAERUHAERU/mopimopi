@@ -96,7 +96,7 @@ function update(lastDPS, lastHPS) {
             },
         })
 
-        if ((lastDPS.partys > 9 && init.q.view24) || view == 'preview24') {
+        if ((lastDPS.partys >= init.q.view24_Number && init.q.view24) || view == 'preview24') {
             if (init.q.viewDPS == 1)
                 onRaidCombatDataUpdate('DPS', lastDPS)
             if (init.q.viewHPS == 1)
