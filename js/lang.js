@@ -10,7 +10,7 @@ l = {
         },
         update: {
             KR: '<div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="u"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
-            EN: '<div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="u"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ MaxHit, MaxHeal Symbol</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
+            EN: '<div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="u"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -511,11 +511,11 @@ l = {
         },
         dpsType: {
             tt: {
-                KR: "DPS/HPS 데이터 유형",
-                JP: "DPS/HPSデータタイプ",
-                EN: "Data Type of DPS/HPS",
-                DE: "Datentyp der DPS/HPS",
-                CN: "DPS/HPS 数据类型",
+                KR: "DPS, HPS 데이터 유형",
+                JP: "DPS、HPSデータタイプ",
+                EN: "Data Type of DPS, HPS",
+                DE: "Datentyp der DPS, HPS",
+                CN: "DPS，HPS 数据类型",
             },
             m: {
                 0: {
@@ -569,11 +569,11 @@ l = {
         },
         dmgType: {
             tt: {
-                KR: "Damage/Healed 데이터 유형",
-                JP: "Damage/Healedデータタイプ",
-                EN: "Data Type of Damage/Healed ",
-                DE: "Datentyp der Damage/Healed ",
-                CN: "Damage/Healed 数据类型",
+                KR: "Damage, Healed 데이터 유형",
+                JP: "Damage、Healedデータタイプ",
+                EN: "Data Type of Damage, Healed ",
+                DE: "Datentyp der Damage, Healed ",
+                CN: "Damage，Healed 数据类型",
             },
             m: {
                 0: {
@@ -857,11 +857,11 @@ l = {
         },
         mhh_unit: {
             tt: {
-                KR: "구분 기호",
-                JP: "区切り記号",
-                EN: "Separator",
-                DE: "Separator",
-                CN: "分隔符",
+                KR: "MaxHit, MaxHeal 구분 기호",
+                JP: "MaxHit、MaxHeal区切り記号",
+                EN: "Separator of MaxHit, MaxHeal",
+                DE: "Separator of MaxHit, MaxHeal",
+                CN: "MaxHit，MaxHeal 分隔符",
             },
             m: {
                 '-': {
@@ -894,7 +894,7 @@ l = {
                 }
 
             },
-            i: "content_cut",
+            i: "space_bar",
             e: "li_radio",
             p: "Data",
             ul: 0
