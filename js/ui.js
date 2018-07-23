@@ -1045,7 +1045,7 @@ function ui() {
             top: 0
         })
     } 
-    $('div[name=More]').css({
+    $('nav[name=main] div[name=More]').css({
         'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
         'border-bottom-right-radius': parseFloat((init.q.rd_navBR * init.Range.sizeRadius) / 10) + 'rem '
     }) 
