@@ -1045,52 +1045,50 @@ function ui() {
             top: 0
         })
     } 
-    if (init.Range.sizeRadius != 0) {
-        $('nav[name=main], nav[name=history]').css({
-            'border-top-left-radius': parseFloat((init.q.rd_navTL * init.Range.sizeRadius) / 10) + 'rem ',
-            'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
-            'border-bottom-left-radius': parseFloat((init.q.rd_navBL * init.Range.sizeRadius) / 10) + 'rem ',
-            'border-bottom-right-radius': parseFloat((init.q.rd_navBR * init.Range.sizeRadius) / 10) + 'rem '
+    $('div[name=More]').css({
+        'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
+        'border-bottom-right-radius': parseFloat((init.q.rd_navBR * init.Range.sizeRadius) / 10) + 'rem '
+    }) 
+    $('nav[name=main], nav[name=history]').css({
+        'border-top-left-radius': parseFloat((init.q.rd_navTL * init.Range.sizeRadius) / 10) + 'rem ',
+        'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
+        'border-bottom-left-radius': parseFloat((init.q.rd_navBL * init.Range.sizeRadius) / 10) + 'rem ',
+        'border-bottom-right-radius': parseFloat((init.q.rd_navBR * init.Range.sizeRadius) / 10) + 'rem '
+    })
+    if (init.q.applyScope == 1) {
+        $('.tableHeader td:first-child').css({
+            'border-top-left-radius': parseFloat((init.q.rd_tableTL * init.Range.sizeRadiusTable) / 10) + 'rem ',
+            'border-bottom-left-radius': parseFloat((init.q.rd_tableBL * init.Range.sizeRadiusTable) / 10) + 'rem '
+        })
+        $('.tableHeader td:last-child').css({
+            'border-top-right-radius': parseFloat((init.q.rd_tableTR * init.Range.sizeRadiusTable) / 10) + 'rem ',
+            'border-bottom-right-radius': parseFloat((init.q.rd_tableBR * init.Range.sizeRadiusTable) / 10) + 'rem '
+        })
+    } else if (init.q.applyScope == 2) {
+        $('.barBg').css({
+            'border-top-left-radius': parseFloat((init.q.rd_tableTL * init.Range.sizeRadiusTable) / 10) + 'rem ',
+            'border-bottom-left-radius': parseFloat((init.q.rd_tableBL * init.Range.sizeRadiusTable) / 10) + 'rem '
+        })
+        $('.barBg').css({
+            'border-top-right-radius': parseFloat((init.q.rd_tableTR * init.Range.sizeRadiusTable) / 10) + 'rem ',
+            'border-bottom-right-radius': parseFloat((init.q.rd_tableBR * init.Range.sizeRadiusTable) / 10) + 'rem '
+        })
+    } else {
+        $('.tableHeader td:first-child, .barBg').css({
+            'border-top-left-radius': parseFloat((init.q.rd_tableTL * init.Range.sizeRadiusTable) / 10) + 'rem ',
+            'border-bottom-left-radius': parseFloat((init.q.rd_tableBL * init.Range.sizeRadiusTable) / 10) + 'rem '
+        })
+        $('.tableHeader td:last-child, .barBg').css({
+            'border-top-right-radius': parseFloat((init.q.rd_tableTR * init.Range.sizeRadiusTable) / 10) + 'rem ',
+            'border-bottom-right-radius': parseFloat((init.q.rd_tableBR * init.Range.sizeRadiusTable) / 10) + 'rem '
         })
     }
-    if (init.Range.sizeRadiusTable != 0) {
-        if (init.q.applyScope == 1) {
-            $('.tableHeader td:first-child').css({
-                'border-top-left-radius': parseFloat((init.q.rd_tableTL * init.Range.sizeRadiusTable) / 10) + 'rem ',
-                'border-bottom-left-radius': parseFloat((init.q.rd_tableBL * init.Range.sizeRadiusTable) / 10) + 'rem '
-            })
-            $('.tableHeader td:last-child').css({
-                'border-top-right-radius': parseFloat((init.q.rd_tableTR * init.Range.sizeRadiusTable) / 10) + 'rem ',
-                'border-bottom-right-radius': parseFloat((init.q.rd_tableBR * init.Range.sizeRadiusTable) / 10) + 'rem '
-            })
-        } else if (init.q.applyScope == 2) {
-            $('.barBg').css({
-                'border-top-left-radius': parseFloat((init.q.rd_tableTL * init.Range.sizeRadiusTable) / 10) + 'rem ',
-                'border-bottom-left-radius': parseFloat((init.q.rd_tableBL * init.Range.sizeRadiusTable) / 10) + 'rem '
-            })
-            $('.barBg').css({
-                'border-top-right-radius': parseFloat((init.q.rd_tableTR * init.Range.sizeRadiusTable) / 10) + 'rem ',
-                'border-bottom-right-radius': parseFloat((init.q.rd_tableBR * init.Range.sizeRadiusTable) / 10) + 'rem '
-            })
-        } else {
-            $('.tableHeader td:first-child, .barBg').css({
-                'border-top-left-radius': parseFloat((init.q.rd_tableTL * init.Range.sizeRadiusTable) / 10) + 'rem ',
-                'border-bottom-left-radius': parseFloat((init.q.rd_tableBL * init.Range.sizeRadiusTable) / 10) + 'rem '
-            })
-            $('.tableHeader td:last-child, .barBg').css({
-                'border-top-right-radius': parseFloat((init.q.rd_tableTR * init.Range.sizeRadiusTable) / 10) + 'rem ',
-                'border-bottom-right-radius': parseFloat((init.q.rd_tableBR * init.Range.sizeRadiusTable) / 10) + 'rem '
-            })
-        }
-    }
-    if (init.Range.sizeRadiusGraph != 0) {
-        $('.bar, .mini div').css({
-            'border-top-left-radius': parseFloat((init.q.rd_graphTL * init.Range.sizeRadiusGraph) / 10) + 'rem ',
-            'border-top-right-radius': parseFloat((init.q.rd_graphTR * init.Range.sizeRadiusGraph) / 10) + 'rem ',
-            'border-bottom-left-radius': parseFloat((init.q.rd_graphBL * init.Range.sizeRadiusGraph) / 10) + 'rem ',
-            'border-bottom-right-radius': parseFloat((init.q.rd_graphBR * init.Range.sizeRadiusGraph) / 10) + 'rem '
-        })
-    }
+    $('.bar, .mini div').css({
+        'border-top-left-radius': parseFloat((init.q.rd_graphTL * init.Range.sizeRadiusGraph) / 10) + 'rem ',
+        'border-top-right-radius': parseFloat((init.q.rd_graphTR * init.Range.sizeRadiusGraph) / 10) + 'rem ',
+        'border-bottom-left-radius': parseFloat((init.q.rd_graphBL * init.Range.sizeRadiusGraph) / 10) + 'rem ',
+        'border-bottom-right-radius': parseFloat((init.q.rd_graphBR * init.Range.sizeRadiusGraph) / 10) + 'rem '
+    })
     $('nav[name=main] i, nav[name=history] i').css({
         color: oHexColor(init.Color.accent, parseFloat(init.Range.navIcon / 100)),
         'font-size': parseFloat(init.Range.sizeIcon / 10) + 'rem'
