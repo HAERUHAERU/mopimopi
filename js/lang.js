@@ -4225,11 +4225,11 @@ l = {
                 },
                 alignHeaderCell6: {
                     tt: {
-                        KR: "RD, RH 등<font class='ex'>　❙ 히스토리, 헤더</font>",
-                        JP: "RD, RHなど<font class='ex'>　❙ ヒストリー、ヘッダー</font>",
-                        EN: "RD, RH, etc.<font class='ex'>　❙ History, Header</font>",
-                        DE: "RD, RH, usw.<font class='ex'>　❙ Historie, Kopf</font>",
-                        CN: "RD, RH等<font class='ex'>　❙ 历史，头部</font>",
+                        KR: "RD, RH 등<font class='ex'>　❙ 헤더, 히스토리</font>",
+                        JP: "RD, RHなど<font class='ex'>　❙ ヘッダー、ヒストリー</font>",
+                        EN: "RD, RH, etc.<font class='ex'>　❙ Header, History</font>",
+                        DE: "RD, RH, usw.<font class='ex'>　❙ Kopf, Historie</font>",
+                        CN: "RD, RH等<font class='ex'>　❙ 头部，历史</font>",
                     },
                     m: {
                         left: {
@@ -4261,11 +4261,11 @@ l = {
                 },
                 alignCell6: {
                     tt: {
-                        KR: "RD, RH 등<font class='ex'>　❙ 히스토리, 바디</font>",
-                        JP: "RD, RHなど<font class='ex'>　❙ ヒストリー、ボディ</font>",
-                        EN: "RD, RH, etc.<font class='ex'>　❙ History, Body</font>",
-                        DE: "RD, RH, usw.<font class='ex'>　❙ Historie, Körper</font>",
-                        CN: "RD, RH等<font class='ex'>　❙ 历史，主体</font>",
+                        KR: "RD, RH 등<font class='ex'>　❙ 바디, 히스토리</font>",
+                        JP: "RD, RHなど<font class='ex'>　❙ ボディ、ヒストリー</font>",
+                        EN: "RD, RH, etc.<font class='ex'>　❙ Body, History</font>",
+                        DE: "RD, RH, usw.<font class='ex'>　❙ Körper, Historie</font>",
+                        CN: "RD, RH等<font class='ex'>　❙ 主体，历史</font>",
                     },
                     m: {
                         left: {
