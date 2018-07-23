@@ -417,7 +417,8 @@ function liReload() {
     jscolor.installByClassName("jscolor");
     $('li').unbind("click").bind("click", function () {
         var id = $(this).attr('id')
-        if ($(this).find('input').prop('type') == 'checkbox') {
+        if($(event.target)[0].tagName == 'A'){}
+        else if ($(this).find('input').prop('type') == 'checkbox') {
             if (!$(this).find('.switch').hasClass('hover')) {
                 $(this).find('.switch').addClass('hover');
                 $(this).find('input').prop('checked', true);
