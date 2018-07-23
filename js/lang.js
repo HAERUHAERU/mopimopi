@@ -859,8 +859,8 @@ l = {
             tt: {
                 KR: "구분 기호",
                 JP: "区切り記号",
-                EN: "Symbol",
-                DE: "Symbol",
+                EN: "Separator",
+                DE: "Separator",
                 CN: "分隔符",
             },
             m: {
