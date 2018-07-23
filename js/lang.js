@@ -799,9 +799,16 @@ l = {
                 EN: "Convert Name to YOU",
                 DE: "Convert Name to YOU",
                 CN: "把自己的名字标记为YOU",
+            },            
+            m: {
+                KR: "<a href='http://ffxivhaeru.blog.me/221325149295' target='_blank'>설정 전 주의사항</a>",
+                JP: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>設定する前の注意事項</a>",
+                EN: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>Read Me First</a>",
+                DE: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>Erst alles genau durchlesen, dann Einstellungen vornehmen!</a>",
+                CN: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>设置前的注意事项</a>",
             },
             i: "person",
-            e: "li_checkbox",
+            e: "li_2line_checkbox_normal",
             ul: 0
         },
         mhh: {
