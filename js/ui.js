@@ -328,45 +328,30 @@ function getOrder(selector, container) {
 }
 function createKeys() {
     var ui = copyObject(init)
-    var del = ['Lang', 'fTime', 'fTarget', 'fRPS', 'fHd', 'fBody', 'resolution', 'overlayBg', 'overlayBgImg', 'overlayBgSize', 'overlayBgRepeat', 'backupDate', 'autoHide', 'tooltips', 'toast']
-
+    var del = ['Lang', 'fTime', 'fTarget', 'fRPS', 'fHd', 'fBody', 'resolution', 'overlayBg', 'overlayBgImg', 'overlayBgSize', 'overlayBgRepeat', 'backupDate', 'autoHide', 'tooltips', 'toast', 'keyboard', 'preview', 'preview24', 'swap', 'hideName', 'pets', 'view24', 'view24_Number']
     for (var i in ui) {
-        if (i != 'Color' && i != 'Range' && i != 'q' && i != 'Order' && i != 'ColData')
+        if (i != 'Color' && i != 'Range' && i != 'q')
             delete ui[i]
     }
     for (var i in del)
         delete ui.q[del[i]]
     delete ui.Range.autoHideTime
-    for (var i in ui.ColData) {
-        delete Object.assign(ui.ColData[i], { ['_']: ui.ColData[i]['DPS'] })['DPS'];
-        delete Object.assign(ui.ColData[i], { ['__']: ui.ColData[i]['HPS'] })['HPS'];
-        delete ui.ColData[i].tt
-    }
-    for (var j in Object.keys(init.ColData)) {
-        var key = Object.keys(init.ColData)[j]
-        for (var i in ui.Order.DPS) {
-            if (ui.Order.DPS[i] == key)
-                ui.Order.DPS[i] = j
-        }
-        for (var i in ui.Order.HPS) {
-            if (ui.Order.HPS[i] == key)
-                ui.Order.HPS[i] = j
-        }
-    }
-    var tmp = new Object(), a = 0, b = 0
+    var tmp = new Object()
     for (var i in ui) {
-        tmp[a] = {}
+        tmp[i] = {}
         for (var j in ui[i]) {
-            tmp[a][b] = ui[i][j]
-            b++
+            tmp[i][j] = ui[i][j]
         }
-        a++
     }
     return tmp
 }
 function applyKeys(data) {
     try {
         var obj = JSON.parse(data)
+        if (obj[0] != null) {
+            callToast('notData', 500, 3000)
+            return
+        }
     } catch (e) {
         if (e instanceof SyntaxError) {
             if (data == '')
@@ -376,30 +361,11 @@ function applyKeys(data) {
             return
         }
     }
-    var a = 0, b = 0, key = ''   
-    var list = ["q", "Color", "Range"]
-    for (var i in list) {
-        key = Object.keys(init[list[i]])
-        a = 0;
+    for (var i in obj) {
         for (var j in obj[i]) {
-            init[list[i]][key[a]] = obj[i][j]
-            a++
+            init[i][j] = obj[i][j]
         }
     }
-    key = Object.keys(init.ColData)
-    for (var i in obj[4]) {
-        var a = obj[4][i]
-        init.ColData[key[b]].DPS = a['_']
-        init.ColData[key[b]].HPS = a['__']
-        b++
-    }
-    for (var i in obj[3]) {
-        for (var j in obj[3][i])
-            obj[3][i][j] = key[obj[3][i][j]]
-    }
-    key = Object.keys(obj[3])
-    init.Order.DPS = copyObject(obj[3][key[0]])
-    init.Order.HPS = copyObject(obj[3][key[1]])
     delete obj
     callToast('submit', 500, 3000)
 }
