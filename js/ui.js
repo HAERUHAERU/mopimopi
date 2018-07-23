@@ -362,8 +362,10 @@ function applyKeys(data) {
         }
     }
     for (var i in obj) {
-        for (var j in obj[i]) {
-            init[i][j] = obj[i][j]
+        if (i == 'q' || i == 'Color' || i == 'Range') {
+            for (var j in obj[i]) {
+                init[i][j] = obj[i][j]
+            }
         }
     }
     delete obj
