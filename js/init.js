@@ -64,7 +64,13 @@ Mopi2 = {
         act_rh: 1,
         act_rank: 1,
         act_max: 1,
-
+        
+        time_italic:0,
+        target_italic:0,
+        rps_italic:0,
+        header_italic:0,
+        body_italic:0,
+        
         viewDPS: 1,
         viewHPS: 1,
         view24: 1,
