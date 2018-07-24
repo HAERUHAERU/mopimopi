@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ DPS/HPS 데이터 통합</div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
-            EN: '<div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrate DPS Data and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / 컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / 컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrate DPS Data and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -5305,6 +5305,42 @@ l = {
                     e: "li_checkbox",
                     i: "looks_4",
                     ul: 0
+                },
+                time_italic:{
+                    tt: {
+                        KR: "글자 기울임<font class='ex'>　❙ 시간</font>",
+                        JP: "イタリック体<font class='ex'>　❙ 時間</font>",
+                        EN: "Italic<font class='ex'>　❙ Time</font>",
+                        DE: "Italic<font class='ex'>　❙ Zeit</font>",
+                        CN: "斜体<font class='ex'>　❙ 时间</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_italic",
+                    ul: 1
+                },
+                target_italic:{
+                    tt: {
+                        KR: "글자 기울임<font class='ex'>　❙ 대상</font>",
+                        JP: "イタリック体<font class='ex'>　❙ ターゲット</font>",
+                        EN: "Italic<font class='ex'>　❙ Target</font>",
+                        DE: "Italic<font class='ex'>　❙ Ziel</font>",
+                        CN: "斜体<font class='ex'>　❙ 目标</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_italic",
+                    ul: 0
+                },
+                rps_italic:{
+                    tt: {
+                        KR: "글자 기울임<font class='ex'>　❙ RD, RH 등</font>",
+                        JP: "イタリック体<font class='ex'>　❙ RD、RHなど</font>",
+                        EN: "Italic<font class='ex'>　❙ RD, RH, etc.</font>",
+                        DE: "Italic<font class='ex'>　❙ RD, RH, usw.</font>",
+                        CN: "斜体<font class='ex'>　❙ RD，RH等</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_italic",
+                    ul: 0
                 }
             }
         },
@@ -5373,30 +5409,6 @@ l = {
                     i: "grid_on",
                     ul: 0
                 },
-                boldYOU: {
-                    tt: {
-                        KR: "글자 굵게<font class='ex'>　❙ 내 캐릭터</font>",
-                        JP: "太字<font class='ex'>　❙ 自分のキャラクター</font>",
-                        EN: "Bold lettering<font class='ex'>　❙ My Character</font>",
-                        DE: "Fette Buchstaben<font class='ex'>　❙ Eigenen Charakter</font>",
-                        CN: "粗体<font class='ex'>　❙ 自己角色</font>",
-                    },
-                    e: "li_checkbox",
-                    i: "format_bold",
-                    ul: 1
-                },
-                boldOther: {
-                    tt: {
-                        KR: "글자 굵게<font class='ex'>　❙ 타 캐릭터</font>",
-                        JP: "太字<font class='ex'>　❙ 他のキャラクター</font>",
-                        EN: "Bold lettering<font class='ex'>　❙ Other Character</font>",
-                        DE: "Fette Buchstaben<font class='ex'>　❙ Andere Charakter</font>",
-                        CN: "粗体<font class='ex'>　❙ 其他角色</font>",
-                    },
-                    e: "li_checkbox",
-                    i: "format_bold",
-                    ul: 0
-                },
                 view24_Number: {
                     tt: {
                         KR: "레이드 모드",
@@ -5439,6 +5451,54 @@ l = {
                     i: "grid_on",
                     p: "advanced_table",
                     ul: 1
+                },
+                boldYOU: {
+                    tt: {
+                        KR: "글자 굵게<font class='ex'>　❙ 내 캐릭터</font>",
+                        JP: "太字<font class='ex'>　❙ 自分のキャラクター</font>",
+                        EN: "Bold lettering<font class='ex'>　❙ My Character</font>",
+                        DE: "Fette Buchstaben<font class='ex'>　❙ Eigenen Charakter</font>",
+                        CN: "粗体<font class='ex'>　❙ 自己角色</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_bold",
+                    ul: 1
+                },
+                boldOther: {
+                    tt: {
+                        KR: "글자 굵게<font class='ex'>　❙ 타 캐릭터</font>",
+                        JP: "太字<font class='ex'>　❙ 他のキャラクター</font>",
+                        EN: "Bold lettering<font class='ex'>　❙ Other Character</font>",
+                        DE: "Fette Buchstaben<font class='ex'>　❙ Andere Charakter</font>",
+                        CN: "粗体<font class='ex'>　❙ 其他角色</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_bold",
+                    ul: 0
+                },                
+                header_italic:{
+                    tt: {
+                        KR: "글자 기울임<font class='ex'>　❙ 헤더</font>",
+                        JP: "イタリック体<font class='ex'>　❙ ヘッダー</font>",
+                        EN: "Italic<font class='ex'>　❙ Header</font>",
+                        DE: "Italic<font class='ex'>　❙ Kopf</font>",
+                        CN: "斜体<font class='ex'>　❙ 头部</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_italic",
+                    ul: 1
+                },
+                body_italic:{
+                    tt: {
+                        KR: "글자 기울임<font class='ex'>　❙ 바디</font>",
+                        JP: "イタリック体<font class='ex'>　❙ ボディ</font>",
+                        EN: "Italic<font class='ex'>　❙ Body</font>",
+                        DE: "Italic<font class='ex'>　❙ Körper</font>",
+                        CN: "斜体<font class='ex'>　❙ 主体</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "format_italic",
+                    ul: 0
                 }
             }
         },
@@ -5453,7 +5513,43 @@ l = {
             e: "tab_btn",
             w: 33.3,
             p: "advanced",
-            inner: {
+            inner: {                
+                bar_pet: {
+                    tt: {
+                        KR: "소환수<font class='ex'>　❙ 소환수 데이터 합산하기 'ON'</font>",
+                        JP: "ペット<font class='ex'>　❙ ペットのデータを合算する 'ON'</font>",
+                        EN: "Pet<font class='ex'>　❙ Combine Pets with Owner 'ON'</font>",
+                        DE: "Begleiter<font class='ex'>　❙ Charakter und Begleiter zusammenfassen 'ON'</font>",
+                        CN: "召唤物<font class='ex'>　❙ 召唤物与自身数据合并 'ON'</font>",
+                    },
+                    e: "li_checkbox",
+                    i: "insert_chart_outlined",
+                    ul: 1
+                },
+                bar_ds: {
+                    tt: {
+                        KR: "D.Shield",
+                        JP: "D.Shield",
+                        EN: "D.Shield",
+                        DE: "D.Shield",
+                        CN: "D.Shield",
+                    },
+                    e: "li_checkbox",
+                    i: "insert_chart_outlined",
+                    ul: 0
+                },
+                bar_oh: {
+                    tt: {
+                        KR: "OverHeal",
+                        JP: "OverHeal",
+                        EN: "OverHeal",
+                        DE: "OverHeal",
+                        CN: "OverHeal",
+                    },
+                    e: "li_checkbox",
+                    i: "insert_chart_outlined",
+                    ul: 0
+                },
                 ani: {
                     tt: {
                         KR: "애니메이션 효과",
@@ -5577,42 +5673,6 @@ l = {
                     e: "li_radio",
                     i: "format_align_center",
                     p: "advanced_graph",
-                    ul: 0
-                },
-                bar_pet: {
-                    tt: {
-                        KR: "소환수<font class='ex'>　❙ 소환수 데이터 합산하기 'ON'</font>",
-                        JP: "ペット<font class='ex'>　❙ ペットのデータを合算する 'ON'</font>",
-                        EN: "Pet<font class='ex'>　❙ Combine Pets with Owner 'ON'</font>",
-                        DE: "Begleiter<font class='ex'>　❙ Charakter und Begleiter zusammenfassen 'ON'</font>",
-                        CN: "召唤物<font class='ex'>　❙ 召唤物与自身数据合并 'ON'</font>",
-                    },
-                    e: "li_checkbox",
-                    i: "insert_chart_outlined",
-                    ul: 1
-                },
-                bar_ds: {
-                    tt: {
-                        KR: "D.Shield",
-                        JP: "D.Shield",
-                        EN: "D.Shield",
-                        DE: "D.Shield",
-                        CN: "D.Shield",
-                    },
-                    e: "li_checkbox",
-                    i: "insert_chart_outlined",
-                    ul: 0
-                },
-                bar_oh: {
-                    tt: {
-                        KR: "OverHeal",
-                        JP: "OverHeal",
-                        EN: "OverHeal",
-                        DE: "OverHeal",
-                        CN: "OverHeal",
-                    },
-                    e: "li_checkbox",
-                    i: "insert_chart_outlined",
                     ul: 0
                 }
             }
