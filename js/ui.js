@@ -19,7 +19,7 @@ $().ready(function () {
     initOverlay()
 });
 function addOption() {
-    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number']
+    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic']
     var sizeVal = ['tableLineVer', 'sizeLineVer']
     var colorVal = ['tableLineVer']
 
@@ -112,7 +112,7 @@ $(window).resize(function () {
     resizeWindow(view)
 });
 function resizeWindow(flag) {
-    if (init.q.view24 && lastCombat != null && lastCombat.partys > 9) {
+    if (init.q.view24 && lastCombat != null && lastCombat.partys >= init.q.view24_Number) {
         if (window.innerWidth % 5 != 0) {
             var w = window.innerWidth % 5
             $('.rRow .rCell').css('width', '20%')
@@ -988,7 +988,7 @@ function createElement(type, obj, id, flag) {
     }
 }
 function ui() {
-    if (window.innerWidth % 5 != 0 && init.q.view24 && lastCombat != null && lastCombat.partys > 9) {
+    if (window.innerWidth % 5 != 0 && init.q.view24 && lastCombat != null && lastCombat.partys >= init.q.view24_Number) {
         var w = window.innerWidth % 5
         for (var i = 0; i < w; i++)
             $('.rRow .rCell:nth-child(' + parseInt(i + 1) + ')').css('width', '-webkit-calc(20% + 1px)')
@@ -996,6 +996,7 @@ function ui() {
     var img = ''
     if (init.q.overlayBg)
         img = init.q.overlayBgImg
+
     $('html').css({
         'font-size': init.q.resolution,
         'background-image': 'url(' + img + ')',
@@ -1008,6 +1009,7 @@ function ui() {
 
     if (init.q.preview24)
         $('#preview24 td:first-child').css('color', '#' + init.Color.accent)
+
     var bg = ''
     if (init.q.pattern == "cross")
         bg = '-webkit-linear-gradient(' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ',transparent .1rem),-webkit-linear-gradient(0,' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ',' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' .1rem)'
@@ -1021,7 +1023,7 @@ function ui() {
         bg = 'repeating-linear-gradient(135deg, ' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ' 0, ' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ' 5%, ' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' 0, ' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' 50%) 0'
     else
         bg = oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100))
-
+    
     $('nav[name=main], nav[name=history]').css({
         background: bg,
         color: oHexColor(init.Color.accent, parseFloat(init.Range.accent / 100)),
@@ -1029,9 +1031,10 @@ function ui() {
         'background-size': parseFloat(init.Range.sizePattern / 10) + 'rem ' + parseFloat(init.Range.sizePattern / 10) + 'rem',
         'background-repeat': 'repeat'
     })
+    
     if (init.Range.navBg != 100)
         $('.btn_wrap').css('background', 'transparent')
-
+    
     if (init.Range.edge != 0) {
         $('nav[name=main], nav[name=history]').css({
             border: parseFloat(init.Range.sizeEdge / 10) + 'rem ' + init.q.edgeType + ' ' + oHexColor(init.Color.edge, parseFloat(init.Range.edge / 100))
@@ -1044,11 +1047,11 @@ function ui() {
             right: 0,
             top: 0
         })
-    } 
+    }
     $('nav[name=main] div[name=More]').css({
         'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
         'border-bottom-right-radius': parseFloat((init.q.rd_navBR * init.Range.sizeRadius) / 10) + 'rem '
-    }) 
+    })
     $('nav[name=main], nav[name=history]').css({
         'border-top-left-radius': parseFloat((init.q.rd_navTL * init.Range.sizeRadius) / 10) + 'rem ',
         'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
@@ -1100,10 +1103,16 @@ function ui() {
         else
             $('nav[name=main] div[name=' + icon[i] + ']').fadeOut(0)
     }
+    var style = 'normal'
+    if (init.q.time_italic)
+        style = 'italic'
+    else
+        style = 'normal'
     $('[name=time]').css({
         color: oHexColor(init.Color.accent, parseFloat(init.Range.navTime / 100)),
         'font-family': "'" + init.q.fTime + "', 'DS-Digital', 'sans-serif'",
         'font-size': parseFloat(init.Range.sizeTime / 10) + 'rem',
+        'font-style': style
     })
     if (init.Range.navTime == 0)
         $('[name=time]').css({
@@ -1115,15 +1124,25 @@ function ui() {
             'padding-left': '1rem',
             'font-size': parseFloat(init.Range.time / 10) + 'rem'
         })
+    if (init.q.target_italic)
+        style = 'italic'
+    else
+        style = 'normal'
     $('[name=target]').css({
         color: oHexColor(init.Color.target, parseFloat(init.Range.target / 100)),
         'font-family': "'" + init.q.fTarget + "', 'Segoe UI', 'sans-serif'",
-        'font-size': parseFloat(init.Range.sizeTarget / 10) + 'rem'
+        'font-size': parseFloat(init.Range.sizeTarget / 10) + 'rem',
+        'font-style': style
     })
+    if (init.q.rps_italic)
+        style = 'italic'
+    else
+        style = 'normal'
     $('[name=rps]').css({
         color: oHexColor(init.Color.rps, parseFloat(init.Range.rps / 100)),
         'font-family': "'" + init.q.fRPS + "', 'Roboto Condensed', 'Segoe UI', 'sans-serif'",
-        'font-size': parseFloat(init.Range.sizeRPS / 10) + 'rem'
+        'font-size': parseFloat(init.Range.sizeRPS / 10) + 'rem',
+        'font-style': style
     })
     if (init.q.act == 2) {
         $('[name=ACT_2line]').fadeIn(0)
@@ -1136,8 +1155,7 @@ function ui() {
             'padding-top': parseFloat(init.Range.sizeGap / 10) + 'rem',
             'vertical-align': 'top'
         })
-    }
-    else {
+    } else {
         $('[name=ACT_2line]').fadeOut(0)
         $('[name=ACT_1line]').fadeIn(0)
         $('[name=ACT_1line] [name=target]').css({
@@ -1188,12 +1206,6 @@ function ui() {
         color: '#' + init.Color.tableExYOU,
         opacity: parseFloat(init.Range.tableYOU / 100),
     })
-    $('.tableBody td:not(:last-child)').css({
-        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableLineVer, parseFloat(init.Range.tableLineVer / 100))
-    })
-    $('.tableHeader td:not(:last-child)').css({
-        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableHd, parseFloat(init.Range.tableHd / 100))
-    })
     $(':not(#YOU).rCell').css({
         'font-weight': boldOther,
         color: '#' + init.Color.tableOther,
@@ -1208,14 +1220,12 @@ function ui() {
         'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
     })
-
     $('.rRow:first-child .rCell').css({
         'border-top': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
     })
     $('.rRow .rCell:last-child').css({
         'border-right': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
     })
-
     $('.rCell .rIdx').css({
         opacity: parseFloat(init.Range.bar / 100),
     })
@@ -1233,13 +1243,19 @@ function ui() {
         color: oHexColor(init.Color.tableHdText, parseFloat(init.Range.tableHdText / 100)),
         'font-family': "'" + init.q.fHd + "', 'Roboto Condensed', 'sans-serif'",
         height: parseFloat(init.Range.sizeHd / 10) + 'rem',
-        'font-size': parseFloat(init.Range.sizeHdText / 10) + 'rem',
+        'font-size': parseFloat(init.Range.sizeHdText / 10) + 'rem'
     })
     $('.tableWrap').css({
         'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
     })
     $('.barBg').css({
         background: oHexColor(init.Color.tableBg, parseFloat(init.Range.tableBg / 100)),
+    })
+    $('.tableBody td:not(:last-child)').css({
+        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableLineVer, parseFloat(init.Range.tableLineVer / 100))
+    })
+    $('.tableHeader td:not(:last-child)').css({
+        'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableHd, parseFloat(init.Range.tableHd / 100))
     })
     for (var i in l.size.tab_graph.inner) {
         $('.' + i.split('_')[1]).css({
@@ -1257,17 +1273,29 @@ function ui() {
     })
     $('#DPSBody, #DPSBody_P').find('.pet').css({
         float: init.q.bar_position_DPS
-    })
+    })    
+    if (init.q.body_italic)
+        style = 'italic'
+    else
+        style = 'normal'
     for (var i = 0; i < 7; i++) {
-        $('.cell_' + i).css({
+        $('.tableBody .cell_' + i).css({
             'width': parseFloat(init.Range['sizeCell' + i] / 10) + 'rem',
             'text-align': init.q['alignCell' + i],
             'padding': '0 ' + parseFloat(init.Range['sizePdCell' + i] / 10) + 'rem',
+            'font-style': style
         })
     }
+    if (init.q.header_italic)
+        style = 'italic'
+    else
+        style = 'normal'
     for (var i = 0; i < 7; i++) {
         $('.tableHeader td.cell_' + i).css({
+            'width': parseFloat(init.Range['sizeCell' + i] / 10) + 'rem',
             'text-align': init.q['alignHeaderCell' + i],
+            'padding': '0 ' + parseFloat(init.Range['sizePdCell' + i] / 10) + 'rem',
+            'font-style': style
         })
     }
     $('#DPSHeader, #DPSHeader_P').css({
@@ -1276,6 +1304,7 @@ function ui() {
     $('#HPSHeader, #HPSHeader_P').css({
         'margin-top': parseFloat(init.Range.sizeHPSGap / 10) + 'rem',
     })
+
     if (!init.q.preview24 && init.q.view24_Number != 1 && view == 'settings') {
         var tmp = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
         if ($('#DPSBody_P').length != 0) {
