@@ -1206,12 +1206,17 @@ function ui() {
         color: '#' + init.Color.tableExYOU,
         opacity: parseFloat(init.Range.tableYOU / 100),
     })
+    if (init.q.body_italic)
+        style = 'italic'
+    else
+        style = 'normal'
     $(':not(#YOU).rCell').css({
         'font-weight': boldOther,
         color: '#' + init.Color.tableOther,
         background: oHexColor(init.Color.tableBg, parseFloat(init.Range.view24BgOther / 100)),
         'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
+        'font-style': style
     })
     $('#YOU.rCell').css({
         'font-weight': boldYOU,
@@ -1219,6 +1224,7 @@ function ui() {
         background: oHexColor(init.Color.accent, parseFloat(init.Range.view24BgYOU / 100)),
         'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
+        'font-style': style
     })
     $('.rRow:first-child .rCell').css({
         'border-top': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
@@ -1274,10 +1280,6 @@ function ui() {
     $('#DPSBody, #DPSBody_P').find('.pet').css({
         float: init.q.bar_position_DPS
     })    
-    if (init.q.body_italic)
-        style = 'italic'
-    else
-        style = 'normal'
     for (var i = 0; i < 7; i++) {
         $('.tableBody .cell_' + i).css({
             'width': parseFloat(init.Range['sizeCell' + i] / 10) + 'rem',
