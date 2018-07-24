@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
-            EN: '<div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
+            KR: '<div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ DPS/HPS 데이터 통합</div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
+            EN: '<div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Merged Data of DPS/HPS</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -1285,6 +1285,139 @@ l = {
                     e: "li_2line_checkbox",
                     ul: 1
                 },
+                
+                enchps: {
+                    tt: "HPS",
+                    m: {
+                        KR: "초당 치유량<br><span class='ac'> = Time 기준, 공식</span>",
+                        JP: "1秒あたりのヒール量<br><span class='ac'> = Time 時点、オフィシャル</span>",
+                        EN: "The healing total of the combatant divided by the duration of the encounter.",
+                        DE: "Summe der verursachen Heilung dividiert durch die Kampfzeit.",
+                        CN: "每秒疗伤<br><span class='ac'> = 治疗总量除以战斗时间</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
+                },
+                "healed%": {
+                    tt: "H%",
+                    m: {
+                        KR: "총 치유량 중 내 캐릭터의 기여율",
+                        JP: "総ヒール量の中自キャラの寄與率",
+                        EN: "The value represents the percent share of all healing done by allies in this encounter.",
+                        DE: "Prozentualer Anteil an der gesamten Heilung der Gruppe.",
+                        CN: "在总治疗量里自己的治疗量占比",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedHealed: {
+                    tt: "Healed",
+                    m: {
+                        KR: "치유량",
+                        JP: "総ヒール量",
+                        EN: "The amount of healing.",
+                        DE: "Summe der verursachten Heilung.",
+                        CN: "总治疗量",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedEffHealed: {
+                    tt: "Eff.Heal",
+                    m: {
+                        KR: "유효 치유량",
+                        JP: "有効総ヒール量",
+                        EN: "The amount of healing except for Overheal and D.Shield.",
+                        DE: "Summe der verursachten Heilung, Overheal und Schilde ausgenommen.",
+                        CN: "有效治疗量",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedDamageShield: {
+                    tt: "D.Shield",
+                    m: {
+                        KR: "보호막의 피해 흡수량",
+                        JP: "バリアヒール量",
+                        EN: "The amount of damage blocked by shield abilities of healer.",
+                        DE: "Summe des Schadens, welcher durch Schilde der Healer absorbiert wurde.",
+                        CN: "治疗防护罩抵消的伤害",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedOverHeal: {
+                    tt: "OverHeal",
+                    m: {
+                        KR: "초과 치유량",
+                        JP: "オーバーヒール量",
+                        EN: "The amount of healing that made flood over 100% of health.",
+                        DE: "Summe der Heilung, welche über 100% Gesundheit verursacht wurde.",
+                        CN: "无效治疗量",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                "overHeal%": {
+                    tt: "OV.H",
+                    m: {
+                        KR: "초과 치유율",
+                        JP: "オーバーヒール率",
+                        EN: "The percentage of heals above target\'s Max HP.",
+                        DE: "Prozentualer Anteil der Heilung, welche über 100% Gesundheit verursacht wurde.",
+                        CN: "无效治疗占比",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedHeals: {
+                    tt: "Heal",
+                    m: {
+                        KR: "치유 횟수<br><span class='ac'> = 도트, 기술 시전 취소 포함</span>",
+                        JP: "ヒール回数<br><span class='ac'> = HOT、スキルキャンセル含む</span>",
+                        EN: "The number of heals from this combatant.",
+                        DE: "Anzahl der verursachen Heilungen.<br><span class='ac'> = Umfasst auch Heilung von jedem Tick von HoTs wie Regena.</span>",
+                        CN: "治疗次数<br><span class='ac'> = 包含HOT，技能等</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
+                },
+                mergedCritheals: {
+                    tt: "C.Heal",
+                    m: {
+                        KR: "치유 극대화 횟수",
+                        JP: "回復のクリティカル回数",
+                        EN: "The number of heals that were critical.",
+                        DE: "Anzahl der Heilung, welche kritisch getroffen hat.",
+                        CN: "治疗暴击次数",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                "critheal%": {
+                    tt: "C.HEAL",
+                    m: {
+                        KR: "치유 극대화율",
+                        JP: "回復のクリティカル率",
+                        EN: "The percentage of heals that were critical.",
+                        DE: "Prozentualer Anteil der Heilung, welche kritisch getroffen hat.",
+                        CN: "治疗暴击率",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                maxheal: {
+                    tt: "MaxHeal",
+                    m: {
+                        KR: "최대 치유 기술",
+                        JP: "最大回復のスキル",
+                        EN: "The highest single healing amount.",
+                        DE: "Größte verursachte Heilung.",
+                        CN: "最大治疗技能",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
+                },
                 mergedDamagetaken: {
                     tt: "D.Taken",
                     m: {
@@ -1478,6 +1611,270 @@ l = {
                     },
                     e: "li_2line_checkbox",
                     ul: 0
+                },
+                duration: {
+                    tt: "P.Time",
+                    m: {
+                        KR: "전투 로그 수집 시간<br><span class='ac'> = 내 첫 공격 기준</span>",
+                        JP: "戦闘ログ収集時間<br><span class='ac'> = 自らの攻撃した時点</span>",
+                        EN: "The duration of the combatant.",
+                        DE: "Kampfzeit des Charakters.",
+                        CN: "战斗日志收集时间<br><span class='ac'> = 自己开始攻击时</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
+                },
+                dps: {
+                    tt: "P.DPS",
+                    m: {
+                        KR: "초당 피해량<br><span class='ac'> = P.Time 기준</span>",
+                        JP: "1秒あたりのダメージ<br><span class='ac'> = P.Time 時点</span>",
+                        EN: "The damage total of the combatant divided by their personal duration.",
+                        DE: "Gesamtschaden der Person dividiert durch die persönliche Kampfzeit.",
+                        CN: "每秒伤害<br><span class='ac'> = 战斗总伤害除以个人战斗时间</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                EncounterDuration: {
+                    tt: "Time",
+                    m: {
+                        KR: "전투 로그 수집 시간<br><span class='ac'> = 파티 첫 공격 기준</span>",
+                        JP: "戦闘ログ収集時間<br><span class='ac'> = パティー初めて攻撃した時点</span>",
+                        EN: "The duration of the encounter.",
+                        DE: "Die Kampfzeit.",
+                        CN: "战斗日志收集时间<br><span class='ac'> = 队伍开始攻击时</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                encdps: {
+                    tt: "DPS",
+                    m: {
+                        KR: "초당 피해량<br><span class='ac'> = Time 기준, 공식</span>",
+                        JP: "1秒あたりのダメージ<br><span class='ac'> = Time 時点、オフィシャル</span>",
+                        EN: "The damage total of the combatant divided by the duration of the encounter.<br><span class='ac'> = This is more commonly used than P.DPS</span>",
+                        DE: "Gesamtschaden dividiert durch die Kampfzeit.<br><span class='ac'> = Diese Option ist weiter verbreitet als P.DPS.</span>",
+                        CN: "每秒伤害<br><span class='ac'> = 战斗总伤害除以战斗时间</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedLast10DPS: {
+                    tt: "Last10",
+                    m: {
+                        KR: "최근 10초간 평균 DPS",
+                        JP: "最近10秒間の平均DPS",
+                        EN: "Average DPS for last 10 seconds.",
+                        DE: "Durchschnittlicher DPS der letzten 10 Sekunden.",
+                        CN: "最近10秒内的平均DPS",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedLast30DPS: {
+                    tt: "Last10",
+                    m: {
+                        KR: "최근 30초간 평균 DPS",
+                        JP: "最近30秒間の平均DPS",
+                        EN: "Average DPS for last 30 seconds.",
+                        DE: "Durchschnittlicher DPS der letzten 30 Sekunden.",
+                        CN: "最近30秒内的平均DPS",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedLast60DPS: {
+                    tt: "Last10",
+                    m: {
+                        KR: "최근 60초간 평균 DPS",
+                        JP: "最近60秒間の平均DPS",
+                        EN: "Average DPS for last 60 seconds.",
+                        DE: "Durchschnittlicher DPS der letzten 60 Sekunden.",
+                        CN: "最近60秒内的平均DPS",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedLast180DPS: {
+                    tt: "Last10",
+                    m: {
+                        KR: "최근 180초간 평균 DPS",
+                        JP: "最近180秒間の平均DPS",
+                        EN: "Average DPS for last 180 seconds.",
+                        DE: "Durchschnittlicher DPS der letzten 180 Sekunden.",
+                        CN: "最近180秒内的平均DPS",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                "damage%": {
+                    tt: "D%",
+                    m: {
+                        KR: "총 피해량 중 내 캐릭터의 기여율",
+                        JP: "総ダメージ量の中自キャラの寄與率",
+                        EN: "This value represents the percent share of all damage done by allies in this encounter.",
+                        DE: "Prozentualer Anteil am Gesamtschadens der Gruppe.",
+                        CN: "在总伤害里自己的伤害占比",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedDamage: {
+                    tt: "Damage",
+                    m: {
+                        KR: "피해량",
+                        JP: "ダメージ量",
+                        EN: "The amount of damage.",
+                        DE: "Summe des verursachten Schadens.",
+                        CN: "伤害量",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedSwings: {
+                    tt: "Swing",
+                    m: {
+                        KR: "공격 횟수<br><span class='ac'> = 자동 공격, 도트, 기술 시전 취소 포함</span>",
+                        JP: "攻撃回数<br><span class='ac'> = オートアタック、DOT、スキルキャンセル含め</span>",
+                        EN: "The number of attack attempts.<br><span class='ac'> = This includes any auto-attacks or abilities, also including resisted abilities that do no damage.</span>",
+                        DE: "Ausgeführte Aktionen.<br><span class='ac'> = Umfasst jede Auto-Attacke und Fähigkeit.</span>",
+                        CN: "攻击次数<br><span class='ac'> = 包含自动攻击，DOT，技能，以及没有伤害的无效攻击。</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
+                },
+                mergedHits: {
+                    tt: "Hit",
+                    m: {
+                        KR: "공격 적중 횟수",
+                        JP: "攻撃の命中回数",
+                        EN: "The number of attack attempts that produced damage.",
+                        DE: "Ausgeführte Aktionen, welche Schaden verursacht haben.",
+                        CN: "攻击的命中次数",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedMisses: {
+                    tt: "Miss",
+                    m: {
+                        KR: "빗나감 횟수",
+                        JP: "攻撃のミス回数",
+                        EN: "The number of auto-attacks of CAs that produced a miss message.",
+                        DE: "Anzahl der Auto-Attacken oder Fähigkeiten welche nicht getroffen haben.",
+                        CN: "攻击的失误次数",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                hitfailed: {
+                    tt: "Avoid",
+                    m: {
+                        KR: "공격 실패 횟수<br><span class='ac'> = 적의 저항, 반사, 막기, 회피 등</span>",
+                        JP: "攻撃の失敗回数<br><span class='ac'> = 敵の抵抗、反射、ブロック、回避など</span>",
+                        EN: "Any type of failed attack that was not a miss.<br><span class='ac'> = This includes resists, reflects, blocks, dodging, etc.</span>",
+                        DE: "Anzahl der Attacken, die keinen Schaden verursacht haben, aber kein Miss waren.<br><span class='ac'> = Umfasst: Widerstände, Reflektionen, Ausgeweichen, blocken, usw.</span>",
+                        CN: "攻击失败次数<br><span class='ac'> = 包括目标的抵抗，反射，阻挡，回避等</span>",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                tohit: {
+                    tt: "ACC",
+                    m: {
+                        KR: "명중률",
+                        JP: "命中率",
+                        EN: "The percentage of hits to swings.",
+                        DE: "Prozentuale Treffergenauigkeit.",
+                        CN: "命中率",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedDirectHitCount: {
+                    tt: "D.Hit",
+                    m: {
+                        KR: "직격 횟수",
+                        JP: "ダイレクトヒット回数",
+                        EN: "The number of hits that were direct hit.",
+                        DE: "Anzahl der Treffer, die direkt getroffen haben.",
+                        CN: "直击次数",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
+                },
+                "DirectHit%": {
+                    tt: "D.HIT",
+                    m: {
+                        KR: "직격 발동률",
+                        JP: "ダイレクトヒット発動率",
+                        EN: "The percentage of hits that were direct hits.",
+                        DE: "Prozentualer Anteil der Treffer, die direkt getroffen haben.",
+                        CN: "直击率",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedCrithits: {
+                    tt: "C.Hit",
+                    m: {
+                        KR: "공격 극대화 횟수",
+                        JP: "攻撃のクリティカル回数",
+                        EN: "The number of damaging attacks that were critical.",
+                        DE: "Anzahl der kritischen Treffer.",
+                        CN: "暴击次数",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                "crithit%": {
+                    tt: "C.HIT",
+                    m: {
+                        KR: "공격 극대화율",
+                        JP: "攻撃のクリティカル率",
+                        EN: "The percentage of damaging attacks that were critical.",
+                        DE: "Prozentualer Anteil der kritischen Treffer.",
+                        CN: "暴击率",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                mergedCritDirectHitCount: {
+                    tt: "C.D.Hit",
+                    m: {
+                        KR: "직격 극대화 횟수",
+                        JP: "ダイレクトヒットクリティカル回数",
+                        EN: "The number of hits that were critical as well as direct hit.",
+                        DE: "Anzahl der Treffer, die direct und kritisch getroffen haben.",
+                        CN: "直击暴击次数",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                "CritDirectHit%": {
+                    tt: "C.D.HIT",
+                    m: {
+                        KR: "직격 극대화율",
+                        JP: "ダイレクトヒットクリティカル率",
+                        EN: "The percentage of hits that were direct hits as well as critical hits.",
+                        DE: "Prozentualer Anteil der Treffer, die direct und kritisch getroffen haben.",
+                        CN: "直击暴击率",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 0
+                },
+                maxhit: {
+                    tt: "MaxHit",
+                    m: {
+                        KR: "최대 공격 기술",
+                        JP: "最大ダメージのスキル",
+                        EN: "The highest single damaging hit.",
+                        DE: "Höchster verursachter Schaden durch einen Angriff.",
+                        CN: "最大伤害技能",
+                    },
+                    e: "li_2line_checkbox",
+                    ul: 1
                 },
                 enchps: {
                     tt: "HPS",
