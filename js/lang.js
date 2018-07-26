@@ -2545,55 +2545,7 @@ l = {
                     i: "format_color_fill",
                     e: "li_color",
                     ul: 1
-                },
-                tableYOU: {
-                    tt: {
-                        KR: "이름, 숫자<font class='ex'>　❙ 내 캐릭터</font>",
-                        JP: "名前、数字<font class='ex'>　❙ 自分のキャラクター</font>",
-                        EN: "Name, Number<font class='ex'>　❙ My Character</font>",
-                        DE: "Namen, Zahlen<font class='ex'>　❙ Eigenen Charakter</font>",
-                        CN: "名称，数字<font class='ex'>　❙ 自己角色</font>",
-                    },
-                    i: "format_color_text",
-                    e: "li_color",
-                    ul: 0
-                },
-                tableExYOU: {
-                    tt: {
-                        KR: "단위, 기술명<font class='ex'>　❙ 내 캐릭터</font>",
-                        JP: "単位、技名<font class='ex'>　❙ 自分のキャラクター</font>",
-                        EN: "Unit, Action's Name<font class='ex'>　❙ My Character</font>",
-                        DE: "Unit, Fähigkeitsnamen<font class='ex'>　❙ Eigenen Charakter</font>",
-                        CN: "单位，技能名<font class='ex'>　❙ 自己角色</font>",
-                    },
-                    i: "format_color_text",
-                    e: "li_color",
-                    ul: 0
-                },
-                tableOther: {
-                    tt: {
-                        KR: "이름, 숫자<font class='ex'>　❙ 타 캐릭터</font>",
-                        JP: "名前、数字<font class='ex'>　❙ 他のキャラクター</font>",
-                        EN: "Name, Number<font class='ex'>　❙ Other Character</font>",
-                        DE: "Namen, Zahlen<font class='ex'>　❙ Andere Charakter</font>",
-                        CN: "名称，数字<font class='ex'>　❙ 其他角色</font>",
-                    },
-                    i: "format_color_text",
-                    e: "li_color",
-                    ul: 0
-                },
-                tableExOther: {
-                    tt: {
-                        KR: "단위, 기술명<font class='ex'>　❙ 타 캐릭터</font>",
-                        JP: "単位、技名<font class='ex'>　❙ 他のキャラクター</font>",
-                        EN: "Unit, Action's Name<font class='ex'>　❙ Other Character</font>",
-                        DE: "Unit, Fähigkeitsnamen<font class='ex'>　❙ Andere Charakter</font>",
-                        CN: "单位，技能名<font class='ex'>　❙ 其他角色</font>",
-                    },
-                    i: "format_color_text",
-                    e: "li_color",
-                    ul: 0
-                },             
+                },                         
                 iconSet: {
                     tt: {
                         KR: "아이콘<font class='ex'>　❙ 클래스 또는 직업</font>",
@@ -2651,28 +2603,28 @@ l = {
                             EN: "Metallic Silver",
                             DE: "Metallic silberner",
                             CN: "闪耀银",
-                        },                                                                                                                 
+                        },        
                         red: {
                             KR: "달라가브색",
                             JP: "ダラガブレッド",
                             EN: "Dalamud Red",
                             DE: "Dalamudroter Farbe",
                             CN: "卫月红",
-                        },                                                                                                                                            
+                        },                                 
                         orange: {
                             KR: "노을색",
                             JP: "サンセットオレンジ",
                             EN: "Sunset Orange",
                             DE: "Abendroter",
                             CN: "日落橙",
-                        },                                                                                                                                          
+                        },                                  
                         green: {
                             KR: "라임색",
                             JP: "ライムグリーン",
                             EN: "Lime Green",
                             DE: "Limettengrüner",
                             CN: "青柠绿",
-                        },                                                                                                                
+                        },        
                         blue: {
                             KR: "오사드 바다색",
                             JP: "オサードブルー",
@@ -2693,6 +2645,54 @@ l = {
                     p: "color_table",
                     ul: 0,
                 },
+                tableYOU: {
+                    tt: {
+                        KR: "이름, 숫자<font class='ex'>　❙ 내 캐릭터</font>",
+                        JP: "名前、数字<font class='ex'>　❙ 自分のキャラクター</font>",
+                        EN: "Name, Number<font class='ex'>　❙ My Character</font>",
+                        DE: "Namen, Zahlen<font class='ex'>　❙ Eigenen Charakter</font>",
+                        CN: "名称，数字<font class='ex'>　❙ 自己角色</font>",
+                    },
+                    i: "format_color_text",
+                    e: "li_color",
+                    ul: 0
+                },
+                tableExYOU: {
+                    tt: {
+                        KR: "단위, 기술명<font class='ex'>　❙ 내 캐릭터</font>",
+                        JP: "単位、技名<font class='ex'>　❙ 自分のキャラクター</font>",
+                        EN: "Unit, Action's Name<font class='ex'>　❙ My Character</font>",
+                        DE: "Unit, Fähigkeitsnamen<font class='ex'>　❙ Eigenen Charakter</font>",
+                        CN: "单位，技能名<font class='ex'>　❙ 自己角色</font>",
+                    },
+                    i: "format_color_text",
+                    e: "li_color",
+                    ul: 0
+                },
+                tableOther: {
+                    tt: {
+                        KR: "이름, 숫자<font class='ex'>　❙ 타 캐릭터</font>",
+                        JP: "名前、数字<font class='ex'>　❙ 他のキャラクター</font>",
+                        EN: "Name, Number<font class='ex'>　❙ Other Character</font>",
+                        DE: "Namen, Zahlen<font class='ex'>　❙ Andere Charakter</font>",
+                        CN: "名称，数字<font class='ex'>　❙ 其他角色</font>",
+                    },
+                    i: "format_color_text",
+                    e: "li_color",
+                    ul: 0
+                },
+                tableExOther: {
+                    tt: {
+                        KR: "단위, 기술명<font class='ex'>　❙ 타 캐릭터</font>",
+                        JP: "単位、技名<font class='ex'>　❙ 他のキャラクター</font>",
+                        EN: "Unit, Action's Name<font class='ex'>　❙ Other Character</font>",
+                        DE: "Unit, Fähigkeitsnamen<font class='ex'>　❙ Andere Charakter</font>",
+                        CN: "单位，技能名<font class='ex'>　❙ 其他角色</font>",
+                    },
+                    i: "format_color_text",
+                    e: "li_color",
+                    ul: 0
+                },    
                 tableLine: {
                     tt: {
                         KR: "구분선<font class='ex'>　❙ 가로</font>",
@@ -3641,11 +3641,11 @@ l = {
                 },
                 tableYOU: {
                     tt: {
-                        KR: "글자<font class='ex'>　❙ 내 캐릭터</font>",
-                        JP: "テキスト<font class='ex'>　❙ 自分のキャラクター</font>",
-                        EN: "Text<font class='ex'>　❙ My Character</font>",
-                        DE: "Text<font class='ex'>　❙ Eigenen Charakter</font>",
-                        CN: "文字<font class='ex'>　❙ 自己角色</font>",
+                        KR: "아이콘, 글자<font class='ex'>　❙ 내 캐릭터</font>",
+                        JP: "アイコン、テキスト<font class='ex'>　❙ 自分のキャラクター</font>",
+                        EN: "Icon, Text<font class='ex'>　❙ My Character</font>",
+                        DE: "Symbole, Text<font class='ex'>　❙ Eigenen Charakter</font>",
+                        CN: "图标，文字<font class='ex'>　❙ 自己角色</font>",
                     },
                     min: 0,
                     max: 100,
@@ -3655,11 +3655,11 @@ l = {
                 },
                 tableOther: {
                     tt: {
-                        KR: "글자<font class='ex'>　❙ 타 캐릭터</font>",
-                        JP: "テキスト<font class='ex'>　❙ 他のキャラクター</font>",
-                        EN: "Text<font class='ex'>　❙ Other Character</font>",
-                        DE: "Text<font class='ex'>　❙ Andere Charakter</font>",
-                        CN: "文字<font class='ex'>　❙ 其他角色</font>",
+                        KR: "아이콘, 글자<font class='ex'>　❙ 타 캐릭터</font>",
+                        JP: "アイコン、テキスト<font class='ex'>　❙ 他のキャラクター</font>",
+                        EN: "Icon, Text<font class='ex'>　❙ Other Character</font>",
+                        DE: "Symbole, Text<font class='ex'>　❙ Andere Charakter</font>",
+                        CN: "图标，文字<font class='ex'>　❙ 其他角色</font>",
                     },
                     min: 0,
                     max: 100,
@@ -3976,6 +3976,20 @@ l = {
                     i: "swap_vert",
                     e: "li_slider",
                     ul: 1
+                },                
+                sizeBodyIcon: {
+                    tt: {
+                        KR: "아이콘<font class='ex'>　❙ 클래스 또는 직업</font>",
+                        JP: "アイコン<font class='ex'>　❙ クラスもしくはジョブ</font>",
+                        EN: "Icon<font class='ex'>　❙ Class or Job</font>",
+                        DE: "Symbole<font class='ex'>　❙ Klassen/Job</font>",
+                        CN: "图标<font class='ex'>　❙ 玩家职业图标</font>",
+                    },
+                    min: 8,
+                    max: 50,
+                    i: "mood",
+                    e: "li_slider",
+                    ul: 0
                 },
                 sizeBodyText: {
                     tt: {
@@ -3988,20 +4002,6 @@ l = {
                     min: 8,
                     max: 50,
                     i: "format_size",
-                    e: "li_slider",
-                    ul: 0
-                },
-                sizeBodyIcon: {
-                    tt: {
-                        KR: "아이콘<font class='ex'>　❙ 클래스 또는 직업</font>",
-                        JP: "アイコン<font class='ex'>　❙ クラスもしくはジョブ</font>",
-                        EN: "Icon<font class='ex'>　❙ Class or Job</font>",
-                        DE: "Symbole<font class='ex'>　❙ Klassen/Job</font>",
-                        CN: "图标<font class='ex'>　❙ 玩家职业图标</font>",
-                    },
-                    min: 8,
-                    max: 50,
-                    i: "mood",
                     e: "li_slider",
                     ul: 0
                 },
