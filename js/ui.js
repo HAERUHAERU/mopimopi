@@ -19,7 +19,7 @@ $().ready(function () {
     initOverlay()
 });
 function addOption() {
-    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic']
+    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet']
     var sizeVal = ['tableLineVer', 'sizeLineVer']
     var colorVal = ['tableLineVer']
 
@@ -457,8 +457,8 @@ function liReload() {
         }
         else if ($(this).find('input').prop('type') == 'radio') {
             $(this).parent().find('li .switch').removeClass('hover')
-            $(this).find('.switch').addClass('hover');
-            //init 값 변경
+            $(this).find('.switch').addClass('hover');            
+            var preIconSet = init.q.iconSet
             init.q[$(this).find(':radio').attr('name')] = $(this).find(':radio').val()
             if ($(this).find(':radio').attr('name') == 'view24_Number') {
                 $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text(l.advanced.tab_table.inner.view24_Number.msg[lang].replace('★', $(this).text()))
@@ -476,7 +476,15 @@ function liReload() {
             }
             else if ($(this).find(':radio').attr('name') == 'palette')
                 button('tab_graph', 'color')
-            toggleRaidMode(init.q.preview24)
+            if($(this).find(':radio').attr('name') != 'iconSet')    
+                toggleRaidMode(init.q.preview24)
+            else{                
+                $('.cell_0.Job img, .rIcon img').each(function(){
+                   var src = $(this).attr('src')
+                   var newSrc = src.replace(preIconSet, init.q.iconSet)
+                   $(this).attr('src', newSrc)                   
+                })
+            }
             return
         }
         else {
