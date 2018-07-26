@@ -158,7 +158,7 @@ function onRaidCombatDataUpdate(flag, last) {
     }
 }
 function createRaidTableBody(flag, a, userName) {
-    return '<table id="' + userName + '" class="rCell"><tr><td rowspan="2" class="rIdx" style="background:' + graphColor(a.Class, a.role, userName) + '"></td><td class="rIcon">' + addData('Job', a.Job, a) + '</td><td class="rName">' + addData('Name', a.name, a) + '</td></tr><tr><td colspan="2" class="rData">' + addData(flag, a['enc' + flag.toLowerCase()], a) + '</td></tr></table>'
+    return '<table id="' + userName + '" class="rCell"><tr><td rowspan="2" class="rIdx" style="background:' + graphColor(a.Class, a.role, userName) + '"></td><td class="rIcon">' + addData('Job', a.Class, a) + '</td><td class="rName">' + addData('Name', a.name, a) + '</td></tr><tr><td colspan="2" class="rData">' + addData(flag, a['enc' + flag.toLowerCase()], a) + '</td></tr></table>'
 }
 function onCombatDataUpdate(flag, last) {
     if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {
@@ -307,7 +307,7 @@ function petName(job, name) {
 function addData(colName, a, p) {
     switch (colName) {
         case 'Job':
-            if (a != undefined) return '<img src="./images/glow/' + a.toUpperCase() + '.png"/>';
+            if (a != undefined) return '<img src="./images/icon/'+init.q.iconSet+'/' + a.toUpperCase() + '.png"/>';
             else return ''
         case 'Name':
             var name = ''
