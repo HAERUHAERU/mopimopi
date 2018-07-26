@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="u"></div><div class="m">[Inven / 컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
-            EN: '<div name="row"><div class="u"></div><div class="m">[Inven / 컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrate the DPS and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">디자인 ❯ 색 ❯ 테이블(탭) ❯ 클래스 또는 직업 아이콘 세트 11종 추가</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">Design ❯ Color ❯ Table (Tab) ❯ Added the 11 sets of Class or Job Icon</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrate DPS Data and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit / Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven / 버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven / 엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven / skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven / 캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit / Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -799,7 +799,7 @@ l = {
                 EN: "Convert Name to YOU",
                 DE: "Convert Name to YOU",
                 CN: "把自己的名字标记为YOU",
-            },            
+            },
             m: {
                 KR: "<a href='http://ffxivhaeru.blog.me/221325149295' target='_blank'>설정 전 주의사항</a>",
                 JP: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>設定する前の注意事項</a>",
@@ -1285,7 +1285,7 @@ l = {
                     e: "li_2line_checkbox",
                     ul: 1
                 },
-                
+
                 enchps: {
                     tt: "HPS",
                     m: {
@@ -2593,6 +2593,105 @@ l = {
                     i: "format_color_text",
                     e: "li_color",
                     ul: 0
+                },             
+                iconSet: {
+                    tt: {
+                        KR: "아이콘<font class='ex'>　❙ 클래스 또는 직업</font>",
+                        JP: "アイコン<font class='ex'>　❙ クラスもしくはジョブ</font>",
+                        EN: "Icon<font class='ex'>　❙ Class or Job</font>",
+                        DE: "Symbole<font class='ex'>　❙ Klassen/Job</font>",
+                        CN: "图标<font class='ex'>　❙ 玩家职业图标</font>",
+                    },
+                    m: {
+                        glow: {
+                            KR: "글로우",
+                            JP: "輝き",
+                            EN: "Glow",
+                            DE: "Glow",
+                            CN: "发光",
+                        },                                              
+                        frame: {
+                            KR: "프레임",
+                            JP: "フレーム",
+                            EN: "Frame",
+                            DE: "Frame",
+                            CN: "帧",
+                        },                      
+                        gear: {
+                            KR: "기어",
+                            JP: "ギヤ",
+                            EN: "Gear",
+                            DE: "Gear",
+                            CN: "齿轮",
+                        },                                                                       
+                        antique: {
+                            KR: "앤틱",
+                            JP: "アンティーク",
+                            EN: "Antique",
+                            DE: "Antique",
+                            CN: "古董",
+                        },                                                                                         
+                        black: {
+                            KR: "칠흑색",
+                            JP: "ジェットブラック",
+                            EN: "Jet Black",
+                            DE: "Rabenschwarzer",
+                            CN: "煤玉黑",
+                        },   
+                        gold:{
+                            KR: "반짝이는 금색",
+                            JP: "シャインゴールド",
+                            EN: "Metallic Gold",
+                            DE: "Metallic goldener",
+                            CN: "闪耀金",
+                        },                                                                              
+                        silver: {
+                            KR: "반짝이는 은색",
+                            JP: "シャインシルバー",
+                            EN: "Metallic Silver",
+                            DE: "Metallic silberner",
+                            CN: "闪耀银",
+                        },                                                                                                                 
+                        red: {
+                            KR: "달라가브색",
+                            JP: "ダラガブレッド",
+                            EN: "Dalamud Red",
+                            DE: "Dalamudroter Farbe",
+                            CN: "卫月红",
+                        },                                                                                                                                            
+                        orange: {
+                            KR: "노을색",
+                            JP: "サンセットオレンジ",
+                            EN: "Sunset Orange",
+                            DE: "Abendroter",
+                            CN: "日落橙",
+                        },                                                                                                                                          
+                        green: {
+                            KR: "라임색",
+                            JP: "ライムグリーン",
+                            EN: "Lime Green",
+                            DE: "Limettengrüner",
+                            CN: "青柠绿",
+                        },                                                                                                                
+                        blue: {
+                            KR: "오사드 바다색",
+                            JP: "オサードブルー",
+                            EN: "Othard Blue",
+                            DE: "Othardblauer",
+                            CN: "东洲蓝",
+                        },
+                        purple:{
+                            KR: "포도색",
+                            JP: "グレープパープル",
+                            EN: "Grape Purple",
+                            DE: "Weintraubenvioletter",
+                            CN: "葡萄紫",
+                        }
+                    },
+                    i: "mood",
+                    e: "li_radio",
+                    p: "color_table",
+                    ul: 0,
                 },
                 tableLine: {
                     tt: {
@@ -2703,7 +2802,7 @@ l = {
                     DE: "Paladin & Gladiator",
                     CN: "骑士 & 剑术师",
                 },
-                i: "<img src='./images/glow/PLD.png'/>",
+                i: "<img src='./images/icon/frame/PLD.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2715,7 +2814,7 @@ l = {
                     DE: "Krieger & Marodeur",
                     CN: "战士 & 斧术师",
                 },
-                i: "<img src='./images/glow/WAR.png'/>",
+                i: "<img src='./images/icon/frame/WAR.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2727,7 +2826,7 @@ l = {
                     DE: "Dunkelritter",
                     CN: "暗黑骑士",
                 },
-                i: "<img src='./images/glow/DRK.png'/>",
+                i: "<img src='./images/icon/frame/DRK.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2739,7 +2838,7 @@ l = {
                     DE: "Weißmagier & Druide",
                     CN: "白魔法师 & 幻术师",
                 },
-                i: "<img src='./images/glow/WHM.png'/>",
+                i: "<img src='./images/icon/frame/WHM.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2751,7 +2850,7 @@ l = {
                     DE: "Gelehrter",
                     CN: "学者",
                 },
-                i: "<img src='./images/glow/SCH.png'/>",
+                i: "<img src='./images/icon/frame/SCH.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2763,7 +2862,7 @@ l = {
                     DE: "Astrologe",
                     CN: "占星术士",
                 },
-                i: "<img src='./images/glow/AST.png'/>",
+                i: "<img src='./images/icon/frame/AST.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2775,7 +2874,7 @@ l = {
                     DE: "Mönch & Faustkämpfer",
                     CN: "武僧 & 格斗家",
                 },
-                i: "<img src='./images/glow/MNK.png'/>",
+                i: "<img src='./images/icon/frame/MNK.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2787,7 +2886,7 @@ l = {
                     DE: "Dragoon & Pikenier",
                     CN: "龙骑士 & 枪术师"
                 },
-                i: "<img src='./images/glow/DRG.png'/>",
+                i: "<img src='./images/icon/frame/DRG.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2799,7 +2898,7 @@ l = {
                     DE: "Ninja & Schurke",
                     CN: "忍者 & 双剑师",
                 },
-                i: "<img src='./images/glow/NIN.png'/>",
+                i: "<img src='./images/icon/frame/NIN.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2811,7 +2910,7 @@ l = {
                     DE: "Samurai",
                     CN: "武士",
                 },
-                i: "<img src='./images/glow/SAM.png'/>",
+                i: "<img src='./images/icon/frame/SAM.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2823,7 +2922,7 @@ l = {
                     DE: "Barde & Waldläufer",
                     CN: "吟游诗人 & 弓箭手"
                 },
-                i: "<img src='./images/glow/BRD.png'/>",
+                i: "<img src='./images/icon/frame/BRD.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2835,7 +2934,7 @@ l = {
                     DE: "Maschinist",
                     CN: "机工士"
                 },
-                i: "<img src='./images/glow/MCH.png'/>",
+                i: "<img src='./images/icon/frame/MCH.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2847,7 +2946,7 @@ l = {
                     DE: "Schwarzmagier & Thaumaturg",
                     CN: "黑魔法师 & 咒术师",
                 },
-                i: "<img src='./images/glow/BLM.png'/>",
+                i: "<img src='./images/icon/frame/BLM.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2859,7 +2958,7 @@ l = {
                     DE: "Beschwörer & Hermetiker",
                     CN: "召唤师 & 秘术师",
                 },
-                i: "<img src='./images/glow/SMN.png'/>",
+                i: "<img src='./images/icon/frame/SMN.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2871,7 +2970,7 @@ l = {
                     DE: "Rotmagier",
                     CN: "赤魔法师",
                 },
-                i: "<img src='./images/glow/RDM.png'/>",
+                i: "<img src='./images/icon/frame/RDM.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2883,7 +2982,7 @@ l = {
                     DE: "Begleiter<font class='ex'>　❙ Charakter und Begleiter zusammenfassen 'ON'</font>",
                     CN: "召唤物<font class='ex'>　❙ 召唤物与自身数据合并 'ON'</font>",
                 },
-                i: "<img src='./images/glow/AVA.png'/>",
+                i: "<img src='./images/icon/frame/AVA.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2919,7 +3018,7 @@ l = {
                     DE: "Limitrausch",
                     CN: "极限技",
                 },
-                i: "<img src='./images/glow/LMB.png'/>",
+                i: "<img src='./images/icon/frame/LMB.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2931,7 +3030,7 @@ l = {
                     DE: "Chocobo",
                     CN: "陆行鸟",
                 },
-                i: "<img src='./images/glow/CBO.png'/>",
+                i: "<img src='./images/icon/frame/CBO.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2943,7 +3042,7 @@ l = {
                     DE: "Zimmerer",
                     CN: "刻木匠",
                 },
-                i: "<img src='./images/glow/CRP.png'/>",
+                i: "<img src='./images/icon/frame/CRP.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -2955,7 +3054,7 @@ l = {
                     DE: "Grobschmied",
                     CN: "锻铁匠",
                 },
-                i: "<img src='./images/glow/BSM.png'/>",
+                i: "<img src='./images/icon/frame/BSM.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2967,7 +3066,7 @@ l = {
                     DE: "Plattner",
                     CN: "铸甲匠",
                 },
-                i: "<img src='./images/glow/ARM.png'/>",
+                i: "<img src='./images/icon/frame/ARM.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2979,7 +3078,7 @@ l = {
                     DE: "Goldschmied",
                     CN: "雕金匠",
                 },
-                i: "<img src='./images/glow/GSM.png'/>",
+                i: "<img src='./images/icon/frame/GSM.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -2991,7 +3090,7 @@ l = {
                     DE: "Gerber",
                     CN: "制革匠",
                 },
-                i: "<img src='./images/glow/LTW.png'/>",
+                i: "<img src='./images/icon/frame/LTW.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -3003,7 +3102,7 @@ l = {
                     DE: "Weber",
                     CN: "裁衣匠",
                 },
-                i: "<img src='./images/glow/WVR.png'/>",
+                i: "<img src='./images/icon/frame/WVR.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -3015,7 +3114,7 @@ l = {
                     DE: "Alchemist",
                     CN: "炼金术士",
                 },
-                i: "<img src='./images/glow/ALC.png'/>",
+                i: "<img src='./images/icon/frame/ALC.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -3027,7 +3126,7 @@ l = {
                     DE: "Gourmet",
                     CN: "烹调师",
                 },
-                i: "<img src='./images/glow/CUL.png'/>",
+                i: "<img src='./images/icon/frame/CUL.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -3039,7 +3138,7 @@ l = {
                     DE: "Minenarbeiter",
                     CN: "采矿工",
                 },
-                i: "<img src='./images/glow/MIN.png'/>",
+                i: "<img src='./images/icon/frame/MIN.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -3051,7 +3150,7 @@ l = {
                     DE: "Gärtner",
                     CN: "园艺工",
                 },
-                i: "<img src='./images/glow/BTN.png'/>",
+                i: "<img src='./images/icon/frame/BTN.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -3063,7 +3162,7 @@ l = {
                     DE: "Fischer",
                     CN: "捕鱼人",
                 },
-                i: "<img src='./images/glow/FSH.png'/>",
+                i: "<img src='./images/icon/frame/FSH.png'/>",
                 e: "li_color",
                 ul: 0
             }
@@ -3137,7 +3236,7 @@ l = {
                     DE: "Verteidiger",
                     CN: "防护职业",
                 },
-                i: "<img src='./images/glow/Tanker.png'/>",
+                i: "<img src='./images/menu/Tanker.png'/>",
                 e: "li_color",
                 ul: 1,
             },
@@ -3149,7 +3248,7 @@ l = {
                     DE: "Heiler",
                     CN: "治疗职业",
                 },
-                i: "<img src='./images/glow/Healer.png'/>",
+                i: "<img src='./images/menu/Healer.png'/>",
                 e: "li_color",
                 ul: 0,
             },
@@ -3161,7 +3260,7 @@ l = {
                     DE: "Angreifer",
                     CN: "进攻职业",
                 },
-                i: "<img src='./images/glow/DPS.png'/>",
+                i: "<img src='./images/menu/DPS.png'/>",
                 e: "li_color",
                 ul: 0,
             },
@@ -3173,7 +3272,7 @@ l = {
                     DE: "Begleiter<font class='ex'>　❙ Charakter und Begleiter zusammenfassen 'ON'</font>",
                     CN: "召唤物<font class='ex'>　❙ 召唤物与自身数据合并 'ON'</font>",
                 },
-                i: "<img src='./images/glow/AVA.png'/>",
+                i: "<img src='./images/icon/frame/AVA.png'/>",
                 e: "li_color",
                 ul: 1,
             },
@@ -3209,7 +3308,7 @@ l = {
                     DE: "Limitrausch",
                     CN: "极限技",
                 },
-                i: "<img src='./images/glow/LMB.png'/>",
+                i: "<img src='./images/icon/frame/LMB.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -3221,7 +3320,7 @@ l = {
                     DE: "Chocobo",
                     CN: "陆行鸟",
                 },
-                i: "<img src='./images/glow/CBO.png'/>",
+                i: "<img src='./images/icon/frame/CBO.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -3233,7 +3332,7 @@ l = {
                     DE: "Handwerker",
                     CN: "能工巧匠",
                 },
-                i: "<img src='./images/glow/CRP.png'/>",
+                i: "<img src='./images/icon/frame/CRP.png'/>",
                 e: "li_color",
                 ul: 1,
             },
@@ -3245,7 +3344,7 @@ l = {
                     DE: "Sammler",
                     CN: "大地使者",
                 },
-                i: "<img src='./images/glow/BTN.png'/>",
+                i: "<img src='./images/icon/frame/BTN.png'/>",
                 e: "li_color",
                 ul: 0,
             }
@@ -3319,7 +3418,7 @@ l = {
                     DE: "Begleiter<font class='ex'>　❙ Charakter und Begleiter zusammenfassen 'ON'</font>",
                     CN: "召唤物<font class='ex'>　❙ 召唤物与自身数据合并 'ON'</font>",
                 },
-                i: "<img src='./images/glow/AVA.png'/>",
+                i: "<img src='./images/icon/frame/AVA.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -3355,7 +3454,7 @@ l = {
                     DE: "Limitrausch",
                     CN: "极限技",
                 },
-                i: "<img src='./images/glow/LMB.png'/>",
+                i: "<img src='./images/icon/frame/LMB.png'/>",
                 e: "li_color",
                 ul: 1
             },
@@ -3367,7 +3466,7 @@ l = {
                     DE: "Chocobo",
                     CN: "陆行鸟",
                 },
-                i: "<img src='./images/glow/CBO.png'/>",
+                i: "<img src='./images/icon/frame/CBO.png'/>",
                 e: "li_color",
                 ul: 1
             }
@@ -5306,7 +5405,7 @@ l = {
                     i: "looks_4",
                     ul: 0
                 },
-                time_italic:{
+                time_italic: {
                     tt: {
                         KR: "글자 기울임<font class='ex'>　❙ 시간</font>",
                         JP: "イタリック体<font class='ex'>　❙ 時間</font>",
@@ -5318,7 +5417,7 @@ l = {
                     i: "format_italic",
                     ul: 1
                 },
-                target_italic:{
+                target_italic: {
                     tt: {
                         KR: "글자 기울임<font class='ex'>　❙ 대상</font>",
                         JP: "イタリック体<font class='ex'>　❙ ターゲット</font>",
@@ -5330,7 +5429,7 @@ l = {
                     i: "format_italic",
                     ul: 0
                 },
-                rps_italic:{
+                rps_italic: {
                     tt: {
                         KR: "글자 기울임<font class='ex'>　❙ RD, RH 등</font>",
                         JP: "イタリック体<font class='ex'>　❙ RD、RHなど</font>",
@@ -5475,8 +5574,8 @@ l = {
                     e: "li_checkbox",
                     i: "format_bold",
                     ul: 0
-                },                
-                header_italic:{
+                },
+                header_italic: {
                     tt: {
                         KR: "글자 기울임<font class='ex'>　❙ 헤더</font>",
                         JP: "イタリック体<font class='ex'>　❙ ヘッダー</font>",
@@ -5488,7 +5587,7 @@ l = {
                     i: "format_italic",
                     ul: 1
                 },
-                body_italic:{
+                body_italic: {
                     tt: {
                         KR: "글자 기울임<font class='ex'>　❙ 바디</font>",
                         JP: "イタリック体<font class='ex'>　❙ ボディ</font>",
@@ -5513,7 +5612,7 @@ l = {
             e: "tab_btn",
             w: 33.3,
             p: "advanced",
-            inner: {                
+            inner: {
                 bar_pet: {
                     tt: {
                         KR: "소환수<font class='ex'>　❙ 소환수 데이터 합산하기 'ON'</font>",
