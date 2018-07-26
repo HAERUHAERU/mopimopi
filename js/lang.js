@@ -2561,7 +2561,14 @@ l = {
                             EN: "Glow",
                             DE: "Glow",
                             CN: "发光",
-                        },                                              
+                        },                     
+                        antique: {
+                            KR: "앤틱",
+                            JP: "アンティーク",
+                            EN: "Antique",
+                            DE: "Antique",
+                            CN: "古董",
+                        },                                           
                         frame: {
                             KR: "프레임",
                             JP: "フレーム",
@@ -2575,14 +2582,7 @@ l = {
                             EN: "Gear",
                             DE: "Gear",
                             CN: "齿轮",
-                        },                                                                       
-                        antique: {
-                            KR: "앤틱",
-                            JP: "アンティーク",
-                            EN: "Antique",
-                            DE: "Antique",
-                            CN: "古董",
-                        },                                                                                         
+                        },           
                         black: {
                             KR: "칠흑색",
                             JP: "ジェットブラック",
