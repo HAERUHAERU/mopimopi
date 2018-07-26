@@ -307,7 +307,7 @@ function petName(job, name) {
 function addData(colName, a, p) {
     switch (colName) {
         case 'Job':
-            if (a != undefined) return '<img src="./images/icon/'+init.q.iconSet+'/' + a.toUpperCase() + '.png"/>';
+            if(a != undefined) return '<img src="./images/icon/' + init.q.iconSet + '/' + p.Job.toUpperCase() + '.png"/>';
             else return ''
         case 'Name':
             var name = ''
