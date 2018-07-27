@@ -902,7 +902,7 @@ function createDOM(type, obj, id) {
             return $('.tabArea :first-child').attr('name')
         case 'list_remove':
             var ul = $('<ul class="remove group shadow">')
-            ul.append('<li class="li_box"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + l.abbset.in_abbOld.m[lang].split('(')[0] + '</td></tr><tr><td class="gVal ac">= ' + l.abbset.in_abbNew.m[lang] + '</td></tr></table></li>')
+            ul.append('<li class="li_box"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + l.abbset.in_abbOld.m[lang].split('(')[0] + '</td></tr><tr><td class="gVal ac">' + l.abbset.in_abbNew.m[lang] + '</td></tr></table></li>')
             for (var i in obj)
                 ul.append(createElement('li_remove_list', null, i, obj[i]))
             $('.scrollArea').append(ul)
@@ -969,7 +969,7 @@ function createElement(type, obj, id, flag) {
         case 'li_full_btn':             
             return '<li class="gTitle sendBtn" style="text-align:center; border-top:solid .1rem rgba(255,255,255,.07)">' + obj.tt[lang] + '</li>'
         case 'li_remove_list':         
-            return '<li class="li_box" name="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + id + '</td><td rowspan="2" class="gIcon removeBtn"><i class="material-icons">remove_circle_outline</i></td></tr><tr><td class="gVal ac">= ' + flag + '</td></tr></table></li>'
+            return '<li class="li_box" name="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + id + '</td><td rowspan="2" class="gIcon removeBtn"><i class="material-icons">remove_circle_outline</i></td></tr><tr><td class="gVal ac">' + flag + '</td></tr></table></li>'
         case 'li_pn':                  
             if (id == 'share' || id == 'apply') var _ = obj.m[lang]
             else var _ = init.q[id]
