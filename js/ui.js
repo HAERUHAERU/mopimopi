@@ -19,9 +19,9 @@ $().ready(function () {
     initOverlay()
 });
 function addOption() {
-    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet']
+    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet', 'borderTextType']
     var sizeVal = ['tableLineVer', 'sizeLineVer']
-    var colorVal = ['tableLineVer']
+    var colorVal = ['tableLineVer', 'tableBorderYOU', 'tableBorderOther']
 
     putValue(qVal, 'q')
     putValue(sizeVal, 'Range')
@@ -1189,30 +1189,42 @@ function ui() {
     else var boldYOU = ''
     if (init.q.boldOther) var boldOther = 'bold'
     else var boldOther = ''
+    if (init.q.borderTextType == 'outline')
+        var btt = '-.1rem 0 #'+ init.Color.tableBorderOther +', 0 .1rem #'+ init.Color.tableBorderOther +', .1rem 0 #'+ init.Color.tableBorderOther +', 0 -.1rem #'+ init.Color.tableBorderOther
+    else
+        var btt = '0 0 .3rem #' + init.Color.tableBorderOther
     $(':not(#YOU) .tableBody td, :not(#YOU).rCell .rName, :not(#YOU).rCell .rData').css({
         color: '#' + init.Color.tableOther,
         opacity: parseFloat(init.Range.tableOther / 100),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
         'font-weight': boldOther,
-        'font-size': parseFloat(init.Range.sizeBodyText / 10) + 'rem'
+        'font-size': parseFloat(init.Range.sizeBodyText / 10) + 'rem',
+        'text-shadow': btt
     })
+    $(':not(#YOU) .tableBody td .ex').css({
+        color: '#' + init.Color.tableExOther,
+        opacity: parseFloat(init.Range.tableOther / 100),
+        'text-shadow': btt
+    })    
+    if (init.q.borderTextType == 'outline')
+        var btt = '-.1rem 0 #'+ init.Color.tableBorderYOU +', 0 .1rem #'+ init.Color.tableBorderYOU +', .1rem 0 #'+ init.Color.tableBorderYOU +', 0 -.1rem #'+ init.Color.tableBorderYOU
+    else
+        var btt = '0 0 .3rem #' + init.Color.tableBorderYOU
     $('#YOU .tableBody td, .myPet .tableBody td, #YOU.rCell .rName, #YOU.rCell .rData').css({
         color: '#' + init.Color.tableYOU,
         opacity: parseFloat(init.Range.tableYOU / 100),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
         'font-weight': boldYOU,
-        'font-size': parseFloat(init.Range.sizeBodyText / 10) + 'rem'
-    })
-    $('.rName').css({
-        'font-size': parseFloat(init.Range.sizeBodyText / 10) - 0.1 + 'rem'
-    })
-    $(':not(#YOU) .tableBody td .ex').css({
-        color: '#' + init.Color.tableExOther,
-        opacity: parseFloat(init.Range.tableOther / 100),
+        'font-size': parseFloat(init.Range.sizeBodyText / 10) + 'rem',
+        'text-shadow': btt
     })
     $('#YOU .tableBody td .ex').css({
         color: '#' + init.Color.tableExYOU,
         opacity: parseFloat(init.Range.tableYOU / 100),
+        'text-shadow': btt
+    })
+    $('.rName').css({
+        'font-size': parseFloat(init.Range.sizeBodyText / 10) - 0.1 + 'rem'
     })
     if (init.q.body_italic)
         style = 'italic'
