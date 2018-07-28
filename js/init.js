@@ -79,6 +79,7 @@ Mopi2 = {
         tableOrder: 1,
         boldYOU: 1,
         boldOther: 0,
+        borderTextType:"shadow", 
 
         ani: 1,
         gradient: 0,
@@ -144,7 +145,9 @@ Mopi2 = {
         tableLineVer: "FFFFFF", 
         tableExYOU: "BDBDBD",
         tableExOther: "BDBDBD",
-
+        tableBorderYOU:"000000",
+        tableBorderOther:"000000",
+        
         myColor: "03A9F4",
         PLD: "7B9AA2",
         WAR: "A91A16",
