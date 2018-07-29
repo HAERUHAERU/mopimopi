@@ -602,7 +602,7 @@ function liReload() {
             var id = $(this).attr('id').split('_')[1]
             var input = $(this).val()
 
-            if (id == 'abbOld' || id == 'abbNew') {  //줄임말 입력시 
+            if (id == 'abbOld' || id == 'abbNew') {  
                 var key = $('#in_abbOld').val()
                 var val = $('#in_abbNew').val()
                 if (key != '' && val == '') {
@@ -700,7 +700,8 @@ function button(id, direction) {
             break
         case 'backup':
             init.q.backupDate = new Date()
-            localStorage.setItem(id, JSON.stringify(init))
+            localStorage.setItem(id, JSON.stringify(init))            
+            localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
             $('#' + id + ' .gVal').html(init.q.backupDate)
             callToast(id, 500, 3000)
             break
