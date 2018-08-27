@@ -9,7 +9,6 @@ window.onpopstate = function () {
     history.go(1)
 }
 $().ready(function () {
-    console.log(lastCombat)
     if (localStorage.getItem("Mopi2_HAERU") == null) {
         localStorage.clear();
         localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
