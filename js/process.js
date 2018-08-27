@@ -21,7 +21,8 @@ function onOverlayDataUpdate(e) {
             update(lastDPS, lastHPS)
             hiddenTable()
         }, 1)
-    }
+    }    
+    console.log(lastCombat)
 }
 function update(lastDPS, lastHPS) {
     if (lastDPS.zone == 'HAERU') {
