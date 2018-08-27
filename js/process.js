@@ -398,6 +398,8 @@ function addData(colName, a, p) {
         case 'MaxHeal':            
             var val = 'merged' + colName + 'val'
             var str = 'merged' + colName + 'str'
+            var unit = 'merged' + colName + 'unit'
+            var data = ''
             var abb = p[str]
             for (var i in init.Alias) {
                 if (p[str] == i) {
@@ -405,24 +407,21 @@ function addData(colName, a, p) {
                     break
                 }
             }
-            if (init.q.mhh == 1) {
-                if (p[val] >= 100000 && init.q.unit == 1)
-                    return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + addComma(p[val], 1000)
-                else
-                    return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + addComma(p[val])
-            } else if (init.q.mhh == 2) {
-                if (p[val] >= 100000 && init.q.unit == 1)
-                    return addComma(p[val], 1000) + '<font class="ex"> ' + init.q.mhh_unit + ' ' + abb + '</font>'
-                else
-                    return addComma(p[val]) + '<font class="ex"> ' + init.q.mhh_unit + ' ' + abb + '</font>'
-            } else if (init.q.mhh == 3) {
+            if(p[unit] == 'K')
+                data = addComma(p[val], 1000, init.q.ns * init.q.dmgType)
+            else if(p[unit] == 'M')
+                data = addComma(p[val], 1000000, init.q.ns * init.q.dmgType)
+            else
+                data = addComma(p[val])
+            
+            if (init.q.mhh == 1) 
+                return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + data
+            else if (init.q.mhh == 2) 
+                return data + '<font class="ex"> ' + init.q.mhh_unit + ' ' + abb + '</font>'
+            else if (init.q.mhh == 3) 
                 return abb
-            } else {
-                if (p[val] >= 100000 && init.q.unit == 1)
-                    return addComma(p[val], 1000)
-                else
-                    return addComma(p[val])
-            }
+            else 
+                return data
         default:
             return addComma(a, null, init.q.ns * init.q.perType) + '<font class="ex">%</font>';
     }
