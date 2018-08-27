@@ -1,4 +1,3 @@
-//미리보기 데이터 
 var xhr = new XMLHttpRequest();
 xhr.onload = function () {
     if (xhr.status === 200) {
@@ -33,7 +32,6 @@ var QueryString = function () {
     return query_string
 }();
 
-
 var host_port = QueryString.HOST_PORT;
 while (host_port.endsWith('/')) {
     host_port = host_port.substring(0, host_port.length - 1)
@@ -55,7 +53,6 @@ if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
         wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
     }
 }
-
 
 class ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
@@ -488,27 +485,45 @@ function Person(e, p) {
     }
     try {
         this.maxhitstr = this.maxhit.split('-')[0];
-        this.maxhitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
-        this.mergedMaxHitstr = this.maxhit.split('-')[0];
-        this.mergedMaxHitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
+        this.maxhitunit = this.maxhit.split('-')[1].replace(/\d/g, "").replace(/\W/g, "")
+        if (this.maxhitunit.toLowerCase() == 'k')
+            this.maxhitval = parseFloat(this.maxhit.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000
+        else if (this.maxhitunit.toLowerCase() == 'm')
+            this.maxhitval = parseFloat(this.maxhit.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000000
+        else
+            this.maxhitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
+        this.mergedMaxHitstr = this.maxhitstr
+        this.mergedMaxHitunit = this.maxhitunit
+        this.mergedMaxHitval = this.maxhitval
     } catch (ex) {
         this.maxhit = "?-0";
         this.maxhitstr = "No Data";
         this.maxhitval = 0;        
-        this.mergedMaxHitstr = "No Data";
-        this.mergedMaxHitval = 0
+        this.maxhitunit = ''
+        this.mergedMaxHitstr = this.maxhitstr
+        this.mergedMaxHitunit = this.maxhitunit
+        this.mergedMaxHitval = this.maxhitval
     }
     try {
         this.maxhealstr = this.maxheal.split('-')[0];
-        this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))        
-        this.mergedMaxHealstr = this.maxheal.split('-')[0];
-        this.mergedMaxHealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))
+        this.maxhealunit = this.maxheal.split('-')[1].replace(/\d/g, "").replace(/\W/g, "")
+        if (this.maxhealunit.toLowerCase() == 'k')
+            this.maxhealval = parseFloat(this.maxheal.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000
+        else if (this.maxhealunit.toLowerCase() == 'm')
+            this.maxhealval = parseFloat(this.maxheal.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000000 
+        else
+            this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))            
+        this.mergedMaxHealstr = this.maxhealstr
+        this.mergedMaxHealunit = this.mergedMaxHealunit
+        this.mergedMaxHealval = this.maxhealval
     } catch (ex) {
         this.maxheal = "?-0";
         this.maxhealstr = "No Data";
+        this.maxhealunit = ''
         this.maxhealval = 0;        
-        this.mergedMaxHealstr = "No Data";
-        this.mergedMaxHealval = 0
+        this.mergedMaxHealstr = this.maxhealstr
+        this.mergedMaxHealunit = this.mergedMaxHealunit
+        this.mergedMaxHealval = this.maxhealval
     }
     this.effHealed = this.healed - this.overHeal - this.damageShield;
     this.visible = !0;
@@ -787,8 +802,8 @@ Combatant.prototype.AttachPets = function () {
         this.Combatant[i].returnOrigin();
         this.Combatant[i].recalculate();
         this.Combatant[i].parent = this
-                
-        if (this.Combatant[i].Job == "AVA") {            
+
+        if (this.Combatant[i].Job == "AVA") {
             if(this.Combatant[i].petOwner == myName || this.Combatant[i].petOwner == tmpMyName)
                 var owner = this.Combatant['YOU']
             else
@@ -797,10 +812,12 @@ Combatant.prototype.AttachPets = function () {
             if (this.Combatant[i].maxhitval > owner.maxhitval) {
                 owner.mergedMaxHitval = this.Combatant[i].maxhitval
                 owner.mergedMaxHitstr = this.Combatant[i].maxhitstr
+                owner.mergedMaxHitunit = this.Combatant[i].maxhitunit
             }
             if (this.Combatant[i].maxhealval > owner.maxhealval) {
                 owner.mergedMaxHealval = this.Combatant[i].maxhealval
                 owner.mergedMaxHealstr = this.Combatant[i].maxhealstr
+                owner.mergedMaxHealunit = this.Combatant[i].maxhealunit
             }
         }
         
@@ -814,8 +831,10 @@ Combatant.prototype.DetachPets = function () {
         this.Combatant[i].parent = this
         this.Combatant[i].mergedMaxHitval = this.Combatant[i].maxhitval
         this.Combatant[i].mergedMaxHitstr = this.Combatant[i].maxhitstr
+        this.Combatant[i].mergedMaxHitunit = this.Combatant[i].maxhitunit
         this.Combatant[i].mergedMaxHealval = this.Combatant[i].maxhealval
         this.Combatant[i].mergedMaxHealstr = this.Combatant[i].maxhealstr
+        this.Combatant[i].mergedMaxHealunit = this.Combatant[i].maxhealunit
     }
 }
 Combatant.prototype.sortkeyChange = function (key) {
