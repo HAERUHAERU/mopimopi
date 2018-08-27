@@ -411,9 +411,14 @@ function addData(colName, a, p) {
                 data = addComma(p[val], 1000, init.q.ns * init.q.dmgType)
             else if(p[unit] == 'M')
                 data = addComma(p[val], 1000000, init.q.ns * init.q.dmgType)
-            else
-                data = addComma(p[val])
-            
+            else{
+                if(p[val] >= 1000 && init.q.unit == 1)
+                    data = addComma(p[val], 1000, init.q.ns * init.q.dmgType)
+                else if(p[val] >= 1000000 && init.q.unit == 1)
+                    data = addComma(p[val], 1000000, init.q.ns * init.q.dmgType)
+                else 
+                    data = addComma(p[val])
+            }                
             if (init.q.mhh == 1) 
                 return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + data
             else if (init.q.mhh == 2) 
