@@ -514,7 +514,7 @@ function Person(e, p) {
         else
             this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))            
         this.mergedMaxHealstr = this.maxhealstr
-        this.mergedMaxHealunit = this.mergedMaxHealunit
+        this.mergedMaxHealunit = this.maxhealunit
         this.mergedMaxHealval = this.maxhealval
     } catch (ex) {
         this.maxheal = "?-0";
