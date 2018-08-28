@@ -1,3 +1,4 @@
+//미리보기 데이터 
 var xhr = new XMLHttpRequest();
 xhr.onload = function () {
     if (xhr.status === 200) {
@@ -459,7 +460,7 @@ function Person(e, p) {
     }
 
     if (this.Class == "") {
-        if (this.name.indexOf("에기") > -1 || this.name.indexOf("카벙클") > -1 || this.name.indexOf("데미바하무트") > -1 || this.name.indexOf("Egi") > -1 || this.name.indexOf("Demi-Bahamut") > -1 || this.name.indexOf("Carbuncle") > -1 || this.name.indexOf("Karfunkel") > -1 || this.name.indexOf("エギ") > -1 || this.name.indexOf("カーバンクル") > -1 || this.name.indexOf("石兽") > -1 || this.name.indexOf("亚灵神巴哈姆特") > -1) {
+        if (this.name.indexOf("에기") > -1 || this.name.indexOf("카벙클") > -1 || this.name.indexOf("데미바하무트") > -1 || this.name.indexOf("Egi") > -1 || this.name.indexOf("Demi-Bahamut") > -1 || this.name.indexOf("Carbuncle") > -1 || this.name.indexOf("Karfunkel") > -1 || this.name.indexOf("エギ") > -1 || this.name.indexOf("カーバンクル") > -1 || this.name.indexOf("石兽") > -1 || this.name.indexOf("之灵") > -1 || this.name.indexOf("亚灵神巴哈姆特") > -1) {
             this.Job = "AVA";
             this.Class = "SMN";
             this.isPet = true;
@@ -486,15 +487,18 @@ function Person(e, p) {
     try {
         this.maxhitstr = this.maxhit.split('-')[0];
         this.maxhitunit = this.maxhit.split('-')[1].replace(/\d/g, "").replace(/\W/g, "")
+
         if (this.maxhitunit.toLowerCase() == 'k')
             this.maxhitval = parseFloat(this.maxhit.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000
         else if (this.maxhitunit.toLowerCase() == 'm')
             this.maxhitval = parseFloat(this.maxhit.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000000
         else
             this.maxhitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
+
         this.mergedMaxHitstr = this.maxhitstr
         this.mergedMaxHitunit = this.maxhitunit
         this.mergedMaxHitval = this.maxhitval
+
     } catch (ex) {
         this.maxhit = "?-0";
         this.maxhitstr = "No Data";
@@ -512,7 +516,8 @@ function Person(e, p) {
         else if (this.maxhealunit.toLowerCase() == 'm')
             this.maxhealval = parseFloat(this.maxheal.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000000 
         else
-            this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))            
+            this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))
+            
         this.mergedMaxHealstr = this.maxhealstr
         this.mergedMaxHealunit = this.maxhealunit
         this.mergedMaxHealval = this.maxhealval
