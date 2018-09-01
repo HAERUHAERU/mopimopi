@@ -29,6 +29,7 @@ Mopi2 = {
         HPS_C: 1,
 
         unit: 1,
+        max_unit:0,
         preview: 0,
         preview24: 0,
         palette: "job",   
