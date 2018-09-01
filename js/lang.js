@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] 중국 서버 소환사 펫 합산 오류</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] 독일어 데이터 추가</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] ACT 3.3.2.257_180825 업데이트 대응 ❯ MaxHit/Heal 단위 강제 적용</div></div><div name="row"><div class="b"></div><div class="m">백업 No Data 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 고급 설정 ❯ 글자 테두리 유형</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 색 ❯ 글자 테두리</div></div><div name="row"><div class="b"></div><div class="m">클래스 아이콘 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 색 ❯ 클래스 또는 직업 아이콘 세트 11종 추가</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
-            EN: '<div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] Error of Combine Pets with Owner (SMN) in China Server</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] Added Deutsch data</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] Responses to ACT 3.3.2.257_180825 Updata ❯ Force the MaxHit/Heal unit added</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Backup</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Advanced ❯ Type of Text Border</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Color ❯ Text Border</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Class Icons</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Color ❯ Added the 11 Sets of Class or Job Icon</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrated the DPS and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
+            KR: '<div name="row"><div class="u"></div><div class="m">[인벤/Proark] 데이터 ❯ MaxHit, MaxHeal 단위 (ACT ver.3.3.2.256 이하만 사용 가능)</div></div><div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] 중국 서버 소환사 펫 합산 오류</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] 독일어 데이터 추가</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] ACT 3.3.2.257_180825 업데이트 대응 ❯ MaxHit/Heal 단위 강제 적용</div></div><div name="row"><div class="b"></div><div class="m">백업 No Data 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 고급 설정 ❯ 글자 테두리 유형</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 색 ❯ 글자 테두리</div></div><div name="row"><div class="b"></div><div class="m">클래스 아이콘 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 색 ❯ 클래스 또는 직업 아이콘 세트 11종 추가</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
+            EN: '<div name="row"><div class="u"></div><div class="m">[Inven/Proark] Data ❯ Unit of MaxHit, MaxHeal (Available the ACT below ver.3.3.2.256)</div></div><div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] Error of Combine Pets with Owner (SMN) in China Server</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] Added Deutsch data</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] Responses to ACT 3.3.2.257_180825 Updata ❯ Force the MaxHit/Heal unit added</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Backup</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Advanced ❯ Type of Text Border</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Color ❯ Text Border</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Class Icons</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Color ❯ Added the 11 Sets of Class or Job Icon</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrated the DPS and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -388,11 +388,11 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.2.8.180828',
-                JP: 'MopiMopi ver.2.8.180828',
-                EN: 'MopiMopi ver.2.8.180828',
-                DE: 'MopiMopi ver.2.8.180828',
-                CN: "MopiMopi ver.2.8.180828",
+                KR: 'MopiMopi ver.2.9.180902',
+                JP: 'MopiMopi ver.2.9.180902',
+                EN: 'MopiMopi ver.2.9.180902',
+                DE: 'MopiMopi ver.2.9.180902',
+                CN: "MopiMopi ver.2.9.180902",
             },
             i: "new_releases",
             e: "li_2line",
@@ -554,16 +554,35 @@ l = {
             tt: {
                 KR: "단위",
                 JP: "単位",
-                EN: "Unit Symbol",
-                DE: "Unit Symbol",
+                EN: "Unit",
+                DE: "Unit",
                 CN: "单位",
             },
             m: {
-                KR: "1k = 1000, 1M = 1000000<font class='ex'>　❙ 권장 ❯ ACT ver.3.3.2.256</font>",
-                JP: "1k = 1000、1M = 1000000<font class='ex'>　❙ 勧告 ❯ ACT ver.3.3.2.256</font>",
-                EN: "1k = 1000, 1M = 1000000<font class='ex'>　❙ Recommendation ❯ ACT ver.3.3.2.256</font>",
-                DE: "1k = 1000, 1M = 1000000<font class='ex'>　❙ Empfehlung ❯ ACT ver.3.3.2.256</font>",
-                CN: "1k = 1000，1M = 1000000<font class='ex'>　❙ 建议 ❯ ACT ver.3.3.2.256</font>",
+                KR: "1k = 1000, 1M = 1000000",
+                JP: "1k = 1000、1M = 1000000",
+                EN: "1k = 1000, 1M = 1000000",
+                DE: "1k = 1000, 1M = 1000000",
+                CN: "1k = 1000，1M = 1000000",
+            },
+            i: "sort",
+            e: "li_2line_checkbox_normal",
+            ul: 0
+        },         
+        max_unit: {
+            tt: {
+                KR: "MaxHit, MaxHeal 단위",
+                JP: "MaxHit、MaxHeal単位",
+                EN: "Unit of MaxHit, MaxHeal",
+                DE: "Unit des MaxHit, MaxHeal",
+                CN: "MaxHit，MaxHeal 单位",
+            },
+            m: {
+                KR: "1k = 1000, 1M = 1000000<font class='ex'>　❙ ACT ver.3.3.2.256 이하</font>",
+                JP: "1k = 1000、1M = 1000000<font class='ex'>　❙ ACT ver.3.3.2.256以下</font>",
+                EN: "1k = 1000, 1M = 1000000<font class='ex'>　❙ Below ACT ver.3.3.2.256</font>",
+                DE: "1k = 1000, 1M = 1000000<font class='ex'>　❙ Unten ACT ver.3.3.2.256</font>",
+                CN: "1k = 1000，1M = 1000000<font class='ex'>　❙ ACT ver.3.3.2.256以下</font>",
             },
             i: "sort",
             e: "li_2line_checkbox_normal",
@@ -723,7 +742,7 @@ l = {
             e: "li_radio",
             p: "Data",
             ul: 0
-        },
+        },       
         abb: {
             tt: {
                 KR: "기술명 줄임말로 표시",
