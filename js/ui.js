@@ -19,7 +19,7 @@ $().ready(function () {
     initOverlay()
 });
 function addOption() {
-    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet', 'borderTextType']
+    var qVal = ['max_unit', 'bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet', 'borderTextType']
     var sizeVal = ['tableLineVer', 'sizeLineVer']
     var colorVal = ['tableLineVer', 'tableBorderYOU', 'tableBorderOther']
 
