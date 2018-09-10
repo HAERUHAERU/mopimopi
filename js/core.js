@@ -460,26 +460,26 @@ function Person(e, p) {
     }
 
     if (this.Class == "") {
-        if (this.name.indexOf("?뿉湲?") > -1 || this.name.indexOf("移대쿃?겢") > -1 || this.name.indexOf("?뜲誘몃컮?븯臾댄듃") > -1 || this.name.indexOf("Egi") > -1 || this.name.indexOf("Demi-Bahamut") > -1 || this.name.indexOf("Carbuncle") > -1 || this.name.indexOf("Karfunkel") > -1 || this.name.indexOf("?궓?궙") > -1 || this.name.indexOf("?궖?꺖?깘?꺍?궚?꺂") > -1 || this.name.indexOf("?윹?끋") > -1 || this.name.indexOf("阿뗧겣") > -1 || this.name.indexOf("雅싩겣曄욃럽?뱢冶녺돶") > -1) {
+        if (this.name.indexOf("에기") > -1 || this.name.indexOf("카벙클") > -1 || this.name.indexOf("데미바하무트") > -1 || this.name.indexOf("Egi") > -1 || this.name.indexOf("Demi-Bahamut") > -1 || this.name.indexOf("Carbuncle") > -1 || this.name.indexOf("Karfunkel") > -1 || this.name.indexOf("エギ") > -1 || this.name.indexOf("カーバンクル") > -1 || this.name.indexOf("石兽") > -1 || this.name.indexOf("之灵") > -1 || this.name.indexOf("亚灵神巴哈姆特") > -1) {
             this.Job = "AVA";
             this.Class = "SMN";
             this.isPet = true;
             this.petType = "Egi"
         }
-        if (this.name.indexOf("?슂?젙") > -1 || this.name.indexOf("Eos") > -1 || this.name.indexOf("Selene") > -1 || this.name.indexOf("?깢?궒?궋?꺁?꺖") > -1 || this.name.indexOf("弱뤶퍢也?") > -1) {
+        if (this.name.indexOf("요정") > -1 || this.name.indexOf("Eos") > -1 || this.name.indexOf("Selene") > -1 || this.name.indexOf("フェアリー") > -1 || this.name.indexOf("小仙女") > -1) {
             this.Job = "AVA";
             this.Class = "SCH";
             this.isPet = true;
             this.role = "Healer";
             this.petType = "Fairy"
         }
-        if (this.name.indexOf("?옄?룞?룷?깙") > -1 || this.name.indexOf("Autoturret") > -1 || this.name.indexOf("?궕?꺖?깉?궭?꺃?긿?깉") > -1 || this.name.indexOf("Selbstschuss-Gyrocopter") > -1 || this.name.indexOf("Auto-tourelle") > -1 || this.name.indexOf("凉뤸뎌令븀궙櫻?") > -1) {
+        if (this.name.indexOf("자동포탑") > -1 || this.name.indexOf("Autoturret") > -1 || this.name.indexOf("オートタレット") > -1 || this.name.indexOf("Selbstschuss-Gyrocopter") > -1 || this.name.indexOf("Auto-tourelle") > -1 || this.name.indexOf("式浮空炮塔") > -1) {
             this.Job = "AVA";
             this.Class = "MCH";
             this.isPet = true;
             this.petType = "AutoTurret"
         }
-        if (this.name.toUpperCase().indexOf("LIMIT BREAK") > -1 || this.name.indexOf("?꺁?깱?긿?깉") > -1) {
+        if (this.name.toUpperCase().indexOf("LIMIT BREAK") > -1 || this.name.indexOf("リミット") > -1) {
             this.Job = "LMB";
             this.Class = "LMB"
         }
