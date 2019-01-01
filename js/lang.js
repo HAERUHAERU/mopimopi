@@ -9,8 +9,8 @@ l = {
             EN: 'PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.'
         },
         update: {
-            KR: '<div name="row"><div class="b"></div><div class="m">[인벤/컨하] 격투사 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[인벤/Proark] 데이터 ❯ MaxHit, MaxHeal 단위 (ACT ver.3.3.2.256 이하만 사용 가능)</div></div><div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] 중국 서버 소환사 펫 합산 오류</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] 독일어 데이터 추가</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] ACT 3.3.2.257_180825 업데이트 대응 ❯ MaxHit/Heal 단위 강제 적용</div></div><div name="row"><div class="b"></div><div class="m">백업 No Data 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 고급 설정 ❯ 글자 테두리 유형</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 색 ❯ 글자 테두리</div></div><div name="row"><div class="b"></div><div class="m">클래스 아이콘 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 색 ❯ 클래스 또는 직업 아이콘 세트 11종 추가</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
-            EN: '<div name="row"><div class="b"></div><div class="m">[Inven/컨하] A Display Error of Pugilist</div></div><div name="row"><div class="u"></div><div class="m">[Inven/Proark] Data ❯ Unit of MaxHit, MaxHeal (Available the ACT below ver.3.3.2.256)</div></div><div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] Error of Combine Pets with Owner (SMN) in China Server</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] Added Deutsch data</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] Responses to ACT 3.3.2.257_180825 Updata ❯ Force the MaxHit/Heal unit added</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Backup</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Advanced ❯ Type of Text Border</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Color ❯ Text Border</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Class Icons</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Color ❯ Added the 11 Sets of Class or Job Icon</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrated the DPS and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
+            KR: '<div name="row"><div class="b"></div><div class="m">레이드 모드 : 직업 아이콘 클릭 시 캐릭터 이름 숨김 오류 </div></div><div name="row"><div class="b"></div><div class="m">레이드 모드 : 직업 아이콘 크기 조절 오류</div></div><div name="row"><div class="u"></div><div class="m">[Gmail/Mark Megyeri] 디자인 ❯ 레이드 모드 (커스터마이징 옵션 추가)</div></div><div name="row"><div class="n"></div><div class="m">★★★ 2019년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div><div name="row"><div class="b"></div><div class="m">[인벤/컨하] 격투사 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[인벤/Proark] 데이터 ❯ MaxHit, MaxHeal 단위 (ACT ver.3.3.2.256 이하만 사용 가능)</div></div><div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] 중국 서버 소환사 펫 합산 오류</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] 독일어 데이터 추가</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] ACT 3.3.2.257_180825 업데이트 대응 ❯ MaxHit/Heal 단위 강제 적용</div></div><div name="row"><div class="b"></div><div class="m">백업 No Data 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 고급 설정 ❯ 글자 테두리 유형</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] 디자인 ❯ 색 ❯ 글자 테두리</div></div><div name="row"><div class="b"></div><div class="m">클래스 아이콘 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">디자인 ❯ 색 ❯ 클래스 또는 직업 아이콘 세트 11종 추가</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] 디자인 ❯ 고급 설정 ❯ 글자 기울임</div></div><div name="row"><div class="c"></div><div class="m">데이터 ❯ 구성 ❯ <a href="http://www.inven.co.kr/board/ff14/4953/1982" target="_blank">DPS/HPS 데이터 통합</a></div></div><div name="row"><div class="b"></div><div class="m">디자인 ❯ 모서리 ❯ 반경이 0일 때 표시 오류</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] 관리 도구 ❯ 커스텀 UI 데이터 ❯ 공유, 적용</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] 디자인 ❯ 고급 설정 ❯ 레이드 모드 (인원수 설정)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] 소환사, 기공사, 학자 MaxHit, MaxHeal 표시 오류</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] 디자인 ❯ 색/불투명도/크기 ❯ 세로 구분선, 디자인 ❯ 셀 ❯ 헤더 정렬</div></div><div name="row"><div class="u"></div><div class="m">데이터 ❯ Damage/Healed 데이터 유형</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] 데이터 ❯ MaxHit, MaxHeal 구분 기호</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] 디자인 ❯ 고급 설정 ❯ 그래프 ❯ DPS/HPS 그래프 정렬</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Streamlabs OBS 프로그램 사용 가능</div></div><div name="row"><div class="b"></div><div class="m">데이터 ❯ 구성, 순서, 이름, 미리보기 화면 등</div></div>',
+            EN: '<div name="row"><div class="b"></div><div class="m">Raid Mode : Hidden Error of Character name (when click the job icon)</div></div><div name="row"><div class="b"></div><div class="m">Raid Mode : Resizing Error of Job icon</div></div><div name="row"><div class="u"></div><div class="m">[Gmail/Mark Megyeri] Design ❯ Raid Mode (Added customizing options, Sorry for late...T^T)</div></div><div name="row"><div class="n"></div><div class="m">★★★ 2/0/1/9! Best wishes for a Happy New Year! ★★★</div></div><div name="row"><div class="b"></div><div class="m">[Inven/컨하] Display Error of Pugilist</div></div><div name="row"><div class="u"></div><div class="m">[Inven/Proark] Data ❯ Unit of MaxHit, MaxHeal (Available the ACT below ver.3.3.2.256)</div></div><div name="row"><div class="b"></div><div class="m">[China/紫水栈桥/Rapis] Error of Combine Pets with Owner (SMN) in China Server</div></div><div name="row"><div class="c"></div><div class="m">[Chaos/Phoenix/Shunittseru Tohka] Added Deutsch data</div></div><div name="row"><div class="b"></div><div class="m">[Gmail/Kyle,endless] Responses to ACT 3.3.2.257_180825 Updata ❯ Force the MaxHit/Heal unit added</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Backup</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Advanced ❯ Type of Text Border</div></div><div name="row"><div class="u"></div><div class="m">[Reddit/qrtru] Design ❯ Color ❯ Text Border</div></div><div name="row"><div class="b"></div><div class="m">Display Error of the Class Icons</div></div><div name="row"><div class="u"></div><div class="m">Design ❯ Color ❯ Added the 11 Sets of Class or Job Icon</div></div><div name="row"><div class="u"></div><div class="m">[Inven/컨하] Design ❯ Advanced ❯ Italic</div></div><div name="row"><div class="c"></div><div class="m">Data ❯ Data Formatting ❯ Integrated the DPS and HPS Data</div></div><div name="row"><div class="b"></div><div class="m">Design ❯ Corner ❯ Error when Radius value is 0</div></div><div name="row"><div class="b"></div><div class="m">[Inven/슈나난] Management Tools ❯ Custom UI Data ❯ Share, Apply</div></div><div name="row"><div class="c"></div><div class="m">[Reddit/Shadyblink] Design ❯ Advanced ❯ Raid Mode (The number of combatants option)</div></div><div name="row"><div class="b"></div><div class="m">[Inven/버플레어] SMN, MCH, SCH MaxHit, MaxHeal Errors</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">[Inven/엔쥬] Design ❯ Color/Opacity/Size ❯ Vertically Division Lines, Design ❯ Cell ❯ Header Align</div></div><div name="row"><div class="u"></div><div class="m">Data ❯ Data Type of Damage/Healed</div></div><div name="row"><div class="u"></div><div class="m">[Inven/skotlex] Data ❯ Separator of MaxHit, MaxHeal</div></div><div name="row"><div class="c"></div><div class="m">[Inven/캐프리컨] Design ❯ Advanced ❯ Graph ❯ DPS/HPS Graph Align</div></div><div name="row"><div class="b"></div><div class="m">[Reddit/Jinzhuu] Available Streamlabs OBS</div></div><div name="row"><div class="b"></div><div class="m">Data ❯ Formatting, Order, Name, Preview, etc.</div></div>'
         }
     },
     msg: {
@@ -163,11 +163,11 @@ l = {
                 },
                 view24: {
                     tt: {
-                        KR: "레이드 모드<font class='ex'>　❙ 디자인 ❯ 고급 설정</font>",
-                        JP: "Raidモード<font class='ex'>　❙ デザイン ❯ 高級の設定</font>",
-                        EN: "Raid Mode<font class='ex'>　❙ Design ❯ Advanced</font>",
-                        DE: "Raid Modus<font class='ex'>　❙ Design ❯ Experteneinstellungen</font>",
-                        CN: "副本模式<font class='ex'>　❙ 设计 ❯ 高级选项</font>",
+                        KR: "레이드 모드",
+                        JP: "Raidモード",
+                        EN: "Raid Mode",
+                        DE: "Raid Modus",
+                        CN: "副本模式",
                     },
                     e: "dr_checkbox"
                 },
@@ -388,11 +388,11 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.3.0.180910',
-                JP: 'MopiMopi ver.3.0.180910',
-                EN: 'MopiMopi ver.3.0.180910',
-                DE: 'MopiMopi ver.3.0.180910',
-                CN: "MopiMopi ver.3.0.180910",
+                KR: 'MopiMopi ver.3.1.190102',
+                JP: 'MopiMopi ver.3.1.190102',
+                EN: 'MopiMopi ver.3.1.190102',
+                DE: 'MopiMopi ver.3.1.190102',
+                CN: "MopiMopi ver.3.1.190102",
             },
             i: "new_releases",
             e: "li_2line",
@@ -1014,6 +1014,18 @@ l = {
             i: "opacity",
             e: "li_link",
             ul: 0
+        },        
+        size: {
+            tt: {
+                KR: "크기",
+                JP: "サイズ",
+                EN: "Size",
+                DE: "Größe",
+                CN: "大小",
+            },
+            i: "straighten",
+            e: "li_link",
+            ul: 0
         },
         cells: {
             tt: {
@@ -1025,7 +1037,7 @@ l = {
             },
             i: "tune",
             e: "li_link",
-            ul: 1
+            ul: 0
         },
         shape: {
             tt: {
@@ -1036,18 +1048,6 @@ l = {
                 CN: "边角",
             },
             i: "rounded_corner",
-            e: "li_link",
-            ul: 0
-        },
-        size: {
-            tt: {
-                KR: "크기",
-                JP: "サイズ",
-                EN: "Size",
-                DE: "Größe",
-                CN: "大小",
-            },
-            i: "straighten",
             e: "li_link",
             ul: 0
         },
@@ -1062,7 +1062,19 @@ l = {
             i: "pan_tool",
             e: "li_link",
             ul: 1
-        }
+        },
+        raid:{
+            tt: {
+                KR: "레이드 모드",
+                JP: "Raidモード",
+                EN: "Raid Mode",
+                DE: "Raid Modus",
+                CN: "副本模式",
+            },
+            i: "grid_on",
+            e: "li_link",
+            ul: 0
+        },
     },
     font: {
         caution: {
@@ -1935,34 +1947,6 @@ l = {
                     i: "opacity",
                     e: "li_slider",
                     ul: 1
-                },                
-                view24BgYOU: {
-                    tt: {
-                        KR: "바디<font class='ex'>　❙ 레이드 모드, 내 캐릭터 </font>",
-                        JP: "ボディ<font class='ex'>　❙ Raidモード、自分のキャラクター</font>",
-                        EN: "Body<font class='ex'>　❙ Raid Mode, My Character</font>",
-                        DE: "Körper<font class='ex'>　❙ Raid Modus, Eigenen Charakter</font>",
-                        CN: "主体<font class='ex'>　❙ 副本模式，自己角色 </font>",
-                    },
-                    min: 0,
-                    max: 100,
-                    i: "opacity",
-                    e: "li_slider",
-                    ul: 0
-                },
-                view24BgOther: {
-                    tt: {
-                        KR: "바디<font class='ex'>　❙ 레이드 모드, 타 캐릭터</font>",
-                        JP: "ボディ<font class='ex'>　❙ Raidモード、他のキャラクター</font>",
-                        EN: "Body<font class='ex'>　❙ Raid Mode, Other Character</font>",
-                        DE: "Körper<font class='ex'>　❙ Raid Modus, Andere Charaktere</font>",
-                        CN: "主体<font class='ex'>　❙ 副本模式，其他角色 </font>",
-                    },
-                    min: 0,
-                    max: 100,
-                    i: "opacity",
-                    e: "li_slider",
-                    ul: 0
                 },
                 tableYOU: {
                     tt: {
@@ -3031,50 +3015,7 @@ l = {
                     e: "li_checkbox",
                     i: "grid_on",
                     ul: 0
-                },
-                view24_Number: {
-                    tt: {
-                        KR: "레이드 모드",
-                        JP: "Raidモード",
-                        EN: "Raid Mode",
-                        DE: "Raid Modus",
-                        CN: "副本模式",
-                    },
-                    msg: {
-                        KR: "파티원이 ★명 이상일 때 테이블을 간단히 표시",
-                        JP: "★人以上のパーティーでテーブルを簡略化する",
-                        EN: "Display table simply when there are ★ or more combatants.",
-                        DE: "Automatische Anpassung der Graphen, falls die Anzahl der Kämpfer > ★ beträgt.",
-                        CN: "当队伍有★人或更多时简化表格",
-                    },
-                    m: {
-                        1: {
-                            KR: "1",
-                            JP: "1",
-                            EN: "1",
-                            DE: "1",
-                            CN: "1",
-                        },
-                        6: {
-                            KR: "6",
-                            JP: "6",
-                            EN: "6",
-                            DE: "6",
-                            CN: "6",
-                        },
-                        10: {
-                            KR: "10",
-                            JP: "10",
-                            EN: "10",
-                            DE: "10",
-                            CN: "10",
-                        }
-                    },
-                    e: "li_radio_change",
-                    i: "grid_on",
-                    p: "advanced_table",
-                    ul: 1
-                },
+                },               
                 boldYOU: {
                     tt: {
                         KR: "글자 굵게<font class='ex'>　❙ 내 캐릭터</font>",
@@ -3277,6 +3218,242 @@ l = {
                     e: "li_radio",
                     i: "format_align_center",
                     p: "advanced_graph",
+                    ul: 0
+                }
+            }
+        },
+    },
+    raid:{
+        //레이드모드 설정 페이지 
+        tab_general:{
+            tt: {
+                KR: "일반",
+                JP: "一般",
+                EN: "General",
+                DE: "Allgemeines",
+                CN: "一般",
+            },
+            e: "tab_btn",
+            w: 25,
+            p: "raid",
+            inner: {
+                view24_Number: {
+                    tt: {
+                        KR: "레이드 모드",
+                        JP: "Raidモード",
+                        EN: "Raid Mode",
+                        DE: "Raid Modus",
+                        CN: "副本模式",
+                    },
+                    msg: {
+                        KR: "파티원이 ★명 이상일 때 테이블을 간단히 표시",
+                        JP: "★人以上のパーティーでテーブルを簡略化する",
+                        EN: "Display table simply when there are ★ or more combatants.",
+                        DE: "Automatische Anpassung der Graphen, falls die Anzahl der Kämpfer > ★ beträgt.",
+                        CN: "当队伍有★人或更多时简化表格",
+                    },
+                    m: {
+                        1: {
+                            KR: "1",
+                            JP: "1",
+                            EN: "1",
+                            DE: "1",
+                            CN: "1",
+                        },
+                        6: {
+                            KR: "6",
+                            JP: "6",
+                            EN: "6",
+                            DE: "6",
+                            CN: "6",
+                        },
+                        10: {
+                            KR: "10",
+                            JP: "10",
+                            EN: "10",
+                            DE: "10",
+                            CN: "10",
+                        }
+                    },
+                    e: "li_radio_change",
+                    i: "grid_on",
+                    p: "raid_general",
+                    ul: 1
+                },
+            }
+        },
+        tab_color:{
+            tt: {
+                KR: "색",
+                JP: "色",
+                EN: "Color",
+                DE: "Farbe",
+                CN: "颜色",
+            },
+            e: "tab_btn",
+            w: 25,
+            p: "raid",
+            inner: {
+                view24BgYOU: {
+                    tt: d.bodyYOU,
+                    i: "format_color_fill",
+                    e: "li_color",
+                    ul: 1
+                },                
+                view24TableYOU: {
+                    tt: d.itYOU,
+                    i: "format_color_text",
+                    e: "li_color",
+                    ul: 0
+                },
+                view24BgOther: {
+                    tt: d.bodyOther,
+                    i: "format_color_fill",
+                    e: "li_color",
+                    ul: 1
+                },
+                view24TableOther: {
+                    tt: d.itOther,
+                    i: "format_color_text",
+                    e: "li_color",
+                    ul: 0
+                }
+            }
+        },
+        tab_opacity:{
+            tt: {
+                KR: "불투명도",
+                JP: "不透明度",
+                EN: "Opacity",
+                DE: "Deckkraft",
+                CN: "透明度",
+            },
+            e: "tab_btn",
+            w: 25,
+            p: "raid",
+            inner: {                                
+                view24BgYOU: {
+                    tt: d.bodyYOU,
+                    min: 0,
+                    max: 100,
+                    i: "opacity",
+                    e: "li_slider",
+                    ul: 1
+                },                
+                view24TableYOU: {
+                    tt: d.itYOU,
+                    min: 0,
+                    max: 100,
+                    i: "opacity",
+                    e: "li_slider",
+                    ul: 0
+                },
+                view24BgOther: {
+                    tt: d.bodyOther,
+                    min: 0,
+                    max: 100,
+                    i: "opacity",
+                    e: "li_slider",
+                    ul: 1
+                },
+                view24TableOther: {
+                    tt: d.itOther,
+                    min: 0,
+                    max: 100,
+                    i: "opacity",
+                    e: "li_slider",
+                    ul: 0
+                },
+            }
+        },
+        tab_size:{
+            tt: {
+                KR: "크기",
+                JP: "サイズ",
+                EN: "Size",
+                DE: "Größe",
+                CN: "大小",
+            },
+            e: "tab_btn",
+            w: 25,
+            p: "raid",
+            inner: {
+                size24TableSlice: {
+                    tt: {
+                        KR: "행 분할",
+                        JP: "行の分割",
+                        EN: "Split Row",
+                        DE: "Zeile Teilen",
+                        CN: "行拆分",
+                    },
+                    min: 1,
+                    max: 25,
+                    i: "view_comfy",
+                    e: "li_slider",
+                    ul: 1
+                },  
+                size24TableHeight: {
+                    tt: {
+                        KR: "행 높이",
+                        JP: "行の高さ",
+                        EN: "Row Height",
+                        DE: "Zeilenhöhe",
+                        CN: "行高",
+                    },
+                    min: 35,
+                    max: 100,
+                    i: "swap_vert",
+                    e: "li_slider",
+                    ul: 0
+                },  
+                size24TableIdxWd: {
+                    tt: {
+                        KR: "인덱스",
+                        JP: "索引",
+                        EN: "Index",
+                        DE: "Index",
+                        CN: "索引",
+                    },
+                    min: 0,
+                    max: 50,
+                    i: "swap_horiz",
+                    e: "li_slider",
+                    ul: 1
+                }, 
+                size24BodyIcon: {
+                    tt: d.icon,
+                    min: 8,
+                    max: 50,
+                    i: "mood",
+                    e: "li_slider",
+                    ul: 0
+                }, 
+                size24BodyNameText: {
+                    tt: {
+                        KR: "글자<font class='ex'>　❙ 캐릭터 이름</font>",
+                        JP: "テキスト<font class='ex'>　❙ キャラ名</font>",
+                        EN: "Text<font class='ex'>　❙ The combatant\'s name.</font>",
+                        DE: "Text<font class='ex'>　❙ Kämpfername.</font>",
+                        CN: "文字<font class='ex'>　❙ 角色名称</font>",
+                    },
+                    min: 8,
+                    max: 50,
+                    i: "format_size",
+                    e: "li_slider",
+                    ul: 0
+                },
+                size24BodyDataText: {
+                    tt: {
+                        KR: "글자<font class='ex'>　❙ 데이터</font>",
+                        JP: "テキスト<font class='ex'>　❙ データ</font>",
+                        EN: "Text<font class='ex'>　❙ Data</font>",
+                        DE: "Text<font class='ex'>　❙ Daten</font>",
+                        CN: "文字<font class='ex'>　❙ 数据</font>",
+                    },
+                    min: 8,
+                    max: 50,
+                    i: "format_size",
+                    e: "li_slider",
                     ul: 0
                 }
             }
@@ -3689,6 +3866,7 @@ l = {
         shape: "Design",
         cells: "Design",
         advanced: "Design",
+        raid: "Design",
         custom: "Tool"
     }
 }
