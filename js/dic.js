@@ -27,28 +27,28 @@ d = {
         DE: "Einstellungen",
         CN: "设置",
     },
-    Capture:{
+    Capture: {
         KR: "캡쳐<font class='ex'>　❙ PC</font>",
         JP: "キャプチャー<font class='ex'>　❙ PC</font>",
         EN: "Capture<font class='ex'>　❙ PC</font>",
         DE: "Screenshot<font class='ex'>　❙ PC</font>",
         CN: "截图<font class='ex'>　❙ PC</font>",
     },
-    Data:{
+    Data: {
         KR: "데이터",
         JP: "データ",
         EN: "Data",
         DE: "Daten",
         CN: "数据",
     },
-    int:{
+    int: {
         KR: "정수",
         JP: "整数",
         EN: "Integer",
         DE: "Integer",
         CN: "整数",
     },
-    float:{
+    float: {
         KR: "소수",
         JP: "小数",
         EN: "Decimal",
@@ -83,13 +83,13 @@ d = {
         DE: "'",
         CN: "'",
     },
-    noUse:{
+    noUse: {
         KR: "사용 안 함",
         JP: "使わない",
         EN: "Disable",
         DE: "Deaktivieren",
         CN: "禁用",
-    }, 
+    },
     1: {
         KR: '1',
         JP: '1',
@@ -104,21 +104,21 @@ d = {
         DE: '2',
         CN: "2",
     },
-    dpsTable:{
+    dpsTable: {
         KR: "DPS 테이블",
         JP: "DPSテーブル",
         EN: "DPS Table",
         DE: "DPS Tabelle",
         CN: "DPS 表",
     },
-    hpsTable:{
+    hpsTable: {
         KR: "HPS 테이블",
         JP: "HPSテーブル",
         EN: "HPS Table",
         DE: "HPS Tabelle",
         CN: "HPS 表"
     },
-    jobFilter:{
+    jobFilter: {
         KR: "직업 필터",
         JP: "ジョブフィルタ",
         EN: "Job Filter",
@@ -132,42 +132,42 @@ d = {
         DE: "Verteidiger",
         CN: "防护职业",
     },
-    filter_healer:{
+    filter_healer: {
         KR: "회복",
         JP: "ヒーラー",
         EN: "Healer",
         DE: "Heiler",
         CN: "治疗职业",
     },
-    filter_DPS:{
+    filter_DPS: {
         KR: "공격",
         JP: "DPS",
         EN: "DPS",
         DE: "Angreifer",
         CN: "进攻职业",
     },
-    filter_CL:{
+    filter_CL: {
         KR: "제작자 & 채집가",
         JP: "クラフター & ギャザラー",
         EN: "Disciples of the Hand/Land",
         DE: "Handwerker & Sammler",
         CN: "能工巧匠 & 大地使者",
     },
-    filter_cbo:{
+    filter_cbo: {
         KR: "초코보",
         JP: "チョコボ",
         EN: "Chocobo",
         DE: "Chocobo",
         CN: "陆行鸟",
     },
-    caution_tt:{
+    caution_tt: {
         KR: "설정 전 주의사항",
         JP: "設定する前の注意事項",
         EN: "Read Me First",
         DE: "Erst alles genau durchlesen, dann Einstellungen vornehmen!",
         CN: "设置前的注意事项",
     },
-    caution_m1:{
+    caution_m1: {
         KR: '<br>키보드로 직접 입력 시,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ 오버레이 관리자 ❯ 설정 ❯ <font class="ac"><b>키 입력 무시, 자동 숨기기(~~.exe)</b> 체크 해제</font> 필수입니다.<br><br><font class="ac">❖ PC에서 한글 입력 시 메모장 등에 데이터를 입력하고 복사(Ctrl+C)후 붙여넣기(Ctrl+V)합니다.</font>',
         JP: '<br>キーボード入力の場合は,<br>ACT > Plugins > ACTWebSocket > Open Manager > Preferences ❯ <font class="ac"><b>No Focus</b>のチェークを解除</font>してください。',
         EN: '<br>When you type directly,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac">UNCHEKED <b>No Focus</b></font>',
@@ -181,7 +181,7 @@ d = {
         DE: '<br>Wenn du direkt schreiben möchtest, gehe wie folgt vor:,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac">DEAKTIVIERE <b>No Focus</b></font><br><br><font class="ac">❖ Dieses Feature wird nicht in der mobilen Umgebung unterstützt.<br>❖ Nur den Schriftart-Namen eintragen. (AUSNAHME: Schriftstil)<br>❖ Falls die Datei der Schriftart beschädigt oder der Name falsch geschrieben ist, wird die Standard-Schriftart angewendet.</font>',
         CN: '<br>在键盘输入的情况下，<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac"><b>No Focus</b> 请取消勾选。</font><br><br><font class="ac">❖ 移动端不支持此功能。<br>❖ 您只能输入字体名称。 (除字体样式外)<br>❖ 如果字体文损坏或者不存在，则使用默认字体。</font>',
     },
-    input_font:{        
+    input_font: {
         m: {
             KR: "글꼴 이름",
             JP: "フォントの名前",
@@ -193,77 +193,77 @@ d = {
         e: 'li_text_inbtn',
         ul: 0
     },
-    nav:{        
+    nav: {
         KR: "내비게이션",
         JP: "ナビゲーション",
         EN: "Navigation",
         DE: "Navigationsleiste",
         CN: "导航",
     },
-    navBg:{
+    navBg: {
         KR: "배경",
         JP: "背景",
         EN: "Background",
         DE: "Hintergrund",
         CN: "背景",
     },
-    pattern:{
+    pattern: {
         KR: "패턴",
         JP: "パターン",
         EN: "Pattern",
         DE: "Muster",
         CN: "图案",
     },
-    edge:{        
+    edge: {
         KR: "테두리",
         JP: "枠線",
         EN: "Border",
         DE: "Rand",
         CN: "边框",
     },
-    jobIcon:{
+    jobIcon: {
         KR: "아이콘<font class='ex'>　❙ 클래스 또는 직업</font>",
         JP: "アイコン<font class='ex'>　❙ クラスもしくはジョブ</font>",
         EN: "Icon<font class='ex'>　❙ Class or Job</font>",
         DE: "Symbole<font class='ex'>　❙ Klassen/Job</font>",
         CN: "图标<font class='ex'>　❙ 玩家职业图标</font>",
     },
-    rps:{
+    rps: {
         KR: "RD, RH 등",
         JP: "RD、RHなど",
         EN: "RD, RH, etc.",
         DE: "RD, RH, usw.",
         CN: "RD，RH等",
     },
-    rps_history:{        
+    rps_history: {
         KR: "RD, RH 등<font class='ex'>　❙ 히스토리</font>",
         JP: "RD、RHなど<font class='ex'>　❙ ヒストリー</font>",
         EN: "RD, RH, etc.<font class='ex'>　❙ History</font>",
         DE: "RD, RH, usw.<font class='ex'>　❙ Historie</font>",
         CN: "RD，RH等<font class='ex'>　❙ 历史</font>",
     },
-    table:{
+    table: {
         KR: "테이블",
         JP: "テーブル",
         EN: "Table",
         DE: "Tabellen",
         CN: "表",
     },
-    graph:{
+    graph: {
         KR: "그래프",
         JP: "グラフ",
         EN: "Graph",
         DE: "Graphen",
         CN: "图表",
     },
-    time:{
+    time: {
         KR: "시간",
         JP: "時間",
         EN: "Time",
         DE: "Zeit",
         CN: "时间",
-    },    
-    target:{
+    },
+    target: {
         KR: "대상",
         JP: "ターゲット",
         EN: "Target",
@@ -277,42 +277,70 @@ d = {
         DE: "Symbole",
         CN: "图标",
     },
-    header:{
+    header: {
         KR: "헤더",
         JP: "ヘッダー",
         EN: "Header",
         DE: "Kopf",
         CN: "头部",
     },
-    headerText:{
+    headerText: {
         KR: "헤더 글자",
         JP: "ヘッダーテキスト",
         EN: "Header Text",
         DE: "Text auf den Kopf",
         CN: "头部文字",
     },
-    body:{        
+    body: {
         KR: "바디",
         JP: "ボディ",
         EN: "Body",
         DE: "Hauptteil",
         CN: "主体",
     },
-    line_ho:{
+    line_ho: {
         KR: "구분선<font class='ex'>　❙ 가로</font>",
         JP: "区分線<font class='ex'>　❙ 横</font>",
         EN: "Division Lines<font class='ex'>　❙ Horizontal</font>",
         DE: "Trennlinien<font class='ex'>　❙ Horizontal</font>",
         CN: "分界线<font class='ex'>　❙ 横</font>",
     },
-    line_ve:{
+    line_ve: {
         KR: "구분선<font class='ex'>　❙ 세로</font>",
         JP: "区分線<font class='ex'>　❙ 縦</font>",
         EN: "Division Lines<font class='ex'>　❙ Vertical</font>",
         DE: "Trennlinien<font class='ex'>　❙ Vertical</font>",
         CN: "分界线<font class='ex'>　❙ 竖</font>",
     },
-    radius:{
+    bodyYOU: {
+        KR: "배경<font class='ex'>　❙ 내 캐릭터 </font>",
+        JP: "背景<font class='ex'>　❙ 自分のキャラクター</font>",
+        EN: "Background<font class='ex'>　❙ My Character</font>",
+        DE: "Hintergrund<font class='ex'>　❙ Eigenen Charakter</font>",
+        CN: "背景<font class='ex'>　❙ 自己角色 </font>",
+    },
+    bodyOther: {
+        KR: "배경<font class='ex'>　❙ 타 캐릭터</font>",
+        JP: "背景<font class='ex'>　❙ 他のキャラクター</font>",
+        EN: "Background<font class='ex'>　❙ Other Character</font>",
+        DE: "Hintergrund<font class='ex'>　❙ Andere Charaktere</font>",
+        CN: "背景<font class='ex'>　❙ 其他角色 </font>",
+    },
+    itYOU: {
+        KR: "아이콘, 글자<font class='ex'>　❙ 내 캐릭터</font>",
+        JP: "アイコン、テキスト<font class='ex'>　❙ 自分のキャラクター</font>",
+        EN: "Icon, Text<font class='ex'>　❙ My Character</font>",
+        DE: "Symbole, Text<font class='ex'>　❙ Eigenen Charakter</font>",
+        CN: "图标，文字<font class='ex'>　❙ 自己角色</font>"
+    },
+    itOther: {
+        KR: "아이콘, 글자<font class='ex'>　❙ 타 캐릭터</font>",
+        JP: "アイコン、テキスト<font class='ex'>　❙ 他のキャラクター</font>",
+        EN: "Icon, Text<font class='ex'>　❙ Other Character</font>",
+        DE: "Symbole, Text<font class='ex'>　❙ Andere Charaktere</font>",
+        CN: "图标，文字<font class='ex'>　❙ 其他角色</font>"
+    },
+    radius: {
         tt: {
             KR: "반경",
             JP: "半径",
@@ -326,7 +354,7 @@ d = {
         e: "li_slider",
         ul: 1
     },
-    TL:{
+    TL: {
         tt: {
             KR: "좌상단",
             JP: "左上",
@@ -338,7 +366,7 @@ d = {
         e: "li_checkbox",
         ul: 1
     },
-    TR:{
+    TR: {
         tt: {
             KR: "우상단",
             JP: "右上",
@@ -350,7 +378,7 @@ d = {
         e: "li_checkbox",
         ul: 0
     },
-    BL:{
+    BL: {
         tt: {
             KR: "좌하단",
             JP: "左下",
@@ -362,7 +390,7 @@ d = {
         e: "li_checkbox",
         ul: 0
     },
-    BR:{
+    BR: {
         tt: {
             KR: "우하단",
             JP: "右下",
@@ -397,7 +425,7 @@ d = {
             CN: "右",
         }
     },
-    palette:{
+    palette: {
         tt: {
             KR: "팔레트",
             JP: "パレット",
@@ -457,28 +485,28 @@ d = {
         e: "li_color",
         ul: 0
     },
-    graph_user:{
+    graph_user: {
         KR: "유저<font class='ex'>　❙ 리미트 브레이크, 초코보 등</font>",
         JP: "ユーザーグ<font class='ex'>　❙ リミットブレイク、チョコボなど</font>",
         EN: "Users<font class='ex'>　❙ Limit Break, Chocobo, etc.</font>",
         DE: "Benutzer<font class='ex'>　❙ Limitrausch, Chocobo, etc.</font>",
         CN: "用户<font class='ex'>　❙ 极限技，陆行鸟等</font>",
     },
-    graph_pet:{
+    graph_pet: {
         KR: "소환수<font class='ex'>　❙ 소환수 데이터 합산하기 'ON'</font>",
         JP: "ペット<font class='ex'>　❙ ペットのデータを合算する 'ON'</font>",
         EN: "Pet<font class='ex'>　❙ Combine Pets with Owner 'ON'</font>",
         DE: "Begleiter<font class='ex'>　❙ Charakter und Begleiter zusammenfassen 'ON'</font>",
         CN: "召唤物<font class='ex'>　❙ 召唤物与自身数据合并 'ON'</font>",
     },
-    graph_shield:{
+    graph_shield: {
         KR: "D.Shield",
         JP: "D.Shield",
         EN: "D.Shield",
         DE: "D.Shield",
         CN: "D.Shield",
     },
-    graph_overheal:{
+    graph_overheal: {
         KR: "OverHeal",
         JP: "OverHeal",
         EN: "OverHeal",
@@ -509,35 +537,35 @@ d = {
         e: "li_color",
         ul: 1
     },
-    cell_job:{        
+    cell_job: {
         KR: "Job",
         JP: "Job",
         EN: "Job",
         DE: "Job",
         CN: "Job",
     },
-    cell_dps:{
+    cell_dps: {
         KR: "DPS, HPS 등",
         JP: "DPS、HPSなど",
         EN: "DPS, HPS, etc.",
         DE: "DPS, HPS, usw.",
         CN: "DPS，HPS等",
     },
-    cell_dmg:{
+    cell_dmg: {
         KR: "Damage, Healed 등",
         JP: "Damage、Healedなど",
         EN: "Damage, Healed, etc.",
         DE: "Damage, Healed, usw.",
         CN: "Damage，Healed等",
     },
-    cell_swings:{
+    cell_swings: {
         KR: "Swing, % 등",
         JP: "Swing、%など",
         EN: "Swing, %, etc.",
         DE: "Swing, %, usw.",
         CN: "Swing，%等",
     },
-    cell_max:{
+    cell_max: {
         KR: "MaxHit, MaxHeal",
         JP: "MaxHit、MaxHeal",
         EN: "MaxHit, MaxHeal",
