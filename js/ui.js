@@ -1,32 +1,31 @@
-var init = new Object(), lang = null, parent = '', view = 'main', time = 0, toast = 0 
+var init = new Object(), lang = null, parent = '', view = 'main', 
+    time = 0, toast = 0 
 var sVal = {    
     now: 0,     
-    pre: 0,  
-    old: 0    
+    pre: 0,     
+    old: 0      
 }
 history.pushState(null, null, location.href);
 window.onpopstate = function () {
     history.go(1)
 }
-$().ready(function () {
+$().ready(function () {       
     if (localStorage.getItem("Mopi2_HAERU") == null) {
         localStorage.clear();
         localStorage.setItem("Mopi2_HAERU", JSON.stringify(Mopi2))
     }
     init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
     addOption()
-    lang = init.q.Lang  
+    lang = init.q.Lang   
     initOverlay()
 });
 function addOption() {
-    var qVal = ['max_unit', 'bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet', 'borderTextType']
-    var sizeVal = ['tableLineVer', 'sizeLineVer']
-    var colorVal = ['tableLineVer', 'tableBorderYOU', 'tableBorderOther']
-
+    var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'alignHeaderCell0', 'alignHeaderCell1', 'alignHeaderCell2', 'alignHeaderCell3', 'alignHeaderCell4', 'alignHeaderCell5', 'alignHeaderCell6', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet', 'borderTextType', 'max_unit']
+    var RangeVal = ['tableLineVer', 'sizeLineVer', 'view24TableYOU', 'view24TableOther', 'view24BgYOU', 'view24BgOther', 'size24BodyNameText', 'size24BodyDataText', 'size24BodyIcon', 'size24TableSlice', 'size24TableHeight', 'size24TableIdxWd']
+    var colorVal = ['tableLineVer', 'tableBorderYOU', 'tableBorderOther', 'view24TableYOU', 'view24TableOther', 'view24BgYOU', 'view24BgOther']
     putValue(qVal, 'q')
-    putValue(sizeVal, 'Range')
+    putValue(RangeVal, 'Range')
     putValue(colorVal, 'Color')
-
     localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
 }
 function putValue(arr, c) {
@@ -47,6 +46,7 @@ function initOverlay(val) {
         $('[name=target]').text(l.NAV.main.tt.target[lang])
         $('[name=rps]').text(l.NAV.main.tt.rps[lang])
         $('.btn_wrap').show()
+        
         for (var i in l.Notice) {
             if (lang == "KR")
                 $('#' + i).html(l.Notice[i][lang])
@@ -86,6 +86,7 @@ $('.dropdown ul').scroll(function () {
 });
 function resizeDropdown() {
     if ($('.dropdown ul')[0].childElementCount > 5) {
+        
         $('.dropdown ul').scrollTop(0)
         $('.dropdown ul').css('height', '23.8rem');
         $('#gradD').fadeIn(0);
@@ -95,15 +96,17 @@ function resizeDropdown() {
 $('[name=More]').unbind("click").bind("click", function () {
     $('.dropdown').fadeIn(0);
     $('#blackBg').fadeIn(150);
-    createDOM('dr_nav', null, $(this).parent().parent().attr('name'))
+    
+    createDOM('dr_nav', null, $(this).parent().parent().attr('name')) 
+    resizeWindow(view)
 });
 $('#blackBg').unbind("click").bind("click", function () {
     $('.dropdown, #blackBg').fadeOut(0);
     $('.dropdown ul').css('height', '');
+    
     localStorage.setItem('Mopi2_HAERU', JSON.stringify(init))
     if (lastCombat != null && view == "main")
         update(lastDPS, lastHPS)
-    resizeWindow(view)
 });
 $(window).on("orientationchange", function () {
     resizeWindow(view)
@@ -113,13 +116,13 @@ $(window).resize(function () {
 });
 function resizeWindow(flag) {
     if (init.q.view24 && lastCombat != null && lastCombat.partys >= init.q.view24_Number) {
-        if (window.innerWidth % 5 != 0) {
-            var w = window.innerWidth % 5
-            $('.rRow .rCell').css('width', '20%')
+        if (window.innerWidth % init.Range.size24TableSlice != 0) {
+            var w = window.innerWidth % init.Range.size24TableSlice
+            $('.rRow .rCell').css('width', parseFloat(100/init.Range.size24TableSlice) + '%')
             for (var i = 0; i < w; i++)
-                $('.rRow .rCell:nth-child(' + parseInt(i + 1) + ')').css('width', '-webkit-calc(20% + 1px)')
+                $('.rRow .rCell:nth-child(' + parseInt(i + 1) + ')').css('width', '-webkit-calc(' +  parseFloat(100/init.Range.size24TableSlice) + '%' + ' + 1px)')
         } else
-            $('.rRow .rCell').css('width', '20%')
+            $('.rRow .rCell').css('width',  parseFloat(100/init.Range.size24TableSlice) + '%')
     }
     if (flag == 'settings') {
         $('.scrollArea').css('height', '-webkit-calc(100vh - ' + $('nav[name=settings]')[0].offsetHeight + 'px - ' + $('.previewArea')[0].offsetHeight + 'px - ' + $('.tabArea')[0].offsetHeight + 'px)')
@@ -183,6 +186,7 @@ $('.btn_wrap div').on({
 });
 function callToast(id, start, end) {
     if (init.q.toast) {
+        
         $('.toast').removeClass('on');
         clearTimeout(toast)
         toast = setTimeout(function () {
@@ -206,23 +210,24 @@ $("html").unbind("click").bind("click", function () {
     } else
         clearTimeout(time)
 })
-function hiddenTable() {
+function hiddenTable() {    
     clearTimeout(time)
     $('.toast').removeClass('on')
     $('.toast').fadeOut(0);
-    if (init.q.autoHide && view != 'settings') {
-        if (lastCombat != null) {
-            if (lastCombat.isActive) {
+    if (init.q.autoHide && view != 'settings') {        
+        if (lastCombat != null) {            
+            if (lastCombat.isActive) {                
                 if (view == 'history')
                     $('div[name=history]').fadeOut(0)
                 else
                     $('div[name=main]').fadeIn(0)
-            }
+            }            
             else {
                 if (view == 'history')
                     $('div[name=history]').fadeIn(0)
                 else
                     $('div[name=main]').fadeIn(0)
+                
                 time = setTimeout(function () {
                     if (view == 'history')
                         $('div[name=history]').fadeOut(150)
@@ -232,15 +237,15 @@ function hiddenTable() {
                         $('div[name=main]').fadeOut(150)
                     }
                     callToast('hiddenTable', 0, 3000)
-                }, init.Range.autoHideTime * 60000)         
+                }, init.Range.autoHideTime * 60000)          
             }
-        }
+        }        
         else {
             if (view == 'history')
                 $('div[name=history]').fadeIn(0)
             else
                 $('div[name=notice]').fadeIn(0)
-            //타이머 체크 시작 
+            
             time = setTimeout(function () {
                 if (view == 'history')
                     $('div[name=history]').fadeOut(150)
@@ -250,7 +255,7 @@ function hiddenTable() {
                     $('div[name=notice]').fadeOut(150)
                 }
                 callToast('hiddenTable', 0, 3000)
-            }, init.Range.autoHideTime * 60000)       
+            }, init.Range.autoHideTime * 60000)          
         }
     }
 }
@@ -261,7 +266,6 @@ function ctrlPreview(flag) {
             createDOM('preview')
         else
             ui()
-
         if (init.q.view24_Number == 1)
             toggleRaidMode(1)
     } else {
@@ -307,12 +311,10 @@ function duCheckMsg(flag, tab1, tab2) {
         tmp += obj.dr[flag + '_M'].tt[lang] + l.msg.comma.m[lang]
     if (init.q[flag + '_C'] == 1)
         tmp += obj.dr[flag + '_C'].tt[lang] + l.msg.comma.m[lang]
-
     if (lang == 'JP')
         tmp = tmp.slice(0, -1)
     else
         tmp = tmp.slice(0, -2)
-
     $('li#' + flag + 'filter .gVal').text(tmp)
     if (init.q.preview) {
         update(previewDPS, previewHPS)
@@ -385,7 +387,7 @@ function copyObject(obj) {
 function jsColorUpdate(jscolor) {
     init.Color[jscolor.valueElement.id] = jscolor.valueElement.value
     toggleRaidMode(init.q.preview24)
-    //그래프 처리 
+    
     ui()
 }
 function loadPreview(el_img) {
@@ -416,12 +418,12 @@ function loadPreviewFile(file) {
 function liReload() {
     jscolor.installByClassName("jscolor");
     $('li').unbind("click").bind("click", function () {
-        var id = $(this).attr('id')
-        if($(event.target)[0].tagName == 'A'){}
+        var id = $(this).attr('id')        
+        if ($(event.target)[0].tagName == 'A') { }
         else if ($(this).find('input').prop('type') == 'checkbox') {
             if (!$(this).find('.switch').hasClass('hover')) {
                 $(this).find('.switch').addClass('hover');
-                $(this).find('input').prop('checked', true);
+                $(this).find('input').prop('checked', true);                
                 if (id.indexOf('DPS-') > -1 || id.indexOf('HPS-') > -1) {
                     init.ColData[id.split('-')[1]][id.split('-')[0]] = 1
                     init.Order[id.split('-')[0]].push(id.split('-')[1])
@@ -429,64 +431,68 @@ function liReload() {
                     init.q[id] = 1
             } else {
                 $(this).find('.switch').removeClass('hover');
-                $(this).find('input').prop('checked', false);
+                $(this).find('input').prop('checked', false);                
                 if (id.indexOf('DPS-') > -1 || id.indexOf('HPS-') > -1) {
                     init.ColData[id.split('-')[1]][id.split('-')[0]] = 0
                     init.Order[id.split('-')[0]].splice(init.Order[id.split('-')[0]].indexOf(id.split('-')[1]), 1);
                 } else
                     init.q[id] = 0
-            }
+            }            
             if ((id == 'pets' || id == 'hideName' || id == 'view24') && view != 'settings') {
                 if (lastCombat != null)
                     update(lastDPS, lastHPS)
-            }
+            }            
             else if (id.indexOf('DPS_') > -1 || id.indexOf('HPS_') > -1) {
                 duCheckMsg(id.slice(0, -2), 'format', id.slice(0, -2))
+                
             } else if (id == 'preview') {
                 togglePreview()
             }
             else {
                 if (id == 'ani') {
-                    barSize.length = 0; 
+                    barSize.length = 0;  
                     barSize = new Array();
                     view = 'ani'
                 }
                 toggleRaidMode(init.q.preview24)
             }
             return
-        }
+        }        
         else if ($(this).find('input').prop('type') == 'radio') {
             $(this).parent().find('li .switch').removeClass('hover')
-            $(this).find('.switch').addClass('hover');            
+            $(this).find('.switch').addClass('hover');
+            
             var preIconSet = init.q.iconSet
             init.q[$(this).find(':radio').attr('name')] = $(this).find(':radio').val()
             if ($(this).find(':radio').attr('name') == 'view24_Number') {
-                $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text(l.advanced.tab_table.inner.view24_Number.msg[lang].replace('★', $(this).text()))
-                if (init.q.view24_Number == 1) 
+                $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text(l.raid.tab_general.inner.view24_Number.msg[lang].replace('★', $(this).text()))
+                if (init.q.view24_Number == 1)
                     toggleRaidMode(1)
-                else 
-                    toggleRaidMode(0)                
+                else
+                    toggleRaidMode(0)
             } else
                 $('li#' + $(this).find(':radio').attr('name') + ' .gVal').text($(this).text())
+            
             if ($(this).find(':radio').attr('name') == 'Lang') {
                 lang = init.q.Lang
                 createDOM('page', l.Settings)
                 $('nav[name=settings]').find('table td').text(l.NAV.settings.tt[lang])
-                $('#preview24 td:first-child').text(l.advanced.tab_table.inner.view24_Number.tt[lang])
+                $('#preview24 td:first-child').text(l.raid.tab_general.inner.view24_Number.tt[lang])
             }
             else if ($(this).find(':radio').attr('name') == 'palette')
                 button('tab_graph', 'color')
-            if($(this).find(':radio').attr('name') != 'iconSet')    
+
+            if ($(this).find(':radio').attr('name') != 'iconSet')
                 toggleRaidMode(init.q.preview24)
-            else{                
-                $('.cell_0.Job img, .rIcon img').each(function(){
-                   var src = $(this).attr('src')
-                   var newSrc = src.replace(preIconSet, init.q.iconSet)
-                   $(this).attr('src', newSrc)                   
+            else {
+                $('.cell_0.Job img, .rIcon img').each(function () {
+                    var src = $(this).attr('src')
+                    var newSrc = src.replace(preIconSet, init.q.iconSet)
+                    $(this).attr('src', newSrc)
                 })
             }
             return
-        }
+        }        
         else {
             if ($(this).hasClass('radio')) {
                 $('.dropdown').fadeIn(0);
@@ -496,6 +502,7 @@ function liReload() {
                 else if ($(this).attr('p').indexOf('_') > -1) {
                     var parent = $(this).attr('p').split('_')[0]
                     var tabName = $(this).attr('p').split('_')[1]
+                    
                     var obj = l[parent]['tab_' + tabName].inner[id]
                 } else
                     var obj = l[$(this).attr('p')][id]
@@ -504,7 +511,7 @@ function liReload() {
                 button($(this).attr('id'))
             return
         }
-    });
+    });    
     $('#preview24').unbind('click').bind('click', function () {
         if (!$(this).find('.switch').hasClass('hover')) {
             $(this).find('.switch').addClass('hover')
@@ -520,7 +527,7 @@ function liReload() {
         view = 'settings'
         resizeWindow(view)
         return
-    });
+    });    
     $('[name=swapBtn], .UBtn, .DBtn, .sendBtn, .removeBtn, .tab_box, button').on({
         mouseover: function () {
             $(this).css({ color: '#' + init.Color.accent })
@@ -528,14 +535,14 @@ function liReload() {
         mouseleave: function () {
             $(this).css({ color: '' })
         }
-    })
+    })    
     $('button').unbind("click").bind("click", function () {
         $('input[type=file]').click()
     })
     $('input[name=uploadFile]').change(function () {
         loadPreview(this)
         return
-    });
+    });    
     $('.jscolor').unbind("click").bind('click', function () {
         if (init.q.keyboard) {
             $(this).blur()
@@ -545,7 +552,7 @@ function liReload() {
     });
     $('.jscolor').unbind("focusout").bind('focusout', function () {
         ctrlPreview(1)
-    }); 
+    });    
     $('.tab_box').unbind("click").bind("click", function () {
         $('.tabArea').find('.tab_title').removeClass('on')
         $('.tabArea').find('.tab_underBar').removeClass('on_bar')
@@ -553,14 +560,15 @@ function liReload() {
         $(this).find('.tab_title').addClass('on')
         $(this).find('.tab_underBar').addClass('on_bar')
         $('.scrollArea').scrollTop(0)
+        
         button($(this).attr('name'), $(this).attr('p'))
         return
-    });
+    });    
     $('.removeBtn').unbind("click").bind("click", function () {
         delete init.Alias[$(this).parents('li').attr('name')]
         $(this).parents('li').remove()
         return
-    });
+    });    
     $('.gTitle.sendBtn').unbind("click").bind("click", function () {
         var key = $('#in_abbOld').val()
         var val = $('#in_abbNew').val()
@@ -574,7 +582,7 @@ function liReload() {
             callToast('noInput', 500, 3000)
         ui()
         return
-    });
+    });    
     $('.ft.sendBtn').unbind("click").bind("click", function () {
         var input = $(this).parent().find('.inputEff')
         var id = $(this).parent().find('.inputEff').attr('id').split('_')[1]
@@ -593,10 +601,10 @@ function liReload() {
         input.val('')
         ui()
         return
-    });
+    });    
     $("#in_share").unbind("click").bind("click", function () {
         $(this).select()
-    });
+    });    
     $(".inputEff:not(.jscolor)").unbind("keydown").bind("keydown", function (e) {
         if (e.keyCode == 13) {
             var id = $(this).attr('id').split('_')[1]
@@ -616,13 +624,13 @@ function liReload() {
                 else if (key != '' && val != '') {
                     init.Alias[key] = val
                     $('ul.remove').append(createElement('li_remove_list', null, key, val))
-                    $('#in_abbOld,#in_abbNew').val('')   
+                    $('#in_abbOld,#in_abbNew').val('')    
                     liReload()
                     callToast('ok', 500, 3000)
                 } else
                     callToast('noInput', 500, 3000)
             }
-            else if (id.indexOf('f') > -1) {   
+            else if (id.indexOf('f') > -1) {     
                 if (input != '') {
                     init.q[id] = input;
                     $('[name=' + id + ']').find('.gVal').text(input)
@@ -641,13 +649,13 @@ function liReload() {
         }
         ui()
         return
-    });
+    });    
     $('input[type=range]').unbind("input").bind("input", function (e) {
         var id = $(this).parents('li').attr('id')
         init.Range[id] = parseInt($(this).val())
         var unit = '%'
         if (id.indexOf('size') > -1) {
-            if (id == 'sizeDPSTable' || id == 'sizeHPSTable')
+            if (id == 'sizeDPSTable' || id == 'sizeHPSTable' || id == 'size24TableSlice')
                 unit = ''
             else
                 unit = 'px'
@@ -658,7 +666,7 @@ function liReload() {
         ui()
         e.preventDefault()
         return
-    });
+    });    
     $(".UBtn").unbind("click").bind("click", function () {
         var srcDiv = $(this).parents(".listBox");
         var tgtDiv = srcDiv.prev();
@@ -667,7 +675,7 @@ function liReload() {
         $('.scrollArea').animate({ scrollTop: sVal.now - 62 }, 150);
         update(previewDPS, previewHPS)
         return
-    });
+    });    
     $(".DBtn").unbind("click").bind("click", function () {
         var srcDiv = $(this).parents(".listBox");
         var tgtDiv = srcDiv.next();
@@ -700,7 +708,7 @@ function button(id, direction) {
             break
         case 'backup':
             init.q.backupDate = new Date()
-            localStorage.setItem(id, JSON.stringify(init))            
+            localStorage.setItem(id, JSON.stringify(init))
             localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
             $('#' + id + ' .gVal').html(init.q.backupDate)
             callToast(id, 500, 3000)
@@ -718,14 +726,14 @@ function button(id, direction) {
                     $('.scrollArea').scrollTop(0)
                 }, 100)
             }
-            break
+            break        
         case 'home':
             button('Back', 'main')
             $('.dropdown, #blackBg').fadeOut(0);
-            break
+            break        
         case 'fullscreen':
             toggleFullScreen()
-            break
+            break        
         case 'Capture':
         case 'RequestEnd':
             $('[name=' + id + '] i').removeClass('flash animated').addClass('flash animated').one('animationend', function () {
@@ -749,7 +757,7 @@ function button(id, direction) {
             }
             else
                 webs.overlayAPI(id)
-            break
+            break        
         case 'History':
             view = 'history'
             $('[name=main], [name=notice]').fadeOut(0)
@@ -757,28 +765,31 @@ function button(id, direction) {
             resizeWindow(view)
             $('nav[name=history]').find('table td').text(l.NAV.history.tt[lang])
             $('.ac').css('color', '#' + init.Color.accent)
-            break
-        case 'Back':
+            break        
+        case 'Back':            
             if (direction == 'main') {
-                view = 'main'
+                view = 'main'                
                 sVal.old = 0; sVal.pre = 0
                 $('[name=history], [name=settings]').fadeOut(0)
                 if (lastCombat != null)
                     $('[name=main]').fadeIn(0)
                 else
                     $('nav[name=main],[name=notice]').fadeIn(0)
+                
                 if (init.q.arrow)
                     $('#wrap').css({ 'background-image': 'url(./images/handle.svg)' })
+                
                 ctrlPreview(0)
                 localStorage.setItem('Mopi2_HAERU', JSON.stringify(init))
-                $('.previewArea, .tabArea, .scrollArea').html('') // 초기화 
+                $('.previewArea, .tabArea, .scrollArea').html('') 
                 if (lastCombat != null) {
                     update(lastDPS, lastHPS)
                     hiddenTable()
-                } else {
+                } else {                    
                     initOverlay()
                 }
-            } break
+            } 
+            break        
         case 'settings':
             ctrlPreview(0)
             sVal.pre = 0
@@ -793,8 +804,10 @@ function button(id, direction) {
             $('.scrollArea').scrollTop(sVal.old)
             resizeWindow(view)
             break
+        
         case 'Data': case 'Design': case 'Overlay': case 'Tool':
             ctrlPreview(0)
+            
             if (direction != 'Back')
                 sVal.old = sVal.now
             $('.scrollArea').scrollTop(0)
@@ -805,7 +818,7 @@ function button(id, direction) {
             if (id == 'Tool')
                 $('#backup .gVal').html(init.q.backupDate)
             resizeWindow(view)
-            break
+            break        
         case 'abbset': case 'font': case 'custom':
             ctrlPreview(0)
             sVal.pre = sVal.now
@@ -819,18 +832,21 @@ function button(id, direction) {
                 $('#in_share').val(JSON.stringify(createKeys()))
             }
             resizeWindow(view)
-            break;
-        case 'format': case 'order': case 'color': case 'opacity': case 'size': case 'advanced': case 'cells': case 'shape':
+            break        
+        case 'format': case 'order': case 'color': case 'opacity': case 'size': case 'advanced': case 'cells': case 'shape': case 'raid':
             if (id != 'format')
                 ctrlPreview(1)
+            if (id == 'raid')
+                toggleRaidMode(1)
             sVal.pre = sVal.now
             $('.scrollArea').scrollTop(0)
             $('nav[name=settings]').find('table td').text(l[l.back[id]][id].tt[lang])
             $('nav[name=settings] [name=Back]').attr('onclick', "button('" + l.back[id] + "', 'Back')")
             button(createDOM('tab', l[id]), id)
             resizeWindow(view)
-            break
+            break        
         case 'tab_DPS': case 'tab_HPS': case 'tab_nav': case 'tab_table': case 'tab_graph': case 'tab_width': case 'tab_align': case 'tab_padding':
+        case 'tab_general': case 'tab_color': case 'tab_opacity': case 'tab_size':
             if (id == "tab_graph" && direction == "color")
                 createDOM('page', l.Graph[init.q.palette], id)
             else if ((id == "tab_DPS" || id == "tab_HPS") && direction == "order")
@@ -840,13 +856,12 @@ function button(id, direction) {
                 if ((id == "tab_DPS" || id == "tab_HPS") && direction == "format")
                     duCheckMsg(id.split('_')[1], direction, id.split('_')[1])
             }
-            break
+            break        
         case 'DPSfilter': case 'HPSfilter':
             $('.dropdown').fadeIn(0);
             $('#blackBg').fadeIn(150);
             createDOM('dr_checkbox', l.format['tab_' + id.split('f')[0]].inner[id].dr)
             break
-
     }
 }
 function createDOM(type, obj, id) {
@@ -854,8 +869,8 @@ function createDOM(type, obj, id) {
     switch (type) {
         case 'preview':
             if (init.q.preview == 1) {
-                $('.previewArea').html('<div><nav name="main"><table name="ACT_2line"><tr><td rowspan="2" name="time">00:00</td><td name="target"></td></tr><tr><td name="rps"></td></tr></table><table name="ACT_1line" style="display:none;"><tr><td name="time">00:00</td><td name="target"></td><td name="rps"></td></tr></table><div class="right btn_wrap" style="top:0"><div name="Capture" class="btn flex" style="display: none"><i class="material-icons">camera</i></div><div name="History" class="btn flex" style="display: none" ><i class="material-icons">history</i></div><div name="RequestEnd" class="btn flex" style="display: none" ><i class="material-icons">timer_off</i></div><div name="More" class="btn flex"><input type="checkbox" /><i class="material-icons">more_vert</i></div></div></nav><div name="main_P"></div> <table id="preview24"><tr><td style="color:rgba(189,189,189,.5); font-size:1.2rem">' + l.advanced.tab_table.inner.view24_Number.tt[lang] + '</td><td><div class="switch"><div class="toggle"></div></div><input type="checkbox"/></td></tr></table></div>')
-                update(previewDPS, previewHPS) 
+                $('.previewArea').html('<div><nav name="main"><table name="ACT_2line"><tr><td rowspan="2" name="time">00:00</td><td name="target"></td></tr><tr><td name="rps"></td></tr></table><table name="ACT_1line" style="display:none;"><tr><td name="time">00:00</td><td name="target"></td><td name="rps"></td></tr></table><div class="right btn_wrap" style="top:0"><div name="Capture" class="btn flex" style="display: none"><i class="material-icons">camera</i></div><div name="History" class="btn flex" style="display: none" ><i class="material-icons">history</i></div><div name="RequestEnd" class="btn flex" style="display: none" ><i class="material-icons">timer_off</i></div><div name="More" class="btn flex"><input type="checkbox" /><i class="material-icons">more_vert</i></div></div></nav><div name="main_P"></div> <table id="preview24"><tr><td style="color:rgba(189,189,189,.5); font-size:1.2rem">' + l.raid.tab_general.inner.view24_Number.tt[lang] + '</td><td><div class="switch"><div class="toggle"></div></div><input type="checkbox"/></td></tr></table></div>')
+                update(previewDPS, previewHPS)
             }
             break
         case 'dr_nav':
@@ -898,6 +913,7 @@ function createDOM(type, obj, id) {
             $('.tabArea, .scrollArea').html('') 
             for (var i in obj)
                 $('.tabArea').append(createElement(obj[i].e, obj[i], i))
+            
             $('.tabArea :first-child').find('.tab_title').addClass('on')
             $('.tabArea :first-child').find('.tab_underBar').addClass('on_bar')
             return $('.tabArea :first-child').attr('name')
@@ -925,29 +941,29 @@ function createDOM(type, obj, id) {
 function createElement(type, obj, id, flag) {
     var on = '', html = ''
     switch (type) {
-        case 'dr_checkbox':        
+        case 'dr_checkbox':         
             if (init.q[id] != undefined && init.q[id] == true) on = 'hover'
             else on = ''
             return '<li id=' + id + '>' + obj.tt[lang] + '<input type="checkbox"/><div class="switch ' + on + '"><div class="toggle"></div></div></li>'
-        case 'dr_radio':           
+        case 'dr_radio':            
             for (var i in obj.m) {
                 if (i == init.q[id]) on = 'hover'
                 else on = ''
                 html += '<li>' + obj.m[i][lang] + '<input type="radio" name="' + id + '" value="' + i + '"/><div class="switch ' + on + '"><div class="toggle"></div></div></li>'
             } return html
-        case 'dr_link':            
+        case 'dr_link':             
             return '<li id=' + id + '>' + obj.tt[lang] + '</li>'
-        case 'tab_btn':            
+        case 'tab_btn':             
             return '<div name="' + id + '" p="' + obj.p + '" class="tab_box" style="width:' + obj.w + '%"><div class="tab_title">' + obj.tt[lang] + '</div><div class="tab_underBar"></div></div>'
-        case 'li_2line':           
+        case 'li_2line':            
             return '<li id="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + obj.m[lang] + '</td></tr></table></li>'
-        case 'li_2line_empty':     
+        case 'li_2line_empty':      
             return '<li id="' + id + '" p="' + obj.p + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac"></td></tr></table></li>'
-        case 'li_link':           
+        case 'li_link':             
             return '<li id="' + id + '"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td class="gIcon"><i class="material-icons">arrow_forward</i></td></tr></table></li>'
         case 'li_radio':            
             return '<li id="' + id + '" class="radio" p="' + obj.p + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + obj.m[init.q[id]][lang] + '</td></tr></table></li>'
-        case 'li_radio_change':          
+        case 'li_radio_change':
             return '<li id="' + id + '" class="radio" p="' + obj.p + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + obj.msg[lang].replace('★', obj.m[init.q[id]][lang]) + '</td></tr></table></li>'
         case 'li_checkbox':         
             if (init.q[id] != undefined && init.q[id] == true) on = 'hover'
@@ -961,23 +977,23 @@ function createElement(type, obj, id, flag) {
             if (init.q[id] != undefined && init.q[id] == true) on = 'hover'
             else on = ''
             return '<li id="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td rowspan="2"  style="padding:0 1.4rem"><div class="switch ' + on + '"><div class="toggle"></div></div></td></tr><tr><td class="gVal ac">' + obj.m[lang] + '</td></tr></table><input type="checkbox"/></li>'
-        case 'li_2btn':                
+        case 'li_2btn':                 
             return '<li style="cursor:default" id="' + id + '" flag="' + flag + '"class="listBox"><table><tr><td class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + obj.tt + '</td><td class="UBtn"><i class="material-icons">arrow_upward</i></td><td style="padding:0 1.4rem"></td><td class="DBtn"><i class="material-icons">arrow_downward</i></td></tr></table></li>'
-        case 'li_box':                 
+        case 'li_box':                  
             return '<li class="li_box"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ex" style="padding-right:1.4rem; text-align:justify">' + obj.m[lang] + '</td></tr></table></li>'
-        case 'li_text':                
+        case 'li_text':                 
             return '<li class="li_text" style="border:0"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td style="width:100%; padding-right:1.4rem"><div class="inputBox"><input class="inputEff" type="text" placeholder="' + obj.m[lang] + '" id="' + id + '"><span class="focus-border"></span></div></td></tr></table></li>'
         case 'li_full_btn':             
             return '<li class="gTitle sendBtn" style="text-align:center; border-top:solid .1rem rgba(255,255,255,.07)">' + obj.tt[lang] + '</li>'
-        case 'li_remove_list':         
+        case 'li_remove_list':          
             return '<li class="li_box" name="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + id + '</td><td rowspan="2" class="gIcon removeBtn"><i class="material-icons">remove_circle_outline</i></td></tr><tr><td class="gVal ac">' + flag + '</td></tr></table></li>'
-        case 'li_pn':                  
+        case 'li_pn':                   
             if (id == 'share' || id == 'apply') var _ = obj.m[lang]
             else var _ = init.q[id]
             return '<li class="li_box" name="' + id + '"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">arrow_right</i></td><td class="gTitle">' + obj.tt[lang] + '</td></tr><tr><td class="gVal ac">' + _ + '</td></tr></table></li>'
         case 'li_text_inbtn':           
             return '<li class="li_text" style="border:0"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td style="width:100%;"><div class="inputBox"><input class="inputEff" type="text" placeholder="' + obj.m[lang] + '" id="' + id + '"><span class="focus-border"></span></div></td><td rowspan="2" class="gIcon ft sendBtn"><i class="material-icons">send</i></td></tr></table></li>'
-        case 'li_color':              
+        case 'li_color':                
             var input = $('<input id = "' + id + '" value="' + init.Color[id] + '" style="text-align:center; ime-mode:disabled" maxlength="6" onKeyUp="this.value=this.value.toUpperCase();">')
             input.addClass("shadow inputEff jscolor {onFineChange:'jsColorUpdate(this)', width:240, height:160, position:'bottom', borderColor:'#212121', insetColor:'#161616', backgroundColor:'#212121'}")
             var li = '<li id="' + id + '" class="li_box"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td style="padding:0 1.4rem">' + input.clone().wrapAll("<div/>").parent().html() + '</td></tr></table></li>'
@@ -985,7 +1001,7 @@ function createElement(type, obj, id, flag) {
         case 'li_slider':               
             var unit = '%'
             if (id.indexOf('size') > -1) {
-                if (id == 'sizeDPSTable' || id == 'sizeHPSTable')
+                if (id == 'sizeDPSTable' || id == 'sizeHPSTable' || id == 'size24TableSlice')
                     unit = ''
                 else
                     unit = 'px'
@@ -1004,21 +1020,18 @@ function ui() {
     }
     var img = ''
     if (init.q.overlayBg)
-        img = init.q.overlayBgImg
-
+        img = init.q.overlayBgImg  
     $('html').css({
         'font-size': init.q.resolution,
         'background-image': 'url(' + img + ')',
         'background-size': init.q.overlayBgSize,
         'background-repeat': init.q.overlayBgRepeat
-    })
+    })    
     $('.ac, .tab_title.on, nav[name=settings] i, input[type="range"]').css('color', '#' + init.Color.accent)
     $('.on_bar, .focus-border, .toggle').css('background', '#' + init.Color.accent)
     $('.switch').css('border-color', '#' + init.Color.accent)
-
     if (init.q.preview24)
         $('#preview24 td:first-child').css('color', '#' + init.Color.accent)
-
     var bg = ''
     if (init.q.pattern == "cross")
         bg = '-webkit-linear-gradient(' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ',transparent .1rem),-webkit-linear-gradient(0,' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ',' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' .1rem)'
@@ -1031,8 +1044,7 @@ function ui() {
     else if (init.q.pattern == "rightDig")
         bg = 'repeating-linear-gradient(135deg, ' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ' 0, ' + oHexColor(init.Color.pattern, parseFloat(init.Range.pattern / 100)) + ' 5%, ' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' 0, ' + oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100)) + ' 50%) 0'
     else
-        bg = oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100))
-    
+        bg = oHexColor(init.Color.navBg, parseFloat(init.Range.navBg / 100))  
     $('nav[name=main], nav[name=history]').css({
         background: bg,
         color: oHexColor(init.Color.accent, parseFloat(init.Range.accent / 100)),
@@ -1040,10 +1052,8 @@ function ui() {
         'background-size': parseFloat(init.Range.sizePattern / 10) + 'rem ' + parseFloat(init.Range.sizePattern / 10) + 'rem',
         'background-repeat': 'repeat'
     })
-    
     if (init.Range.navBg != 100)
         $('.btn_wrap').css('background', 'transparent')
-    
     if (init.Range.edge != 0) {
         $('nav[name=main], nav[name=history]').css({
             border: parseFloat(init.Range.sizeEdge / 10) + 'rem ' + init.q.edgeType + ' ' + oHexColor(init.Color.edge, parseFloat(init.Range.edge / 100))
@@ -1056,7 +1066,7 @@ function ui() {
             right: 0,
             top: 0
         })
-    }
+    }    
     $('nav[name=main] div[name=More]').css({
         'border-top-right-radius': parseFloat((init.q.rd_navTR * init.Range.sizeRadius) / 10) + 'rem ',
         'border-bottom-right-radius': parseFloat((init.q.rd_navBR * init.Range.sizeRadius) / 10) + 'rem '
@@ -1100,7 +1110,7 @@ function ui() {
         'border-top-right-radius': parseFloat((init.q.rd_graphTR * init.Range.sizeRadiusGraph) / 10) + 'rem ',
         'border-bottom-left-radius': parseFloat((init.q.rd_graphBL * init.Range.sizeRadiusGraph) / 10) + 'rem ',
         'border-bottom-right-radius': parseFloat((init.q.rd_graphBR * init.Range.sizeRadiusGraph) / 10) + 'rem '
-    })
+    })    
     $('nav[name=main] i, nav[name=history] i').css({
         color: oHexColor(init.Color.accent, parseFloat(init.Range.navIcon / 100)),
         'font-size': parseFloat(init.Range.sizeIcon / 10) + 'rem'
@@ -1116,7 +1126,7 @@ function ui() {
     if (init.q.time_italic)
         style = 'italic'
     else
-        style = 'normal'
+        style = 'normal'    
     $('[name=time]').css({
         color: oHexColor(init.Color.accent, parseFloat(init.Range.navTime / 100)),
         'font-family': "'" + init.q.fTime + "', 'DS-Digital', 'sans-serif'",
@@ -1132,7 +1142,7 @@ function ui() {
         $('[name=time]').css({
             'padding-left': '1rem',
             'font-size': parseFloat(init.Range.time / 10) + 'rem'
-        })
+        })    
     if (init.q.target_italic)
         style = 'italic'
     else
@@ -1152,7 +1162,7 @@ function ui() {
         'font-family': "'" + init.q.fRPS + "', 'Roboto Condensed', 'Segoe UI', 'sans-serif'",
         'font-size': parseFloat(init.Range.sizeRPS / 10) + 'rem',
         'font-style': style
-    })
+    })    
     if (init.q.act == 2) {
         $('[name=ACT_2line]').fadeIn(0)
         $('[name=ACT_1line]').fadeOut(0)
@@ -1164,7 +1174,8 @@ function ui() {
             'padding-top': parseFloat(init.Range.sizeGap / 10) + 'rem',
             'vertical-align': 'top'
         })
-    } else {
+    }    
+    else {
         $('[name=ACT_2line]').fadeOut(0)
         $('[name=ACT_1line]').fadeIn(0)
         $('[name=ACT_1line] [name=target]').css({
@@ -1185,16 +1196,17 @@ function ui() {
         $('[name=target]').css({
             'padding-left': '1rem',
             'font-size': parseFloat(init.Range.sizeTarget / 10) + 'rem'
-        })
+        })    
     if (init.q.boldYOU) var boldYOU = 'bold'
     else var boldYOU = ''
     if (init.q.boldOther) var boldOther = 'bold'
     else var boldOther = ''
+
     if (init.q.borderTextType == 'outline')
-        var btt = '-.1rem 0 #'+ init.Color.tableBorderOther +', 0 .1rem #'+ init.Color.tableBorderOther +', .1rem 0 #'+ init.Color.tableBorderOther +', 0 -.1rem #'+ init.Color.tableBorderOther
+        var btt = '-.1rem 0 #' + init.Color.tableBorderOther + ', 0 .1rem #' + init.Color.tableBorderOther + ', .1rem 0 #' + init.Color.tableBorderOther + ', 0 -.1rem #' + init.Color.tableBorderOther
     else
-        var btt = '0 0 .3rem #' + init.Color.tableBorderOther
-    $(':not(#YOU) .tableBody td, :not(#YOU).rCell .rName, :not(#YOU).rCell .rData').css({
+        var btt = '0 0 .3rem #' + init.Color.tableBorderOther    
+    $(':not(#YOU) .tableBody td').css({
         color: '#' + init.Color.tableOther,
         opacity: parseFloat(init.Range.tableOther / 100),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
@@ -1206,12 +1218,13 @@ function ui() {
         color: '#' + init.Color.tableExOther,
         opacity: parseFloat(init.Range.tableOther / 100),
         'text-shadow': btt
-    })    
+    })
     if (init.q.borderTextType == 'outline')
-        var btt = '-.1rem 0 #'+ init.Color.tableBorderYOU +', 0 .1rem #'+ init.Color.tableBorderYOU +', .1rem 0 #'+ init.Color.tableBorderYOU +', 0 -.1rem #'+ init.Color.tableBorderYOU
+        var btt = '-.1rem 0 #' + init.Color.tableBorderYOU + ', 0 .1rem #' + init.Color.tableBorderYOU + ', .1rem 0 #' + init.Color.tableBorderYOU + ', 0 -.1rem #' + init.Color.tableBorderYOU
     else
         var btt = '0 0 .3rem #' + init.Color.tableBorderYOU
-    $('#YOU .tableBody td, .myPet .tableBody td, #YOU.rCell .rName, #YOU.rCell .rData').css({
+    
+    $('#YOU .tableBody td, .myPet .tableBody td').css({
         color: '#' + init.Color.tableYOU,
         opacity: parseFloat(init.Range.tableYOU / 100),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
@@ -1226,75 +1239,96 @@ function ui() {
     })
     $('.rName').css({
         'font-size': parseFloat(init.Range.sizeBodyText / 10) - 0.1 + 'rem'
-    })
+    })    
     if (init.q.body_italic)
         style = 'italic'
     else
-        style = 'normal'
+        style = 'normal'    
     $(':not(#YOU).rCell').css({
-        'font-weight': boldOther,
-        color: '#' + init.Color.tableOther,
-        background: oHexColor(init.Color.tableBg, parseFloat(init.Range.view24BgOther / 100)),
+        background: oHexColor(init.Color.view24BgOther, parseFloat(init.Range.view24BgOther / 100)),
         'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
-        'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
-        'font-style': style
-    })
+        height: parseFloat(init.Range.size24TableHeight / 10) + 'rem',
+    })        
     $('#YOU.rCell').css({
-        'font-weight': boldYOU,
-        color: '#' + init.Color.tableYOU,
-        background: oHexColor(init.Color.accent, parseFloat(init.Range.view24BgYOU / 100)),
-        'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
+        background: oHexColor(init.Color.view24BgYOU, parseFloat(init.Range.view24BgYOU / 100)),
+        'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),        
+        height: parseFloat(init.Range.size24TableHeight / 10) + 'rem',
+    })    
+    $(':not(#YOU).rCell td').css({
+        'font-weight': boldOther,
+        color: '#'+ init.Color.view24TableOther,
+        opacity: parseFloat(init.Range.view24TableOther / 100),
         'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
-        'font-style': style
+        'font-style': style,
+        'font-size': parseFloat(init.Range.size24BodyText / 10) + 'rem',
+        'text-shadow': btt
+    })    
+    $('#YOU.rCell td').css({
+        'font-weight': boldYOU,
+        color: '#'+ init.Color.view24TableYOU,
+        opacity: parseFloat(init.Range.view24TableYOU / 100),
+        'font-family': "'" + init.q.fBody + "', 'Segoe UI', 'sans-serif'",
+        'font-style': style,
+        'text-shadow': btt
+    })
+    $('.rName').css({
+        'font-size': parseFloat(init.Range.size24BodyNameText / 10) + 'rem',
+    })
+    $('.rData').css({
+        'font-size': parseFloat(init.Range.size24BodyDataText / 10) + 'rem',
     })
     $('.rRow:first-child .rCell').css({
         'border-top': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
     })
     $('.rRow .rCell:last-child').css({
         'border-right': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
-    })
+    })    
     $('.rCell .rIdx').css({
+        width: parseFloat(init.Range.size24TableIdxWd / 10) + 'rem',
         opacity: parseFloat(init.Range.bar / 100),
-    })
+    })    
+    $('.rIcon, .rIcon img').css({
+        width: parseFloat(init.Range.size24BodyIcon / 10) + 'rem',
+    }) 
     $('.cell_0 img').css({
         width: parseFloat(init.Range.sizeBodyIcon / 10) + 'rem',
-    })
+    })    
     $('.tableBody td .ex').css({
         'font-size': parseFloat((init.Range.sizeBodyText - 1) / 10) + 'rem'
-    })
+    })    
     $('.tableHeader').css({
         'margin': parseFloat(init.Range.sizeHdGap / 10) + 'rem 0'
-    })
+    })    
     $('.tableHeader td').css({
         background: oHexColor(init.Color.tableHd, parseFloat(init.Range.tableHd / 100)),
         color: oHexColor(init.Color.tableHdText, parseFloat(init.Range.tableHdText / 100)),
         'font-family': "'" + init.q.fHd + "', 'Roboto Condensed', 'sans-serif'",
         height: parseFloat(init.Range.sizeHd / 10) + 'rem',
         'font-size': parseFloat(init.Range.sizeHdText / 10) + 'rem'
-    })
+    })    
     $('.tableWrap').css({
         'border-bottom': parseFloat(init.Range.sizeLine / 10) + 'rem solid ' + oHexColor(init.Color.tableLine, parseFloat(init.Range.tableLine / 100)),
-    })
+    })    
     $('.barBg').css({
         background: oHexColor(init.Color.tableBg, parseFloat(init.Range.tableBg / 100)),
-    })
+    })    
     $('.tableBody td:not(:last-child)').css({
         'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableLineVer, parseFloat(init.Range.tableLineVer / 100))
     })
     $('.tableHeader td:not(:last-child)').css({
         'border-right': parseFloat(init.Range.sizeLineVer / 10) + 'rem solid ' + oHexColor(init.Color.tableHd, parseFloat(init.Range.tableHd / 100))
-    })
+    })    
     for (var i in l.size.tab_graph.inner) {
         $('.' + i.split('_')[1]).css({
             height: parseFloat(init.Range[i] / 10) + 'rem',
             'margin-top': parseFloat((init.Range.sizeBody - init.Range[i]) / 10) + 'rem',
             opacity: parseFloat(init.Range[i.split('_')[1]] / 100)
         })
-    }
+    }    
     $('.tableWrap').css({
         height: parseFloat(init.Range.sizeBody / 10) + 'rem',
         'margin-top': parseFloat((init.Range.sizeBody - init.Range.sizeBody) / 10) + 'rem',
-    })
+    })    
     $('#HPSBody, #HPSBody_P').find('.pet, .ds, .oh').css({
         float: init.q.bar_position
     })
@@ -1308,7 +1342,7 @@ function ui() {
             'padding': '0 ' + parseFloat(init.Range['sizePdCell' + i] / 10) + 'rem',
             'font-style': style
         })
-    }
+    }    
     if (init.q.header_italic)
         style = 'italic'
     else
@@ -1320,15 +1354,14 @@ function ui() {
             'padding': '0 ' + parseFloat(init.Range['sizePdCell' + i] / 10) + 'rem',
             'font-style': style
         })
-    }
+    }    
     $('#DPSHeader, #DPSHeader_P').css({
         'margin-top': parseFloat(init.Range.sizeDPSGap / 10) + 'rem',
     })
     $('#HPSHeader, #HPSHeader_P').css({
         'margin-top': parseFloat(init.Range.sizeHPSGap / 10) + 'rem',
     })
-
-    if (!init.q.preview24 && init.q.view24_Number != 1 && view == 'settings') {
+    if (!init.q.preview24 && init.q.view24_Number != 1 && view == 'settings') {        
         var tmp = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
         if ($('#DPSBody_P').length != 0) {
             $('#DPSBody_P').css({
@@ -1348,10 +1381,10 @@ function ui() {
                 })
             }
         }
-    }
+    }    
     if (lastCombat != null && lastDPS.isActive == false) {
-        $('#DPSBody, #HPSBody').find('.cell_0').css('cursor', 'pointer')
-        $('#DPSBody, #HPSBody').find('.cell_0').on({
+        $('.cell_0, .rIcon').css('cursor', 'pointer')
+        $('.cell_0, .rIcon').on({
             mouseover: function () {
                 if (init.q.tooltips) {
                     $('#tooltip').html('Name<font class="ex">　❙ On / Off</font>')
@@ -1362,9 +1395,14 @@ function ui() {
                 $('#tooltip').hide()
             },
             click: function () {
-                $(this).parent().find('.cell_1').toggleClass('hidden')
+                if($(this)[0].className == 'rIcon')
+                    $(this).parent().find('.rName').toggleClass('hidden')
+                else
+                    $(this).parent().find('.cell_1').toggleClass('hidden')
             }
         });
     } else
-        $('#DPSBody, #HPSBody').find('.cell_0').css('cursor', 'default')
+        $('.cell_0, .rIcon').css('cursor', 'default')
+        $('.rRow .rCell').css('width', parseFloat(100/init.Range.size24TableSlice) + '%')
+        resizeWindow(view)  
 }
