@@ -3224,7 +3224,6 @@ l = {
         },
     },
     raid:{
-        //레이드모드 설정 페이지 
         tab_general:{
             tt: {
                 KR: "일반",
@@ -3301,7 +3300,13 @@ l = {
                     ul: 1
                 },                
                 view24TableYOU: {
-                    tt: d.itYOU,
+                    tt: {
+                        KR: "글자<font class='ex'>　❙ 내 캐릭터</font>",
+                        JP: "テキスト<font class='ex'>　❙ 自分のキャラクター</font>",
+                        EN: "Text<font class='ex'>　❙ My Character</font>",
+                        DE: "Text<font class='ex'>　❙ Eigenen Charakter</font>",
+                        CN: "文字<font class='ex'>　❙ 自己角色</font>"
+                    },
                     i: "format_color_text",
                     e: "li_color",
                     ul: 0
@@ -3313,7 +3318,13 @@ l = {
                     ul: 1
                 },
                 view24TableOther: {
-                    tt: d.itOther,
+                    tt: {
+                        KR: "글자<font class='ex'>　❙ 타 캐릭터</font>",
+                        JP: "テキスト<font class='ex'>　❙ 他のキャラクター</font>",
+                        EN: "Text<font class='ex'>　❙ Other Character</font>",
+                        DE: "Text<font class='ex'>　❙ Andere Charaktere</font>",
+                        CN: "文字<font class='ex'>　❙ 其他角色</font>"
+                    },
                     i: "format_color_text",
                     e: "li_color",
                     ul: 0
