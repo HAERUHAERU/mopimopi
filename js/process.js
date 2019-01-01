@@ -124,7 +124,7 @@ function onRaidCombatDataUpdate(flag, last) {
             if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') { } else {
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
-                        if (set <= 5) {
+                        if (set <= init.Range.size24TableSlice) {
                             row.append(createRaidTableBody(flag, a, userName))
                             set++
                         }
@@ -138,7 +138,7 @@ function onRaidCombatDataUpdate(flag, last) {
                 }
                 else {
                     if (init.q.DPS_T == 1 && a.role == 'Tanker' || init.q.DPS_H == 1 && a.role == 'Healer' || init.q.DPS_D == 1 && a.role == 'DPS' || init.q.DPS_C == 1 && a.Job == 'CBO' || init.q.DPS_M == 1 && a.role == 'Crafter' || init.q.DPS_M == 1 && a.role == 'Gathering') {
-                        if (set <= 5) {
+                        if (set <= init.Range.size24TableSlice) {
                             row.append(createRaidTableBody(flag, a, userName))
                             set++
                         }
