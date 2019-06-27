@@ -12,7 +12,6 @@ xhr.onload = function () {
 }
 xhr.open('GET', 'js/previewLog.json', true);
 xhr.send(null);
-
 var webs = null;
 var QueryString = function () {
     var query_string = {};
@@ -53,7 +52,6 @@ if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
         wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
     }
 }
-
 class ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
         this.uri = uri;
@@ -454,6 +452,7 @@ function Person(e, p) {
             case "PLD":
             case "WAR":
             case "DRK":
+            case "GNB":
                 this.role = "Tanker";
                 break
         }
