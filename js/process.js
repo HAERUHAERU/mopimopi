@@ -5,7 +5,7 @@ var lastDPS = null,
 var barSize = new Array(),
     encounterArray = new Array(),
     encounterCount = 1;
-
+   
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
@@ -278,11 +278,9 @@ function createTableBody(userName, flag, newBody, a) {
     newBody.appendChild(wrap)
 }
 
-function cutName(name) {
+function printName(name) {
     var tmp = name.split(' ');
-    if (tmp.length == 1) {
-        return name
-    } else {
+    if (tmp.length >= 2) {
         if (init.q.cnt == 1)
             return name
         else if (init.q.cnt == 2)
@@ -291,6 +289,21 @@ function cutName(name) {
             return tmp[0].substr(0, 1) + '. ' + tmp[1]
         else
             return tmp[0].substr(0, 1) + '. ' + tmp[1].substr(0, 1) + '.'
+    } else
+        return name
+}
+function cutName(name) {
+    if (name.indexOf("(") > -1) {
+        var tmp = name.split('(');
+        var cn = tmp[1].substr(0, tmp[1].length - 1)
+
+        if(init.q.myName == false && cn == "YOU")   
+            return tmp[0] + ' (' + printName(myName) + ')'
+        else 
+            return tmp[0] + ' (' + printName(cn) + ')'
+    }
+    else {      
+        return printName(name)
     }
 }
 function petName(job, name) {
@@ -307,29 +320,23 @@ function petName(job, name) {
 function addData(colName, a, p) {
     switch (colName) {
         case 'Job':
-            if(a != undefined) return '<img src="./images/icon/' + init.q.iconSet + '/' + p.Job.toUpperCase() + '.png"/>';
+            if (a != undefined)
+                return '<img src="./images/icon/' + init.q.iconSet + '/' + p.Job.toUpperCase() + '.png"/>';
             else return ''
         case 'Name':
             var name = ''
             if (init.q.hideName == false) {
-                if (a == "YOU" && init.q.myName == false){
-                    if(myName != '')
+                if (a == "YOU" && init.q.myName == false) {
+                    if (myName != '')
                         name = cutName(myName);
                     else
                         name = a
                 }
                 else {
                     if ((p.petOwner == myName || p.petOwner == 'YOU') && p.petOwner != '' && init.q.myName == true)
-                        name = petName(p.Job, a)                    
-                    else{
-                        if(a == "Eos (YOU)"){
-                            if(myName == "")
-                                name = a
-                            else
-                                name = 'Eos (' + myName + ')'
-                        }
-                        else
-                            name = cutName(a);
+                        name = petName(p.Job, a)
+                    else {
+                        name = cutName(a);
                     }
                 }
             }
