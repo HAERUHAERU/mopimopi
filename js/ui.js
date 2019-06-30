@@ -806,8 +806,10 @@ function button(id, direction) {
             break
         
         case 'Data': case 'Design': case 'Overlay': case 'Tool':
-            ctrlPreview(0)
-            
+            if(id == 'Data')
+                ctrlPreview(1)
+            else
+                ctrlPreview(0)            
             if (direction != 'Back')
                 sVal.old = sVal.now
             $('.scrollArea').scrollTop(0)
@@ -834,8 +836,7 @@ function button(id, direction) {
             resizeWindow(view)
             break        
         case 'format': case 'order': case 'color': case 'opacity': case 'size': case 'advanced': case 'cells': case 'shape': case 'raid':
-            if (id != 'format')
-                ctrlPreview(1)
+            ctrlPreview(1)
             if (id == 'raid')
                 toggleRaidMode(1)
             sVal.pre = sVal.now
