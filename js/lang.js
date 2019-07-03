@@ -164,7 +164,7 @@ l = {
                 view24: {
                     tt: {
                         KR: "레이드 모드",
-                        JP: "Raidモード",
+                        JP: "レイドモード",
                         EN: "Raid Mode",
                         DE: "Raid Modus",
                         CN: "副本模式",
@@ -388,11 +388,11 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi2 ver.3.5.190629',
-                JP: 'MopiMopi2 ver.3.5.190629',
-                EN: 'MopiMopi2 ver.3.5.190629',
-                DE: 'MopiMopi2 ver.3.5.190629',
-                CN: "MopiMopi2 ver.3.5.190629",
+                KR: 'MopiMopi2 ver.3.51.190704',
+                JP: 'MopiMopi2 ver.3.51.190704',
+                EN: 'MopiMopi2 ver.3.51.190704',
+                DE: 'MopiMopi2 ver.3.51.190704',
+                CN: "MopiMopi2 ver.3.51.190704",
             },
             i: "new_releases",
             e: "li_2line",
@@ -1090,7 +1090,7 @@ l = {
         raid:{
             tt: {
                 KR: "레이드 모드",
-                JP: "Raidモード",
+                JP: "レイドモード",
                 EN: "Raid Mode",
                 DE: "Raid Modus",
                 CN: "副本模式",
@@ -3299,7 +3299,7 @@ l = {
                 view24_Number: {
                     tt: {
                         KR: "레이드 모드",
-                        JP: "Raidモード",
+                        JP: "レイドモード",
                         EN: "Raid Mode",
                         DE: "Raid Modus",
                         CN: "副本模式",
@@ -3307,7 +3307,7 @@ l = {
                     msg: {
                         KR: "파티원이 ★명 이상일 때 테이블을 간단히 표시",
                         JP: "★人以上のパーティーでテーブルを簡略化する",
-                        EN: "Display table simply when there are ★ or more combatants.",
+                        EN: "Display the table simply when there are ★ or more combatants.",
                         DE: "Automatische Anpassung der Graphen, falls die Anzahl der Kämpfer > ★ beträgt.",
                         CN: "当队伍有★人或更多时简化表格",
                     },
