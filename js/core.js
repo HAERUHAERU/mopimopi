@@ -457,26 +457,39 @@ function Person(e, p) {
                 break
         }
     }
-
-    if (this.Class == "") {
-        if (this.name.indexOf("에기") > -1 || this.name.indexOf("카벙클") > -1 || this.name.indexOf("데미바하무트") > -1 || this.name.indexOf("Egi") > -1 || this.name.indexOf("Demi-Bahamut") > -1 || this.name.indexOf("Carbuncle") > -1 || this.name.indexOf("Karfunkel") > -1 || this.name.indexOf("エギ") > -1 || this.name.indexOf("カーバンクル") > -1 || this.name.indexOf("石兽") > -1 || this.name.indexOf("之灵") > -1 || this.name.indexOf("亚灵神巴哈姆特") > -1) {
+    /*
+    닌자 : 分身 / Bunshin / Gedoppeltes Ich / Ombre
+    학자 : セラフィム / Seraph / Seraph / Séraphin
+    소환사 : デミ・フェニックス / Demi-Phoenix / Demi-Phönix / Demi-Phénix
+    기공사 : オートマトン・クイーン / Automaton Queen / Automaton DAME / Automate Reine
+    암흑기사 : 英雄の影身 / Esteem / Schattenschemen / Estime
+    */
+     if (this.Class == "") {
+        if (this.name.indexOf("에기") > -1 || this.name.indexOf("카벙클") > -1 || this.name.indexOf("데미바하무트") > -1 || this.name.indexOf("Egi") > -1 || this.name.indexOf("Demi") > -1 || this.name.indexOf("Carbuncle") > -1 || this.name.indexOf("Karfunkel") > -1 || this.name.indexOf("エギ") > -1 || this.name.indexOf("カーバンクル") > -1 || this.name.indexOf("石兽") > -1 || this.name.indexOf("之灵") > -1 || this.name.indexOf("亚灵神巴哈姆特") > -1 || this.name.indexOf("デミ・フェニックス") > -1 ) {
             this.Job = "AVA";
             this.Class = "SMN";
             this.isPet = true;
-            this.petType = "Egi"
         }
-        if (this.name.indexOf("요정") > -1 || this.name.indexOf("Eos") > -1 || this.name.indexOf("Selene") > -1 || this.name.indexOf("フェアリー") > -1 || this.name.indexOf("小仙女") > -1) {
+        if (this.name.indexOf("요정") > -1 || this.name.indexOf("Eos") > -1 || this.name.indexOf("Selene") > -1 || this.name.indexOf("フェアリー") > -1 || this.name.indexOf("小仙女") > -1 || this.name.indexOf("セラフィム") > -1 || this.name.indexOf("Seraph") > -1 || this.name.indexOf("Séraphin") > -1) {
             this.Job = "AVA";
             this.Class = "SCH";
             this.isPet = true;
             this.role = "Healer";
-            this.petType = "Fairy"
         }
-        if (this.name.indexOf("자동포탑") > -1 || this.name.indexOf("Autoturret") > -1 || this.name.indexOf("オートタレット") > -1 || this.name.indexOf("Selbstschuss-Gyrocopter") > -1 || this.name.indexOf("Auto-tourelle") > -1 || this.name.indexOf("式浮空炮塔") > -1) {
+        if (this.name.indexOf("자동포탑") > -1 || this.name.indexOf("Autoturret") > -1 || this.name.indexOf("オートタレット") > -1 || this.name.indexOf("Selbstschuss-Gyrocopter") > -1 || this.name.indexOf("Auto-tourelle") > -1 || this.name.indexOf("式浮空炮塔") > -1 || this.name.indexOf("オートマトン・クイーン") > -1 || this.name.indexOf("Automaton") > -1 || this.name.indexOf("Automate") > -1) {
             this.Job = "AVA";
             this.Class = "MCH";
             this.isPet = true;
-            this.petType = "AutoTurret"
+        }
+        if (this.name.indexOf("英雄の影身") > -1 || this.name.indexOf("Esteem") > -1 || this.name.indexOf("Schattenschemen") > -1 || this.name.indexOf("Estime") > -1){            
+            this.Job = "AVA";
+            this.Class = "DRK";
+            this.isPet = true;
+        }        
+        if (this.name.indexOf("分身") > -1 || this.name.indexOf("Bunshin") > -1 || this.name.indexOf("Gedoppeltes") > -1 || this.name.indexOf("Ombre") > -1){            
+            this.Job = "AVA";
+            this.Class = "NIN";
+            this.isPet = true;
         }
         if (this.name.toUpperCase().indexOf("LIMIT BREAK") > -1 || this.name.indexOf("リミット") > -1) {
             this.Job = "LMB";
