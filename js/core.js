@@ -503,7 +503,7 @@ function Person(e, p) {
             this.Class = "NIN";
             this.isPet = true;
         }
-        else if (this.name.toUpperCase().indexOf("LIMIT BREAK") > -1 || this.name.indexOf("リミット") > -1){{
+        else if (this.name.toUpperCase().indexOf("LIMIT BREAK") > -1 || this.name.indexOf("リミット") > -1){
             this.Job = "LMB";
             this.Class = "LMB";
         }
