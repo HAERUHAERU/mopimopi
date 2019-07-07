@@ -507,7 +507,6 @@ function Person(e, p) {
         else if (this.name.indexOf("(") > -1) {
             this.Job = "CBO";
             this.Class = "CBO";
-            this.isPet = true;
         }
         else {
             this.Job = "LMB";
