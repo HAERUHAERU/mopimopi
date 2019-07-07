@@ -387,7 +387,6 @@ function Person(e, p) {
     if (this.Job != "")
         this.Class = this.Job.toUpperCase();
     this.petOwner = "";
-    this.petType = "Chocobo";
     this.isPet = !1;
     this.role = "DPS";
     this.rank = 0;
@@ -503,12 +502,8 @@ function Person(e, p) {
             this.Job = "AVA";
             this.Class = "NIN";
             this.isPet = true;
-        }
-        else if (this.name.indexOf("(") > -1) {
-            this.Job = "CBO";
-            this.Class = "CBO";
-        }
-        else {
+        }       
+        else if (this.name.indexOf("(") == -1) {
             this.Job = "LMB";
             this.Class = "LMB";
         }
@@ -599,7 +594,6 @@ function Person(e, p) {
     if (this.petOwner != "" && this.Job == "0") {
         this.Job = "CBO";
         this.Class = "CBO";
-        this.petType = "Chocobo_Persons";
         this.role = "CBO"
     }
     if (this.overHeal != undefined) { }
