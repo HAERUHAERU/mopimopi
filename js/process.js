@@ -490,7 +490,7 @@ function inputGraph(userName, flag, maxDamage, p) {
     })
     if (init.q.pets == 1) {
         if (flag == 'DPS') {
-            if (p.Class == "MCH" || p.Class == "SMN" || p.Class == "ACN") {
+            if (p.Class == "MCH" || p.Class == "SMN" || p.Class == "ACN" || p.Class == "NIN" || p.Class == "DRK") {
                 var petWidth = Math.min(100, parseInt((p.mergedDamage - p.damage) / maxDamage * 100))
                 graphAnimate(petWidth, 'pet', flag, userName, 'pet')
             }
