@@ -120,7 +120,7 @@ function onRaidCombatDataUpdate(flag, last) {
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
-            if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') { } else {
+            if (init.q.pets == 1 && (a.Job == "AVA" || a.Job == "CBO") || a.Class == '') { } else {
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
                         if (set <= init.Range.size24TableSlice) {
@@ -175,7 +175,7 @@ function onCombatDataUpdate(flag, last) {
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
-            if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') { } else {
+            if (init.q.pets == 1 && (a.Job == "AVA" || a.Job == "CBO") || a.Class == '') { } else {
                 var bodyHeight = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
@@ -204,7 +204,7 @@ function onCombatDataUpdate(flag, last) {
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
-            if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') { } else
+            if (init.q.pets == 1 && (a.Job == "AVA" || a.Job == "CBO") || a.Class == '') { } else
                 inputGraph(userName, flag, a.parent.maxdamage, a)
         }
     }
