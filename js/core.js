@@ -496,14 +496,20 @@ function Person(e, p) {
         else if (drkPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "DRK";
-            this.isPet = true;
+            this.isPet = true;            
+            this.role = "Tanker";
         }
         else if (ninPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "NIN";
             this.isPet = true;
         }
-        else if (this.name.toUpperCase().indexOf("LIMIT BREAK") > -1 || this.name.indexOf("リミット") > -1){
+        else if (this.name.indexOf("(") > -1) {
+            this.Job = "CBO";
+            this.Class = "CBO";
+            this.isPet = true;
+        }
+        else {
             this.Job = "LMB";
             this.Class = "LMB";
         }
