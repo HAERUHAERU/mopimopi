@@ -594,7 +594,8 @@ function Person(e, p) {
     if (this.petOwner != "" && this.Job == "0") {
         this.Job = "CBO";
         this.Class = "CBO";
-        this.role = "CBO"
+        this.role = "CBO";        
+        this.isPet = true;
     }
     if (this.overHeal != undefined) { }
 
