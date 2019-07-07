@@ -1649,7 +1649,7 @@ l = {
                 },
                 i: "<img src='./images/icon/frame/BLU.png'/>",
                 e: "li_color",
-                ul: 1
+                ul: 0
             },
             pet: {
                 tt: d.graph_pet,
@@ -1668,9 +1668,9 @@ l = {
                 i: "<img src='./images/menu/Healer.png'/>",
                 e: "li_color",
                 ul: 0
-            },
-            LMB: d.LMB,
+            },            
             CBO: d.CBO,
+            LMB: d.LMB,
             CRP: {
                 tt: {
                     KR: "목수",
@@ -1844,8 +1844,8 @@ l = {
                 e: "li_color",
                 ul: 0
             },
-            LMB: d.LMB,
             CBO: d.CBO,
+            LMB: d.LMB,
             Crafter: {
                 tt: {
                     KR: "제작자",
@@ -1909,8 +1909,8 @@ l = {
                 e: "li_color",
                 ul: 0
             },
-            LMB: d.LMB,
-            CBO: d.CBO
+            CBO: d.CBO,
+            LMB: d.LMB
         }
     },
     opacity: {
