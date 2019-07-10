@@ -296,7 +296,8 @@ function cutName(name) {
     if (name.indexOf("(") > -1) {
         var tmp = name.split('(');
         var cn = tmp[1].substr(0, tmp[1].length - 1)
-
+        if (myName == "")   
+            myName = 'YOU'        
         if(init.q.myName == false && cn == "YOU")   
             return tmp[0] + ' (' + printName(myName) + ')'
         else 
