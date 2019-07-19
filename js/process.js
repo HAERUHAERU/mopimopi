@@ -70,13 +70,15 @@ function update(lastDPS, lastHPS) {
             var max = '<span name="swapBtn">MaxHeal&nbsp;</span>' + addData('MaxHeal', null, lastHPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '') + '　</span>'
 
         var msg = ''
-
+       
         if (init.q.act_rd) msg += rd
         if (init.q.act_rh) msg += rh
         if (init.q.act_rank) msg += rk
         if (init.q.act_max) msg += max
 
         $('[name=rps]').html(msg)
+        
+        console.log(msg);
 
         $('[name=swapBtn]').on({
             click: function () {
