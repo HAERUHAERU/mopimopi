@@ -63,22 +63,21 @@ function update(lastDPS, lastHPS) {
         var rd = "RD " + addComma(lastDPS.Encounter.ENCDPS) + "　"
         var rh = "RH " + addComma(lastHPS.Encounter.ENCHPS) + "　"
         var rk = "Rank " + parseInt(lastDPS.Combatant.YOU.rank + 1) + "/" + parseInt(lastHPS.Combatant.YOU.rank + 1) + "/" + lastDPS.partys + "　"
+        var max = ''
 
         if (init.q.swap == 0)
-            var max = '<span name="swapBtn">MaxHit&nbsp;</span>' + addData('MaxHit', null, lastDPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '') + '　</span>'
+            max = '<span name="swapBtn">MaxHit </span>' + addData('MaxHit', null, lastDPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '');
         else
-            var max = '<span name="swapBtn">MaxHeal&nbsp;</span>' + addData('MaxHeal', null, lastHPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '') + '　</span>'
+            max = '<span name="swapBtn">MaxHeal </span>' + addData('MaxHeal', null, lastHPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '');
 
         var msg = ''
-       
+
         if (init.q.act_rd) msg += rd
         if (init.q.act_rh) msg += rh
         if (init.q.act_rank) msg += rk
         if (init.q.act_max) msg += max
 
         $('[name=rps]').html(msg)
-        
-        console.log(msg);
 
         $('[name=swapBtn]').on({
             click: function () {
