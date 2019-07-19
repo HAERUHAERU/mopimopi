@@ -65,9 +65,9 @@ function update(lastDPS, lastHPS) {
         var rk = "Rank " + parseInt(lastDPS.Combatant.YOU.rank + 1) + "/" + parseInt(lastHPS.Combatant.YOU.rank + 1) + "/" + lastDPS.partys + "　"
         var msg = ''
         if (init.q.swap == 0)
-            var max = '<span name="swapBtn">MaxHit </span>' + addData('MaxHit', null, lastDPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '');
+            var max = '<span name="swapBtn">MaxHit </span>' + addData('MaxHit', null, lastDPS.Combatant.YOU)
         else
-            var max = '<span name="swapBtn">MaxHeal </span>' + addData('MaxHeal', null, lastHPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '');
+            var max = '<span name="swapBtn">MaxHeal </span>' + addData('MaxHeal', null, lastHPS.Combatant.YOU)
         if (init.q.act_rd) msg += rd
         if (init.q.act_rh) msg += rh
         if (init.q.act_rank) msg += rk
