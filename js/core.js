@@ -472,7 +472,8 @@ function Person(e, p) {
                         "セラフィム", "Seraph", "Séraphin"];
     var drkPetsList = ["英雄の影身", "Schattenschemen", "Estime", "Esteem"];
     var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin"];
-
+    var astPetsList = ["지상의 별", "Earthly Star", "アーサリースター", "Irdischer Stern", "Étoile terrestre", "地星"];
+    
     var petsName = this.name.split(' (')[0];
 
     if (this.Class == "") {
@@ -502,7 +503,13 @@ function Person(e, p) {
             this.Job = "AVA";
             this.Class = "NIN";
             this.isPet = true;
-        }       
+        }    
+        else if (astPetsList.indexOf(petsName) > -1) {
+            this.Job = "AVA";
+            this.Class = "AST";
+            this.isPet = true;            
+            this.role = "Healer";
+        }
         else if (this.name.indexOf("(") == -1) {
             this.Job = "LMB";
             this.Class = "LMB";
