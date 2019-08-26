@@ -5,12 +5,12 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br>Mobile and Broadcast(OBS Studio, XSplit, etc.) users<br>should install the <a href="https://github.com/ZCube/ACTWebSocket/releases" target="_blank">ACTWebsocket 1.3.3.9 or higher</a> version.<br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.3.74.190723 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.3.74.190723 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.3.76.190827 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.3.76.190827 / HAERU@Moogle (KR)'
         },
         update: {
-            KR: '<div name="row"><div class="b">19/07/23</div><div class="m">펫 그래프 표시 오류 수정</div></div><div name="row"><div class="b">19/07/23</div><div class="m">지상의 별 표시 오류 수정</div></div><div name="row"><div class="b">19/07/19</div><div class="m">내비게이션의 MaxHit/Heal 기술명 색상이 변경되지 않던 버그 수정</div></div><div name="row"><div class="c">19/07/10</div><div class="m">시작 페이지 레이아웃 변경</div></div><div name="row"><div class="u">19/07/05</div><div class="m">[인벤/Stellalight] 5.0 신규 소환수 데이터 추가</div></div><div name="row"><div class="b">19/06/30</div><div class="m">[twitch/Armell] 이니셜 표시 오류 수정</div></div><div name="row"><div class="u">19/06/28</div><div class="m">[노래하는혼@모그리] 5.0 patch Gunbreaker/Dancer 아이콘 세트 추가</div></div><div name="row"><div class="n">19/03/14</div><div class="m">★★★ 모피모피 벌써 2주년! 항상 감사드립니다! ★★★</div></div><div name="row"><div class="u">19/01/22</div><div class="m">[이솜@모그리] 4.5 patch 청마도사 아이콘 세트 추가</div></div><div name="row"><div class="b">19/01/02</div><div class="m">레이드 모드 : 직업 아이콘 클릭 시 캐릭터 이름 숨김 오류 수정</div></div><div name="row"><div class="b">19/01/02</div><div class="m">레이드 모드 : 직업 아이콘 크기 조절 오류 수정</div></div><div name="row"><div class="u">19/01/02</div><div class="m">[Gmail/Mark Megyeri] 레이드 모드 커스터마이징 옵션 추가</div></div><div name="row"><div class="n">19/01/01</div><div class="m">★★★ 2019년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
-            EN: '<div name="row"><div class="b">19/07/23</div><div class="m">Fixed display error of the pets graph</div></div><div name="row"><div class="b">19/07/23</div><div class="m">Fixed display error of the Earthly Star</div></div><div name="row"><div class="b">19/07/19</div><div class="m">Fixed a bug that the color of MaxHit/Heal action name in navigation bar did not change</div></div><div name="row"><div class="c">19/07/10</div><div class="m">Changed a layout of the start page</div></div><div name="row"><div class="u">19/07/05</div><div class="m">[Inven/Stellalight] Added data of the new 5.0 pets</div></div><div name="row"><div class="b">19/06/30</div><div class="m">[twitch/Armell] Fixed display error of the initial name</div></div><div name="row"><div class="u">19/06/28</div><div class="m">[KR/노래하는혼@모그리] Added icon sets of the Gunbreaker/Dancer (5.0 patch)</div></div><div name="row"><div class="u">19/01/22</div><div class="m">[KR/이솜@모그리] Added icon sets of the Blue Mage (4.5 patch)</div></div><div name="row"><div class="n">19/03/14</div><div class="m">★★★ 2nd anniversary of MopiMopi! Thank you for using it! ★★★</div></div><div name="row"><div class="b">19/01/02</div><div class="m">Raid Mode : Fixed a hidden error of character name when you click the job icon</div></div><div name="row"><div class="b">19/01/02</div><div class="m">Raid Mode : Fixed a resizing error of job icon</div></div><div name="row"><div class="u">19/01/02</div><div class="m">[Gmail/Mark Megyeri] Added customizing options of the raid mode</div></div><div name="row"><div class="n">19/01/01</div><div class="m">★★★ 2/0/1/9 Best wishes for a Happy New Year! ★★★</div></div>'
+            KR: '<div name="row"><div class="b">19/08/27</div><div class="m">[Gmail/Marc Henne] FFXIV-DE : 암흑기사 소환수 데이터 수정</div></div><div name="row"><div class="b">19/08/27</div><div class="m">[Gmail/Raye Aerinae] 팔레트:역할일 때, Limit Break 색상이 변경되지 않던 버그 수정</div></div><div name="row"><div class="b">19/07/23</div><div class="m">펫 그래프 표시 오류 수정</div></div><div name="row"><div class="b">19/07/23</div><div class="m">지상의 별 표시 오류 수정</div></div><div name="row"><div class="b">19/07/19</div><div class="m">내비게이션의 MaxHit/Heal 기술명 색상이 변경되지 않던 버그 수정</div></div><div name="row"><div class="c">19/07/10</div><div class="m">시작 페이지 레이아웃 변경</div></div><div name="row"><div class="u">19/07/05</div><div class="m">[인벤/Stellalight] 5.0 신규 소환수 데이터 추가</div></div><div name="row"><div class="b">19/06/30</div><div class="m">[twitch/Armell] 이니셜 표시 오류 수정</div></div><div name="row"><div class="u">19/06/28</div><div class="m">[노래하는혼@모그리] 5.0 patch Gunbreaker/Dancer 아이콘 세트 추가</div></div><div name="row"><div class="n">19/03/14</div><div class="m">★★★ 모피모피 벌써 2주년! 항상 감사드립니다! ★★★</div></div><div name="row"><div class="u">19/01/22</div><div class="m">[이솜@모그리] 4.5 patch 청마도사 아이콘 세트 추가</div></div><div name="row"><div class="b">19/01/02</div><div class="m">레이드 모드 : 직업 아이콘 클릭 시 캐릭터 이름 숨김 오류 수정</div></div><div name="row"><div class="b">19/01/02</div><div class="m">레이드 모드 : 직업 아이콘 크기 조절 오류 수정</div></div><div name="row"><div class="u">19/01/02</div><div class="m">[Gmail/Mark Megyeri] 레이드 모드 커스터마이징 옵션 추가</div></div><div name="row"><div class="n">19/01/01</div><div class="m">★★★ 2019년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
+            EN: '<div name="row"><div class="b">19/08/27</div><div class="m">[Gmail/Marc Henne] FFXIV-DE : Fixed a Drk\'s pet data</div></div><div name="row"><div class="b">19/08/27</div><div class="m">[Gmail/Raye Aerinae] If palette value is role, fixed a bug that the color of Limit Break graph in table did not change</div></div><div name="row"><div class="b">19/07/23</div><div class="m">Fixed display error of the pets graph</div></div><div name="row"><div class="b">19/07/23</div><div class="m">Fixed display error of the Earthly Star</div></div><div name="row"><div class="b">19/07/19</div><div class="m">Fixed a bug that the color of MaxHit/Heal action name in navigation bar did not change</div></div><div name="row"><div class="c">19/07/10</div><div class="m">Changed a layout of the start page</div></div><div name="row"><div class="u">19/07/05</div><div class="m">[Inven/Stellalight] Added data of the new 5.0 pets</div></div><div name="row"><div class="b">19/06/30</div><div class="m">[twitch/Armell] Fixed display error of the initial name</div></div><div name="row"><div class="u">19/06/28</div><div class="m">[KR/노래하는혼@모그리] Added icon sets of the Gunbreaker/Dancer (5.0 patch)</div></div><div name="row"><div class="u">19/01/22</div><div class="m">[KR/이솜@모그리] Added icon sets of the Blue Mage (4.5 patch)</div></div><div name="row"><div class="n">19/03/14</div><div class="m">★★★ 2nd anniversary of MopiMopi! Thank you for using it! ★★★</div></div><div name="row"><div class="b">19/01/02</div><div class="m">Raid Mode : Fixed a hidden error of character name when you click the job icon</div></div><div name="row"><div class="b">19/01/02</div><div class="m">Raid Mode : Fixed a resizing error of job icon</div></div><div name="row"><div class="u">19/01/02</div><div class="m">[Gmail/Mark Megyeri] Added customizing options of the raid mode</div></div><div name="row"><div class="n">19/01/01</div><div class="m">★★★ 2/0/1/9 Best wishes for a Happy New Year! ★★★</div></div>'
         }
     },
     msg: {
@@ -388,11 +388,11 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.3.73.190723',
-                JP: 'MopiMopi ver.3.73.190723',
-                EN: 'MopiMopi ver.3.73.190723',
-                DE: 'MopiMopi ver.3.73.190723',
-                CN: "MopiMopi ver.3.73.190723",
+                KR: 'MopiMopi ver.3.76.190827',
+                JP: 'MopiMopi ver.3.76.190827',
+                EN: 'MopiMopi ver.3.76.190827',
+                DE: 'MopiMopi ver.3.76.190827',
+                CN: "MopiMopi ver.3.76.190827",
             },
             i: "new_releases",
             e: "li_2line",
@@ -580,7 +580,7 @@ l = {
             i: "sort",
             e: "li_2line_checkbox_normal",
             ul: 0
-        },         
+        },
         max_unit: {
             tt: {
                 KR: "MaxHit, MaxHeal 단위",
@@ -766,7 +766,7 @@ l = {
             e: "li_radio",
             p: "Data",
             ul: 0
-        },       
+        },
         abb: {
             tt: {
                 KR: "기술명 줄임말로 표시",
@@ -1038,7 +1038,7 @@ l = {
             i: "opacity",
             e: "li_link",
             ul: 0
-        },        
+        },
         size: {
             tt: {
                 KR: "크기",
@@ -1087,7 +1087,7 @@ l = {
             e: "li_link",
             ul: 1
         },
-        raid:{
+        raid: {
             tt: {
                 KR: "레이드 모드",
                 JP: "レイドモード",
@@ -1361,7 +1361,7 @@ l = {
                     e: "li_color",
                     ul: 0
                 },
-                tableBorderYOU:{
+                tableBorderYOU: {
                     tt: {
                         KR: "글자 테두리<font class='ex'>　❙ 내 캐릭터</font>",
                         JP: "テキストの枠線<font class='ex'>　❙ 自分のキャラクター</font>",
@@ -1396,8 +1396,8 @@ l = {
                     i: "format_color_text",
                     e: "li_color",
                     ul: 0
-                },                
-                tableBorderOther:{
+                },
+                tableBorderOther: {
                     tt: {
                         KR: "글자 테두리<font class='ex'>　❙ 타 캐릭터</font>",
                         JP: "テキストの枠線<font class='ex'>　❙ 他のキャラクター</font>",
@@ -1638,7 +1638,7 @@ l = {
                 i: "<img src='./images/icon/frame/RDM.png'/>",
                 e: "li_color",
                 ul: 0
-            },            
+            },
             BLU: {
                 tt: {
                     KR: "청마도사",
@@ -1668,7 +1668,7 @@ l = {
                 i: "<img src='./images/menu/Healer.png'/>",
                 e: "li_color",
                 ul: 0
-            },            
+            },
             CBO: d.CBO,
             LMB: d.LMB,
             CRP: {
@@ -3075,7 +3075,7 @@ l = {
                     e: "li_checkbox",
                     i: "grid_on",
                     ul: 0
-                },               
+                },
                 boldYOU: {
                     tt: {
                         KR: "글자 굵게<font class='ex'>　❙ 내 캐릭터</font>",
@@ -3123,7 +3123,7 @@ l = {
                     e: "li_checkbox",
                     i: "format_italic",
                     ul: 0
-                },                
+                },
                 borderTextType: {
                     tt: {
                         KR: "글자 테두리 유형",
@@ -3283,8 +3283,8 @@ l = {
             }
         },
     },
-    raid:{
-        tab_general:{
+    raid: {
+        tab_general: {
             tt: {
                 KR: "일반",
                 JP: "一般",
@@ -3341,7 +3341,7 @@ l = {
                 },
             }
         },
-        tab_color:{
+        tab_color: {
             tt: {
                 KR: "색",
                 JP: "色",
@@ -3358,7 +3358,7 @@ l = {
                     i: "format_color_fill",
                     e: "li_color",
                     ul: 1
-                },                
+                },
                 view24TableYOU: {
                     tt: {
                         KR: "글자<font class='ex'>　❙ 내 캐릭터</font>",
@@ -3391,7 +3391,7 @@ l = {
                 }
             }
         },
-        tab_opacity:{
+        tab_opacity: {
             tt: {
                 KR: "불투명도",
                 JP: "不透明度",
@@ -3402,7 +3402,7 @@ l = {
             e: "tab_btn",
             w: 25,
             p: "raid",
-            inner: {                                
+            inner: {
                 view24BgYOU: {
                     tt: d.bodyYOU,
                     min: 0,
@@ -3410,7 +3410,7 @@ l = {
                     i: "opacity",
                     e: "li_slider",
                     ul: 1
-                },                
+                },
                 view24TableYOU: {
                     tt: d.itYOU,
                     min: 0,
@@ -3437,7 +3437,7 @@ l = {
                 },
             }
         },
-        tab_size:{
+        tab_size: {
             tt: {
                 KR: "크기",
                 JP: "サイズ",
@@ -3462,7 +3462,7 @@ l = {
                     i: "view_comfy",
                     e: "li_slider",
                     ul: 1
-                },  
+                },
                 size24TableHeight: {
                     tt: {
                         KR: "행 높이",
@@ -3476,7 +3476,7 @@ l = {
                     i: "swap_vert",
                     e: "li_slider",
                     ul: 0
-                },  
+                },
                 size24TableIdxWd: {
                     tt: {
                         KR: "인덱스",
@@ -3490,7 +3490,7 @@ l = {
                     i: "swap_horiz",
                     e: "li_slider",
                     ul: 1
-                }, 
+                },
                 size24BodyIcon: {
                     tt: d.icon,
                     min: 8,
@@ -3498,7 +3498,7 @@ l = {
                     i: "mood",
                     e: "li_slider",
                     ul: 0
-                }, 
+                },
                 size24BodyNameText: {
                     tt: {
                         KR: "글자<font class='ex'>　❙ 캐릭터 이름</font>",
