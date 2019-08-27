@@ -1,3 +1,4 @@
+//미리보기 데이터
 var xhr = new XMLHttpRequest();
 xhr.onload = function () {
     if (xhr.status === 200) {
@@ -12,6 +13,7 @@ xhr.onload = function () {
 }
 xhr.open('GET', 'js/previewLog.json', true);
 xhr.send(null);
+
 var webs = null;
 var QueryString = function () {
     var query_string = {};
@@ -52,6 +54,7 @@ if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
         wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
     }
 }
+
 class ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
         this.uri = uri;
@@ -386,14 +389,14 @@ function Person(e, p) {
     }
     if (this.Job != "")
         this.Class = this.Job.toUpperCase();
-    this.petOwner = "";
-    this.isPet = !1;
-    this.role = "DPS";
-    this.rank = 0;
-    this.maxdamage = 0;
-    this.displayName = this.name;
-    this.isLower = !1;
-    var vjob = this.Job;
+        this.petOwner = "";
+        this.isPet = !1;
+        this.role = "DPS";
+        this.rank = 0;
+        this.maxdamage = 0;
+        this.displayName = this.name;
+        this.isLower = !1;
+        var vjob = this.Job;
     if (vjob != "") vjob = this.Job.toUpperCase();
     switch (vjob) {
         case "GLD":
@@ -405,8 +408,8 @@ function Person(e, p) {
             this.Class = "WAR";
             this.isLower = !0;
             break;
-        case "PUG": 
-        case "PGL": 
+        case "PUG":
+        case "PGL":
             this.Class = "MNK";
             this.isLower = !0;
             break;
@@ -433,12 +436,12 @@ function Person(e, p) {
         case "CNJ":
             this.Class = "WHM";
             this.isLower = !0;
-            break
+            break;
         case "CRP": case "BSM": case "ARM": case "GSM": case "LTW": case "WVR": case "ALC": case "CUL":
-            this.role = "Crafter"
+            this.role = "Crafter";
             break;
         case "BTN": case "MIN": case "FSH":
-            this.role = "Gathering"
+            this.role = "Gathering";
             break;
     }
     if (this.Class != "") {
@@ -453,9 +456,9 @@ function Person(e, p) {
             case "DRK":
             case "GNB":
                 this.role = "Tanker";
-                break
+                break;
         }
-    }    
+    }
     var smnPetsList = ["카벙클 에메랄드", "カーバンクル・エメラルド", "绿宝石兽", "Smaragd-Karfunkel", "Carbuncle émeraude", "Emerald Carbuncle",
                         "카벙클 토파즈", "カーバンクル・トパーズ", "黄宝石兽", "Topas-Karfunkel", "Carbuncle topaze", "Topaz Carbuncle",
                         "카벙클 루비", "カーバンクル・ルビー", "红宝石兽", "Rubin-Karfunkel", "Carbuncle rubis", "Ruby Carbuncle",
@@ -472,8 +475,7 @@ function Person(e, p) {
                         "セラフィム", "Seraph", "Séraphin"];
     var drkPetsList = ["英雄の影身", "Hochachtung", "Estime", "Esteem"];
     var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin"];
-    var astPetsList = ["지상의 별", "Earthly Star", "アーサリースター", "Irdischer Stern", "Étoile terrestre", "地星"];
-    
+
     var petsName = this.name.split(' (')[0];
 
     if (this.Class == "") {
@@ -503,12 +505,6 @@ function Person(e, p) {
             this.Job = "AVA";
             this.Class = "NIN";
             this.isPet = true;
-        }    
-        else if (astPetsList.indexOf(petsName) > -1) {
-            this.Job = "AVA";
-            this.Class = "AST";
-            this.isPet = true;            
-            this.role = "Healer";
         }
         else if (this.name.indexOf("(") == -1) {
             this.Job = "LMB";
@@ -516,49 +512,27 @@ function Person(e, p) {
         }
     }
     try {
-        this.maxhitstr = this.maxhit.split('-')[0];
-        this.maxhitunit = this.maxhit.split('-')[1].replace(/\d/g, "").replace(/\W/g, "")
-
-        if (this.maxhitunit.toLowerCase() == 'k')
-            this.maxhitval = parseFloat(this.maxhit.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000
-        else if (this.maxhitunit.toLowerCase() == 'm')
-            this.maxhitval = parseFloat(this.maxhit.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000000
-        else
-            this.maxhitval = parseInt(this.maxhit.split('-')[1].replace(/\D/g, ""))
-
+        this.maxhitstr = this.maxhit.replace(/[0-9]/g,"").slice(0,-1)   
+        this.maxhitval = parseInt(this.maxhit.replace(/[^0-9]/g,""))
         this.mergedMaxHitstr = this.maxhitstr
-        this.mergedMaxHitunit = this.maxhitunit
         this.mergedMaxHitval = this.maxhitval
-
     } catch (ex) {
         this.maxhit = "?-0";
         this.maxhitstr = "No Data";
-        this.maxhitval = 0;        
-        this.maxhitunit = ''
+        this.maxhitval = 0;
         this.mergedMaxHitstr = this.maxhitstr
-        this.mergedMaxHitunit = this.maxhitunit
         this.mergedMaxHitval = this.maxhitval
     }
     try {
-        this.maxhealstr = this.maxheal.split('-')[0];
-        this.maxhealunit = this.maxheal.split('-')[1].replace(/\d/g, "").replace(/\W/g, "")
-        if (this.maxhealunit.toLowerCase() == 'k')
-            this.maxhealval = parseFloat(this.maxheal.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000
-        else if (this.maxhealunit.toLowerCase() == 'm')
-            this.maxhealval = parseFloat(this.maxheal.split('-')[1].replace(/^[A-Za-z]/g, "")) * 1000000 
-        else
-            this.maxhealval = parseInt(this.maxheal.split('-')[1].replace(/\D/g, ""))
-            
+        this.maxhealstr = this.maxheal.replace(/[0-9]/g,"").slice(0,-1)
+        this.maxhealval = parseInt(this.maxheal.replace(/[^0-9]/g,""))
         this.mergedMaxHealstr = this.maxhealstr
-        this.mergedMaxHealunit = this.maxhealunit
         this.mergedMaxHealval = this.maxhealval
     } catch (ex) {
         this.maxheal = "?-0";
         this.maxhealstr = "No Data";
-        this.maxhealunit = ''
-        this.maxhealval = 0;        
+        this.maxhealval = 0;
         this.mergedMaxHealstr = this.maxhealstr
-        this.mergedMaxHealunit = this.mergedMaxHealunit
         this.mergedMaxHealval = this.maxhealval
     }
     this.effHealed = this.healed - this.overHeal - this.damageShield;
@@ -601,7 +575,7 @@ function Person(e, p) {
     if (this.petOwner != "" && this.Job == "0") {
         this.Job = "CBO";
         this.Class = "CBO";
-        this.role = "CBO";        
+        this.role = "CBO";
     }
     if (this.overHeal != undefined) { }
 
@@ -839,7 +813,7 @@ Combatant.prototype.AttachPets = function () {
         this.Combatant[i].parent = this
 
         if (this.Combatant[i].Job == "AVA") {
-            if(this.Combatant[i].petOwner == myName || this.Combatant[i].petOwner == tmpMyName)
+            if (this.Combatant[i].petOwner == myName || this.Combatant[i].petOwner == tmpMyName)
                 var owner = this.Combatant['YOU']
             else
                 var owner = this.Combatant[this.Combatant[i].petOwner]
@@ -847,15 +821,13 @@ Combatant.prototype.AttachPets = function () {
             if (this.Combatant[i].maxhitval > owner.maxhitval) {
                 owner.mergedMaxHitval = this.Combatant[i].maxhitval
                 owner.mergedMaxHitstr = this.Combatant[i].maxhitstr
-                owner.mergedMaxHitunit = this.Combatant[i].maxhitunit
             }
             if (this.Combatant[i].maxhealval > owner.maxhealval) {
                 owner.mergedMaxHealval = this.Combatant[i].maxhealval
                 owner.mergedMaxHealstr = this.Combatant[i].maxhealstr
-                owner.mergedMaxHealunit = this.Combatant[i].maxhealunit
             }
         }
-        
+
     }
 }
 Combatant.prototype.DetachPets = function () {
@@ -866,10 +838,8 @@ Combatant.prototype.DetachPets = function () {
         this.Combatant[i].parent = this
         this.Combatant[i].mergedMaxHitval = this.Combatant[i].maxhitval
         this.Combatant[i].mergedMaxHitstr = this.Combatant[i].maxhitstr
-        this.Combatant[i].mergedMaxHitunit = this.Combatant[i].maxhitunit
         this.Combatant[i].mergedMaxHealval = this.Combatant[i].maxhealval
         this.Combatant[i].mergedMaxHealstr = this.Combatant[i].maxhealstr
-        this.Combatant[i].mergedMaxHealunit = this.Combatant[i].maxhealunit
     }
 }
 Combatant.prototype.sortkeyChange = function (key) {
