@@ -512,7 +512,7 @@ function Person(e, p) {
         }
     }
     try {
-        this.maxhitstr = this.maxhit.replace(/[0-9]/g,"").slice(0,-1)   
+        this.maxhitstr = this.maxhit.replace(/[0-9.,']/g,"").trim().slice(0,-1)
         this.maxhitval = parseInt(this.maxhit.replace(/[^0-9]/g,""))
         this.mergedMaxHitstr = this.maxhitstr
         this.mergedMaxHitval = this.maxhitval
@@ -524,7 +524,7 @@ function Person(e, p) {
         this.mergedMaxHitval = this.maxhitval
     }
     try {
-        this.maxhealstr = this.maxheal.replace(/[0-9]/g,"").slice(0,-1)
+        this.maxhealstr = this.maxheal.replace(/[0-9.,']/g,"").trim().slice(0,-1)
         this.maxhealval = parseInt(this.maxheal.replace(/[^0-9]/g,""))
         this.mergedMaxHealstr = this.maxhealstr
         this.mergedMaxHealval = this.maxhealval
