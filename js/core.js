@@ -465,15 +465,18 @@ function Person(e, p) {
                         "이프리트 에기", "イフリート・エギ", "伊弗利特之灵", "Ifrit-Egi",
                         "타이탄 에기", "タイタン・エギ", "泰坦之灵", "Titan-Egi",
                         "데미바하무트", "デミ・バハムート", "亚灵神巴哈姆特", "Demi-Bahamut", "デミ・フェニックス",
-                        "Demi-Phönix", "Demi-Phénix", "Demi-Phoenix"];
+                        "Demi-Phönix", "Demi-Phénix", "Demi-Phoenix", "亚灵神不死鸟"
+    ];
     var mchPetsList = ["자동포탑 룩", "オートタレット・ルーク", "车式浮空炮塔", "Selbstschuss-Gyrocopter TURM", "Auto-tourelle Tour", "Rook Autoturret",
                         "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter LÄUFER", "Auto-tourelle Fou", "Bishop Autoturret",
-                        "オートマトン・クイーン", "Automaton DAME", "Automate Reine", "Automaton Queen"];
+                        "オートマトン・クイーン", "Automaton DAME", "Automate Reine", "Automaton Queen", "后式自走人偶"
+    ];
     var schPetsList = ["요정 에오스", "フェアリー・エオス", "朝日小仙女", "Eos",
                         "요정 셀레네", "フェアリー・セレネ", "夕月小仙女", "Selene",
-                        "セラフィム", "Seraph", "Séraphin"];
-    var drkPetsList = ["英雄の影身", "Hochachtung", "Estime", "Esteem"];
-    var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin"];    
+                        "セラフィム", "Seraph", "Séraphin", "炽天使"
+    ];
+    var drkPetsList = ["英雄の影身", "Hochachtung", "Estime", "Esteem", "英雄的掠影"];
+    var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin"];
     var astPetsList = ["지상의 별", "アーサリースター", "地星", "Earthly Star", "Étoile terrestre", "Irdischer Stern"];
 
     var petsName = this.name.split(' (')[0];
