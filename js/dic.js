@@ -657,7 +657,7 @@ d = {
         ul: 0
     },
     mergedLast30DPS: {
-        tt: "Last10",
+        tt: "Last30",
         m: {
             KR: "최근 30초간 평균 DPS",
             JP: "最近30秒間の平均DPS",
@@ -669,7 +669,7 @@ d = {
         ul: 0
     },
     mergedLast60DPS: {
-        tt: "Last10",
+        tt: "Last60",
         m: {
             KR: "최근 60초간 평균 DPS",
             JP: "最近60秒間の平均DPS",
@@ -681,7 +681,7 @@ d = {
         ul: 0
     },
     mergedLast180DPS: {
-        tt: "Last10",
+        tt: "Last180",
         m: {
             KR: "최근 180초간 평균 DPS",
             JP: "最近180秒間の平均DPS",
