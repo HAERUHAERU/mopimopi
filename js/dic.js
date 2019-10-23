@@ -1077,7 +1077,7 @@ d = {
         ul: 1
     },
     deaths: {
-        tt: "Death",
+        tt: "Deaths",
         m: {
             KR: "죽음 횟수",
             JP: "死亡回数",
