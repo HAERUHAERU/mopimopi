@@ -1017,7 +1017,7 @@ d = {
         ul: 0
     },
     mergedAbsorbHeal: {
-        tt: "Rep.HP",
+        tt: "HP",
         m: {
             KR: "기술을 통한 HP 회복량",
             JP: "スキルのよるHP回復量",
@@ -1029,7 +1029,7 @@ d = {
         ul: 0
     },
     powerheal: {
-        tt: "Rep.MP",
+        tt: "MP",
         m: {
             KR: "기술을 통한 MP 회복량",
             JP: "スキルのよるMP回復量",
