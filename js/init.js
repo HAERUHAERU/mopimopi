@@ -255,7 +255,7 @@ Mopi2 = {
         },
         duration: {
             tt: "P.Time",
-            width: 50,
+            width: 40,
             padding: 0,
             alignHeader: "center",
             alignBody: "center",
@@ -273,7 +273,7 @@ Mopi2 = {
         },
         EncounterDuration: {
             tt: "Time",
-            width: 50,
+            width: 40,
             padding: 0,
             alignHeader: "center",
             alignBody: "center",
