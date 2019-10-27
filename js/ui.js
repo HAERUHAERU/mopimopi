@@ -1,4 +1,3 @@
-
 var init = new Object(),
     lang = null,
     parent = '',
