@@ -1,34 +1,36 @@
 var lastDPS = null,
     lastHPS = null,
     firstCombat = false,
-    _ = ''
+    _ = '' 
 var barSize = new Array(),
     encounterArray = new Array(),
     encounterCount = 1;
-   
+
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
-    console.log(lastDPS);
+    console.log(lastDPS)
+        
     if (view != 'settings') {
+        
         if (!firstCombat) {
             $('[name=notice], [name=history]').fadeOut(0)
             $('[name=main]').fadeIn(0)
             view = 'main'
             firstCombat = true
         }
-        setTimeout(function () {
+        setTimeout(function() {
             saveLog()
             update(lastDPS, lastHPS)
             hiddenTable()
         }, 1)
-    }    
+    }
 }
-function update(lastDPS, lastHPS) {
+function update(lastDPS, lastHPS) {    
     if (lastDPS.zone == 'HAERU') {
         _ = '_P'
     } else
-        _ = ''
+        _ = ''        
     if (init.q.pets == 0) {
         lastDPS.summonerMerge = false;
         lastDPS.DetachPets();
@@ -50,130 +52,125 @@ function update(lastDPS, lastHPS) {
     } else {
         $('nav table[name=ACT_2line]').fadeOut(0)
         $('nav table[name=ACT_1line]').fadeIn(0)
-    }
+    }    
     $('[name=target]').text(lastDPS.Encounter.title)
     $('[name=time]').text(lastDPS.Encounter.duration)
-
     if (init.q.tableOrder == 1)
         $('div[name=main' + _ + ']').html('<div id="DPSHeader' + _ + '"><div id="DPSoldHeader' + _ + '"></div></div><div id="DPSBody' + _ + '"><div id="DPSoldBody' + _ + '"></div></div><div id="HPSHeader' + _ + '"><div id="HPSoldHeader' + _ + '"></div></div><div id="HPSBody' + _ + '"><div id="HPSoldBody' + _ + '"></div></div>')
     else
         $('div[name=main' + _ + ']').html('<div id="HPSHeader' + _ + '"><div id="HPSoldHeader' + _ + '"></div></div><div id="HPSBody' + _ + '"><div id="HPSoldBody' + _ + '"></div></div><div id="DPSHeader' + _ + '"><div id="DPSoldHeader' + _ + '"></div></div><div id="DPSBody' + _ + '"><div id="DPSoldBody' + _ + '"></div></div>')
-    if (lastDPS.Combatant["YOU"] == undefined || lastDPS.Combatant["YOU"] == null) {
+        
+    if (lastDPS.Combatant["YOU"] == undefined && lastDPS.Combatant["YOU"] == null) {        
         $('[name=rps]').text(l.NAV.main.tt.rps[lang])
     } else {
         var rd = "RD " + addComma(lastDPS.Encounter.ENCDPS) + "　"
         var rh = "RH " + addComma(lastHPS.Encounter.ENCHPS) + "　"
+        var md = "MD " + addComma(lastDPS.Combatant.YOU.encdps) + "　"
+        var mh = "MH " + addComma(lastHPS.Combatant.YOU.enchps) + "　"
         var rk = "Rank " + parseInt(lastDPS.Combatant.YOU.rank + 1) + "/" + parseInt(lastHPS.Combatant.YOU.rank + 1) + "/" + lastDPS.partys + "　"
         var msg = ''
         if (init.q.swap == 0)
-            var max = '<span name="swapBtn">MaxHit </span>' + addData('MaxHit', null, lastDPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '')
+            var max = '<span name="swapBtn">MaxHit </span>' + addData('maxhit', null, lastDPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '')
         else
-            var max = '<span name="swapBtn">MaxHeal </span>' + addData('MaxHeal', null, lastHPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '')
+            var max = '<span name="swapBtn">MaxHeal </span>' + addData('maxheal', null, lastHPS.Combatant.YOU).replace('<font class="ex">', '').replace("</font>", '')
         if (init.q.act_rd) msg += rd
         if (init.q.act_rh) msg += rh
+        if (init.q.act_md) msg += md
+        if (init.q.act_mh) msg += mh
         if (init.q.act_rank) msg += rk
         if (init.q.act_max) msg += max.replace('<font class="ex">', '').replace("</font>", '')
 
         $('[name=rps]').html(msg)
-
         $('[name=swapBtn]').on({
-            click: function () {
+            click: function() {
                 if (init.q.swap == 0) {
                     init.q.swap = 1
                 } else {
                     init.q.swap = 0
-                }
+                }                
                 localStorage.setItem('Mopi2_HAERU', JSON.stringify(init))
                 update(lastDPS, lastHPS)
             },
-            mouseover: function () {
+            mouseover: function() {
                 $(this).css({ color: '#' + init.Color.accent })
             },
-            mouseleave: function () {
+            mouseleave: function() {
                 $(this).css({ color: '' })
             },
         })
-
         if ((lastDPS.partys >= init.q.view24_Number && init.q.view24) || view == 'preview24') {
             if (init.q.viewDPS == 1)
                 onRaidCombatDataUpdate('DPS', lastDPS)
             if (init.q.viewHPS == 1)
                 onRaidCombatDataUpdate('HPS', lastHPS)
-        } else {
+        } else {            
             if (init.q.viewDPS == 1)
                 onCombatDataUpdate('DPS', lastDPS)
             if (init.q.viewHPS == 1)
                 onCombatDataUpdate('HPS', lastHPS)
         }
-    }
+    }    
     ui()
 }
-
 function onRaidCombatDataUpdate(flag, last) {
     if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {
         var row = $('<div class="rRow"></div>'),
             set = 1,
             newBody = $('<div id="' + flag + 'Body' + _ + '"></div>')
-
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
-            if (init.q.pets == 1 && a.Job == "AVA" || a.Class == '') { } else {
+            if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') {} else {
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
                         if (set <= init.Range.size24TableSlice) {
                             row.append(createRaidTableBody(flag, a, userName))
                             set++
-                        }
-                        else {
+                        } else {
                             set = 2
                             newBody.append(row)
                             row = $('<div class="rRow"></div>')
                             row.append(createRaidTableBody(flag, a, userName))
                         }
                     }
-                }
-                else {
+                } else {
                     if (init.q.DPS_T == 1 && a.role == 'Tanker' || init.q.DPS_H == 1 && a.role == 'Healer' || init.q.DPS_D == 1 && a.role == 'DPS' || init.q.DPS_C == 1 && a.Job == 'CBO' || init.q.DPS_M == 1 && a.role == 'Crafter' || init.q.DPS_M == 1 && a.role == 'Gathering') {
                         if (set <= init.Range.size24TableSlice) {
                             row.append(createRaidTableBody(flag, a, userName))
                             set++
-                        }
-                        else {
+                        } else {
                             set = 2
                             newBody.append(row)
                             row = $('<div class="rRow"></div>')
                             row.append(createRaidTableBody(flag, a, userName))
                         }
-
                     }
                 }
             }
         }
         newBody.append(row)
         $('#' + flag + 'Body' + _).replaceWith(newBody)
-
     }
 }
 function createRaidTableBody(flag, a, userName) {
-    return '<table id="' + userName + '" class="rCell"><tr><td rowspan="2" class="rIdx" style="background:' + graphColor(a.Class, a.role, userName) + '"></td><td class="rIcon">' + addData('Job', a.Class, a) + '</td><td class="rName">' + addData('Name', a.name, a) + '</td></tr><tr><td colspan="2" class="rData">' + addData(flag, a['enc' + flag.toLowerCase()], a) + '</td></tr></table>'
+    return '<table id="' + userName + '" class="rCell"><tr><td rowspan="2" class="rIdx" style="background:' + graphColor(a.Class, a.role, userName) + '"></td><td class="rIcon">' + addData('Class', a.Class, a) + '</td><td class="rName">' + addData('name', a.name, a) + '</td></tr><tr><td colspan="2" class="rData">' + addData('enc' + flag.toLowerCase(), a['enc' + flag.toLowerCase()], a) + '</td></tr></table>'
 }
 function onCombatDataUpdate(flag, last) {
-    if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {
+    if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {        
         var Height = 0;
         var tableHeader = document.getElementById(flag + "Header" + _);
         var oldHeader = document.getElementById(flag + "oldHeader" + _);
         var newHeader = document.createElement("div");
         createTableHeader(flag, newHeader);
         tableHeader.replaceChild(newHeader, oldHeader);
-        newHeader.id = flag + 'oldHeader' + _;
+        newHeader.id = flag + 'oldHeader' + _;        
         var tableBody = document.getElementById(flag + "Body" + _);
         var oldBody = document.getElementById(flag + "oldBody" + _);
         var newBody = document.createElement("div");
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
-            if (init.q.pets == 1 && a.Job == "AVA" || a.Class == '') { } else {
+            if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') {} else {
                 var bodyHeight = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
@@ -195,19 +192,17 @@ function onCombatDataUpdate(flag, last) {
             }
         }
         tableBody.replaceChild(newBody, oldBody);
-        newBody.id = flag + 'oldBody' + _;
+        newBody.id = flag + 'oldBody' + _;        
         if (Height == 0)
-            $('#' + flag + 'Header' + _).html('<div id="' + flag + 'oldHeader' + _ + '"></div>')
-
+            $('#' + flag + 'Header' + _).html('<div id="' + flag + 'oldHeader' + _ + '"></div>')        
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
-            if (init.q.pets == 1 && a.Job == "AVA" || a.Class == '') { } else
+            if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') {} else
                 inputGraph(userName, flag, a.parent.maxdamage, a)
         }
     }
 }
-
 function createTableHeader(flag, newHeader) {
     var tableHeader = document.createElement("TABLE");
     tableHeader.className = "tableHeader";
@@ -216,11 +211,10 @@ function createTableHeader(flag, newHeader) {
         var n = init.Order[flag][i]
         var td = tr.insertCell();
         td.innerHTML = init.ColData[n].tt;
-        td.className = addClassName(init.ColData[n].tt);
+        td.className = n + " cell";
     }
     newHeader.appendChild(tableHeader)
 }
-
 function createTableBody(userName, flag, newBody, a) {
     var wrap = document.createElement("div");
     wrap.id = userName;
@@ -239,16 +233,14 @@ function createTableBody(userName, flag, newBody, a) {
         var n = init.Order[flag][i]
         if (init.ColData[n][flag] == true) {
             var td = tr.insertCell();
-            td.innerHTML = addData(init.ColData[n].tt, a[n], a);
-            td.className = addClassName(init.ColData[n].tt) + ' ' + init.ColData[n].tt;
+            td.innerHTML = addData(n, a[n], a);
+            td.className = n + " cell";
         }
     }
     wrap.appendChild(table);
-
     var miniBar = document.createElement("div");
     miniBar.className = "mini";
-
-   if (flag == "DPS") {
+    if (flag == "DPS") {
         if (init.q.bar_pet == 1) {
             var bar1 = document.createElement("div");
             bar1.className = "pet";
@@ -276,7 +268,6 @@ function createTableBody(userName, flag, newBody, a) {
     wrap.appendChild(barBg);
     newBody.appendChild(wrap)
 }
-
 function printName(name) {
     var tmp = name.split(' ');
     if (tmp.length >= 2) {
@@ -292,17 +283,16 @@ function printName(name) {
         return name
 }
 function cutName(name) {
-    if (name.indexOf("(") > -1) {
+    if (name.indexOf("(") > -1) {        
         var tmp = name.split('(');
-        var cn = tmp[1].substr(0, tmp[1].length - 1)
-        if (myName == "")   
-            myName = 'YOU'        
-        if(init.q.myName == false && cn == "YOU")   
+        var cn = tmp[1].substr(0, tmp[1].length - 1)        
+        if (myName == "") 
+            myName = 'YOU'
+        if (init.q.myName == false && cn == "YOU")
             return tmp[0] + ' (' + printName(myName) + ')'
-        else 
+        else
             return tmp[0] + ' (' + printName(cn) + ')'
-    }
-    else {      
+    } else {        
         return printName(name)
     }
 }
@@ -319,19 +309,19 @@ function petName(job, name) {
 }
 function addData(colName, a, p) {
     switch (colName) {
-        case 'Job':
+        case 'Class':
             if (a != undefined)
                 return '<img src="./images/icon/' + init.q.iconSet + '/' + p.Job.toUpperCase() + '.png"/>';
             else return ''
-        case 'Name':
-            var name = ''
-            if (init.q.hideName == false) {
+        case 'name':
+            var name = ''                
+            if (init.q.hideName == false) {                
                 if (a == "YOU" && init.q.myName == false) {
                     if (myName != '')
                         name = cutName(myName);
                     else
                         name = a
-                }
+                }                
                 else {
                     if ((p.petOwner == myName || p.petOwner == 'YOU') && p.petOwner != '' && init.q.myName == true)
                         name = petName(p.Job, a)
@@ -339,14 +329,13 @@ function addData(colName, a, p) {
                         name = cutName(a);
                     }
                 }
-            }
+            }            
             else {
-                if (a == "YOU") {
+                if (a == "YOU") {                    
                     name = a
-                }
-                else {
+                } else {                    
                     if (p.petOwner == myName || p.petOwner == 'YOU')
-                        name = petName(p.Job, a)
+                        name = petName(p.Job, a)                        
                     else {
                         if (p.Job == "LMB")
                             name = 'Limit Break'
@@ -354,54 +343,54 @@ function addData(colName, a, p) {
                             name = '';
                     }
                 }
-            }
+            }            
             if (init.q.rank == 1)
                 return (p.rank + 1) + '. ' + name
-            else 
+            else
                 return name
-        case 'Time':
-        case 'P.Time':
+        case 'duration':
+        case 'EncounterDuration':
             return a
-        case 'PARRY':
-        case 'BLOCK':
+        case 'ParryPct':
+        case 'BlockPct':
             return addComma(a) + '<font class="ex">%</font>';
-        case 'P.DPS':
-        case 'Last10':
-        case 'Last30':
-        case 'Last60':
-        case 'Last180':
-        case 'DPS':
-        case 'HPS':
+        case 'dps':
+        case 'mergedLast10DPS':
+        case 'mergedLast30DPS':
+        case 'mergedLast60DPS':
+        case 'mergedLast180DPS':
+        case 'encdps':
+        case 'enchps':
             if (a != 'Infinity') {
                 if (a >= 10000 && init.q.unit == 1) return addComma(a, 1000, init.q.ns * init.q.dpsType)
                 else return addComma(a, null, init.q.ns * init.q.dpsType);
             } else
                 return '∞'
-        case 'Damage':
-        case 'Swing':
-        case 'Hit':
-        case 'D.Hit':
-        case 'C.Hit':
-        case 'C.D.Hit':
-        case 'Miss':
-        case 'Avoid':
-        case 'D.Taken':
-        case 'H.Taken':
-        case 'Healed':
-        case 'Eff.Heal':
-        case 'D.Shield':
-        case 'OverHeal':
-        case 'Heal':
-        case 'C.Heal':
-        case 'Dispel':
-        case 'Rep.HP':
-        case 'Rep.MP':
-        case 'Death':
+        case 'mergedDamage':
+        case 'mergedSwings':
+        case 'mergedHits':
+        case 'mergedDirectHitCount':
+        case 'mergedCrithits':
+        case 'mergedCritDirectHitCount':
+        case 'mergedMisses':
+        case 'hitfailed':
+        case 'mergedDamagetaken':
+        case 'mergedHealstaken':
+        case 'mergedHealed':
+        case 'mergedEffHealed':
+        case 'mergedDamageShield':
+        case 'mergedOverHeal':
+        case 'mergedHeals':
+        case 'mergedCritheals':
+        case 'mergedCures':
+        case 'mergedAbsorbHeal':
+        case 'powerheal':
+        case 'deaths':
             if (a >= 1000000 && init.q.unit == 1) return addComma(a, 1000000, init.q.ns * init.q.dmgType)
             else if (a >= 10000 && init.q.unit == 1) return addComma(a, 1000, init.q.ns * init.q.dmgType)
             else return addComma(a);
-        case 'MaxHit':
-        case 'MaxHeal':            
+        case 'maxhit':
+        case 'maxheal':
             var val = 'merged' + colName + 'val'
             var str = 'merged' + colName + 'str'
             var unit = 'merged' + colName + 'unit'
@@ -413,50 +402,46 @@ function addData(colName, a, p) {
                     break
                 }
             }
-            if(p[unit] == 'K')
+            if (p[unit] == 'K')
                 data = addComma(p[val], 1000, init.q.ns * init.q.dmgType)
-            else if(p[unit] == 'M')
+            else if (p[unit] == 'M')
                 data = addComma(p[val], 1000000, init.q.ns * init.q.dmgType)
-            else{
-                if(p[val] >= 1000 && init.q.max_unit == 1)
+            else {
+                if (p[val] >= 1000 && init.q.max_unit == 1)
                     data = addComma(p[val], 1000, init.q.ns * init.q.dmgType)
-                else if(p[val] >= 1000000 && init.q.max_unit == 1)
+                else if (p[val] >= 1000000 && init.q.max_unit == 1)
                     data = addComma(p[val], 1000000, init.q.ns * init.q.dmgType)
-                else 
+                else
                     data = addComma(p[val])
-            }                 
-            if (init.q.mhh == 1) 
+            }
+            if (init.q.mhh == 1)
                 return '<font class="ex">' + abb + ' ' + init.q.mhh_unit + ' </font>' + data
-            else if (init.q.mhh == 2) 
+            else if (init.q.mhh == 2)
                 return data + '<font class="ex"> ' + init.q.mhh_unit + ' ' + abb + '</font>'
-            else if (init.q.mhh == 3) 
+            else if (init.q.mhh == 3)
                 return abb
-            else 
+            else
                 return data
         default:
             return addComma(a, null, init.q.ns * init.q.perType) + '<font class="ex">%</font>';
     }
 }
-
 function addComma(num, dd, ds) {
     if (num == 'NaN' || num == undefined || num == Infinity || num == '--') return 0;
     else {
         if (dd == null) dd = 1
-        if (ds == null) ds = 0
-        num = (num / dd).toFixed(ds)
-
+        if (ds == null) ds = 0            
+        num = (num / dd).toFixed(ds)        
         if (init.q.ds == '_')
             num = num.toString().replace('.', ' ')
         else
-            num = num.toString().replace('.', init.q.ds)
-        
+            num = num.toString().replace('.', init.q.ds)            
         if (init.q.gs == 0)
             num = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '')
         else if (init.q.gs == '_')
             num = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
         else
             num = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, init.q.gs)
-
         if (dd == 1000)
             return num + '<font class="ex">k</font>'
         else if (dd == 1000000)
@@ -465,16 +450,6 @@ function addComma(num, dd, ds) {
             return num
     }
 }
-
-function addClassName(name) {
-    if (name == 'Job') return 'cell_0'
-    else if (name == 'Name') return 'cell_1'
-    else if (name == 'DPS' || name == 'HPS' || name == 'P.DPS' || name == 'Last10' || name == 'Last30' || name == 'Last60' || name == 'Last180') return 'cell_2'
-    else if (name == 'Damage' || name == 'D.Taken' || name == 'H.Taken' || name == 'Healed' || name == 'Eff.Heal' || name == 'D.Shield' || name == 'OverHeal' || name == 'Rep.HP' || name == 'Rep.MP') return 'cell_3'
-    else if (name == 'MaxHeal' || name == 'MaxHit') return 'cell_4'
-    else return 'cell_5'
-}
-
 function inputGraph(userName, flag, maxDamage, p) {
     if (flag == 'DPS')
         var userWidth = parseInt((p.mergedDamage / maxDamage) * 100);
@@ -484,7 +459,6 @@ function inputGraph(userName, flag, maxDamage, p) {
         var shield = Math.min(100, parseInt((p.mergedDamageShield / p.mergedHealed) * 100))
     }
     var width = graphAnimate(userWidth, 'bar', flag, userName, p.Class, p.role)
-
     $('#' + flag + 'Body' + _).find('#' + userName).find('.mini').css({
         width: width + '%',
     })
@@ -506,7 +480,6 @@ function inputGraph(userName, flag, maxDamage, p) {
         }
     }
 }
-
 function graphAnimate(width, bar, flag, userName, job, role) {
     if (init.q.gradient == 1) {
         if (bar == 'bar')
@@ -515,7 +488,6 @@ function graphAnimate(width, bar, flag, userName, job, role) {
             var bg = '-webkit-linear-gradient(' + init.q.direction + ', rgba(0,0,0,0),' + graphColor(job, role, userName) + ')'
     } else
         var bg = graphColor(job, role, userName)
-
     if (barSize[userName + bar + flag] == undefined) {
         $('#' + flag + 'Body' + _).find('#' + userName).find('.' + bar).css({
             width: 0 + '%',
@@ -546,10 +518,8 @@ function graphAnimate(width, bar, flag, userName, job, role) {
         });
     }
     barSize[userName + bar + flag] = width;
-
     return width
 }
-
 function graphColor(job, role, userName) {
     switch (init.q.palette) {
         case "job":
@@ -557,17 +527,16 @@ function graphColor(job, role, userName) {
                 return '#' + init.Color.myColor
             else
                 return '#' + init.Color[job]
-
         case "role":
             if (init.q.myColorUse == 1 && userName.indexOf("YOU") > -1 && job != "ds" && job != "oh" && job != "pet")
                 return '#' + init.Color.myColor
             else {
-                if (role != undefined || role != null){
-                    if(job == "LMB")
+                if (role != undefined || role != null) {
+                    if (job == "LMB")
                         return '#' + init.Color[job]
                     else
                         return '#' + init.Color[role]
-                }else
+                } else
                     return '#' + init.Color[job]
             }
         case "meYou":
@@ -581,7 +550,6 @@ function graphColor(job, role, userName) {
             }
     }
 }
-
 function saveLog() {
     if (lastDPS == null)
         return;
@@ -616,36 +584,35 @@ function historyAddRow() {
     td.className = "cell_5";
     td.id = "viewIcon";
     var td = tr.insertCell();
-    if(lastDPS.title != 'Encounter')
+    if (lastDPS.title != 'Encounter')
         td.innerHTML = lastDPS.title + '<span class="ex"> / ' + lastDPS.zone + '</span>';
     else
-        td.innerHTML = 'No Data' + '<span class="ex"> / ' + lastDPS.zone + '</span>'; 
+        td.innerHTML = 'No Data' + '<span class="ex"> / ' + lastDPS.zone + '</span>';
     td.className = "cell_1";
     var td = tr.insertCell();
     td.innerHTML = lastDPS.Encounter.duration;
     td.className = "cell_5";
     var td = tr.insertCell();
-    if(lastDPS.persons.YOU != null)
-        td.innerHTML = addComma(lastDPS.persons.YOU.ENCDPS)
-    else 
-        td.innerHTML = 'No Data' 
-    td.className = "cell_6 ac";
-    var td = tr.insertCell();
     td.innerHTML = addComma(lastDPS.Encounter.ENCDPS)
     td.className = "cell_6";
-    var td = tr.insertCell();
-    if(lastHPS.persons.YOU != null)
-        td.innerHTML = addComma(lastHPS.persons.YOU.ENCHPS)    
-    else 
-        td.innerHTML = 'No Data' 
-    td.className = "cell_6 ac";
     var td = tr.insertCell();
     td.innerHTML = addComma(lastHPS.Encounter.ENCHPS)
     td.className = "cell_6";
     var td = tr.insertCell();
+    if (lastDPS.persons.YOU != null)
+        td.innerHTML = addComma(lastDPS.persons.YOU.ENCDPS)
+    else
+        td.innerHTML = 'No Data'
+    td.className = "cell_6 ac";
+    var td = tr.insertCell();
+    if (lastHPS.persons.YOU != null)
+        td.innerHTML = addComma(lastHPS.persons.YOU.ENCHPS)
+    else
+        td.innerHTML = 'No Data'
+    td.className = "cell_6 ac";
+    var td = tr.insertCell();
     td.className = "cell_5";
     td.id = "CNT";
-
     if (encounterArray.length == 1)
         td.innerText = 1;
     else {
@@ -666,7 +633,7 @@ function historyAddRow() {
     else wrap.insertBefore(newHistory, oldHistory);
     newHistory.id = 'HISTORYoldBody';
     $('#HISTORYBody .tableWrap').on({
-        mouseover: function () {
+        mouseover: function() {
             if (init.Range.bar == 0)
                 var tmp = 25
             else
@@ -675,12 +642,12 @@ function historyAddRow() {
                 background: oHexColor(init.Color.accent, parseFloat(tmp / 100))
             })
         },
-        mouseleave: function () {
+        mouseleave: function() {
             $(this).find('.barBg').css({
                 background: oHexColor(init.Color.tableBg, parseFloat(init.Range.tableBg / 100))
             })
         },
-        click: function () {
+        click: function() {
             $('#HISTORYBody').find('td#viewIcon').html('');
             var listName = $(this).find('table').attr("id")
             for (var i in encounterArray) {
