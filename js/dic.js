@@ -1,4 +1,18 @@
 d = {
+    actionName: {
+        KR: "기술명",
+        JP: "技名",
+        EN: "Action's Name",
+        DE: "Fähigkeitsnamen",
+        CN: "技能名"
+    },
+    general: {
+        KR: "일반",
+        JP: "一般",
+        EN: "General",
+        DE: "Allgemeines",
+        CN: "一般"
+    },
     fullscreen: {
         KR: "전체 화면 모드<font class='ex'>　❙ 모바일</font>",
         JP: "フルスクリーンモード<font class='ex'>　❙ モバイル</font>",
@@ -168,14 +182,14 @@ d = {
         CN: "设置前的注意事项",
     },
     caution_m1: {
-        KR: '<br>키보드로 직접 입력 시,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ 오버레이 관리자 ❯ 설정 ❯ <font class="ac"><b>키 입력 무시, 자동 숨기기(~~.exe)</b> 체크 해제</font> 필수입니다.<br><br><font class="ac">❖ PC에서 한글 입력 시 메모장 등에 데이터를 입력하고 복사(Ctrl+C)후 붙여넣기(Ctrl+V)합니다.</font>',
+        KR: '<br>키보드로 직접 입력 시,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ 오버레이 관리자 ❯ 설정 ❯ <font class="ac"><b>키 입력 무시, 자동 숨기기(~~.exe)</b> 체크 해제</font> 필수입니다.',
         JP: '<br>キーボード入力の場合は,<br>ACT > Plugins > ACTWebSocket > Open Manager > Preferences ❯ <font class="ac"><b>No Focus</b>のチェークを解除</font>してください。',
         EN: '<br>When you type directly,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac">UNCHEKED <b>No Focus</b></font>',
         DE: '<br>Wenn du direkt schreiben möchtest, gehe wie folgt vor:,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac">DEAKTIVIERE <b>No Focus</b></font>',
         CN: '<br>在键盘输入的情况下，<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac"><b>No Focus</b> 请取消勾选。</font>',
     },
     caution_m2: {
-        KR: '<br>키보드로 직접 입력 시,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ 오버레이 관리자 ❯ 설정 ❯ <font class="ac"><b>키 입력 무시, 자동 숨기기(~~.exe)</b> 체크 해제</font> 필수입니다.<br><br><font class="ac">❖ 모바일 환경에서는 해당 기능을 지원하지 않습니다.<br>❖ 글꼴 이름만 입력합니다. (글꼴 스타일 제외)<br>❖ 글꼴 파일이 손상됐거나 글꼴 이름을 잘못 입력한 경우 기본값으로 적용합니다.<br>❖ PC에서 한글 입력 시 메모장 등에 데이터를 입력하고 복사(Ctrl+C)후 붙여넣기(Ctrl+V)합니다.</font>',
+        KR: '<br>키보드로 직접 입력 시,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ 오버레이 관리자 ❯ 설정 ❯ <font class="ac"><b>키 입력 무시, 자동 숨기기(~~.exe)</b> 체크 해제</font> 필수입니다.<br><br><font class="ac">❖ 모바일 환경에서는 해당 기능을 지원하지 않습니다.<br>❖ 글꼴 이름만 입력합니다. (글꼴 스타일 제외)<br>❖ 글꼴 파일이 손상됐거나 글꼴 이름을 잘못 입력한 경우 기본값으로 적용합니다.</font>',
         JP: '<br>キーボード入力の場合は,<br>ACT > Plugins > ACTWebSocket > Open Manager > Preferences ❯ <font class="ac"><b>No Focus</b>のチェークを解除</font>してください。<br><br><font class="ac">❖ 携帯環境では該当オプションは使用できません。<br>❖ フォントの名前だけ入力してください。(フォントスタイル除外)<br>❖ フォントのファイルが損傷されている、もしくは名前が間違っている場合は基本フォントが適用されます。</font>',
         EN: '<br>When you type directly,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac">UNCHEKED <b>No Focus</b></font><br><br><font class="ac">❖ This feature isn\'t supported in mobile environment.<br>❖ You only must be entered the font name. (EXCEPT font style)<br>❖ If the font file is corrupted or font name is entered incorrectly, it will be applied by default.</font>',
         DE: '<br>Wenn du direkt schreiben möchtest, gehe wie folgt vor:,<br>ACT ❯ Plugins ❯ ACTWebSocket ❯ Open Manager ❯ Preferences ❯ <font class="ac">DEAKTIVIERE <b>No Focus</b></font><br><br><font class="ac">❖ Dieses Feature wird nicht in der mobilen Umgebung unterstützt.<br>❖ Nur den Schriftart-Namen eintragen. (AUSNAHME: Schriftstil)<br>❖ Falls die Datei der Schriftart beschädigt oder der Name falsch geschrieben ist, wird die Standard-Schriftart angewendet.</font>',
@@ -229,18 +243,11 @@ d = {
         CN: "图标<font class='ex'>　❙ 玩家职业图标</font>",
     },
     rps: {
-        KR: "RD, RH 등",
-        JP: "RD、RHなど",
-        EN: "RD, RH, etc.",
-        DE: "RD, RH, usw.",
-        CN: "RD，RH等",
-    },
-    rps_history: {
-        KR: "RD, RH 등<font class='ex'>　❙ 히스토리</font>",
-        JP: "RD、RHなど<font class='ex'>　❙ ヒストリー</font>",
-        EN: "RD, RH, etc.<font class='ex'>　❙ History</font>",
-        DE: "RD, RH, usw.<font class='ex'>　❙ Historie</font>",
-        CN: "RD，RH等<font class='ex'>　❙ 历史</font>",
+        KR: "데이터",
+        JP: "データ",
+        EN: "Data",
+        DE: "Daten",
+        CN: "数据",
     },
     table: {
         KR: "테이블",
@@ -537,41 +544,6 @@ d = {
         e: "li_color",
         ul: 1
     },
-    cell_job: {
-        KR: "Job",
-        JP: "Job",
-        EN: "Job",
-        DE: "Job",
-        CN: "Job",
-    },
-    cell_dps: {
-        KR: "DPS, HPS 등",
-        JP: "DPS、HPSなど",
-        EN: "DPS, HPS, etc.",
-        DE: "DPS, HPS, usw.",
-        CN: "DPS，HPS等",
-    },
-    cell_dmg: {
-        KR: "Damage, Healed 등",
-        JP: "Damage、Healedなど",
-        EN: "Damage, Healed, etc.",
-        DE: "Damage, Healed, usw.",
-        CN: "Damage，Healed等",
-    },
-    cell_swings: {
-        KR: "Swing, % 등",
-        JP: "Swing、%など",
-        EN: "Swing, %, etc.",
-        DE: "Swing, %, usw.",
-        CN: "Swing，%等",
-    },
-    cell_max: {
-        KR: "MaxHit, MaxHeal",
-        JP: "MaxHit、MaxHeal",
-        EN: "MaxHit, MaxHeal",
-        DE: "MaxHit, MaxHeal",
-        CN: "MaxHit，MaxHeal",
-    },
     Class: {
         tt: "Job",
         m: {
@@ -692,7 +664,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 0
     },
-    "damage%": {
+    damagePct: {
         tt: "D%",
         m: {
             KR: "총 피해량 중 내 캐릭터의 기여율",
@@ -788,7 +760,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 1
     },
-    "DirectHit%": {
+    DirectHitPct: {
         tt: "D.HIT",
         m: {
             KR: "직격 발동률",
@@ -812,7 +784,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 0
     },
-    "crithit%": {
+    crithitPct: {
         tt: "C.HIT",
         m: {
             KR: "공격 극대화율",
@@ -836,7 +808,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 0
     },
-    "CritDirectHit%": {
+    CritDirectHitPct: {
         tt: "C.D.HIT",
         m: {
             KR: "직격 극대화율",
@@ -872,7 +844,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 1
     },
-    "healed%": {
+    healedPct: {
         tt: "H%",
         m: {
             KR: "총 치유량 중 내 캐릭터의 기여율",
@@ -932,7 +904,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 0
     },
-    "overHeal%": {
+    overHealPct: {
         tt: "OV.H",
         m: {
             KR: "초과 치유율",
@@ -968,7 +940,7 @@ d = {
         e: "li_2line_checkbox",
         ul: 0
     },
-    "critheal%": {
+    crithealPct: {
         tt: "C.HEAL",
         m: {
             KR: "치유 극대화율",
