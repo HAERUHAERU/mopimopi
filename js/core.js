@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.onload = function () {
+xhr.onload = function() {
     if (xhr.status === 200) {
         responseObject = JSON.parse(xhr.responseText);
         previewDPS = new Combatant({
@@ -12,9 +12,8 @@ xhr.onload = function () {
 }
 xhr.open('GET', 'js/previewLog.json', true);
 xhr.send(null);
-
 var webs = null;
-var QueryString = function () {
+var QueryString = function() {
     var query_string = {};
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -31,7 +30,6 @@ var QueryString = function () {
     }
     return query_string
 }();
-
 var host_port = QueryString.HOST_PORT;
 while (host_port.endsWith('/')) {
     host_port = host_port.substring(0, host_port.length - 1)
@@ -53,20 +51,19 @@ if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
         wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
     }
 }
-
 class ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
         this.uri = uri;
         this.id = null;
         this.activate = !1;
         var This = this;
-        document.addEventListener('onBroadcastMessage', function (evt) {
+        document.addEventListener('onBroadcastMessage', function(evt) {
             This.onBroadcastMessage(evt)
         });
-        document.addEventListener('onRecvMessage', function (evt) {
+        document.addEventListener('onRecvMessage', function(evt) {
             This.onRecvMessage(evt)
         });
-        window.addEventListener('message', function (e) {
+        window.addEventListener('message', function(e) {
             if (e.data.type === 'onBroadcastMessage') {
                 This.onBroadcastMessage(e.data)
             }
@@ -81,16 +78,16 @@ class ActWebsocketInterface {
         this.activate = !0;
         var This = this;
         this.websocket = new WebSocket(this.uri);
-        this.websocket.onopen = function (evt) {
+        this.websocket.onopen = function(evt) {
             This.onopen(evt)
         };
-        this.websocket.onmessage = function (evt) {
+        this.websocket.onmessage = function(evt) {
             This.onmessage(evt)
         };
-        this.websocket.onclose = function (evt) {
+        this.websocket.onclose = function(evt) {
             This.onclose(evt)
         };
-        this.websocket.onerror = function (evt) {
+        this.websocket.onerror = function(evt) {
             This.onerror(evt)
         }
     }
@@ -119,7 +116,7 @@ class ActWebsocketInterface {
         this.websocket = null;
         if (this.activate) {
             var This = this;
-            setTimeout(function () {
+            setTimeout(function() {
                 This.connect()
             }, 5000)
         }
@@ -143,8 +140,8 @@ class ActWebsocketInterface {
                         detail: obj
                     }))
                 }
-                if (type == "set_id") { }
-            } catch (e) { }
+                if (type == "set_id") {}
+            } catch (e) {}
         }
     }
     onerror(evt) {
@@ -159,7 +156,7 @@ class ActWebsocketInterface {
             try {
                 var pair = vars[i].split('=');
                 querieSet[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1])
-            } catch (e) { }
+            } catch (e) {}
         }
         return querySet
     }
@@ -202,8 +199,8 @@ class ActWebsocketInterface {
         this.id = overlayWindowId;
         this.websocket.send(JSON.stringify(obj))
     }
-    onRecvMessage(e) { }
-    onBroadcastMessage(e) { }
+    onRecvMessage(e) {}
+    onBroadcastMessage(e) {}
 };
 class WebSocketImpl extends ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
@@ -216,27 +213,27 @@ class WebSocketImpl extends ActWebsocketInterface {
         onBroadcastMessage(e)
     }
 };
-String.prototype.format = function (a) {
+String.prototype.format = function(a) {
     var result = this;
     for (var i in a)
         result = result.replace("{" + i + "}", a[i]);
     return result
 };
-String.prototype.contains = function (a) {
+String.prototype.contains = function(a) {
     if (this.indexOf(a) > -1) return !0;
     else return !1
 };
-String.prototype.replaceArray = function (a) {
+String.prototype.replaceArray = function(a) {
     var r = this;
     for (var i in a)
         while (r.contains(a[i].target))
             r = r.replace(a[i].target, a[i].replacement);
     return r
 };
-Number.prototype.nanFix = function () {
+Number.prototype.nanFix = function() {
     return parseFloat(isNaN(this) ? 0 : this)
 };
-Number.prototype.numFormat = new function () {
+Number.prototype.numFormat = new function() {
     var data = 0;
     try {
         if (data != Infinity && data != 0 && data != NaN) {
@@ -250,25 +247,25 @@ Number.prototype.numFormat = new function () {
     }
 };
 if (document.addEventListener) {
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         document.removeEventListener("DOMContentLoaded", arguments.callee, !1);
         domReady()
     }, !1);
-    window.onbeforeunload = function () {
+    window.onbeforeunload = function() {
         webs.close()
     };
-    window.addEventListener("unload", function () {
+    window.addEventListener("unload", function() {
         webs.close()
     }, !1)
 } else if (document.attachEvent) {
-    document.attachEvent("onreadystatechange", function () {
+    document.attachEvent("onreadystatechange", function() {
         if (document.readyState === "complete") {
             document.detachEvent("onreadystatechange", arguments.callee);
             domReady()
         }
     })
 }
-window.addEventListener('message', function (e) {
+window.addEventListener('message', function(e) {
     if (e.data.type === 'onBroadcastMessage') {
         onBroadcastMessage(e.data)
     }
@@ -276,7 +273,6 @@ window.addEventListener('message', function (e) {
         onRecvMessage(e.data)
     }
 });
-
 function domReady() {
     try {
         webs = new WebSocketImpl(wsUri);
@@ -287,10 +283,10 @@ function domReady() {
     }
     try {
         document.addEventListener('beforeLogLineRead', beforeLogLineRead)
-    } catch (ex) { }
+    } catch (ex) {}
     try {
         document.addEventListener('onLogLineRead', onLogLineRead)
-    } catch (ex) { }
+    } catch (ex) {}
     try {
         document.addEventListener('onOverlayDataUpdate', onOverlayDataUpdate)
     } catch (ex) {
@@ -298,12 +294,11 @@ function domReady() {
     }
     try {
         document.addEventListener('onOverlayStateUpdate', onOverlayStateUpdate)
-    } catch (ex) { }
+    } catch (ex) {}
     try {
         onDocumentLoad()
-    } catch (ex) { }
+    } catch (ex) {}
 }
-
 function onRecvMessage(e) {
     if (e.detail.msgtype == "Chat") {
         document.dispatchEvent(new CustomEvent("onChatting", {
@@ -313,7 +308,6 @@ function onRecvMessage(e) {
         console.log(e.detail.msgtype + ":" + e.detail.msg)
     }
 }
-
 function onBroadcastMessage(e) {
     if (e.detail.msgtype == "CombatData") {
         lastCombatRaw = e.detail.msg;
@@ -351,7 +345,6 @@ function onBroadcastMessage(e) {
         }
     }
 }
-
 function Person(e, p) {
     this.EncounterDuration = p.Encounter.duration;
     this.parent = p;
@@ -388,14 +381,14 @@ function Person(e, p) {
     }
     if (this.Job != "")
         this.Class = this.Job.toUpperCase();
-        this.petOwner = "";
-        this.isPet = !1;
-        this.role = "DPS";
-        this.rank = 0;
-        this.maxdamage = 0;
-        this.displayName = this.name;
-        this.isLower = !1;
-        var vjob = this.Job;
+    this.petOwner = "";
+    this.isPet = !1;
+    this.role = "DPS";
+    this.rank = 0;
+    this.maxdamage = 0;
+    this.displayName = this.name;
+    this.isLower = !1;
+    var vjob = this.Job;
     if (vjob != "") vjob = this.Job.toUpperCase();
     switch (vjob) {
         case "GLD":
@@ -436,10 +429,19 @@ function Person(e, p) {
             this.Class = "WHM";
             this.isLower = !0;
             break;
-        case "CRP": case "BSM": case "ARM": case "GSM": case "LTW": case "WVR": case "ALC": case "CUL":
+        case "CRP":
+        case "BSM":
+        case "ARM":
+        case "GSM":
+        case "LTW":
+        case "WVR":
+        case "ALC":
+        case "CUL":
             this.role = "Crafter";
             break;
-        case "BTN": case "MIN": case "FSH":
+        case "BTN":
+        case "MIN":
+        case "FSH":
             this.role = "Gathering";
             break;
     }
@@ -459,90 +461,83 @@ function Person(e, p) {
         }
     }
     var smnPetsList = ["카벙클 에메랄드", "カーバンクル・エメラルド", "绿宝石兽", "Smaragd-Karfunkel", "Carbuncle émeraude", "Emerald Carbuncle",
-                        "카벙클 토파즈", "カーバンクル・トパーズ", "黄宝石兽", "Topas-Karfunkel", "Carbuncle topaze", "Topaz Carbuncle",
-                        "카벙클 루비", "カーバンクル・ルビー", "红宝石兽", "Rubin-Karfunkel", "Carbuncle rubis", "Ruby Carbuncle",
-                        "가루다 에기", "ガルーダ・エギ", "迦楼罗之灵", "Garuda-Egi",
-                        "이프리트 에기", "イフリート・エギ", "伊弗利特之灵", "Ifrit-Egi",
-                        "타이탄 에기", "タイタン・エギ", "泰坦之灵", "Titan-Egi",
-                        "데미바하무트", "デミ・バハムート", "亚灵神巴哈姆特", "Demi-Bahamut", "デミ・フェニックス",
-                        "Demi-Phönix", "Demi-Phénix", "Demi-Phoenix", "亚灵神不死鸟"
+        "카벙클 토파즈", "カーバンクル・トパーズ", "黄宝石兽", "Topas-Karfunkel", "Carbuncle topaze", "Topaz Carbuncle",
+        "카벙클 루비", "カーバンクル・ルビー", "红宝石兽", "Rubin-Karfunkel", "Carbuncle rubis", "Ruby Carbuncle",
+        "가루다 에기", "ガルーダ・エギ", "迦楼罗之灵", "Garuda-Egi",
+        "이프리트 에기", "イフリート・エギ", "伊弗利特之灵", "Ifrit-Egi",
+        "타이탄 에기", "タイタン・エギ", "泰坦之灵", "Titan-Egi",
+        "데미바하무트", "デミ・バハムート", "亚灵神巴哈姆特", "Demi-Bahamut", "デミ・フェニックス",
+        "Demi-Phönix", "Demi-Phénix", "Demi-Phoenix", "亚灵神不死鸟"
     ];
     var mchPetsList = ["자동포탑 룩", "オートタレット・ルーク", "车式浮空炮塔", "Selbstschuss-Gyrocopter TURM", "Auto-tourelle Tour", "Rook Autoturret",
-                        "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter LÄUFER", "Auto-tourelle Fou", "Bishop Autoturret",
-                        "オートマトン・クイーン", "Automaton DAME", "Automate Reine", "Automaton Queen", "后式自走人偶"
+        "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter LÄUFER", "Auto-tourelle Fou", "Bishop Autoturret",
+        "オートマトン・クイーン", "Automaton DAME", "Automate Reine", "Automaton Queen", "后式自走人偶"
     ];
     var schPetsList = ["요정 에오스", "フェアリー・エオス", "朝日小仙女", "Eos",
-                        "요정 셀레네", "フェアリー・セレネ", "夕月小仙女", "Selene",
-                        "セラフィム", "Seraph", "Séraphin", "炽天使"
+        "요정 셀레네", "フェアリー・セレネ", "夕月小仙女", "Selene",
+        "セラフィム", "Seraph", "Séraphin", "炽天使"
     ];
     var drkPetsList = ["英雄の影身", "Hochachtung", "Estime", "Esteem", "英雄的掠影"];
     var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin"];
     var astPetsList = ["지상의 별", "アーサリースター", "地星", "Earthly Star", "Étoile terrestre", "Irdischer Stern"];
 
     var petsName = this.name.split(' (')[0];
-
     if (this.Class == "") {
         if (smnPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "SMN";
             this.isPet = true;
-        }
-        else if (schPetsList.indexOf(petsName) > -1) {
+        } else if (schPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "SCH";
             this.isPet = true;
             this.role = "Healer";
-        }
-        else if (mchPetsList.indexOf(petsName) > -1) {
+        } else if (mchPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "MCH";
             this.isPet = true;
-        }
-        else if (drkPetsList.indexOf(petsName) > -1) {
+        } else if (drkPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "DRK";
-            this.isPet = true;            
+            this.isPet = true;
             this.role = "Tanker";
-        }
-        else if (ninPetsList.indexOf(petsName) > -1) {
+        } else if (ninPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "NIN";
             this.isPet = true;
-        }
-        else if(astPetsList.indexOf(petsName) > -1) {            
+        } else if (astPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "AST";
             this.isPet = true;
             this.role = "Healer";
-        }
-        else if (this.name.indexOf("(") == -1) {
+        } else if (this.name.indexOf("(") == -1) {
             this.Job = "LMB";
             this.Class = "LMB";
-        }        
+        }
     }
     try {
-        this.maxhitstr = this.maxhit.replace(/[0-9.,']/g,"").trim().slice(0,-1)
-        this.maxhitval = parseInt(this.maxhit.replace(/[^0-9]/g,""))
-        this.mergedMaxHitstr = this.maxhitstr
-        this.mergedMaxHitval = this.maxhitval
+        this.maxhitstr = this.maxhit.replace(/[0-9.,']/g, "").trim().slice(0, -1)
+        this.maxhitval = parseInt(this.maxhit.replace(/[^0-9]/g, ""))
+        this.mergedmaxhitstr = this.maxhitstr
+        this.mergedmaxhitval = this.maxhitval
     } catch (ex) {
         this.maxhit = "?-0";
         this.maxhitstr = "No Data";
         this.maxhitval = 0;
-        this.mergedMaxHitstr = this.maxhitstr
-        this.mergedMaxHitval = this.maxhitval
+        this.mergedmaxhitstr = this.maxhitstr
+        this.mergedmaxhitval = this.maxhitval
     }
     try {
-        this.maxhealstr = this.maxheal.replace(/[0-9.,']/g,"").trim().slice(0,-1)
-        this.maxhealval = parseInt(this.maxheal.replace(/[^0-9]/g,""))
-        this.mergedMaxHealstr = this.maxhealstr
-        this.mergedMaxHealval = this.maxhealval
+        this.maxhealstr = this.maxheal.replace(/[0-9.,']/g, "").trim().slice(0, -1)
+        this.maxhealval = parseInt(this.maxheal.replace(/[^0-9]/g, ""))
+        this.mergedmaxhealstr = this.maxhealstr
+        this.mergedmaxhealval = this.maxhealval
     } catch (ex) {
         this.maxheal = "?-0";
         this.maxhealstr = "No Data";
         this.maxhealval = 0;
-        this.mergedMaxHealstr = this.maxhealstr
-        this.mergedMaxHealval = this.maxhealval
+        this.mergedmaxhealstr = this.maxhealstr
+        this.mergedmaxhealval = this.maxhealval
     }
     this.effHealed = this.healed - this.overHeal - this.damageShield;
     this.visible = !0;
@@ -577,8 +572,7 @@ function Person(e, p) {
             if (this.Job == "0" || this.Job == "AVA")
                 this.petOwner = matches[1];
         }
-    }
-    catch (ex) {
+    } catch (ex) {
 
     }
     if (this.petOwner != "" && this.Job == "0") {
@@ -586,7 +580,7 @@ function Person(e, p) {
         this.Class = "CBO";
         this.role = "CBO";
     }
-    if (this.overHeal != undefined) { }
+    if (this.overHeal != undefined) {}
 
     for (var i in this.original) {
         if (i.indexOf("Last") > -1)
@@ -597,7 +591,7 @@ function Person(e, p) {
     }
     this.pets = {}
 }
-Person.prototype.returnOrigin = function () {
+Person.prototype.returnOrigin = function() {
     for (var i in this.original) {
         if (i.indexOf("Last") > -1)
             this["merged" + i] = this[i];
@@ -606,7 +600,7 @@ Person.prototype.returnOrigin = function () {
         else this["merged" + i] = this[i.substr(0, 1).toLowerCase() + i.substr(1)]
     }
 };
-Person.prototype.merge = function (person) {
+Person.prototype.merge = function(person) {
     this.returnOrigin();
     this.pets[person.name] = person;
     for (var k in this.pets) {
@@ -618,7 +612,7 @@ Person.prototype.merge = function (person) {
     }
     this.recalculate()
 };
-Person.prototype.recalculate = function () {
+Person.prototype.recalculate = function() {
     var dur = this.DURATION;
     if (dur == 0) dur = 1;
     this.dps = pFloat(this.mergedDamage / dur);
@@ -633,17 +627,16 @@ Person.prototype.recalculate = function () {
     this.ENCHPS = Math.floor(this.enchps);
     this["ENCDPS-k"] = Math.floor(this.encdps / 1000);
     this["ENCHPS-k"] = Math.floor(this.enchps / 1000);
-    this["damage%"] = pFloat(this.mergedDamage / this.parent.Encounter.damage * 100);
-    this["healed%"] = pFloat(this.mergedHealed / this.parent.Encounter.healed * 100);
-    this["overHeal%"] = pFloat(this.mergedOverHeal / this.mergedHealed * 100);
-    this["crithit%"] = pFloat(this.mergedCrithits / this.mergedHits * 100);
-    this["DirectHit%"] = pFloat(this.mergedDirectHitCount / this.mergedHits * 100);
-    this["CritDirectHit%"] = pFloat(this.mergedCritDirectHitCount / this.mergedHits * 100);
-    this["critheal%"] = pFloat(this.mergedCritheals / this.mergedHeals * 100);
+    this["damagePct"] = pFloat(this.mergedDamage / this.parent.Encounter.damage * 100);
+    this["healedPct"] = pFloat(this.mergedHealed / this.parent.Encounter.healed * 100);
+    this["overHealPct"] = pFloat(this.mergedOverHeal / this.mergedHealed * 100);
+    this["crithitPct"] = pFloat(this.mergedCrithits / this.mergedHits * 100);
+    this["DirectHitPct"] = pFloat(this.mergedDirectHitCount / this.mergedHits * 100);
+    this["CritDirectHitPct"] = pFloat(this.mergedCritDirectHitCount / this.mergedHits * 100);
+    this["crithealPct"] = pFloat(this.mergedCritheals / this.mergedHeals * 100);
     this.tohit = pFloat(this.mergedHits / this.mergedSwings * 100)
 };
-
-Person.prototype.get = function (key) {
+Person.prototype.get = function(key) {
     if (this.parent.summonerMerge) {
         switch (key) {
             case "damage":
@@ -656,7 +649,6 @@ Person.prototype.get = function (key) {
     }
     return this[key]
 }
-
 function Combatant(e, sortkey) {
     if (sortkey == undefined) var sortkey = "encdps";
     this.Encounter = {};
@@ -709,10 +701,10 @@ function Combatant(e, sortkey) {
     this.persons = this.Combatant;
     this.resort()
 }
-Combatant.prototype.rerank = function (vector) {
+Combatant.prototype.rerank = function(vector) {
     this.sort(vector)
 };
-Combatant.prototype.indexOf = function (person) {
+Combatant.prototype.indexOf = function(person) {
     var v = -1;
     for (var i in this.Combatant) {
         v++;
@@ -721,7 +713,7 @@ Combatant.prototype.indexOf = function (person) {
     }
     return v
 };
-Combatant.prototype.sort = function (vector) {
+Combatant.prototype.sort = function(vector) {
     if (vector != undefined)
         this.sortvector = vector;
     if (this.summonerMerge) {
@@ -781,10 +773,10 @@ Combatant.prototype.sort = function (vector) {
     }
     this.Combatant = {};
     if (this.sortvector)
-        tmp.sort(function (a, b) {
+        tmp.sort(function(a, b) {
             return b.key - a.key
         });
-    else tmp.sort(function (a, b) {
+    else tmp.sort(function(a, b) {
         return a.key - b.key
     });
     var tmpMax = 0;
@@ -813,8 +805,7 @@ Combatant.prototype.sort = function (vector) {
     this.partys = r
     this.persons = this.Combatant
 };
-
-Combatant.prototype.AttachPets = function () {
+Combatant.prototype.AttachPets = function() {
     this.summonerMerge = !0;
     for (var i in this.Combatant) {
         this.Combatant[i].returnOrigin();
@@ -828,36 +819,36 @@ Combatant.prototype.AttachPets = function () {
                 var owner = this.Combatant[this.Combatant[i].petOwner]
 
             if (this.Combatant[i].maxhitval > owner.maxhitval) {
-                owner.mergedMaxHitval = this.Combatant[i].maxhitval
-                owner.mergedMaxHitstr = this.Combatant[i].maxhitstr
+                owner.mergedmaxhitval = this.Combatant[i].maxhitval
+                owner.mergedmaxhitstr = this.Combatant[i].maxhitstr
             }
             if (this.Combatant[i].maxhealval > owner.maxhealval) {
-                owner.mergedMaxHealval = this.Combatant[i].maxhealval
-                owner.mergedMaxHealstr = this.Combatant[i].maxhealstr
+                owner.mergedmaxhealval = this.Combatant[i].maxhealval
+                owner.mergedmaxhealstr = this.Combatant[i].maxhealstr
             }
         }
 
     }
 }
-Combatant.prototype.DetachPets = function () {
+Combatant.prototype.DetachPets = function() {
     this.summonerMerge = !1;
     for (var i in this.Combatant) {
         this.Combatant[i].returnOrigin();
         this.Combatant[i].recalculate();
         this.Combatant[i].parent = this
-        this.Combatant[i].mergedMaxHitval = this.Combatant[i].maxhitval
-        this.Combatant[i].mergedMaxHitstr = this.Combatant[i].maxhitstr
-        this.Combatant[i].mergedMaxHealval = this.Combatant[i].maxhealval
-        this.Combatant[i].mergedMaxHealstr = this.Combatant[i].maxhealstr
+        this.Combatant[i].mergedmaxhitval = this.Combatant[i].maxhitval
+        this.Combatant[i].mergedmaxhitstr = this.Combatant[i].maxhitstr
+        this.Combatant[i].mergedmaxhealval = this.Combatant[i].maxhealval
+        this.Combatant[i].mergedmaxhealstr = this.Combatant[i].maxhealstr
     }
 }
-Combatant.prototype.sortkeyChange = function (key) {
+Combatant.prototype.sortkeyChange = function(key) {
     this.resort(key, !0)
 };
-Combatant.prototype.sortkeyChangeDesc = function (key) {
+Combatant.prototype.sortkeyChangeDesc = function(key) {
     this.resort(key, !1)
 };
-Combatant.prototype.resort = function (key, vector) {
+Combatant.prototype.resort = function(key, vector) {
     if (key == undefined)
         this.sortkey = activeSort(this.sortkey);
     else this.sortkey = activeSort(key);
@@ -865,7 +856,6 @@ Combatant.prototype.resort = function (key, vector) {
         vector = this.sortvector;
     this.sort(vector)
 };
-
 function activeSort(key) {
     if (key.indexOf("merged") > -1) {
         if (key.indexOf("Last") > -1) {
@@ -910,8 +900,12 @@ var combatLog = [];
 var combatants = [];
 var curhp = 100;
 var delayOK = !0;
-var lastCombatRaw = null, lastCombat = null;
-var previewDPS = null, previewHPS = null, preview24DPS = null, preview24HPS = null;
+var lastCombatRaw = null,
+    lastCombat = null;
+var previewDPS = null,
+    previewHPS = null,
+    preview24DPS = null,
+    preview24HPS = null;
 var maxhp = 100;
 var myID = 0;
 var myName = "";
