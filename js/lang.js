@@ -300,11 +300,11 @@ l = {
                     CN: "한국어",
                 },
                 JP: {
-                    KR: "日本語<font class='ex'>　❙ by Korea [Moogle] 오후의홍차, 이카루가</font>",
-                    JP: "日本語<font class='ex'>　❙ by Korea [Moogle] 오후의홍차, 이카루가</font>",
-                    EN: "日本語<font class='ex'>　❙ by Korea [Moogle] 오후의홍차, 이카루가</font>",
-                    DE: "日本語<font class='ex'>　❙ by Korea [Moogle] 오후의홍차, 이카루가</font>",
-                    CN: "日本語<font class='ex'>　❙ by Korea [Moogle] 오후의홍차, 이카루가</font>"
+                    KR: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
+                    JP: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
+                    EN: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
+                    DE: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
+                    CN: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>"
                 },
                 CN: {
                     KR: "中國語<font class='ex'>　❙ by China [紫水栈桥] Rapis</font>",
