@@ -298,12 +298,7 @@ function cutName(name) {
 }
 function petName(job, name) {
     if (job == 'CBO') {
-        if (lang == "KR")
-            return '초코보 (YOU)'
-        else if (lang == "JP")
-            return 'チョコボ (YOU)'
-        else
-            return 'Chocobo (YOU)'
+        return d.CBO.tt[lang] + " (YOU)"
     } else
         return name.split('(')[0] + '(YOU)';
 }
@@ -338,7 +333,7 @@ function addData(colName, a, p) {
                         name = petName(p.Job, a)                        
                     else {
                         if (p.Job == "LMB")
-                            name = 'Limit Break'
+                            name = d.LMB.tt[lang];
                         else
                             name = '';
                     }
