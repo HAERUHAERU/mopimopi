@@ -137,7 +137,7 @@ l = {
             tt: {
                 target: {
                     KR: '모피모피　',
-                    JP: 'モピモピ　',
+                    JP: 'MopiMopi　',
                     EN: 'MopiMopi　',
                     DE: 'MopiMopi　',
                     CN: "MopiMopi　",
