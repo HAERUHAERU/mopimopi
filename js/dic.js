@@ -48,12 +48,12 @@ d = {
         CN: "设置",
     },
     Capture: {
-        KR: "캡쳐<font class='ex'>　❙ PC</font>",
-        JP: "キャプチャー<font class='ex'>　❙ PC</font>",
-        EN: "Capture<font class='ex'>　❙ PC</font>",
-        FR: "Screenshot<font class='ex'>　❙ PC</font>",
-        DE: "Screenshot<font class='ex'>　❙ PC</font>",
-        CN: "截图<font class='ex'>　❙ PC</font>",
+        KR: "캡쳐<font class='ex'>　❙ PC, ACTWebSocket</font>",
+        JP: "キャプチャー<font class='ex'>　❙ PC, ACTWebSocket</font>",
+        EN: "Capture<font class='ex'>　❙ PC, ACTWebSocket</font>",
+        FR: "Screenshot<font class='ex'>　❙ PC, ACTWebSocket</font>",
+        DE: "Screenshot<font class='ex'>　❙ PC, ACTWebSocket</font>",
+        CN: "截图<font class='ex'>　❙ PC, ACTWebSocket</font>",
     },
     Data: {
         KR: "데이터",
