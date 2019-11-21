@@ -52,21 +52,7 @@ function SubOption() {
         if (i.indexOf("Cell") > -1) {
             delete init.Range[i];
         }
-    }
-    var backup = localStorage.getItem("backup");
-    if (backup != null) {
-        for (var i in backup.q) {
-            if (i.indexOf("Cell") > -1) {
-                delete init.q[i];
-            }
-        }
-        for (var i in backup.Range) {
-            if (i.indexOf("Cell") > -1) {
-                delete init.Range[i];
-            }
-        }
-        localStorage.setItem("backup", JSON.stringify(backup))
-    }
+    }   
     localStorage.setItem("Mopi2_HAERU", JSON.stringify(init))
 }
 function initOverlay(val) {
