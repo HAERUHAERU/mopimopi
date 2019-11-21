@@ -329,7 +329,7 @@ function addData(colName, a, p) {
                 if (a == "YOU") {                    
                     name = a
                 } else {                    
-                    if (p.petOwner == myName || p.petOwner == 'YOU')
+                    if ((p.petOwner == myName || p.petOwner == 'YOU') && myName != "")
                         name = petName(p.Job, a)                        
                     else {
                         if (p.Job == "LMB")
