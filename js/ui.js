@@ -781,8 +781,12 @@ function button(id, direction) {
                     webs.overlayAPI(id)
                 }, 1300)
                 callToast(id, 1500, 8000);
-            } else
-                webs.overlayAPI(id)
+            } else {
+                try {
+                    webs.overlayAPI(id);
+                    window.OverlayPluginApi.endEncounter();
+                } catch {}
+            }
             break            
         case 'History':
             view = 'history'
