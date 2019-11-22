@@ -787,8 +787,8 @@ function button(id, direction) {
                     webs.overlayAPI(id);
                     window.OverlayPluginApi.endEncounter();
                 }
-                catch {
-                    console.log("");
+                catch (e){
+                    console.log(e.meassage);
                 }
             }
             break            
