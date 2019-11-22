@@ -782,10 +782,12 @@ function button(id, direction) {
                 }, 1300)
                 callToast(id, 1500, 8000);
             } else {
-                try {
+                try 
+                {
                     webs.overlayAPI(id);
                     window.OverlayPluginApi.endEncounter();
-                } catch {}
+                }
+                catch {}
             }
             break            
         case 'History':
