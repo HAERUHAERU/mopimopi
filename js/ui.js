@@ -788,7 +788,7 @@ function button(id, direction) {
                     window.OverlayPluginApi.endEncounter();
                 }
                 catch (e){
-                    console.log(e.meassage);
+                    console.log("[Please Ignore] Button processing : " + e.meassage);
                 }
             }
             break            
