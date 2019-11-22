@@ -787,7 +787,9 @@ function button(id, direction) {
                     webs.overlayAPI(id);
                     window.OverlayPluginApi.endEncounter();
                 }
-                catch {}
+                catch {
+                    console.log("");
+                }
             }
             break            
         case 'History':
