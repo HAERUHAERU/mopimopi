@@ -5,8 +5,8 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br>Mobile and Broadcast(OBS Studio, XSplit, etc.) users<br>should install the <a href="https://github.com/ZCube/ACTWebSocket/releases" target="_blank">ACTWebsocket 1.3.3.9 or higher</a> version.<br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.191121 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.191121 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.191122 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.191122 / HAERU@Moogle (KR)'
         },
         update: {
             KR: '<div name="row"><div class="b">11/22</div><div class="m">버튼 처리 버그 수정</div></div><div name="row"><div class="u">11/21</div><div class="m">[Light/Elarun Moyse@Shiva] 프랑스어 번역 추가</div></div><div name="row"><div class="b">11/21</div><div class="m">복원 버그 수정 </div></div><div name="row"><div class="c">11/21</div><div class="m">일부 CSS 값 변경</div></div><div name="row"><div class="c">11/20</div><div class="m">일부 번역 변경</div></div><div name="row"><div class="n">10/27</div><div class="m">★★★ 셀 옵션 추가를 위해 데이터 구성과 순서의 값을 초기화했습니다. 불편을 드려 죄송합니다. ★★★</div></div><div name="row"><div class="b">10/27</div><div class="m">기타 마이너 버그 및 오타 수정</div></div><div name="row"><div class="c">10/27</div><div class="m">설정 → 데이터 레이아웃 변경</div></div><div name="row"><div class="u">10/27</div><div class="m">설정 → 디자인 → 고급 설정 옵션 추가 : 내비게이션에 나의 DPS, HPS 표시 가능</div></div><div name="row"><div class="u">10/27</div><div class="m">[Gmail/Terence] 설정 → 디자인 → 셀 옵션 추가 : 헤더 글자, 너비, 여백, 정렬을 각각 변경 가능</div></div><div name="row"><div class="u">10/22</div><div class="m">[CN/Rapis@紫水栈桥] FFXIV-CN : 5.0 신규 소환수 데이터 추가</div></div><div name="row"><div class="b">09/04</div><div class="m">지상의 별 버그 재수정</div></div><div name="row"><div class="b">08/31</div><div class="m">[인벤/우지훤] MaxHit/Heal 하이픈 버그 수정</div></div><div name="row"><div class="b">08/28</div><div class="m">[Gmail/Marc Henne] FFXIV-DE : MaxHit/Heal 버그 수정</div></div><div name="row"><div class="b">08/27</div><div class="m">[Gmail/Marc Henne] FFXIV-DE : 암흑기사 소환수 이름 수정</div></div><div name="row"><div class="b">08/27</div><div class="m">[Gmail/Raye Aerinae] 팔레트 값이 역할일 때, Limit Break 색상이 변경되지 않던 버그 수정</div></div><div name="row"><div class="b">07/23</div><div class="m">펫 그래프 버그 수정</div></div><div name="row"><div class="b">07/23</div><div class="m">지상의 별 버그 수정</div></div><div name="row"><div class="b">07/19</div><div class="m">내비게이션의 MaxHit/Heal 기술명 색상이 변경되지 않던 버그 수정</div></div><div name="row"><div class="c">07/10</div><div class="m">시작 페이지 레이아웃 변경</div></div><div name="row"><div class="u">07/05</div><div class="m">[인벤/Stellalight] 5.0 신규 소환수 데이터 추가</div></div><div name="row"><div class="b">06/30</div><div class="m">[twitch/Armell] 이니셜 버그 수정</div></div><div name="row"><div class="u">06/28</div><div class="m">[KR/노래하는혼@모그리] 5.0 patch Gunbreaker/Dancer 아이콘 세트 추가</div></div><div name="row"><div class="n">03/14</div><div class="m">★★★ 모피모피 벌써 2주년! 항상 감사드립니다! ★★★</div></div><div name="row"><div class="u">01/22</div><div class="m">[KR/이솜@모그리] 4.5 patch 청마도사 아이콘 세트 추가</div></div><div name="row"><div class="b">01/02</div><div class="m">레이드 모드 : 직업 아이콘 클릭 시 캐릭터 이름 숨김 오류 수정</div></div><div name="row"><div class="b">01/02</div><div class="m">레이드 모드 : 직업 아이콘 크기 조절 오류 수정</div></div><div name="row"><div class="u">01/02</div><div class="m">[Gmail/Mark Megyeri] 레이드 모드 커스터마이징 옵션 추가</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2019년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
@@ -430,12 +430,12 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.191121',
-                JP: 'MopiMopi ver.191121',
-                EN: 'MopiMopi ver.191121',
-                FR: 'MopiMopi ver.191121',
-                DE: 'MopiMopi ver.191121',
-                CN: "MopiMopi ver.191121",
+                KR: 'MopiMopi ver.191122',
+                JP: 'MopiMopi ver.191122',
+                EN: 'MopiMopi ver.191122',
+                FR: 'MopiMopi ver.191122',
+                DE: 'MopiMopi ver.191122',
+                CN: "MopiMopi ver.191122",
             },
             i: "new_releases",
             e: "li_2line",
