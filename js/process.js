@@ -9,7 +9,7 @@ var barSize = new Array(),
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
-    console.log(lastDPS)
+    //console.log(lastDPS)
         
     if (view != 'settings') {
         
