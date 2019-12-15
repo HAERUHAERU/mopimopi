@@ -818,11 +818,11 @@ Combatant.prototype.AttachPets = function() {
             else
                 var owner = this.Combatant[this.Combatant[i].petOwner]
 
-            if (this.Combatant[i].maxhitval > owner.maxhitval) {
+            if (this.Combatant[i].maxhitval > owner.mergedmaxhitval) {
                 owner.mergedmaxhitval = this.Combatant[i].maxhitval
                 owner.mergedmaxhitstr = this.Combatant[i].maxhitstr
             }
-            if (this.Combatant[i].maxhealval > owner.maxhealval) {
+            if (this.Combatant[i].maxhealval > owner.mergedmaxhealval) {
                 owner.mergedmaxhealval = this.Combatant[i].maxhealval
                 owner.mergedmaxhealstr = this.Combatant[i].maxhealstr
             }
