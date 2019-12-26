@@ -516,7 +516,7 @@ function Person(e, p) {
         }
     }
     try {
-        this.maxhitstr = this.maxhit.replace(/[0-9.,']/g, "").trim().slice(0, -1)
+        this.maxhitstr = this.maxhit.split("-")[0]
         this.maxhitval = this.MAXHIT
         this.mergedmaxhitstr = this.maxhitstr
         this.mergedmaxhitval = this.maxhitval
@@ -528,7 +528,7 @@ function Person(e, p) {
         this.mergedmaxhitval = this.maxhitval
     }
     try {
-        this.maxhealstr = this.maxheal.replace(/[0-9.,']/g, "").trim().slice(0, -1)
+        this.maxhealstr = this.maxheal.split("-")[0]
         this.maxhealval = this.MAXHEAL
         this.mergedmaxhealstr = this.maxhealstr
         this.mergedmaxhealval = this.maxhealval
