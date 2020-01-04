@@ -5,12 +5,12 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br>Mobile and Broadcast(OBS Studio, XSplit, etc.) users<br>should install the <a href="https://github.com/ZCube/ACTWebSocket/releases" target="_blank">ACTWebsocket 1.3.3.9 or higher</a> version.<br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.191227 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.191227 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.200115 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.200115 / HAERU@Moogle (KR)'
         },
         update: {
-            KR: '<div name="row"><div class="n">01/01</div><div class="m">★★★ 2020년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
-            EN: '<div name="row"><div class="n">Jan 01</div><div class="m">★★★ 2/0/2/0 Best wishes for a Happy New Year! ★★★</div></div>'
+            KR: '<div name="row"><div class="n">01/05</div><div class="m">대기 모드 및 히스토리 테이블 오동작 버그 수정</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2020년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
+            EN: '<div name="row"><div class="n">Jan 05</div><div class="m">Fixed bugs about standby mode and History table</div></div><div name="row"><div class="n">Jan 01</div><div class="m">★★★ 2/0/2/0 Best wishes for a Happy New Year! ★★★</div></div>'
         }
     },
     msg: {
@@ -430,12 +430,12 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.191227',
-                JP: 'MopiMopi ver.191227',
-                EN: 'MopiMopi ver.191227',
-                FR: 'MopiMopi ver.191227',
-                DE: 'MopiMopi ver.191227',
-                CN: "MopiMopi ver.191227",
+                KR: 'MopiMopi ver.200115',
+                JP: 'MopiMopi ver.200115',
+                EN: 'MopiMopi ver.200115',
+                FR: 'MopiMopi ver.200115',
+                DE: 'MopiMopi ver.200115',
+                CN: "MopiMopi ver.200115",
             },
             i: "new_releases",
             e: "li_2line",
