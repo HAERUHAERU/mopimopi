@@ -550,7 +550,7 @@ function saveLog() {
     if (lastDPS == null)
         return;
     else {
-        if (lastDPS.isActive == false) {
+        if (lastCombat.isActive) == "false") {
             encounterArray.unshift({
                 lastDPS: lastDPS,
                 lastHPS: lastHPS,
