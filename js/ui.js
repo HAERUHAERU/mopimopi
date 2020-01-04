@@ -170,9 +170,8 @@ function toggleFullScreen() {
 $('nav[name=main] div[name=More]').on({
     mouseover: function() {
         if ($(this).attr('name') == 'More') {
-            if (lastCombat != null && lastCombat.isActive){            
-                $(this).parent().find('div:not([name=History])').fadeIn(150)
-            }
+            if (lastCombat != null && String(lastCombat.isActive) == "true")          
+                $(this).parent().find('div:not([name=History])').fadeIn(150)            
             else
                 $(this).parent().find('div').fadeIn(150)
         }
@@ -233,7 +232,7 @@ function hiddenTable() {
     $('.toast').fadeOut(0);
     if (init.q.autoHide && view != 'settings') {        
         if (lastCombat != null) {            
-            if (lastCombat.isActive) {                
+            if (String(lastCombat.isActive) == "true") {                
                 if (view == 'history')
                     $('div[name=history]').fadeOut(0)
                 else
