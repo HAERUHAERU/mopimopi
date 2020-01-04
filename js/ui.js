@@ -1519,7 +1519,7 @@ function ui() {
         }
     }
     $('.name.cell').css("width", "100%");    
-    if (lastCombat != null && lastDPS.isActive == false) {
+    if (lastCombat != null && String(lastCombat.isActive) == "false") {
         $('.Class, .rIcon').css('cursor', 'pointer')
         $('.Class, .rIcon').on({
             mouseover: function() {
