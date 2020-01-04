@@ -170,8 +170,10 @@ function toggleFullScreen() {
 $('nav[name=main] div[name=More]').on({
     mouseover: function() {
         if ($(this).attr('name') == 'More') {
-            if (lastCombat != null && lastCombat.isActive)
+            if (lastCombat != null && lastCombat.isActive){            
                 $(this).parent().find('div:not([name=History])').fadeIn(150)
+                console.log("Check");
+            }
             else
                 $(this).parent().find('div').fadeIn(150)
         }
