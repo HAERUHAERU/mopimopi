@@ -10,7 +10,7 @@ l = {
         },
         update: {
             KR: '<div name="row"><div class="b">01/05</div><div class="m">[Lalapauwah/Github] 대기 모드 및 히스토리 테이블 오동작 버그 수정</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2020년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
-            EN: '<div name="row"><div class="n">Jan 05</div><div class="m">[Lalapauwah/Github] Fixed bugs about standby mode and History table</div></div><div name="row"><div class="n">Jan 01</div><div class="m">★★★ 2/0/2/0 Best wishes for a Happy New Year! ★★★</div></div>'
+            EN: '<div name="row"><div class="b">Jan 05</div><div class="m">[Lalapauwah/Github] Fixed bugs about standby mode and History table</div></div><div name="row"><div class="n">Jan 01</div><div class="m">★★★ 2/0/2/0 Best wishes for a Happy New Year! ★★★</div></div>'
         }
     },
     msg: {
