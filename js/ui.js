@@ -1509,12 +1509,12 @@ function ui() {
                 'font-style': style
             });
             if (init.q.header_italic)
-                style = 'italic'
+                style_header = 'italic'
             else
-                style = 'normal'
+                style_header = 'normal'
             $('.tableHeader .' + n + '.cell').css({
                 'text-align': init.ColData[n]["alignHeader"],
-                'font-style': style
+                'font-style': style_header
             });
         }
     }
