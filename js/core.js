@@ -469,9 +469,9 @@ function Person(e, p) {
         "데미바하무트", "デミ・バハムート", "亚灵神巴哈姆特", "Demi-Bahamut", "デミ・フェニックス",
         "데미피닉스", "Demi-Phönix", "Demi-Phénix", "Demi-Phoenix", "亚灵神不死鸟"
     ];
-    var mchPetsList = ["자동포탑 룩", "オートタレット・ルーク", "车式浮空炮塔", "Selbstschuss-Gyrocopter TURM", "Auto-tourelle Tour", "Rook Autoturret",
-        "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter LÄUFER", "Auto-tourelle Fou", "Bishop Autoturret",
-        "オートマトン・クイーン", "Automaton DAME", "Automate Reine", "Automaton Queen", "后式自走人偶", "자동인형 퀸"
+    var mchPetsList = ["자동포탑 룩", "オートタレット・ルーク", "车式浮空炮塔", "Selbstschuss-Gyrocopter Turm", "Auto-tourelle Tour", "Rook Autoturret",
+        "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter Läufer", "Auto-tourelle Fou", "Bishop Autoturret",
+        "オートマトン・クイーン", "Automaton Dame", "Automate Reine", "Automaton Queen", "后式自走人偶", "자동인형 퀸"
     ];
     var schPetsList = ["요정 에오스", "フェアリー・エオス", "朝日小仙女", "Eos",
         "요정 셀레네", "フェアリー・セレネ", "夕月小仙女", "Selene",
