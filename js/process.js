@@ -54,8 +54,8 @@ function update(lastDPS, lastHPS) {
         $('nav table[name=ACT_2line]').fadeOut(0)
         $('nav table[name=ACT_1line]').fadeIn(0)
     }    
-    $('[name=target]').text(lastDPS.Encounter.title)
-    $('[name=time]').text(lastDPS.Encounter.duration)
+    $('[name=target]').text(lastDPS.title)
+    $('[name=time]').text(lastDPS.duration)
     if (init.q.tableOrder == 1)
         $('div[name=main' + _ + ']').html('<div id="DPSHeader' + _ + '"><div id="DPSoldHeader' + _ + '"></div></div><div id="DPSBody' + _ + '"><div id="DPSoldBody' + _ + '"></div></div><div id="HPSHeader' + _ + '"><div id="HPSoldHeader' + _ + '"></div></div><div id="HPSBody' + _ + '"><div id="HPSoldBody' + _ + '"></div></div>')
     else
