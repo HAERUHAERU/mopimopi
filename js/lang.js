@@ -9,8 +9,8 @@ l = {
             EN: '[OFFICIAL] MopiMopi ver.200128 / HAERU@Moogle (KR)'
         },
         update: {
-            KR: '<div name="row"><div class="n">01/01</div><div class="m">★★★ 2021년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
-            EN: '<div name="row"><div class="n">Jan 01</div><div class="m">★★★ 2021 Best wishes for a Happy New Year! ★★★</div></div>'
+            KR: '<div name="row"><div class="c">04/01</div><div class="m">[Matthew Smith/Gmail] 축약어를 변경함<Br>(RD → Total DPS, RH → Total HPS, MD → My DPS, MH → My HPS)</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2021년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
+            EN: '<div name="row"><div class="c">04/01</div><div class="m">[Matthew Smith/Gmail] Change Abbreviations<Br>(RD → Total DPS, RH → Total HPS, MD → My DPS, MH → My HPS)</div></div><div name="row"><div class="n">Jan 01</div><div class="m">★★★ 2021 Best wishes for a Happy New Year! ★★★</div></div>'
         }
     },
     msg: {
