@@ -64,10 +64,10 @@ function update(lastDPS, lastHPS) {
     if (lastDPS.Combatant["YOU"] == undefined && lastDPS.Combatant["YOU"] == null) {        
         $('[name=rps]').text(l.NAV.main.tt.rps[lang])
     } else {
-        var rd = "RD " + addComma(lastDPS.Encounter.ENCDPS) + "　"
-        var rh = "RH " + addComma(lastHPS.Encounter.ENCHPS) + "　"
-        var md = "MD " + addComma(lastDPS.Combatant.YOU.encdps) + "　"
-        var mh = "MH " + addComma(lastHPS.Combatant.YOU.enchps) + "　"
+        var rd = "Total DPS " + addComma(lastDPS.Encounter.ENCDPS) + "　"
+        var rh = "Total HPS " + addComma(lastHPS.Encounter.ENCHPS) + "　"
+        var md = "My DPS " + addComma(lastDPS.Combatant.YOU.encdps) + "　"
+        var mh = "My HPS " + addComma(lastHPS.Combatant.YOU.enchps) + "　"
         var rk = "Rank " + parseInt(lastDPS.Combatant.YOU.rank + 1) + "/" + parseInt(lastHPS.Combatant.YOU.rank + 1) + "/" + lastDPS.partys + "　"
         var msg = ''
         if (init.q.swap == 0)
