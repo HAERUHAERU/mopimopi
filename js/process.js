@@ -117,6 +117,8 @@ function onRaidCombatDataUpdate(flag, last) {
     if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {
         var row = $('<div class="rRow"></div>'),
             set = 1,
+            dpsLine = 1,
+            hpsLine = 1,
             newBody = $('<div id="' + flag + 'Body' + _ + '"></div>')
         for (var d in last.persons) {
             var a = last.persons[d];
@@ -127,11 +129,12 @@ function onRaidCombatDataUpdate(flag, last) {
                         if (set <= init.Range.size24TableSlice) {
                             row.append(createRaidTableBody(flag, a, userName))
                             set++
-                        } else {
+                        } else if (hpsLine < init.Range.size24TableHPS) {
                             set = 2
                             newBody.append(row)
                             row = $('<div class="rRow"></div>')
                             row.append(createRaidTableBody(flag, a, userName))
+                            hpsLine++
                         }
                     }
                 } else {
@@ -139,11 +142,12 @@ function onRaidCombatDataUpdate(flag, last) {
                         if (set <= init.Range.size24TableSlice) {
                             row.append(createRaidTableBody(flag, a, userName))
                             set++
-                        } else {
+                        } else if (dpsLine < init.Range.size24TableDPS) {
                             set = 2
                             newBody.append(row)
                             row = $('<div class="rRow"></div>')
                             row.append(createRaidTableBody(flag, a, userName))
+                            dpsLine++
                         }
                     }
                 }
