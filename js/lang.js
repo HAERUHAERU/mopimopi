@@ -3507,6 +3507,36 @@ l = {
                     e: "li_slider",
                     ul: 0
                 }
+                size24TableDPS: {
+                    tt: {
+                        KR: "DPS 테이블 행 개수<font class='ex'>　❙ 스크롤 영역 조절</font>",
+                        JP: "DPSテーブル行数<font class='ex'>　❙ スクロール領域調整</font>",
+                        EN: "Number of Rows in DPS Table<font class='ex'>　❙ Adjust Scroll Area</font>",
+                        FR: "Nombre de colonnes dans le tableau DPS<font class='ex'>　❙ Ajuster zone de défilement</font>",
+                        DE: "Anzahl der Zeilen in der DPS Tabelle<font class='ex'>　❙ Adjust Scroll Area</font>",
+                        CN: "DPS表行数<font class='ex'>　❙ 调整滚动区域</font>",
+                    },
+                    min: 1,
+                    max: 25,
+                    i: "group",
+                    e: "li_slider",
+                    ul: 1
+                },
+                size24TableHPS: {
+                    tt: {
+                        KR: "HPS 테이블 행 개수<font class='ex'>　❙ 스크롤 영역 조절</font>",
+                        JP: "HPSテーブル行数<font class='ex'>　❙ スクロール領域調整</font>",
+                        EN: "Number of Rows in HPS Table<font class='ex'>　❙ Adjust Scroll Area</font>",
+                        FR: "Nombre de colonnes dans le tableau HPS<font class='ex'>　❙ Ajuster zone de défilement</font>",
+                        DE: "Anzahl der Zeilen in der HPS Tabelle<font class='ex'>　❙ Adjust Scroll Area</font>",
+                        CN: "HPS表行数<font class='ex'>　❙ 调整滚动区域</font>",
+                    },
+                    min: 1,
+                    max: 25,
+                    i: "group",
+                    e: "li_slider",
+                    ul: 0
+                }
             }
         },
     },
