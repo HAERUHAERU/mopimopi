@@ -3506,7 +3506,7 @@ l = {
                     i: "format_size",
                     e: "li_slider",
                     ul: 0
-                }
+                },
                 size24TableDPS: {
                     tt: {
                         KR: "DPS 테이블 행 개수<font class='ex'>　❙ 스크롤 영역 조절</font>",
