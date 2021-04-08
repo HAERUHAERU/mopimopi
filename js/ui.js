@@ -1134,7 +1134,7 @@ function createElement(type, obj, id, flag) {
         case 'li_slider': 
             var unit = '%'
             if (id.indexOf('size') > -1) {
-                if (id == 'sizeDPSTable' || id == 'sizeHPSTable' || id == 'size24TableSlice')
+                if (id == 'sizeDPSTable' || id == 'sizeHPSTable' || id == 'size24TableSlice' || id == 'size24TableDPS' || id == 'size24TableHPS')
                     unit = ''
                 else
                     unit = 'px'
