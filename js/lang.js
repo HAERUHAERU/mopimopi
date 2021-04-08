@@ -3518,7 +3518,7 @@ l = {
                     },
                     min: 1,
                     max: 25,
-                    i: "group",
+                    i: "table_rows",
                     e: "li_slider",
                     ul: 1
                 },
@@ -3533,7 +3533,7 @@ l = {
                     },
                     min: 1,
                     max: 25,
-                    i: "group",
+                    i: "table_rows",
                     e: "li_slider",
                     ul: 0
                 }
