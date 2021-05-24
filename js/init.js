@@ -207,6 +207,8 @@ Mopi2 = {
         size24BodyIcon: 20, 
         size24BodyNameText: 12, 
         size24BodyDataText: 12, 
+        size24TableDPS: 9,
+        size24TableHPS: 4,
         sizeGraph_bar: 21, 
         sizeGraph_pet: 21, 
         sizeGraph_ds: 21, 
