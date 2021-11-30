@@ -450,6 +450,7 @@ function Person(e, p) {
             case "SCH":
             case "WHM":
             case "AST":
+            case "SGE":
                 this.role = "Healer";
                 break;
             case "PLD":
