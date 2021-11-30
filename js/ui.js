@@ -26,7 +26,7 @@ $().ready(function() {
 function addOption() {
     var qVal = ['bar_position_DPS', 'mhh_unit', 'dmgType', 'view24_Number', 'time_italic', 'target_italic', 'rps_italic', 'header_italic', 'body_italic', 'iconSet', 'borderTextType', 'max_unit', 'act_md', 'act_mh']
     var RangeVal = ['tableLineVer', 'sizeLineVer', 'view24TableYOU', 'view24TableOther', 'view24BgYOU', 'view24BgOther', 'size24BodyNameText', 'size24BodyDataText', 'size24BodyIcon', 'size24TableSlice', 'size24TableHeight', 'size24TableIdxWd']
-    var colorVal = ['DNC', 'GNB', 'BLU', 'tableLineVer', 'tableBorderYOU', 'tableBorderOther', 'view24TableYOU', 'view24TableOther', 'view24BgYOU', 'view24BgOther']
+    var colorVal = ['RPR', 'SGE', 'DNC', 'GNB', 'BLU', 'tableLineVer', 'tableBorderYOU', 'tableBorderOther', 'view24TableYOU', 'view24TableOther', 'view24BgYOU', 'view24BgOther']
     putValue(qVal, 'q')
     putValue(RangeVal, 'Range')
     putValue(colorVal, 'Color')
