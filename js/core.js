@@ -481,6 +481,7 @@ function Person(e, p) {
     var drkPetsList = ["영웅의 환영", "英雄の影身", "Hochachtung", "Estime", "Esteem", "英雄的掠影"];
     var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin", "분신"];
     var astPetsList = ["지상의 별", "アーサリースター", "地星", "Earthly Star", "Étoile terrestre", "Irdischer Stern"];
+    var whmPetsList = ["Liturgy of the Bell", "リタージー・オブ・ベル", "Tintinnabule", "Verbesserter Göttlicher Segen"];
 
     var petsName = this.name.split(' (')[0];
     if (this.Class == "") {
@@ -509,6 +510,11 @@ function Person(e, p) {
         } else if (astPetsList.indexOf(petsName) > -1) {
             this.Job = "AVA";
             this.Class = "AST";
+            this.isPet = true;
+            this.role = "Healer";
+        } else if (whmPetsList.indexOf(petsName) > -1) {
+            this.Job = "AVA";
+            this.Class = "WHM";
             this.isPet = true;
             this.role = "Healer";
         } else if (this.name.indexOf("(") == -1) {
