@@ -133,7 +133,7 @@ Mopi2 = {
         DRG: "3752D8",
         NIN: "EE2E48",
         SAM: "E45A0F",
-        RPR: "3A3A35",
+        RPR: "EADD6F",
         BRD: "ADC551",
         MCH: "148AA9",
         DNC: "E2B0AF",
