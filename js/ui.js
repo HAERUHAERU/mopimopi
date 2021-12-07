@@ -569,7 +569,7 @@ function liReload() {
     });    
     $('.jscolor').unbind("click").bind('click', function() {
         if (init.q.keyboard) {
-            $(this).blur()
+            //$(this).blur()
             ctrlPreview(1)
         } else
             ctrlPreview(0)
