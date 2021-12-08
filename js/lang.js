@@ -5,12 +5,12 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.211203 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.211203 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.211209 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.211209 / HAERU@Moogle (KR)'
         },
         update: {
-            KR: '<div name="row"><div class="u">12/03</div><div class="m">[파일 지원 - 오미루@모그리] 6.0 신규 직업 아이콘 추가 (RPR/SGE)</div></div><div name="row"><div class="b">12/03</div><div class="m">6.0 신규 펫이나 기술 이름 제보 바랍니다. <a href="https://docs.google.com/spreadsheets/d/1Cqni0rjvQLnXjK2dhx95xk_NOIIWXt9PK8-2gez5pTI/edit#gid=0" target="_blank">▶▶▶ 데이터 제보하기</a></div></div><div name="row"><div class="u">11/30</div><div class="m">6.0 신규 직업 데이터 추가 (RPR/SGE)</div></div><div name="row"><div class="c">04/01</div><div class="m">[Matthew Smith/Gmail] 축약어를 변경함<Br>(RD → Total DPS, RH → Total HPS, MD → My DPS, MH → My HPS)</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2021년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
-            EN: '<div name="row"><div class="u">12/03</div><div class="m">[Files support - Oh Miru@Mana/Anima] Added icon of new jobs (RPR/SGE)</div></div><div name="row"><div class="b">12/03</div><div class="m">Please report 6.0 pets or actions name. <a href="https://docs.google.com/spreadsheets/d/1Cqni0rjvQLnXjK2dhx95xk_NOIIWXt9PK8-2gez5pTI/edit#gid=0" target="_blank">▶▶▶ Report link</a></div></div><div name="row"><div class="u">11/30</div><div class="m">Added data of new jobs (RPR/SGE)</div></div><div name="row"><div class="c">04/01</div><div class="m">[Matthew Smith/Gmail] Change Abbreviations<Br>(RD → Total DPS, RH → Total HPS, MD → My DPS, MH → My HPS)</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2021 Best wishes for a Happy New Year! ★★★</div></div>'
+            KR: '<div name="row"><div class="u">12/09</div><div class="m">[파일 지원 - 오미루@모그리] 6.0 신규 펫 데이터 추가 (SMN)</div></div><div name="row"><div class="u">12/03</div><div class="m">[파일 지원 - 오미루@모그리] 6.0 신규 직업 아이콘 추가 (RPR/SGE)</div></div><div name="row"><div class="b">12/03</div><div class="m">6.0 신규 펫이나 기술 이름 제보 바랍니다. <a href="https://docs.google.com/spreadsheets/d/1Cqni0rjvQLnXjK2dhx95xk_NOIIWXt9PK8-2gez5pTI/edit#gid=0" target="_blank">▶▶▶ 데이터 제보하기</a></div></div><div name="row"><div class="u">11/30</div><div class="m">6.0 신규 직업 데이터 추가 (RPR/SGE)</div></div><div name="row"><div class="c">04/01</div><div class="m">[Matthew Smith/Gmail] 축약어를 변경함<Br>(RD → Total DPS, RH → Total HPS, MD → My DPS, MH → My HPS)</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2021년에도 모피모피와 함께! 새해 복 많이 받으세요! ★★★</div></div>',
+            EN: '<div name="row"><div class="u">12/09</div><div class="m">[Files support - Oh Miru@Mana/Anima] Added data of new pets (SMN)</div></div><div name="row"><div class="u">12/03</div><div class="m">[Files support - Oh Miru@Mana/Anima] Added icon of new jobs (RPR/SGE)</div></div><div name="row"><div class="b">12/03</div><div class="m">Please report 6.0 pets or actions name. <a href="https://docs.google.com/spreadsheets/d/1Cqni0rjvQLnXjK2dhx95xk_NOIIWXt9PK8-2gez5pTI/edit#gid=0" target="_blank">▶▶▶ Report link</a></div></div><div name="row"><div class="u">11/30</div><div class="m">Added data of new jobs (RPR/SGE)</div></div><div name="row"><div class="c">04/01</div><div class="m">[Matthew Smith/Gmail] Change Abbreviations<Br>(RD → Total DPS, RH → Total HPS, MD → My DPS, MH → My HPS)</div></div><div name="row"><div class="n">01/01</div><div class="m">★★★ 2021 Best wishes for a Happy New Year! ★★★</div></div>'
         }
     },
     msg: {
@@ -430,12 +430,12 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.211203',
-                JP: 'MopiMopi ver.211203',
-                EN: 'MopiMopi ver.211203',
-                FR: 'MopiMopi ver.211203',
-                DE: 'MopiMopi ver.211203',
-                CN: "MopiMopi ver.211203",
+                KR: 'MopiMopi ver.211209',
+                JP: 'MopiMopi ver.211209',
+                EN: 'MopiMopi ver.211209',
+                FR: 'MopiMopi ver.211209',
+                DE: 'MopiMopi ver.211209',
+                CN: "MopiMopi ver.211209",
             },
             i: "new_releases",
             e: "li_2line",
