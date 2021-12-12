@@ -390,6 +390,11 @@ function Person(e, p) {
     this.isLower = !1;
     var vjob = this.Job;
     if (vjob != "") vjob = this.Job.toUpperCase();
+     //글섭 6.0 리미트브레이크 대응
+    if (vjob == "Limit break") {
+        this.Job = "LMB";
+        this.Class = "LMB";
+    }
     switch (vjob) {
         case "GLD":
         case "GLA":
