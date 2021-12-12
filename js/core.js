@@ -381,6 +381,11 @@ function Person(e, p) {
     }
     if (this.Job != "")
         this.Class = this.Job.toUpperCase();
+    //글섭 6.0 리미트브레이크 대응
+    if (this.Job == "Limit Break") {
+        this.Job = "LMB";
+        this.Class = "LMB";
+    }
     this.petOwner = "";
     this.isPet = !1;
     this.role = "DPS";
@@ -390,11 +395,6 @@ function Person(e, p) {
     this.isLower = !1;
     var vjob = this.Job;
     if (vjob != "") vjob = this.Job.toUpperCase();
-     //글섭 6.0 리미트브레이크 대응
-    if (vjob == "Limit Break") {
-        this.Job = "LMB";
-        this.Class = "LMB";
-    }
     switch (vjob) {
         case "GLD":
         case "GLA":
