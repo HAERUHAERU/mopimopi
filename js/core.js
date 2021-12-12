@@ -391,7 +391,7 @@ function Person(e, p) {
     var vjob = this.Job;
     if (vjob != "") vjob = this.Job.toUpperCase();
      //글섭 6.0 리미트브레이크 대응
-    if (vjob == "Limit break") {
+    if (vjob == "Limit Break") {
         this.Job = "LMB";
         this.Class = "LMB";
     }
