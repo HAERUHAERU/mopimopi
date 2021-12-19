@@ -490,7 +490,7 @@ function Person(e, p) {
     var drkPetsList = ["영웅의 환영", "英雄の影身", "Hochachtung", "Estime", "Esteem", "英雄的掠影"];
     var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin", "분신"];
     var astPetsList = ["지상의 별", "アーサリースター", "地星", "Earthly Star", "Étoile terrestre", "Irdischer Stern"];
-    var whmPetsList = ["Liturgy of the Bell", "liturgic bell", "Liturgic Bell", "リタージー・オブ・ベル", "Tintinnabule", "Glockenspiel"];
+    var whmPetsList = ["Liturgic Bell", "リタージー・オブ・ベル", "Tintinnabule", "Glockenspiel"];
 
     var petsName = this.name.split(' (')[0];
     if (this.Class == "") {
