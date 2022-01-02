@@ -31,24 +31,26 @@ var QueryString = function() {
     return query_string
 }();
 var host_port = QueryString.HOST_PORT;
-while (host_port.endsWith('/')) {
-    host_port = host_port.substring(0, host_port.length - 1)
-}
-if (wsUri.indexOf("//") == 0) {
-    wsUri = wsUri.substring(2)
-}
-if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
-    if (host_port.indexOf("ws://") == 0 || host_port.indexOf("wss://") == 0) {
-        wsUri = wsUri.replace(/ws:\/\/@HOST_PORT@/im, host_port);
-        wsUri = wsUri.replace(/wss:\/\/@HOST_PORT@/im, host_port)
-    } else {
-        wsUri = wsUri.replace(/@HOST_PORT@/im, host_port)
+if(host_port != undefined) {
+    while (host_port.endsWith('/')) {
+        host_port = host_port.substring(0, host_port.length - 1)
     }
-} else {
-    if (host_port.indexOf("ws://") == 0 || host_port.indexOf("wss://") == 0) {
-        wsUri = wsUri.replace(/@HOST_PORT@/im, host_port)
+    if (wsUri.indexOf("//") == 0) {
+        wsUri = wsUri.substring(2)
+    }
+    if (wsUri.indexOf("ws://") == 0 || wsUri.indexOf("wss://") == 0) {
+        if (host_port.indexOf("ws://") == 0 || host_port.indexOf("wss://") == 0) {
+            wsUri = wsUri.replace(/ws:\/\/@HOST_PORT@/im, host_port);
+            wsUri = wsUri.replace(/wss:\/\/@HOST_PORT@/im, host_port)
+        } else {
+            wsUri = wsUri.replace(/@HOST_PORT@/im, host_port)
+        }
     } else {
-        wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
+        if (host_port.indexOf("ws://") == 0 || host_port.indexOf("wss://") == 0) {
+            wsUri = wsUri.replace(/@HOST_PORT@/im, host_port)
+        } else {
+            wsUri = "ws://" + wsUri.replace(/@HOST_PORT@/im, host_port)
+        }
     }
 }
 class ActWebsocketInterface {
