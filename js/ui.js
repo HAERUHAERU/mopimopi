@@ -9,6 +9,7 @@ var sVal = {
         pre: 0, 
         old: 0 
     }    
+var nowColorPicker = null;
 history.pushState(null, null, location.href);
 window.onpopstate = function() {
     history.go(1)
@@ -33,7 +34,12 @@ function addOption() {
     if (!init.ColData.Class.hasOwnProperty("width")) {
         init.ColData = Mopi2.ColData;
         init.Order = Mopi2.Order;
-    }    
+    }
+    
+     //임시기간에만 실행
+    if (init['Color']['RPR'] == "3A3A35")
+        init['Color']['RPR'] = "EADD6F"
+    
     SubOption()
 }
 function putValue(arr, c) {
@@ -403,6 +409,7 @@ function copyObject(obj) {
     return copiedObj;
 }
 function jsColorUpdate(jscolor) {
+    nowColorPicker = jscolor;
     init.Color[jscolor.valueElement.id] = jscolor.valueElement.value
     toggleRaidMode(init.q.preview24)        
     ui()
@@ -572,6 +579,12 @@ function liReload() {
     $('.jscolor').unbind("focusout").bind('focusout', function() {
         ctrlPreview(1)
     });    
+    $('.jscolor').on("keyup",function(key){
+        if(key.keyCode==13) {
+            nowColorPicker.hide()
+            this.blur();
+        }
+    });
     $('.tab_box').unbind("click").bind("click", function() {
         $('.tabArea').find('.tab_title').removeClass('on')
         $('.tabArea').find('.tab_underBar').removeClass('on_bar')
@@ -1127,7 +1140,7 @@ function createElement(type, obj, id, flag) {
         case 'li_text_inbtn': 
             return '<li class="li_text" style="border:0"><table><tr><td rowspan="2" class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td style="width:100%;"><div class="inputBox"><input class="inputEff" type="text" placeholder="' + obj.m[lang] + '" id="' + id + '"><span class="focus-border"></span></div></td><td rowspan="2" class="gIcon ft sendBtn"><i class="material-icons">send</i></td></tr></table></li>'
         case 'li_color': 
-            var input = $('<input id = "' + id + '" value="' + init.Color[id] + '" style="text-align:center; ime-mode:disabled" maxlength="6">')
+            var input = $('<input id = "' + id + '" value="' + init.Color[id] + '" style="text-align:center;" maxlength="6">')
             input.addClass("shadow inputEff jscolor {onFineChange:'jsColorUpdate(this)', width:240, height:160, position:'bottom', borderColor:'#212121', insetColor:'#161616', backgroundColor:'#212121'}")
             var li = '<li id="' + id + '" class="li_box"><table><tr><td class="gIcon"><i class="material-icons">' + obj.i + '</i></td><td class="gTitle">' + obj.tt[lang] + '</td><td style="padding:0 1.4rem">' + input.clone().wrapAll("<div/>").parent().html() + '</td></tr></table></li>'
             return li
