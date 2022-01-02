@@ -9,7 +9,6 @@ var sVal = {
         pre: 0, 
         old: 0 
     }    
-var nowColorPicker = null;
 history.pushState(null, null, location.href);
 window.onpopstate = function() {
     history.go(1)
@@ -579,12 +578,6 @@ function liReload() {
     $('.jscolor').unbind("focusout").bind('focusout', function() {
         ctrlPreview(1)
     });    
-    $('.jscolor').on("keyup",function(key){
-        if(key.keyCode==13) {
-            nowColorPicker.hide()
-            this.blur();
-        }
-    });
     $('.tab_box').unbind("click").bind("click", function() {
         $('.tabArea').find('.tab_title').removeClass('on')
         $('.tabArea').find('.tab_underBar').removeClass('on_bar')
