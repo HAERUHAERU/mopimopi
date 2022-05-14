@@ -12,8 +12,8 @@ function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
 
-    console.log(lastDPS.isActive)
-    console.log(onStopFlag)
+    //console.log(lastDPS.isActive)
+    //console.log(onStopFlag)
 
     if (lastDPS.isActive == true) {
         update(lastDPS, lastHPS)
