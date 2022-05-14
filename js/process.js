@@ -6,36 +6,25 @@ var barSize = new Array(),
     encounterArray = new Array(),
     encounterCount = 1;
 
-var onStopFlag = false;
-
 function onOverlayDataUpdate(e) {
     lastDPS = lastCombat
     lastHPS = new Combatant(e, 'enchps');
 
-    //console.log(lastDPS.isActive)
-    //console.log(onStopFlag)
+    //console.log(lastDPS);
 
-    if (lastDPS.isActive == true) {
-        update(lastDPS, lastHPS)
-        onStopFlag = true;
-    }
-    else {
-        if (!onStopFlag)
-            return;
-        else {
-            if (view != 'settings') {
-                if (!firstCombat) {
-                    $('[name=notice], [name=history]').fadeOut(0)
-                    $('[name=main]').fadeIn(0)
-                    view = 'main'
-                    firstCombat = true
-                }
-                saveLog()
-                update(lastDPS, lastHPS)
-                hiddenTable()
-            }
-            onStopFlag = false;
+    if (view != 'settings') {
+
+        if (!firstCombat) {
+            $('[name=notice], [name=history]').fadeOut(0)
+            $('[name=main]').fadeIn(0)
+            view = 'main'
+            firstCombat = true
         }
+        setTimeout(function() {
+            saveLog()
+            update(lastDPS, lastHPS)
+            hiddenTable()
+        }, 1)
     }
 }
 
