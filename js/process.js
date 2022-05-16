@@ -24,6 +24,7 @@ function onOverlayDataUpdate(e) {
                 firstCombat = true
             }
             update(lastDPS, lastHPS)
+            hiddenTable()
         }
         onStopFlag = true;
     }
