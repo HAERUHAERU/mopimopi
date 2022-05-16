@@ -5,8 +5,8 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.20220514 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.20220514 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.20220516 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.20220516 / HAERU@Moogle (KR)'
         },
         update: {
             KR: '<div name="row"><div class="c">05/14</div><div class="m">화면이 변경되지 않는 유저들은 캐시 폴더를 삭제하고 다시 실행해 봅니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">OverlayPlugin : 시작 → 실행 → %appdata% → Advanced Combat Tracker → OverlayPluginCache 폴더 삭제</div></div><div name="row"><div class="c">05/14</div><div class="m">ACTWebSocket : ACT 폴더 → Plugins → ACTWebSocket → overlay_proc → cache 폴더 삭제</div></div>',
@@ -430,12 +430,12 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.20220514',
-                JP: 'MopiMopi ver.20220514',
-                EN: 'MopiMopi ver.20220514',
-                FR: 'MopiMopi ver.20220514',
-                DE: 'MopiMopi ver.20220514',
-                CN: "MopiMopi ver.20220514",
+                KR: 'MopiMopi ver.20220516',
+                JP: 'MopiMopi ver.20220516',
+                EN: 'MopiMopi ver.20220516',
+                FR: 'MopiMopi ver.20220516',
+                DE: 'MopiMopi ver.20220516',
+                CN: "MopiMopi ver.20220516",
             },
             i: "new_releases",
             e: "li_2line",
