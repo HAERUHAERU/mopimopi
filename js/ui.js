@@ -825,7 +825,8 @@ function button(id, direction) {
                 localStorage.setItem('Mopi2_HAERU', JSON.stringify(init))
                 $('.previewArea, .tabArea, .scrollArea').html('') 
                 if (lastCombat != null) {
-                    update(lastDPS, lastHPS)
+                    //오버레이가 계속 갱신되므로 해당부분 제거
+                    //update(lastDPS, lastHPS)
                     hiddenTable()
                 } else {                    
                     initOverlay()
