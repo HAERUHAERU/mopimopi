@@ -178,6 +178,7 @@ function createRaidTableBody(flag, a, userName) {
     return '<table id="' + userName + '" class="rCell"><tr><td rowspan="2" class="rIdx" style="background:' + graphColor(a.Class, a.role, userName) + '"></td><td class="rIcon">' + addData('Class', a.Class, a) + '</td><td class="rName">' + addData('name', a.name, a) + '</td></tr><tr><td colspan="2" class="rData">' + addData('enc' + flag.toLowerCase(), a['enc' + flag.toLowerCase()], a) + '</td></tr></table>'
 }
 function onCombatDataUpdate(flag, last) {
+    console.log(last);
     if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {        
         var Height = 0;
         var tableHeader = document.getElementById(flag + "Header" + _);
