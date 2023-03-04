@@ -178,8 +178,7 @@ function createRaidTableBody(flag, a, userName) {
     return '<table id="' + userName + '" class="rCell"><tr><td rowspan="2" class="rIdx" style="background:' + graphColor(a.Class, a.role, userName) + '"></td><td class="rIcon">' + addData('Class', a.Class, a) + '</td><td class="rName">' + addData('name', a.name, a) + '</td></tr><tr><td colspan="2" class="rData">' + addData('enc' + flag.toLowerCase(), a['enc' + flag.toLowerCase()], a) + '</td></tr></table>'
 }
 function onCombatDataUpdate(flag, last) {
-    console.log(last);
-    if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {        
+    if (last.Combatant["YOU"] != undefined || last.Combatant["YOU"] != null) {
         var Height = 0;
         var tableHeader = document.getElementById(flag + "Header" + _);
         var oldHeader = document.getElementById(flag + "oldHeader" + _);
@@ -197,6 +196,12 @@ function onCombatDataUpdate(flag, last) {
                 var bodyHeight = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
+                        a.healed-=a.overHeal
+                        a["healed%"]-=a.overHealPct
+                        a.healedPct-=a.OverHealPct
+                        a.overHeal = 0
+                        a.overHealPct = 0
+                        a.OverHealPct = 0
                         createTableBody(userName, flag, newBody, a);
                         if (Height < parseFloat(bodyHeight * init.Range.sizeHPSTable)) {
                             Height += bodyHeight
