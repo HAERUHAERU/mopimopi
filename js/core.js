@@ -371,7 +371,7 @@ function Person(e, p) {
     }
     if (this.DURATION <= 0) {
         this.dps = parseFloat((this.damage / this.parent.DURATION).nanFix().toFixed(underDot));
-        this.hps = parseFloat((this.healed . this.overHeal / this.parent.DURATION).nanFix().toFixed(underDot));
+        this.hps = parseFloat((this.healed / this.parent.DURATION).nanFix().toFixed(underDot));
         this.DPS = Math.floor(this.dps);
         this.HPS = Math.floor(this.hps);
         this["DPS-k"] = Math.floor(this.dps / 1000);
@@ -641,8 +641,7 @@ Person.prototype.recalculate = function() {
     if (dur == 0) dur = 1;
     this.dps = pFloat(this.mergedDamage / dur);
     this.encdps = pFloat(this.mergedDamage / this.parent.DURATION);
-    this.hps = 0;
-    this.Healed = 0,
+    this.hps = pFloat(this.mergedHealed / dur);
     this.enchps = pFloat(this.mergedHealed / this.parent.DURATION);
     this["DAMAGE-k"] = Math.floor(this.mergedDamage / 1000);
     this["DAMAGE-m"] = Math.floor(this.mergedDamage / 1000000);
