@@ -371,7 +371,7 @@ function Person(e, p) {
     }
     if (this.DURATION <= 0) {
         this.dps = parseFloat((this.damage / this.parent.DURATION).nanFix().toFixed(underDot));
-        this.hps = parseFloat(((this.healed - this.overHeal) / this.parent.DURATION).nanFix().toFixed(underDot));
+        this.hps = parseFloat((this.healed / this.parent.DURATION).nanFix().toFixed(underDot));
         this.DPS = Math.floor(this.dps);
         this.HPS = Math.floor(this.hps);
         this["DPS-k"] = Math.floor(this.dps / 1000);
@@ -575,7 +575,7 @@ function Person(e, p) {
         CritDirectHitCount: this.CritDirectHitCount,
         Damagetaken: this.damagetaken,
         Heals: this.heals,
-        Healed: this.healed - this.overHeal,
+        Healed: this.healed,
         EffHealed: this.healed - this.overHeal - this.damageShield,
         Cures: this.cures,
         Critheals: this.critheals,
