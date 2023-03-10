@@ -190,8 +190,8 @@ function onCombatDataUpdate(flag, last) {
         var oldBody = document.getElementById(flag + "oldBody" + _);
         var newBody = document.createElement("div");
         for (var d in last.persons) {
-            console.log(d)
             var a = last.persons[d];
+            console.log(a)
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
             if (init.q.pets == 1 && a.Job == 'AVA' || a.Class == '') {} else {
                 var bodyHeight = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
