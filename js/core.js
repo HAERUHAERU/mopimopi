@@ -659,6 +659,7 @@ Person.prototype.recalculate = function() {
     this["CritDirectHitPct"] = pFloat(this.mergedCritDirectHitCount / this.mergedHits * 100);
     this["crithealPct"] = pFloat(this.mergedCritheals / this.mergedHeals * 100);
     this.tohit = pFloat(this.mergedHits / this.mergedSwings * 100)
+    this.mergedHealed = this.healed - this.overHeal
 };
 Person.prototype.get = function(key) {
     if (this.parent.summonerMerge) {
@@ -667,7 +668,7 @@ Person.prototype.get = function(key) {
                 key = "mergedDamage";
                 break;
             case "healed":
-                key = "healedPct";
+                key = "mergedHealed";
                 break;
         }
     }
