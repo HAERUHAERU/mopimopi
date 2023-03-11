@@ -667,7 +667,7 @@ Person.prototype.get = function(key) {
                 key = "mergedDamage";
                 break;
             case "healed":
-                key = "enchps";
+                key = "healedPct";
                 break;
         }
     }
