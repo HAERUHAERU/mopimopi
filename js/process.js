@@ -199,7 +199,7 @@ function onCombatDataUpdate(flag, last) {
                         //a["healed%"]-=a.overHealPct
                         //a.healedPct-=a.OverHealPct
                         a.mergedHealed = a.healed - a.overHeal
-                        a.enchps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION))
+                        a.enchps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
                         a.overHeal = 0
                         a.overHealPct = 0
                         a.OverHealPct = 0
