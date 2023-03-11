@@ -200,6 +200,7 @@ function onCombatDataUpdate(flag, last) {
                         //a.healedPct-=a.OverHealPct
                         a.mergedHealed = a.healed - a.overHeal
                         a.enchps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
+                        a.hps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
                         createTableBody(userName, flag, newBody, a);
                         if (Height < parseFloat(bodyHeight * init.Range.sizeHPSTable)) {
                             Height += bodyHeight
