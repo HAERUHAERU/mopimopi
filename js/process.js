@@ -201,7 +201,7 @@ function onCombatDataUpdate(flag, last) {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
                         //a["healed%"]-=a.overHealPct
                         //a.healedPct-=a.OverHealPct
-                        a.mergedHealed = a.healed - a.overHeal
+                        //a.mergedHealed = a.healed - a.overHeal
                         a.enchps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
                         //a.hps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
                         createTableBody(userName, flag, newBody, a);
