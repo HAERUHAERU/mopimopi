@@ -637,6 +637,7 @@ Person.prototype.merge = function(person) {
     this.recalculate()
 };
 Person.prototype.recalculate = function() {
+    console.log(this.parent.Encounter)
     var dur = this.DURATION;
     if (dur == 0) dur = 1;
     this.dps = pFloat(this.mergedDamage / dur);
