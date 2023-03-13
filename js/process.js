@@ -192,6 +192,13 @@ function onCombatDataUpdate(flag, last) {
         var tableBody = document.getElementById(flag + "Body" + _);
         var oldBody = document.getElementById(flag + "oldBody" + _);
         var newBody = document.createElement("div");
+
+        var totalOverheal = 0;
+        for (var d in last.persons) {
+            var a = last.persons[d];
+            totalOverheal+=a.overHeal
+        }
+
         for (var d in last.persons) {
             var a = last.persons[d];
             var userName = a.name.replace(/ /g, "").replace("(", "").replace(")", "").replace(/'/g, "_");
@@ -199,8 +206,8 @@ function onCombatDataUpdate(flag, last) {
                 var bodyHeight = parseInt(init.Range.sizeBody) + parseInt(init.Range.sizeLine)
                 if (flag == "HPS") {
                     if (init.q.HPS_T == 1 && a.role == 'Tanker' || init.q.HPS_H == 1 && a.role == 'Healer' || init.q.HPS_D == 1 && a.role == 'DPS' || init.q.HPS_C == 1 && a.Job == 'CBO' || init.q.HPS_M == 1 && a.role == 'Crafter' || init.q.HPS_M == 1 && a.role == 'Gathering') {
-                        //a["healed%"]-=a.overHealPct
-                        //a.healedPct-=a.OverHealPct
+                        a["healed%"] = pFloat(a.mergedHealed / (a.parent.Encounter.healed - totalOverheal) * 100);
+                        a.healedPct = pFloat(a.mergedHealed / (a.parent.Encounter.healed - totalOverheal) * 100);
                         a.mergedHealed = a.healed - a.overHeal
                         a.enchps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
                         //a.hps = parseFloat(((a.healed - a.overHeal) / a.parent.DURATION).nanFix().toFixed(underDot))
