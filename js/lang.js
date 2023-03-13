@@ -166,17 +166,6 @@ l = {
                 }
             },
             dr: {
-                pets: {
-                    tt: {
-                        KR: "소환수 데이터 합산하기",
-                        JP: "ペットのデータを合算する",
-                        EN: "Combine Pets with Owner",
-                        FR: "Combiner les familiers aux propriétaires",
-                        DE: "Charakter und Begleiter zusammenfassen",
-                        CN: "召唤物与自身数据合并",
-                    },
-                    e: "dr_checkbox"
-                },
                 view24: {
                     tt: {
                         KR: "레이드 모드",
@@ -192,16 +181,12 @@ l = {
                     tt: {
                         KR: "이름 숨기기",
                         JP: "名前を隠す",
-                        EN: "Hide the Name",
+                        EN: "Streamer Mode",
                         FR: "Cacher le nom",
                         DE: "Namen ausblenden",
                         CN: "隐藏名称",
                     },
                     e: "dr_checkbox"
-                },
-                fullscreen: {
-                    tt: d.fullscreen,
-                    e: "dr_link"
                 },
                 settings: {
                     tt: d.settings,
@@ -441,27 +426,6 @@ l = {
             e: "li_2line",
             ul: 1
         },
-        About: {
-            tt: {
-                KR: "문의",
-                JP: "問い合わせ",
-                EN: "Help",
-                FR: "Aide",
-                DE: "Hilfe",
-                CN: "帮助",
-            },
-            m: {
-                KR: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
-                JP: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
-                EN: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
-                FR: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
-                DE: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
-                CN: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
-            },
-            i: "help_outline",
-            e: "li_2line",
-            ul: 0
-        }
     },
     Data: {
         tab_general: {
