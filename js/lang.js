@@ -5,12 +5,12 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.20220604 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.20220604 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.231SkyeEdit / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.231SkyeEdit / HAERU@Moogle (KR)'
         },
         update: {
-            KR: '<div name="row"><div class="c">05/22</div><div class="m">ACTWebSocket으로 더이상 모피모피를 이용하지 마십시오. OverlayPlugin으로 연결하시기 바랍니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">화면이 변경되지 않는 유저들은 캐시 폴더를 삭제하고 다시 실행해 봅니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">OverlayPlugin : ACT 종료 → 시작 → 실행 → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache 폴더 삭제 후 ACT 재실행</div></div>',
-            EN: '<div name="row"><div class="c">May 22</div><div class="m">Do NOT use MopiMopi with ACTWebSocket anymore. Please connect to OverlayPlugin.</div></div><div name="row"><div class="c">May 14</div><div class="m">Users whose screen doesn\'t change, delete the cache folder and try again.</div></div><div name="row"><div class="c">May 14</div><div class="m">OverlayPlugin :  Exit ACT → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache directory delete → Restart ACT</div></div>'
+            KR: '<div name="row"><div class="c">05/22</div><div class="m">We back in this bish. No more wrong healing meters.</div></div>',
+            EN: '<div name="row"><div class="c">March 23</div><div class="m">We back in this bish. No more wrong healing meters.</div></div>'
         }
     },
     msg: {
@@ -430,12 +430,12 @@ l = {
                 CN: "版本",
             },
             m: {
-                KR: 'MopiMopi ver.20220604',
-                JP: 'MopiMopi ver.20220604',
-                EN: 'MopiMopi ver.20220604',
-                FR: 'MopiMopi ver.20220604',
-                DE: 'MopiMopi ver.20220604',
-                CN: "MopiMopi ver.20220604",
+                KR: 'MopiMopi ver.231SkyeEdit',
+                JP: 'MopiMopi ver.231SkyeEdit',
+                EN: 'MopiMopi ver.231SkyeEdit',
+                FR: 'MopiMopi ver.231SkyeEdit',
+                DE: 'MopiMopi ver.231SkyeEdit',
+                CN: "MopiMopi ver.231SkyeEdit",
             },
             i: "new_releases",
             e: "li_2line",
