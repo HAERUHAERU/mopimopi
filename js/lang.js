@@ -5,8 +5,8 @@ l = {
             EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a> ❘ <a href="#" id="ES" onclick="initOverlay(this.id)">Spanish</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.20220604 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.20220604 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.20240609 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.20240609 / HAERU@Moogle (KR)'
         },
         update: {
             KR: '<div name="row"><div class="c">05/22</div><div class="m">ACTWebSocket으로 더이상 모피모피를 이용하지 마십시오. OverlayPlugin으로 연결하시기 바랍니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">화면이 변경되지 않는 유저들은 캐시 폴더를 삭제하고 다시 실행해 봅니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">OverlayPlugin : ACT 종료 → 시작 → 실행 → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache 폴더 삭제 후 ACT 재실행</div></div>',
@@ -474,13 +474,13 @@ l = {
                 ES: "Versión",
             },
             m: {
-                KR: 'MopiMopi ver.20220604',
-                JP: 'MopiMopi ver.20220604',
-                EN: 'MopiMopi ver.20220604',
-                FR: 'MopiMopi ver.20220604',
-                DE: 'MopiMopi ver.20220604',
-                CN: "MopiMopi ver.20220604",
-                ES: 'MopiMopi ver.20220604',
+                KR: 'MopiMopi ver.20240609',
+                JP: 'MopiMopi ver.20240609',
+                EN: 'MopiMopi ver.20240609',
+                FR: 'MopiMopi ver.20240609',
+                DE: 'MopiMopi ver.20240609',
+                CN: "MopiMopi ver.20240609",
+                ES: 'MopiMopi ver.20240609',
             },
             i: "new_releases",
             e: "li_2line",
@@ -1807,7 +1807,7 @@ l = {
                     EN: "Sage",
                     FR: "Sage",
                     DE: "Weise",
-                    CN: "Sage",
+                    CN: "贤者",
                     ES: "Sabio",
                 },
                 i: "<img src='./images/icon/frame/SGE.png'/>",
@@ -1861,7 +1861,7 @@ l = {
                     KR: "사무라이",
                     JP: "侍",
                     EN: "Samurai",
-                    FR: "Samurai",
+                    FR: "Samouraï",
                     DE: "Samurai",
                     CN: "武士",
                     ES: "Samurai",
@@ -1877,10 +1877,23 @@ l = {
                     EN: "Reaper",
                     FR: "Faucheur",
                     DE: "Schnitter",
-                    CN: "Reaper",
+                    CN: "钐镰客",
                     ES: "Segador",
                 },
                 i: "<img src='./images/icon/frame/RPR.png'/>",
+                e: "li_color",
+                ul: 0
+            },
+            VPR: {
+                tt: {
+                    KR: "바이퍼",
+                    JP: "ヴァイパー",
+                    EN: "Viper",
+                    FR: "Rôdeur Vipère",
+                    DE: "Viper",
+                    CN: "Viper",
+                },
+                i: "<img src='./images/icon/frame/VIP.png'/>",
                 e: "li_color",
                 ul: 0
             },
@@ -1965,6 +1978,19 @@ l = {
                     ES: "Mago rojo",
                 },
                 i: "<img src='./images/icon/frame/RDM.png'/>",
+                e: "li_color",
+                ul: 0
+            },
+            PCT: {
+                tt: {
+                    KR: "픽토맨서",
+                    JP: "ピクトマンサー",
+                    EN: "Pictomancer",
+                    FR: "Pictomancien",
+                    DE: "Piktomant",
+                    CN: "Pictomancer",
+                },
+                i: "<img src='./images/icon/frame/PIC.png'/>",
                 e: "li_color",
                 ul: 0
             },

@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.onload = function() {
+xhr.onload = function () {
     if (xhr.status === 200) {
         responseObject = JSON.parse(xhr.responseText);
         previewDPS = new Combatant({
@@ -13,7 +13,7 @@ xhr.onload = function() {
 xhr.open('GET', 'js/previewLog.json', true);
 xhr.send(null);
 var webs = null;
-var QueryString = function() {
+var QueryString = function () {
     var query_string = {};
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -31,7 +31,7 @@ var QueryString = function() {
     return query_string
 }();
 var host_port = QueryString.HOST_PORT;
-if(host_port != undefined) {
+if (host_port != undefined) {
     while (host_port.endsWith('/')) {
         host_port = host_port.substring(0, host_port.length - 1)
     }
@@ -59,13 +59,13 @@ class ActWebsocketInterface {
         this.id = null;
         this.activate = !1;
         var This = this;
-        document.addEventListener('onBroadcastMessage', function(evt) {
+        document.addEventListener('onBroadcastMessage', function (evt) {
             This.onBroadcastMessage(evt)
         });
-        document.addEventListener('onRecvMessage', function(evt) {
+        document.addEventListener('onRecvMessage', function (evt) {
             This.onRecvMessage(evt)
         });
-        window.addEventListener('message', function(e) {
+        window.addEventListener('message', function (e) {
             if (e.data.type === 'onBroadcastMessage') {
                 This.onBroadcastMessage(e.data)
             }
@@ -80,16 +80,16 @@ class ActWebsocketInterface {
         this.activate = !0;
         var This = this;
         this.websocket = new WebSocket(this.uri);
-        this.websocket.onopen = function(evt) {
+        this.websocket.onopen = function (evt) {
             This.onopen(evt)
         };
-        this.websocket.onmessage = function(evt) {
+        this.websocket.onmessage = function (evt) {
             This.onmessage(evt)
         };
-        this.websocket.onclose = function(evt) {
+        this.websocket.onclose = function (evt) {
             This.onclose(evt)
         };
-        this.websocket.onerror = function(evt) {
+        this.websocket.onerror = function (evt) {
             This.onerror(evt)
         }
     }
@@ -118,7 +118,7 @@ class ActWebsocketInterface {
         this.websocket = null;
         if (this.activate) {
             var This = this;
-            setTimeout(function() {
+            setTimeout(function () {
                 This.connect()
             }, 5000)
         }
@@ -142,8 +142,8 @@ class ActWebsocketInterface {
                         detail: obj
                     }))
                 }
-                if (type == "set_id") {}
-            } catch (e) {}
+                if (type == "set_id") { }
+            } catch (e) { }
         }
     }
     onerror(evt) {
@@ -158,7 +158,7 @@ class ActWebsocketInterface {
             try {
                 var pair = vars[i].split('=');
                 querieSet[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1])
-            } catch (e) {}
+            } catch (e) { }
         }
         return querySet
     }
@@ -201,8 +201,8 @@ class ActWebsocketInterface {
         this.id = overlayWindowId;
         this.websocket.send(JSON.stringify(obj))
     }
-    onRecvMessage(e) {}
-    onBroadcastMessage(e) {}
+    onRecvMessage(e) { }
+    onBroadcastMessage(e) { }
 };
 class WebSocketImpl extends ActWebsocketInterface {
     constructor(uri, path = "MiniParse") {
@@ -215,27 +215,27 @@ class WebSocketImpl extends ActWebsocketInterface {
         onBroadcastMessage(e)
     }
 };
-String.prototype.format = function(a) {
+String.prototype.format = function (a) {
     var result = this;
     for (var i in a)
         result = result.replace("{" + i + "}", a[i]);
     return result
 };
-String.prototype.contains = function(a) {
+String.prototype.contains = function (a) {
     if (this.indexOf(a) > -1) return !0;
     else return !1
 };
-String.prototype.replaceArray = function(a) {
+String.prototype.replaceArray = function (a) {
     var r = this;
     for (var i in a)
         while (r.contains(a[i].target))
             r = r.replace(a[i].target, a[i].replacement);
     return r
 };
-Number.prototype.nanFix = function() {
+Number.prototype.nanFix = function () {
     return parseFloat(isNaN(this) ? 0 : this)
 };
-Number.prototype.numFormat = new function() {
+Number.prototype.numFormat = new function () {
     var data = 0;
     try {
         if (data != Infinity && data != 0 && data != NaN) {
@@ -249,25 +249,25 @@ Number.prototype.numFormat = new function() {
     }
 };
 if (document.addEventListener) {
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         document.removeEventListener("DOMContentLoaded", arguments.callee, !1);
         domReady()
     }, !1);
-    window.onbeforeunload = function() {
+    window.onbeforeunload = function () {
         webs.close()
     };
-    window.addEventListener("unload", function() {
+    window.addEventListener("unload", function () {
         webs.close()
     }, !1)
 } else if (document.attachEvent) {
-    document.attachEvent("onreadystatechange", function() {
+    document.attachEvent("onreadystatechange", function () {
         if (document.readyState === "complete") {
             document.detachEvent("onreadystatechange", arguments.callee);
             domReady()
         }
     })
 }
-window.addEventListener('message', function(e) {
+window.addEventListener('message', function (e) {
     if (e.data.type === 'onBroadcastMessage') {
         onBroadcastMessage(e.data)
     }
@@ -285,10 +285,10 @@ function domReady() {
     }
     try {
         document.addEventListener('beforeLogLineRead', beforeLogLineRead)
-    } catch (ex) {}
+    } catch (ex) { }
     try {
         document.addEventListener('onLogLineRead', onLogLineRead)
-    } catch (ex) {}
+    } catch (ex) { }
     try {
         document.addEventListener('onOverlayDataUpdate', onOverlayDataUpdate)
     } catch (ex) {
@@ -296,10 +296,10 @@ function domReady() {
     }
     try {
         document.addEventListener('onOverlayStateUpdate', onOverlayStateUpdate)
-    } catch (ex) {}
+    } catch (ex) { }
     try {
         onDocumentLoad()
-    } catch (ex) {}
+    } catch (ex) { }
 }
 function onRecvMessage(e) {
     if (e.detail.msgtype == "Chat") {
@@ -479,7 +479,8 @@ function Person(e, p) {
         "Ruby Ifrit", "Ifrit rubis", "Rubin-Ifrit", "イフリート・ルビー", "이프리트 루비", "伊芙利特之灵",
         "Topaz Titan", "Titan topaze", "Topas-Titan", "タイタン・トパーズ", "타이탄 토파즈", "泰坦之灵",
         "Emerald Garuda", "Garuda émeraude", "Smaragd-Garuda", "ガルーダ・エメラルド", "가루다 에메랄드", "迦楼罗之灵",
-        "카벙클", "カーバンクル", "Karfunkel", "Carbuncle", "宝石兽"
+        "카벙클", "カーバンクル", "Karfunkel", "Carbuncle", "宝石兽",
+        "Solar Bahamut", "ソルバハムート", "Sol-Bahamut", "Sol-Bahamut",
     ];
     var mchPetsList = ["자동포탑 룩", "オートタレット・ルーク", "车式浮空炮塔", "Selbstschuss-Gyrocopter Turm", "Auto-tourelle Tour", "Rook Autoturret",
         "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter Läufer", "Auto-tourelle Fou", "Bishop Autoturret",
@@ -493,8 +494,8 @@ function Person(e, p) {
     var ninPetsList = ["分身", "Gedoppeltes Ich", "Ombre", "Bunshin", "분신"];
     var astPetsList = ["지상의 별", "アーサリースター", "地星", "Earthly Star", "Étoile terrestre", "Irdischer Stern"];
     var whmPetsList = ["Liturgic Bell", "liturgic bell", "リタージー・オブ・ベル", "Tintinnabule", "tintinnabule", "Glockenspiel", "예배종", "礼仪之铃"];
-    var sgePetsList = ["ペプシス", "Pepsis", "소화 작용", "消化"];    
-    
+    var sgePetsList = ["ペプシス", "Pepsis", "소화 작용", "消化"];
+
     var petsName = this.name.split(' (')[0];
     if (this.Class == "") {
         if (smnPetsList.indexOf(petsName) > -1) {
@@ -604,7 +605,7 @@ function Person(e, p) {
         this.Class = "CBO";
         this.role = "CBO";
     }
-    if (this.overHeal != undefined) {}
+    if (this.overHeal != undefined) { }
 
     for (var i in this.original) {
         if (i.indexOf("Last") > -1)
@@ -615,7 +616,7 @@ function Person(e, p) {
     }
     this.pets = {}
 }
-Person.prototype.returnOrigin = function() {
+Person.prototype.returnOrigin = function () {
     for (var i in this.original) {
         if (i.indexOf("Last") > -1)
             this["merged" + i] = this[i];
@@ -624,7 +625,7 @@ Person.prototype.returnOrigin = function() {
         else this["merged" + i] = this[i.substr(0, 1).toLowerCase() + i.substr(1)]
     }
 };
-Person.prototype.merge = function(person) {
+Person.prototype.merge = function (person) {
     this.returnOrigin();
     this.pets[person.name] = person;
     for (var k in this.pets) {
@@ -636,7 +637,7 @@ Person.prototype.merge = function(person) {
     }
     this.recalculate()
 };
-Person.prototype.recalculate = function() {
+Person.prototype.recalculate = function () {
     var dur = this.DURATION;
     if (dur == 0) dur = 1;
     this.dps = pFloat(this.mergedDamage / dur);
@@ -660,7 +661,7 @@ Person.prototype.recalculate = function() {
     this["crithealPct"] = pFloat(this.mergedCritheals / this.mergedHeals * 100);
     this.tohit = pFloat(this.mergedHits / this.mergedSwings * 100)
 };
-Person.prototype.get = function(key) {
+Person.prototype.get = function (key) {
     if (this.parent.summonerMerge) {
         switch (key) {
             case "damage":
@@ -725,10 +726,10 @@ function Combatant(e, sortkey) {
     this.persons = this.Combatant;
     this.resort()
 }
-Combatant.prototype.rerank = function(vector) {
+Combatant.prototype.rerank = function (vector) {
     this.sort(vector)
 };
-Combatant.prototype.indexOf = function(person) {
+Combatant.prototype.indexOf = function (person) {
     var v = -1;
     for (var i in this.Combatant) {
         v++;
@@ -737,7 +738,7 @@ Combatant.prototype.indexOf = function(person) {
     }
     return v
 };
-Combatant.prototype.sort = function(vector) {
+Combatant.prototype.sort = function (vector) {
     if (vector != undefined)
         this.sortvector = vector;
     if (this.summonerMerge) {
@@ -797,10 +798,10 @@ Combatant.prototype.sort = function(vector) {
     }
     this.Combatant = {};
     if (this.sortvector)
-        tmp.sort(function(a, b) {
+        tmp.sort(function (a, b) {
             return b.key - a.key
         });
-    else tmp.sort(function(a, b) {
+    else tmp.sort(function (a, b) {
         return a.key - b.key
     });
     var tmpMax = 0;
@@ -829,7 +830,7 @@ Combatant.prototype.sort = function(vector) {
     this.partys = r
     this.persons = this.Combatant
 };
-Combatant.prototype.AttachPets = function() {
+Combatant.prototype.AttachPets = function () {
     this.summonerMerge = !0;
     for (var i in this.Combatant) {
         this.Combatant[i].returnOrigin();
@@ -854,7 +855,7 @@ Combatant.prototype.AttachPets = function() {
 
     }
 }
-Combatant.prototype.DetachPets = function() {
+Combatant.prototype.DetachPets = function () {
     this.summonerMerge = !1;
     for (var i in this.Combatant) {
         this.Combatant[i].returnOrigin();
@@ -866,13 +867,13 @@ Combatant.prototype.DetachPets = function() {
         this.Combatant[i].mergedmaxhealstr = this.Combatant[i].maxhealstr
     }
 }
-Combatant.prototype.sortkeyChange = function(key) {
+Combatant.prototype.sortkeyChange = function (key) {
     this.resort(key, !0)
 };
-Combatant.prototype.sortkeyChangeDesc = function(key) {
+Combatant.prototype.sortkeyChangeDesc = function (key) {
     this.resort(key, !1)
 };
-Combatant.prototype.resort = function(key, vector) {
+Combatant.prototype.resort = function (key, vector) {
     if (key == undefined)
         this.sortkey = activeSort(this.sortkey);
     else this.sortkey = activeSort(key);
