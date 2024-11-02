@@ -719,7 +719,7 @@ d = {
             FR: "Durée du combatant.",
             DE: "Kampfzeit des Charakters.",
             CN: "战斗日志收集时间<br><span class='ac'> = 自己开始攻击时</span>",
-            ES: "The duracion del combatiente.",
+            ES: "La duración del combatiente.",
         },
         e: "li_2line_checkbox",
         ul: 1
