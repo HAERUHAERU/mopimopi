@@ -21,6 +21,12 @@ $().ready(function () {
     init = JSON.parse(localStorage.getItem("Mopi2_HAERU"))
     addOption()
     lang = init.q.Lang
+
+    // 2024-12-09 레이드 변환 인원수 늘림
+    if(init.q.view24_Number == 10) {
+        init.q.view24_Number = 14; 
+    }
+    
     initOverlay()
 });
 function addOption() {

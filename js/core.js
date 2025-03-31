@@ -480,7 +480,7 @@ function Person(e, p) {
         "Topaz Titan", "Titan topaze", "Topas-Titan", "タイタン・トパーズ", "타이탄 토파즈", "泰坦之灵",
         "Emerald Garuda", "Garuda émeraude", "Smaragd-Garuda", "ガルーダ・エメラルド", "가루다 에메랄드", "迦楼罗之灵",
         "카벙클", "カーバンクル", "Karfunkel", "Carbuncle", "宝石兽",
-        "Solar Bahamut", "ソルバハムート", "Sol-Bahamut", "Sol-Bahamut",
+        "솔 바하무트", "Solar Bahamut", "ソルバハムート", "Sol-Bahamut", "Sol-Bahamut",
     ];
     var mchPetsList = ["자동포탑 룩", "オートタレット・ルーク", "车式浮空炮塔", "Selbstschuss-Gyrocopter Turm", "Auto-tourelle Tour", "Rook Autoturret",
         "자동포탑 비숍", "オートタレット・ビショップ", "象式浮空炮塔", "Selbstschuss-Gyrocopter Läufer", "Auto-tourelle Fou", "Bishop Autoturret",

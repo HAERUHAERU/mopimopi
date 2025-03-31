@@ -6,9 +6,9 @@ l = {
             ES: '<b style=«color:#ffea00»>MopiMopi<br>¡Experimenta la increíble personalización!</b><br><br><b>Se recomiendan las aplicaciones Chrome o Safari</b> para el entorno móvil.<br>Usuarios de PC : <b>OverlayProc ❯ MUST Check «AppRegion»</b> to limit the draggable area.<br><br><font style=«color:cyan»>Si estás usando FFXIV_ACT_Plugin versión 2.0.2.3 o posterior,<br>ACT → Plugins → FFXIV Settings Tab → <b>Marca Disable Combine Pets with Owner</b>. </font><br><br>Por favor, selecciona <b>tu idioma</b> : <a href=«#» id=«KR» onclick=«initOverlay(this.id)»>한국어</a> ❘ <a href=«#» id=«EN» onclick="initOverlay(this. id)«>Español</a> ❘ <a href=»#« id=»JP« onclick=»initOverlay(this.id)«>日本語</a> ❘ <a href=»#« id=»CN« onclick=»initOverlay(this.id)«>中國語</a> ❘ <a href=»#« id=»DE« onclick=»initOverlay(this. id)«>Deutsch</a> ❘ <a href=»#« id=»FR« onclick=»initOverlay(this.id)«>French</a> ❘ <a href=»#« id=»ES« onclick=»initOverlay(this.id)">Spanish</a><br>'
         },
         tip: {
-            KR: '[OFFICIAL] MopiMopi ver.20240609 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.20240609 / HAERU@Moogle (KR)',
-            ES: '[OFICIAL] MopiMopi ver.20240609 / HAERU@Moogle (KR)'
+            KR: '[OFFICIAL] MopiMopi ver.20241209 / 해루@모그리',
+            EN: '[OFFICIAL] MopiMopi ver.20241209 / HAERU@Moogle (KR)',
+            ES: '[OFICIAL] MopiMopi ver.20241209 / HAERU@Moogle (KR)'
         },
         update: {
             KR: '<div name="row"><div class="c">05/22</div><div class="m">ACTWebSocket으로 더이상 모피모피를 이용하지 마십시오. OverlayPlugin으로 연결하시기 바랍니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">화면이 변경되지 않는 유저들은 캐시 폴더를 삭제하고 다시 실행해 봅니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">OverlayPlugin : ACT 종료 → 시작 → 실행 → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache 폴더 삭제 후 ACT 재실행</div></div>',
@@ -478,13 +478,13 @@ l = {
                 ES: "Versión",
             },
             m: {
-                KR: 'MopiMopi ver.20240609',
-                JP: 'MopiMopi ver.20240609',
-                EN: 'MopiMopi ver.20240609',
-                FR: 'MopiMopi ver.20240609',
-                DE: 'MopiMopi ver.20240609',
-                CN: "MopiMopi ver.20240609",
-                ES: 'MopiMopi ver.20240609',
+                KR: 'MopiMopi ver.20241209',
+                JP: 'MopiMopi ver.20241209',
+                EN: 'MopiMopi ver.20241209',
+                FR: 'MopiMopi ver.20241209',
+                DE: 'MopiMopi ver.20241209',
+                CN: "MopiMopi ver.20241209",
+                ES: 'MopiMopi ver.20241209',
             },
             i: "new_releases",
             e: "li_2line",
@@ -3567,14 +3567,14 @@ l = {
                             CN: "6",
                             ES: "6",
                         },
-                        10: {
-                            KR: "10",
-                            JP: "10",
-                            EN: "10",
-                            FR: "10",
-                            DE: "10",
-                            CN: "10",
-                            ES: "10",
+                        14: {
+                            KR: "14",
+                            JP: "14",
+                            EN: "14",
+                            FR: "14",
+                            DE: "14",
+                            CN: "14",
+                            ES: "14",
                         }
                     },
                     e: "li_radio_change",
