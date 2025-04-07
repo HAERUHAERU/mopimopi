@@ -2,7 +2,7 @@ l = {
     Notice: {
         strong: {
             KR: '<b style="color:#ffea00">모피모피<br>놀라운 커스터마이징을 경험하세요!</b><br><br>모바일 환경에서는 <b>크롬 또는 사파리</b> 앱을 권장합니다.<br>PC 유저는 <b>오버레이 프로세스 관리자 ❯ 드래그 영역 사용 체크</b> 필수입니다.<br><br><font style="color:cyan">FFXIV_ACT_Plugin.dll 2.0.2.3 버전 이상을 사용하는 유저는<br>ACT → Plugins → FFXIV Settings Tab → <b>Disable Combine Pets with Owner</b> 옵션을 체크합니다.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>',
-            EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
+            EN: '<b style="color:#ffea00">MopiMopi<br>Experience Incredible Customization!</b><br><br><b>Chrome or Safari</b> are recommended for mobile devices.<br>PC Users: <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
         },
         tip: {
             KR: '[OFFICIAL] MopiMopi ver.20241209 / 해루@모그리',
@@ -10,7 +10,7 @@ l = {
         },
         update: {
             KR: '<div name="row"><div class="c">05/22</div><div class="m">ACTWebSocket으로 더이상 모피모피를 이용하지 마십시오. OverlayPlugin으로 연결하시기 바랍니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">화면이 변경되지 않는 유저들은 캐시 폴더를 삭제하고 다시 실행해 봅니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">OverlayPlugin : ACT 종료 → 시작 → 실행 → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache 폴더 삭제 후 ACT 재실행</div></div>',
-            EN: '<div name="row"><div class="c">May 22</div><div class="m">Do NOT use MopiMopi with ACTWebSocket anymore. Please connect to OverlayPlugin.</div></div><div name="row"><div class="c">May 14</div><div class="m">Users whose screen doesn\'t change, delete the cache folder and try again.</div></div><div name="row"><div class="c">May 14</div><div class="m">OverlayPlugin :  Exit ACT → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache directory delete → Restart ACT</div></div>'
+            EN: '<div name="row"><div class="c">May 22</div><div class="m">Do NOT use MopiMopi with ACTWebSocket anymore. Please use OverlayPlugin instead.</div></div><div name="row"><div class="c">May 14</div><div class="m">If your overlay does not update, delete the cache folder and try again.</div></div><div name="row"><div class="c">May 14</div><div class="m">OverlayPlugin:  Exit ACT → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache directory delete → Restart ACT</div></div>'
         }
     },
     msg: {
@@ -48,7 +48,7 @@ l = {
             m: {
                 KR: "변경 사항을 적용했습니다.",
                 JP: "変更事項を適応しました。",
-                EN: "The change applied.",
+                EN: "The change has been applied.",
                 FR: "La modification a été appliquée.",
                 DE: "Einstellungen wurden übernommen.",
                 CN: "更改已应用。",
@@ -68,7 +68,7 @@ l = {
             m: {
                 KR: "대기 모드로 전환합니다.",
                 JP: "待機モードに転換します。",
-                EN: "The overlay switches to standby mode.",
+                EN: "Overlay switching to standby mode.",
                 FR: "L\'overlay passe en mode veille.",
                 DE: "Das Overlay wurde in den Standby versetzt.",
                 CN: "切换到待机模式。",
@@ -78,7 +78,7 @@ l = {
             m: {
                 KR: "설정에 대한 모든 변경 사항이 기본값으로 복원되고 개인 데이터가 삭제됩니다. 초기화를 진행하시겠습니까?",
                 JP: "設定のよるすべての変更を基本値に戻し、個人データを削除します。初期化を進行しますか？",
-                EN: "Any changes to the settings will be restored to their defaults and your personal data will be deleted. Do you want to proceed with the initialization?",
+                EN: "Any changes to settings will be restored to their defaults, and your personal data will be deleted. Do you wish to proceed?",
                 FR: "Toutes les modificationsd des différents paramètres seront remis à zéro et vos données personnelles seront effacées. Voulez-vous lancer la réinitialisation ?",
                 DE: "Alle Einstellungen werden zurückgesetzt. Deine persönlichen Einstellungen gehen unwiderruflich verloren! Möchtest du fortfahren?",
                 CN: "所有设置將恢复到默认值，以及个人数据会被删除，请问要继续初始化吗？",
@@ -98,7 +98,7 @@ l = {
             m: {
                 KR: "백업을 완료했습니다.",
                 JP: "バックアップを完了しました。",
-                EN: "The backup completed successfully.",
+                EN: "Data backed up successfully.",
                 FR: "Sauvegarde réalisée avec succès.",
                 DE: "Backup erfolgreich erstellt.",
                 CN: "备份完成。",
@@ -108,7 +108,7 @@ l = {
             m: {
                 KR: "복원을 완료했습니다.",
                 JP: "復元を完了しました。",
-                EN: "The restore completed successfully.",
+                EN: "Data restored successfully.",
                 FR: "Restauration terminée avec succès.",
                 DE: "Das Backup wurde erfolgreich wiederhergestellt.",
                 CN: "还原完成。",
@@ -118,7 +118,7 @@ l = {
             m: {
                 KR: "백업 데이터가 존재하지 않습니다.",
                 JP: "バックアップデーターがありません。",
-                EN: "The backup data does not exist.",
+                EN: "Backup data does not exist.",
                 FR: "Aucune sauvegarde présente.",
                 DE: "Das Backup existiert nicht.",
                 CN: "备份数据不存在。",
@@ -159,7 +159,7 @@ l = {
                 rps: {
                     KR: '전투를 시작하세요.',
                     JP: '戦闘を始めてください。',
-                    EN: 'Please start the combat.',
+                    EN: 'Please begin combat.',
                     FR: 'Démarrez un combat.',
                     DE: 'Warte auf Kampf.',
                     CN: "请开始战斗。",
@@ -192,7 +192,7 @@ l = {
                     tt: {
                         KR: "이름 숨기기",
                         JP: "名前を隠す",
-                        EN: "Hide the Name",
+                        EN: "Hide Names",
                         FR: "Cacher le nom",
                         DE: "Namen ausblenden",
                         CN: "隐藏名称",
@@ -528,7 +528,7 @@ l = {
                     tt: {
                         KR: "DPS, HPS 데이터 유형",
                         JP: "DPS、HPSデータタイプ",
-                        EN: "Data Type of DPS, HPS",
+                        EN: "DPS/HPS Data Type",
                         FR: "Type de données DPS/HPS",
                         DE: "Datentyp vom DPS/HPS",
                         CN: "DPS，HPS 数据类型",
@@ -546,7 +546,7 @@ l = {
                     tt: {
                         KR: "% 데이터 유형",
                         JP: "%データタイプ",
-                        EN: "Data Type of %",
+                        EN: "Percentage (%) Data Type",
                         FR: "Type de données %",
                         DE: "Datentyp der %",
                         CN: "% 数据类型",
@@ -564,7 +564,7 @@ l = {
                     tt: {
                         KR: "Damage, Healed 데이터 유형",
                         JP: "Damage、Healedデータタイプ",
-                        EN: "Data Type of Damage, Healed ",
+                        EN: "Damage Dealt/Healed Data Type",
                         FR: "Type de données Dégâts, Boucliers ",
                         DE: "Datentyp der Damage, Healed ",
                         CN: "Damage，Healed 数据类型",
@@ -698,7 +698,7 @@ l = {
                     tt: {
                         KR: "이름 표시 유형",
                         JP: "名前の表示タイプ",
-                        EN: "Display Type of Name",
+                        EN: "Name Display Type",
                         FR: "Type d'affichage des noms",
                         DE: "Anzeigetyp des Namens",
                         CN: "名称显示类型",
@@ -715,7 +715,7 @@ l = {
                         2: {
                             KR: "이름 단축하기",
                             JP: "姓のみイニシャル",
-                            EN: "Surname Abbreviated",
+                            EN: "Abbreviate Surname",
                             FR: "Initiale prénom",
                             DE: "Nachname abgekürzt",
                             CN: "姓缩写",
@@ -723,7 +723,7 @@ l = {
                         3: {
                             KR: "성 단축하기",
                             JP: "名のみイニシャル",
-                            EN: "Forename Abbreviated",
+                            EN: "Abbreviate First Name",
                             FR: "Initiale nom",
                             DE: "Vorname abgekürzt",
                             CN: "名缩写",
@@ -780,7 +780,7 @@ l = {
                     tt: {
                         KR: "이름 숨기기",
                         JP: "名前を隠す",
-                        EN: "Hide the Name",
+                        EN: "Hide Player Names",
                         FR: "Cacher le nom",
                         DE: "Namen ausblenden",
                         CN: "隐藏名称",
@@ -801,7 +801,7 @@ l = {
                     tt: {
                         KR: "MaxHit, MaxHeal 표시 유형",
                         JP: "MaxHit、MaxHeal表示タイプ",
-                        EN: "Display Type of MaxHit, MaxHeal",
+                        EN: "MaxHit/MaxHeal Display Type",
                         FR: "Type d\'affichage de MaxHit, MaxHeal",
                         DE: "Anzeigetyp des MaxHit, MaxHeal",
                         CN: "MaxHit，MaxHeal 显示类型",
@@ -836,7 +836,7 @@ l = {
                     tt: {
                         KR: "MaxHit, MaxHeal 구분 기호",
                         JP: "MaxHit、MaxHeal区切り記号",
-                        EN: "Separator of MaxHit, MaxHeal",
+                        EN: "MaxHit/MaxHeal Seperator",
                         FR: "Séparateur de MaxHit, MaxHeal",
                         DE: "Trennzeichen von MaxHit, MaxHeal",
                         CN: "MaxHit，MaxHeal 分隔符",
@@ -884,7 +884,7 @@ l = {
                     tt: {
                         KR: "기술명 줄임말로 표시",
                         JP: "技名を略語に表示",
-                        EN: "Display Abbreviate Action\'s Name",
+                        EN: "Display Abbreviated Action Names",
                         FR: "Afficher le nom de l\'action abrégée",
                         DE: "Zeige abgekürzte Fähigkeitsnamen",
                         CN: "显示简化技能名",
@@ -897,7 +897,7 @@ l = {
                     tt: {
                         KR: "기술명 줄임말 설정",
                         JP: "技名の略語の設定",
-                        EN: "Action\'s Name Abbreviations Settings",
+                        EN: "Action Name Abbreviation Settings",
                         FR: "Paramètres des noms d\'actions abrégés",
                         DE: "Einstellungen der abgekürzten Fähigkeitsnamen",
                         CN: "设置简化技能名",
@@ -1087,7 +1087,7 @@ l = {
             m: {
                 KR: "기술명 (띄어쓰기 주의)",
                 JP: "技名",
-                EN: "Action\'s name (Make sure you marked spacing!)",
+                EN: "Action Name (Make sure you marked spacing!)",
                 FR: "Nom de l\'action (Assurez vous d'avoir mis un espace !)",
                 DE: "Fähigkeitsnamen (Achte auf Leerzeichen!)",
                 CN: "技能名（请确保间距）",
@@ -2493,7 +2493,7 @@ l = {
                     tt: {
                         KR: "헤더 간격",
                         JP: "ヘッダー行間",
-                        EN: "Spacing of Header",
+                        EN: "Header Spacing",
                         FR: "Espacement de l\'entête",
                         DE: "Abstand der Kopfzeile",
                         CN: "头部间距",
@@ -2508,7 +2508,7 @@ l = {
                     tt: {
                         KR: "DPS 테이블 간격",
                         JP: "DPSテーブル行間",
-                        EN: "Spacing of DPS Table",
+                        EN: "DPS Table Spacing",
                         FR: "Espacement du tableau DPS",
                         DE: "Abstand der DPS Tabelle",
                         CN: "DPS表间距",
@@ -2523,7 +2523,7 @@ l = {
                     tt: {
                         KR: "HPS 테이블 간격",
                         JP: "HPSテーブル行間",
-                        EN: "Spacing of HPS Table",
+                        EN: "HPS Table Spacing",
                         FR: "Espacement du tableau HPS",
                         DE: "Abstand der HPS Tabelle",
                         CN: "HPS表间距",
@@ -2847,7 +2847,7 @@ l = {
                     tt: {
                         KR: "캡쳐 버튼 고정",
                         JP: "キャプチャーボタン固定",
-                        EN: "Fixed of Capture Button",
+                        EN: "Fixed Capture Button",
                         FR: "Bouton Capture fixe",
                         DE: "Zeige den Screenshot-Button immer",
                         CN: "固定截图按钮",
@@ -2860,7 +2860,7 @@ l = {
                     tt: {
                         KR: "히스토리 버튼 고정",
                         JP: "ヒストリーボタン固定",
-                        EN: "Fixed of History Button",
+                        EN: "Fixed History Button",
                         FR: "Bouton Historique fixe",
                         DE: "Zeige den Historie-Button immer",
                         CN: "固定历史按钮",
@@ -2873,7 +2873,7 @@ l = {
                     tt: {
                         KR: "전투 집계 종료 버튼 고정",
                         JP: "エンカウント終了ボタン固定",
-                        EN: "Fixed of End-Encounter Button",
+                        EN: "Fixed End-Encounter Button",
                         FR: "Bouton de fin de combat fixe",
                         DE: "Zeige den Stopp Button immer",
                         CN: "固定战斗统计结束按钮",
@@ -2886,7 +2886,7 @@ l = {
                     tt: {
                         KR: "전투 데이터 표시 유형",
                         JP: "バトルデータ表示タイプ",
-                        EN: "Display Type of Combatant Data",
+                        EN: "Combatant Data Display Type",
                         FR: "Affichage Données Type de combatant",
                         DE: "Anzeige der allgemeinen Kampfdaten",
                         CN: "战斗数据类型显示",
@@ -2970,7 +2970,7 @@ l = {
                     tt: {
                         KR: "Rank<font class='ex'>　❙ DPS 순위 / HPS 순위 / 총 인원수</font>",
                         JP: "Rank<font class='ex'>　❙ DPS順位 / HPS順位 / 総人数</font>",
-                        EN: "Rank<font class='ex'>　❙ DPS Ranking / HPS Ranking / The total number of combatants</font>",
+                        EN: "Rank<font class='ex'>　❙ DPS Ranking / HPS Ranking / Total number of combatants</font>",
                         FR: "Rang<font class='ex'>　❙ Rang DPS / Rang HPS / Nombre total de combatant</font>",
                         DE: "Rank<font class='ex'>　❙ DPS Rang / HPS Rang / Anzahl der Teilnehmer</font>",
                         CN: "Rank<font class='ex'>　❙ DPS 顺序 / HPS 顺序 / 总人数</font>",
@@ -3043,7 +3043,7 @@ l = {
                     tt: {
                         KR: "테이블 순서<font class='ex'>　❙ 크기 ❯ 테이블 간격</font>",
                         JP: "テーブル順序<font class='ex'>　❙ サイズ ❯ テーブル行間</font>",
-                        EN: "Order of Table<font class='ex'>　❙ Size ❯ Spacing of Table</font>",
+                        EN: "Table Order<font class='ex'>　❙ Size ❯ Table Spacing</font>",
                         FR: "Tri du tableau<font class='ex'>　❙ Taille ❯ Espacement du Tableau</font>",
                         DE: "Reihenfolge der Tabellen<font class='ex'>　❙ Size ❯ Spacing of Table</font>",
                         CN: "表顺序<font class='ex'>　❙ 大小 ❯ 表间距</font>",
@@ -3139,7 +3139,7 @@ l = {
                     tt: {
                         KR: "글자 테두리 유형",
                         JP: "テキストの枠線タイプ",
-                        EN: "Type of Text Border",
+                        EN: "Text Border Type",
                         FR: "Type de bordure de texte",
                         DE: "Typ des Textrahmes",
                         CN: "文字边框类型",
@@ -3271,7 +3271,7 @@ l = {
                     tt: {
                         KR: "DPS 그래프 정렬",
                         JP: "DPSグラフ整列",
-                        EN: "DPS Graph Align",
+                        EN: "DPS Graph Alignment",
                         FR: "Alignement graphique DPS",
                         DE: "DPS Graph ausrichtung",
                         CN: "DPS 图形对齐",
@@ -3289,7 +3289,7 @@ l = {
                     tt: {
                         KR: "HPS 그래프 정렬",
                         JP: "HPSグラフ整列",
-                        EN: "HPS Graph Align",
+                        EN: "HPS Graph Alignment",
                         FR: "Alignement graphique HPS",
                         DE: "HPS Graph ausrichtung",
                         CN: "HPS 图形对齐",
@@ -3655,7 +3655,7 @@ l = {
             m: {
                 KR: "전투 종료 후 대기 시간이 경과하면 테이블을 숨김",
                 JP: "バトル終了後、待機時間が経過したらデータテーブルを非可視化する",
-                EN: "Hide the table after standby time of inactivity when not in combat.",
+                EN: "Hide the table after a period of inactivity when not in combat.",
                 FR: "Cacher les tableaux après une période d\'inactivité hors combat",
                 DE: "Versteckt die Tabelle, wenn kein Kampf für Standby-Zeit stattfindet.",
                 CN: "战斗结束后经过待机时间自动隐藏表格",
@@ -3708,7 +3708,7 @@ l = {
             tt: {
                 KR: "배경 이미지 크기",
                 JP: "壁紙イメージサイズ",
-                EN: "Size of Background Image",
+                EN: "Background Image Size",
                 FR: "Taille de l\'image de fond",
                 DE: "Größe des Hintergrundbildes",
                 CN: "背景图像大小",
@@ -3748,7 +3748,7 @@ l = {
             tt: {
                 KR: "배경 이미지 반복",
                 JP: "壁紙イメージ繰り返し",
-                EN: "Repeat of Background Image",
+                EN: "Repeat Background Image",
                 FR: "Répéter l\'image de fond",
                 DE: "Hintergrundbild wiederholen",
                 CN: "重置背景图片",
@@ -3766,7 +3766,7 @@ l = {
                 'repeat-y': {
                     KR: "세로축",
                     JP: "縦軸",
-                    EN: "Vertically Axis",
+                    EN: "Vertical Axis",
                     FR: "Axe vertical",
                     DE: "Vertikale Achse",
                     CN: "纵轴",
@@ -3838,7 +3838,7 @@ l = {
             m: {
                 KR: '초기 설정으로 복원',
                 JP: '設定を初期化する',
-                EN: 'Restore to their initial settings.',
+                EN: 'Revert to initial settings.',
                 FR: 'Restaurer les paramètres initiaux',
                 DE: 'Wiederherstellen der ursprünglichen Einstellungen.',
                 CN: "恢复到初始设置",
@@ -3936,7 +3936,7 @@ l = {
             m: {
                 KR: '아래 코드를 복사(Ctrl+C)합니다. 일부 설정은 포함하지 않습니다.',
                 JP: '次のコードをコピー（Ctrl+C）します。一部の設定は含まれていません。',
-                EN: 'Copy under the code (Ctrl+C). Some settings are not included.',
+                EN: 'Copy the code below (Ctrl+C). Some settings are not included.',
                 FR: 'Copier le code (Ctrl+C). Certains paramètres ne sont pas inclus.',
                 DE: 'Kopiere den unteren Code (Strg+C). Manche Daten sind nicht enthalten.',
                 CN: "复制（Ctrl+C）以下代码。某些设置不包含在内。",
@@ -3970,7 +3970,7 @@ l = {
             m: {
                 KR: '코드를 아래에 붙여 넣고(Ctrl+V), 엔터 키 또는 버튼을 누릅니다.',
                 JP: 'コードをペーストし（Ctrl+V）、エンターキーまたはボタンを押します。',
-                EN: 'Paste under the code to apply (Ctrl+V), and then Press the Enter key.',
+                EN: 'Paste the code below (Ctrl+V), and then press the Enter key to apply.',
                 FR: 'Coller le code (Ctrl+V) et valider avec Entrée.',
                 DE: 'Füge den kopierten Code unten ein (Strg+V) und drücke die Eingabetaste.',
                 CN: "请把代码粘贴（Ctrl+V）到下方，按回车或者应用确认。",
