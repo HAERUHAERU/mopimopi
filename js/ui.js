@@ -139,6 +139,7 @@ $(window).resize(function () {
 });
 function resizeWindow(flag) {
     if (init.q.view24 && lastCombat != null && lastCombat.partys >= init.q.view24_Number) {
+        /*
         if (window.innerWidth % init.Range.size24TableSlice != 0) {
             var w = window.innerWidth % init.Range.size24TableSlice
             $('.rRow .rCell').css('width', parseFloat(100 / init.Range.size24TableSlice) + '%')
@@ -146,6 +147,10 @@ function resizeWindow(flag) {
                 $('.rRow .rCell:nth-child(' + parseInt(i + 1) + ')').css('width', '-webkit-calc(' + parseFloat(100 / init.Range.size24TableSlice) + '%' + ' + 1px)')
         } else
             $('.rRow .rCell').css('width', parseFloat(100 / init.Range.size24TableSlice) + '%')
+        */
+
+        $('.rRow').css({'display':'grid', 'grid-template-columns': `repeat(${init.Range.size24TableSlice}, 1fr)`});
+        $('.rRow table').css('width', '100%');
     }
     if (flag == 'settings') {
         $('.scrollArea').css('height', '-webkit-calc(100vh - ' + $('nav[name=settings]')[0].offsetHeight + 'px - ' + $('.previewArea')[0].offsetHeight + 'px - ' + $('.tabArea')[0].offsetHeight + 'px)')
@@ -1551,3 +1556,4 @@ function ui() {
     $('.rRow .rCell').css('width', parseFloat(100 / init.Range.size24TableSlice) + '%')
     resizeWindow(view)
 }
+
