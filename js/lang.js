@@ -1,16 +1,20 @@
 l = {
     Notice: {
         strong: {
-            KR: '<b style="color:#ffea00">모피모피<br>놀라운 커스터마이징을 경험하세요!</b><br><br>모바일 환경에서는 <b>크롬 또는 사파리</b> 앱을 권장합니다.<br>PC 유저는 <b>오버레이 프로세스 관리자 ❯ 드래그 영역 사용 체크</b> 필수입니다.<br><br><font style="color:cyan">FFXIV_ACT_Plugin.dll 2.0.2.3 버전 이상을 사용하는 유저는<br>ACT → Plugins → FFXIV Settings Tab → <b>Disable Combine Pets with Owner</b> 옵션을 체크합니다.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>',
-            EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a><br>'
+            KR: '<b style="color:#ffea00">모피모피<br>놀라운 커스터마이징을 경험하세요!</b><br><br>모바일 환경에서는 <b>크롬 또는 사파리</b> 앱을 권장합니다.<br>PC 유저는 <b>오버레이 프로세스 관리자 ❯ 드래그 영역 사용 체크</b> 필수입니다.<br><br><font style="color:cyan">FFXIV_ACT_Plugin.dll 2.0.2.3 버전 이상을 사용하는 유저는<br>ACT → Plugins → FFXIV Settings Tab → <b>Disable Combine Pets with Owner</b> 옵션을 체크합니다.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a> ❘ <a href="#" id="ES" onclick="initOverlay(this.id)">Spanish</a><br>',
+            EN: '<b style="color:#ffea00">MopiMopi<br>Experience the Incredible Customizing!</b><br><br><b>Chrome or Safari</b> apps are recommended for mobile environment.<br>PC Users : <b>OverlayProc ❯ MUST Check "AppRegion"</b> to limit the draggable area.<br><br><font style="color:cyan">If you are using FFXIV_ACT_Plugin version 2.0.2.3 or later,<br>ACT → Plugins → FFXIV Settings Tab → <b>Check Disable Combine Pets with Owner</b>.</font><br><br>Please select <b>your language</b> : <a href="#" id="KR" onclick="initOverlay(this.id)">한국어</a> ❘ <a href="#" id="EN" onclick="initOverlay(this.id)">English</a> ❘ <a href="#" id="JP" onclick="initOverlay(this.id)">日本語</a> ❘ <a href="#" id="CN" onclick="initOverlay(this.id)">中國語</a> ❘ <a href="#" id="DE" onclick="initOverlay(this.id)">Deutsch</a> ❘ <a href="#" id="FR" onclick="initOverlay(this.id)">French</a> ❘ <a href="#" id="ES" onclick="initOverlay(this.id)">Spanish</a><br>',
+            ES: '<b style=«color:#ffea00»>MopiMopi<br>¡Experimenta la increíble personalización!</b><br><br><b>Se recomiendan las aplicaciones Chrome o Safari</b> para el entorno móvil.<br>Usuarios de PC : <b>OverlayProc ❯ MUST Check «AppRegion»</b> to limit the draggable area.<br><br><font style=«color:cyan»>Si estás usando FFXIV_ACT_Plugin versión 2.0.2.3 o posterior,<br>ACT → Plugins → FFXIV Settings Tab → <b>Marca Disable Combine Pets with Owner</b>. </font><br><br>Por favor, selecciona <b>tu idioma</b> : <a href=«#» id=«KR» onclick=«initOverlay(this.id)»>한국어</a> ❘ <a href=«#» id=«EN» onclick="initOverlay(this. id)«>Español</a> ❘ <a href=»#« id=»JP« onclick=»initOverlay(this.id)«>日本語</a> ❘ <a href=»#« id=»CN« onclick=»initOverlay(this.id)«>中國語</a> ❘ <a href=»#« id=»DE« onclick=»initOverlay(this. id)«>Deutsch</a> ❘ <a href=»#« id=»FR« onclick=»initOverlay(this.id)«>French</a> ❘ <a href=»#« id=»ES« onclick=»initOverlay(this.id)">Spanish</a><br>'
         },
         tip: {
             KR: '[OFFICIAL] MopiMopi ver.20241209 / 해루@모그리',
-            EN: '[OFFICIAL] MopiMopi ver.20241209 / HAERU@Moogle (KR)'
+            EN: '[OFFICIAL] MopiMopi ver.20241209 / HAERU@Moogle (KR)',
+            ES: '[OFICIAL] MopiMopi ver.20241209 / HAERU@Moogle (KR)'
         },
         update: {
             KR: '<div name="row"><div class="c">05/22</div><div class="m">ACTWebSocket으로 더이상 모피모피를 이용하지 마십시오. OverlayPlugin으로 연결하시기 바랍니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">화면이 변경되지 않는 유저들은 캐시 폴더를 삭제하고 다시 실행해 봅니다.</div></div><div name="row"><div class="c">05/14</div><div class="m">OverlayPlugin : ACT 종료 → 시작 → 실행 → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache 폴더 삭제 후 ACT 재실행</div></div>',
-            EN: '<div name="row"><div class="c">May 22</div><div class="m">Do NOT use MopiMopi with ACTWebSocket anymore. Please connect to OverlayPlugin.</div></div><div name="row"><div class="c">May 14</div><div class="m">Users whose screen doesn\'t change, delete the cache folder and try again.</div></div><div name="row"><div class="c">May 14</div><div class="m">OverlayPlugin :  Exit ACT → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache directory delete → Restart ACT</div></div>'
+            EN: '<div name="row"><div class="c">May 22</div><div class="m">Do NOT use MopiMopi with ACTWebSocket anymore. Please connect to OverlayPlugin.</div></div><div name="row"><div class="c">May 14</div><div class="m">Users whose screen doesn\'t change, delete the cache folder and try again.</div></div><div name="row"><div class="c">May 14</div><div class="m">OverlayPlugin :  Exit ACT → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Cache directory delete → Restart ACT</div></div>',
+            ES: '<div name=«row»><div class=«c»>22 de mayo</div><div class=«m»>Ya NO uses MopiMopi con ACTWebSocket. Porfavor conectate a OverlayPlugin.</div></div><div name=«row»><div class=«c»>14 de mayo</div><div class=«m»>Los usuarios cuya pantalla no cambie, borren la carpeta de caché y vuelvan a intentarlo. </div></div><div name=«row»><div class=«c»>14 de mayo</div><div class=«m»>OverlayPlugin : Salir de ACT → %appdata% → Advanced Combat Tracker → OverlayPluginCache → Borrar directorio de caché → Reiniciar ACT</div></div>'
+
         }
     },
     msg: {
@@ -22,6 +26,7 @@ l = {
                 FR: ", ",
                 DE: ", ",
                 CN: "，",
+                ES: ", "
             }
         },
         overlayBg: {
@@ -32,6 +37,7 @@ l = {
                 FR: "Seuls les fichiers avec les extensions suivantes sont acceptés : png, jpg, jpeg, gif.",
                 DE: "Es sind nur Dateien mit den folgenden Endungen erlaubt: png, jpg, jpeg, gif.",
                 CN: "只能使用以下文件格式: png，jpg，jpeg，gif。",
+                ES: "Solo se permiten ficheros con extensión: png, jpg, jpeg, gif.",
             }
         },
         Capture: {
@@ -42,6 +48,7 @@ l = {
                 FR: "Le screenshot peut être trouvé dans le répertoire Screenshot d\'ACT.",
                 DE: "Du findest den aufgenommenen Screenshot in deinem ACT-Ordner unter ScreenShot.",
                 CN: "截图可以在ACT目录下的Screenshot文件夹中找到。",
+                ES: "La captura se puede encontrar en la carpeta Screenshot del directorio ACT.",
             }
         },
         submit: {
@@ -52,6 +59,7 @@ l = {
                 FR: "La modification a été appliquée.",
                 DE: "Einstellungen wurden übernommen.",
                 CN: "更改已应用。",
+                ES: "El cambio ha sido aplicado.",
             }
         },
         ok: {
@@ -62,6 +70,7 @@ l = {
                 FR: "Enregistré.",
                 DE: "Registriert.",
                 CN: "已登录。",
+                ES: "Registrado.",
             }
         },
         hiddenTable: {
@@ -72,6 +81,7 @@ l = {
                 FR: "L\'overlay passe en mode veille.",
                 DE: "Das Overlay wurde in den Standby versetzt.",
                 CN: "切换到待机模式。",
+                ES: "El overlay cambia al modo en espera",
             }
         },
         initConfirm: {
@@ -82,6 +92,7 @@ l = {
                 FR: "Toutes les modificationsd des différents paramètres seront remis à zéro et vos données personnelles seront effacées. Voulez-vous lancer la réinitialisation ?",
                 DE: "Alle Einstellungen werden zurückgesetzt. Deine persönlichen Einstellungen gehen unwiderruflich verloren! Möchtest du fortfahren?",
                 CN: "所有设置將恢复到默认值，以及个人数据会被删除，请问要继续初始化吗？",
+                ES: "Cualquier modificación de las opciones será restaurada y tu inforamción personal borrada. ¿Quieres continuar con la inicialización?",
             }
         },
         init: {
@@ -92,6 +103,7 @@ l = {
                 FR: "Initialisation terminée avec succès.",
                 DE: "Erfolgreich initialisiert.",
                 CN: "初始化完成。",
+                ES: "La inicialización se ha completado."
             }
         },
         backup: {
@@ -102,6 +114,7 @@ l = {
                 FR: "Sauvegarde réalisée avec succès.",
                 DE: "Backup erfolgreich erstellt.",
                 CN: "备份完成。",
+                ES: "Se ha completado la copia de seguridad.",
             }
         },
         restore: {
@@ -112,6 +125,7 @@ l = {
                 FR: "Restauration terminée avec succès.",
                 DE: "Das Backup wurde erfolgreich wiederhergestellt.",
                 CN: "还原完成。",
+                ES: "La restauración se ha completado correctamente.",
             }
         },
         noData: {
@@ -122,6 +136,7 @@ l = {
                 FR: "Aucune sauvegarde présente.",
                 DE: "Das Backup existiert nicht.",
                 CN: "备份数据不存在。",
+                ES: "No existe copia de seguridad."
             }
         },
         noInput: {
@@ -132,6 +147,7 @@ l = {
                 FR: "Il n\'y a pas de valeur d'entrée",
                 DE: "Kein Eingabewert erkannt.",
                 CN: "没有输入值。",
+                ES: "No hay un valor de entrada",
             }
         },
         notData: {
@@ -142,6 +158,7 @@ l = {
                 FR: "Type de donnée non valide.",
                 DE: "Kein gültiger Datentyp.",
                 CN: "不是有效的数据类型。",
+                ES: "No es un tipo de dato valido.",
             }
         }
     },
@@ -155,6 +172,7 @@ l = {
                     FR: 'MopiMopi　',
                     DE: 'MopiMopi　',
                     CN: "MopiMopi　",
+                    ES: 'MopiMopi　',
                 },
                 rps: {
                     KR: '전투를 시작하세요.',
@@ -163,6 +181,7 @@ l = {
                     FR: 'Démarrez un combat.',
                     DE: 'Warte auf Kampf.',
                     CN: "请开始战斗。",
+                    ES: "Comienza el combate.",
                 }
             },
             dr: {
@@ -174,6 +193,7 @@ l = {
                         FR: "Combiner les familiers aux propriétaires",
                         DE: "Charakter und Begleiter zusammenfassen",
                         CN: "召唤物与自身数据合并",
+                        ES: "Combinar mascotas con dueños",
                     },
                     e: "dr_checkbox"
                 },
@@ -185,6 +205,7 @@ l = {
                         FR: "Mode Raid",
                         DE: "Raid Modus",
                         CN: "副本模式",
+                        ES: "Modo Raid",
                     },
                     e: "dr_checkbox"
                 },
@@ -196,6 +217,7 @@ l = {
                         FR: "Cacher le nom",
                         DE: "Namen ausblenden",
                         CN: "隐藏名称",
+                        ES: "Ocultar el nombre",
                     },
                     e: "dr_checkbox"
                 },
@@ -220,6 +242,7 @@ l = {
                         FR: "Historique<font class='ex'>　❙ Si hors combat</font>",
                         DE: "Historie<font class='ex'>　❙ Wenn nicht im Kampf</font>",
                         CN: "历史<font class='ex'>　❙ 非战斗时</font>",
+                        ES: "Historial<font class='ex'>　❙ Cuando no estas en combate</font>",
                     }
                 },
                 RequestEnd: {
@@ -230,6 +253,7 @@ l = {
                         FR: 'Terminer le combat',
                         DE: 'Stoppe den Kampf',
                         CN: "战斗统计结束",
+                        ES: "Terminar el encuentro",
                     }
                 },
                 More: {
@@ -245,6 +269,7 @@ l = {
                 FR: 'Historique',
                 DE: 'Historie',
                 CN: "历史",
+                ES: "Historial",
             },
             btn: {
                 Back: {
@@ -266,6 +291,7 @@ l = {
                         FR: "Aperçu",
                         DE: "Vorschau",
                         CN: "预览",
+                        ES: "Previsualización",
                     },
                     e: "dr_checkbox"
                 },
@@ -277,6 +303,7 @@ l = {
                         FR: "Clavier bloqué<font class='ex'>　❙ Mobile</font>",
                         DE: "Tastatur sperren<font class='ex'>　❙ Handy</font>",
                         CN: "键盘锁<font class='ex'>　❙ 移动端</font>",
+                        ES: "Bloqueo de teclado<font class='ex'>　❙ Móvil</font>",
                     },
                     e: "dr_checkbox"
                 },
@@ -292,6 +319,7 @@ l = {
                         FR: "Retour à la page principale",
                         DE: "Zurück zur Hauptseite",
                         CN: "返回主页",
+                        ES: "Volver a la página principal",
                     },
                     e: "dr_link"
                 }
@@ -314,7 +342,8 @@ l = {
                 EN: "Language",
                 FR: "Langue",
                 DE: "Sprache",
-                CN: "语言"
+                CN: "语言",
+                ES: "Idioma",
             },
             m: {
                 KR: {
@@ -324,6 +353,7 @@ l = {
                     FR: "한국어",
                     DE: "한국어",
                     CN: "한국어",
+                    ES: "한국어",
                 },
                 EN: {
                     KR: "English",
@@ -332,6 +362,7 @@ l = {
                     FR: "English",
                     DE: "English",
                     CN: "English",
+                    ES: "English",
                 },
                 JP: {
                     KR: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
@@ -339,7 +370,8 @@ l = {
                     EN: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
                     FR: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
                     DE: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
-                    CN: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>"
+                    CN: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
+                    ES: "日本語<font class='ex'>　❙ by Korea [모그리] 오후의홍차, 이카루가</font>",
                 },
                 CN: {
                     KR: "中國語<font class='ex'>　❙ by China [紫水栈桥] Rapis</font>",
@@ -348,6 +380,7 @@ l = {
                     FR: "中國語<font class='ex'>　❙ by China [紫水栈桥] Rapis</font>",
                     DE: "中國語<font class='ex'>　❙ by China [紫水栈桥] Rapis</font>",
                     CN: "中國語<font class='ex'>　❙ by China [紫水栈桥] Rapis</font>",
+                    ES: "中國語<font class='ex'>　❙ by China [紫水栈桥] Rapis</font>",
                 },
                 DE: {
                     KR: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>",
@@ -355,7 +388,8 @@ l = {
                     EN: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>",
                     FR: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>",
                     DE: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>",
-                    CN: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>"
+                    CN: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>",
+                    ES: "Deutsch<font class='ex'>　❙ by Chaos [Phoenix] Shunittseru Tohka</font>",
                 },
                 FR: {
                     KR: "French<font class='ex'>　❙ by Light [Shiva] Elarun Moyse</font>",
@@ -364,6 +398,16 @@ l = {
                     FR: "French<font class='ex'>　❙ by Light [Shiva] Elarun Moyse</font>",
                     DE: "French<font class='ex'>　❙ by Light [Shiva] Elarun Moyse</font>",
                     CN: "French<font class='ex'>　❙ by Light [Shiva] Elarun Moyse</font>",
+                    ES: "French<font class='ex'>　❙ by Light [Shiva] Elarun Moyse</font>",
+                },
+                ES: {
+                    KR: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
+                    JP: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
+                    EN: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
+                    FR: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
+                    DE: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
+                    CN: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
+                    ES: "Spanish<font class='ex'>　❙ by Chaos [Ragnarok] Yokimitsuro K\'shtah</font>",
                 }
             },
             i: "language",
@@ -386,6 +430,7 @@ l = {
                 FR: "Design",
                 DE: "Design",
                 CN: "设计",
+                ES: "Diseño",
             },
             i: "brush",
             e: "li_link",
@@ -400,6 +445,7 @@ l = {
                 FR: "Overlay",
                 DE: "Overlay",
                 CN: "Overlay",
+                ES: "Overlay",
             },
             i: "web_asset",
             e: "li_link",
@@ -414,6 +460,7 @@ l = {
                 FR: "Outils de gestion",
                 DE: "Management Tools",
                 CN: "管理工具",
+                ES: "Herramientas de gestión",
             },
             i: "build",
             e: "li_link",
@@ -428,6 +475,7 @@ l = {
                 FR: "Version",
                 DE: "Version",
                 CN: "版本",
+                ES: "Versión",
             },
             m: {
                 KR: 'MopiMopi ver.20241209',
@@ -436,6 +484,7 @@ l = {
                 FR: 'MopiMopi ver.20241209',
                 DE: 'MopiMopi ver.20241209',
                 CN: "MopiMopi ver.20241209",
+                ES: 'MopiMopi ver.20241209',
             },
             i: "new_releases",
             e: "li_2line",
@@ -449,6 +498,7 @@ l = {
                 FR: "Aide",
                 DE: "Hilfe",
                 CN: "帮助",
+                ES: "Ayuda",
             },
             m: {
                 KR: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
@@ -457,6 +507,7 @@ l = {
                 FR: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
                 DE: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
                 CN: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
+                ES: 'FF14 KR Moogle 해루 ❯ ffxivHAERU@gmail.com',
             },
             i: "help_outline",
             e: "li_2line",
@@ -478,6 +529,7 @@ l = {
                         FR: "Formatage",
                         DE: "Formatierung",
                         CN: "格式",
+                        ES: "Formato",
                     },
                     i: "view_column",
                     e: "li_link",
@@ -491,6 +543,7 @@ l = {
                         FR: "Ordre",
                         DE: "Reihenfolge",
                         CN: "顺序",
+                        ES: "Orden",
                     },
                     i: "swap_vert",
                     e: "li_link",
@@ -504,6 +557,7 @@ l = {
                         FR: "Combiner les familiers avec les propriétaires",
                         DE: "Charakter und Begleiter zusammenfassen",
                         CN: "召唤物与自身数据合并",
+                        ES: "Combinar mascotas con dueños",
                     },
                     i: "merge_type",
                     e: "li_checkbox",
@@ -519,6 +573,7 @@ l = {
                 FR: "Nombre",
                 DE: "Zahlen",
                 CN: "数字",
+                ES: "Número",
             },
             e: "tab_btn",
             w: 25,
@@ -532,6 +587,7 @@ l = {
                         FR: "Type de données DPS/HPS",
                         DE: "Datentyp vom DPS/HPS",
                         CN: "DPS，HPS 数据类型",
+                        ES: "Tipo de datos DPS, HPS",
                     },
                     m: {
                         0: d.int,
@@ -550,6 +606,7 @@ l = {
                         FR: "Type de données %",
                         DE: "Datentyp der %",
                         CN: "% 数据类型",
+                        ES: "Tipo de dato de %",
                     },
                     m: {
                         0: d.int,
@@ -568,6 +625,7 @@ l = {
                         FR: "Type de données Dégâts, Boucliers ",
                         DE: "Datentyp der Damage, Healed ",
                         CN: "Damage，Healed 数据类型",
+                        ES: "Tipo de dato de daño, curado ",
                     },
                     m: {
                         0: d.int,
@@ -586,6 +644,7 @@ l = {
                         FR: "Symbol décimal",
                         DE: "Dezimaltrennzeichen",
                         CN: "小数点符号",
+                        ES: "Símbolo decimal",
                     },
                     m: {
                         ".": d["."],
@@ -606,6 +665,7 @@ l = {
                         FR: "Nombre de chiffres après la virgule",
                         DE: "Anzahl der Dezimalstellen",
                         CN: "小数点后尾数",
+                        ES: "Nº de digitos decimales",
                     },
                     m: {
                         1: d["1"],
@@ -624,6 +684,7 @@ l = {
                         FR: "Symbole de séparation de groupe",
                         DE: "Symbol für Zifferngruppierung",
                         CN: "数字分隔符",
+                        ES: "Símbolo de agrupación",
                     },
                     m: {
                         0: d.noUse,
@@ -645,6 +706,7 @@ l = {
                         FR: "Unité",
                         DE: "Unit",
                         CN: "单位",
+                        ES: "Unidad",
                     },
                     m: {
                         KR: "1k = 1000, 1M = 1000000",
@@ -653,6 +715,7 @@ l = {
                         FR: "1k = 1000, 1M = 1000000",
                         DE: "1k = 1000, 1M = 1000000",
                         CN: "1k = 1000，1M = 1000000",
+                        ES: "1k = 1000, 1M = 1000000",
                     },
                     i: "sort",
                     e: "li_2line_checkbox_normal",
@@ -666,6 +729,7 @@ l = {
                         FR: "Unités de MaxHit, MaxHeal",
                         DE: "Unit des MaxHit, MaxHeal",
                         CN: "MaxHit，MaxHeal 单位",
+                        ES: "Unidad de MaxHit, MaxHeal",
                     },
                     m: {
                         KR: "1k = 1000, 1M = 1000000",
@@ -674,6 +738,7 @@ l = {
                         FR: "1k = 1000, 1M = 1000000",
                         DE: "1k = 1000, 1M = 1000000",
                         CN: "1k = 1000，1M = 1000000",
+                        ES: "1k = 1000, 1M = 1000000",
                     },
                     i: "sort",
                     e: "li_2line_checkbox_normal",
@@ -689,6 +754,7 @@ l = {
                 FR: "Nom",
                 DE: "Namen",
                 CN: "名称",
+                ES: "Nombre",
             },
             e: "tab_btn",
             w: 25,
@@ -702,6 +768,7 @@ l = {
                         FR: "Type d'affichage des noms",
                         DE: "Anzeigetyp des Namens",
                         CN: "名称显示类型",
+                        ES: "Mostrar tipo de nombre",
                     },
                     m: {
                         1: {
@@ -711,6 +778,7 @@ l = {
                             FR: "Nom complet",
                             DE: "Voller Name",
                             CN: "全名",
+                            ES: "Nombre completo",
                         },
                         2: {
                             KR: "이름 단축하기",
@@ -719,6 +787,7 @@ l = {
                             FR: "Initiale prénom",
                             DE: "Nachname abgekürzt",
                             CN: "姓缩写",
+                            ES: "Apellido abreviado",
                         },
                         3: {
                             KR: "성 단축하기",
@@ -727,6 +796,7 @@ l = {
                             FR: "Initiale nom",
                             DE: "Vorname abgekürzt",
                             CN: "名缩写",
+                            ES: "Nombre Abreviado",
                         },
                         4: {
                             KR: "이니셜로 보기",
@@ -735,6 +805,7 @@ l = {
                             FR: "Initiales",
                             DE: "Initialien",
                             CN: "姓名首字母缩写",
+                            ES: "Iniciales",
                         }
                     },
                     i: "people",
@@ -750,6 +821,7 @@ l = {
                         FR: "Afficher le rang dans le nom",
                         DE: "Zeige Rank im Namen",
                         CN: "显示名称排名",
+                        ES: "Mostrar Rank en el nombre",
                     },
                     i: "format_list_numbered",
                     e: "li_checkbox",
@@ -763,6 +835,7 @@ l = {
                         FR: "Convertir votre nom en YOU",
                         DE: "Konvertiert deinen Namen in “YOU”",
                         CN: "把自己的名字标记为YOU",
+                        ES: "Convertir nombre en “YOU”",
                     },
                     m: {
                         KR: "<a href='http://ffxivhaeru.blog.me/221325149295' target='_blank'>설정 전 주의사항</a>",
@@ -771,6 +844,7 @@ l = {
                         FR: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>Lisez moi en premier</a>",
                         DE: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>Erst alles genau durchlesen, dann Einstellungen vornehmen!</a>",
                         CN: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>设置前的注意事项</a>",
+                        ES: "<a href='https://docs.google.com/presentation/d/1U7-Vgv6UA2_EFdvw3m8BI-5-9T91WeKTflDuR7rEx-U/edit#slide=id.g24320c31e9_0_67' target='_blank'>Leeme</a>",
                     },
                     i: "person",
                     e: "li_2line_checkbox_normal",
@@ -784,6 +858,7 @@ l = {
                         FR: "Cacher le nom",
                         DE: "Namen ausblenden",
                         CN: "隐藏名称",
+                        ES: "Ocultar el nombre",
                     },
                     i: "visibility_off",
                     e: "li_checkbox",
@@ -805,6 +880,7 @@ l = {
                         FR: "Type d\'affichage de MaxHit, MaxHeal",
                         DE: "Anzeigetyp des MaxHit, MaxHeal",
                         CN: "MaxHit，MaxHeal 显示类型",
+                        ES: "Mostrar el tipo MaxHit, MaxHeal",
                     },
                     m: {
                         1: {
@@ -814,6 +890,7 @@ l = {
                             FR: "Nom + valeur",
                             DE: "Fähigkeitsnamen + Daten",
                             CN: "技能名 + 数据",
+                            ES: "Nombre de la acción + Datos",
                         },
                         2: {
                             KR: "데이터 + 기술명",
@@ -822,6 +899,7 @@ l = {
                             FR: "Valeur + nom",
                             DE: "Daten + Fähigkeitsnamen",
                             CN: "数据 + 技能名",
+                            ES: "Datos + Nombre de la acción",
                         },
                         3: d.actionName,
                         4: d.Data
@@ -840,6 +918,7 @@ l = {
                         FR: "Séparateur de MaxHit, MaxHeal",
                         DE: "Trennzeichen von MaxHit, MaxHeal",
                         CN: "MaxHit，MaxHeal 分隔符",
+                        ES: "Separador de MaxHit, MaxHeal",
                     },
                     m: {
                         '-': {
@@ -849,6 +928,7 @@ l = {
                             FR: "-",
                             DE: "-",
                             CN: "-",
+                            ES: "-",
                         },
                         '/': {
                             KR: "/",
@@ -857,6 +937,7 @@ l = {
                             FR: "/",
                             DE: "/",
                             CN: "/",
+                            ES: "/",
                         },
                         '❘': {
                             KR: "❘",
@@ -865,6 +946,7 @@ l = {
                             FR: "❘",
                             DE: "❘",
                             CN: "❘",
+                            ES: "❘",
                         },
                         '❯': {
                             KR: "❯",
@@ -873,6 +955,7 @@ l = {
                             FR: "❯",
                             DE: "❯",
                             CN: "❯",
+                            ES: "❯",
                         }
                     },
                     i: "space_bar",
@@ -888,6 +971,7 @@ l = {
                         FR: "Afficher le nom de l\'action abrégée",
                         DE: "Zeige abgekürzte Fähigkeitsnamen",
                         CN: "显示简化技能名",
+                        ES: "Mostrar nombre de la acción abreviada",
                     },
                     i: "short_text",
                     e: "li_checkbox",
@@ -901,6 +985,7 @@ l = {
                         FR: "Paramètres des noms d\'actions abrégés",
                         DE: "Einstellungen der abgekürzten Fähigkeitsnamen",
                         CN: "设置简化技能名",
+                        ES: "Opciones de nombres de acciones abreviadas",
                     },
                     i: "insert_comment",
                     e: "li_link",
@@ -1091,6 +1176,7 @@ l = {
                 FR: "Nom de l\'action (Assurez vous d'avoir mis un espace !)",
                 DE: "Fähigkeitsnamen (Achte auf Leerzeichen!)",
                 CN: "技能名（请确保间距）",
+                ES: "Nombre de acción (Asegurate de marcar espaciado!)",
             },
             i: "looks_one",
             e: "li_text",
@@ -1104,6 +1190,7 @@ l = {
                 FR: "Abbréviation",
                 DE: "Abkürzung",
                 CN: "缩写",
+                ES: "Abreviación",
             },
             i: "looks_two",
             e: "li_text",
@@ -1117,6 +1204,7 @@ l = {
                 FR: "Ajouter à la liste",
                 DE: "Hinzufügen",
                 CN: "添加",
+                ES: "Añadir a la lista"
             },
             e: "li_full_btn",
             ul: 0
@@ -1131,6 +1219,7 @@ l = {
                 FR: "Police",
                 DE: "Schrift",
                 CN: "字体",
+                ES: "Fuente",
             },
             i: "text_format",
             e: "li_link",
@@ -1144,6 +1233,7 @@ l = {
                 FR: "Couleur",
                 DE: "Farbe",
                 CN: "颜色",
+                ES: "Color",
             },
             i: "colorize",
             e: "li_link",
@@ -1157,6 +1247,7 @@ l = {
                 FR: "Opacité",
                 DE: "Deckkraft",
                 CN: "透明度",
+                ES: "Opacidad",
             },
             i: "opacity",
             e: "li_link",
@@ -1170,6 +1261,7 @@ l = {
                 FR: "Taille",
                 DE: "Größe",
                 CN: "大小",
+                ES: "Tamaño",
             },
             i: "straighten",
             e: "li_link",
@@ -1183,6 +1275,7 @@ l = {
                 FR: "Cellule",
                 DE: "Zellen",
                 CN: "单元格",
+                ES: "Celda",
             },
             i: "tune",
             e: "li_link",
@@ -1196,6 +1289,7 @@ l = {
                 FR: "Coin",
                 DE: "Ecken",
                 CN: "边角",
+                ES: "Esquina",
             },
             i: "rounded_corner",
             e: "li_link",
@@ -1209,6 +1303,7 @@ l = {
                 FR: "Mode Raid",
                 DE: "Raid Modus",
                 CN: "副本模式",
+                ES: "Modo raid",
             },
             i: "grid_on",
             e: "li_link",
@@ -1222,6 +1317,7 @@ l = {
                 FR: "Avancé",
                 DE: "Erweiterte Einstellungen",
                 CN: "高级选项",
+                ES: "Avanzado",
             },
             i: "pan_tool",
             e: "li_link",
@@ -1244,6 +1340,7 @@ l = {
                 FR: "Temps<font class='ex'>　❙ Default ❯ DS-Digital</font>",
                 DE: "Zeit<font class='ex'>　❙ Voreinstellung ❯ DS-Digital</font>",
                 CN: "时间<font class='ex'>　❙ 默认值 ❯ DS-Digital</font>",
+                ES: "Tiempo<font class='ex'>　❙ Por defecto ❯ DS-Digital</font>",
             },
             e: 'li_pn',
             ul: 1
@@ -1257,6 +1354,7 @@ l = {
                 FR: "Cible<font class='ex'>　❙ Default ❯ Segoe UI</font>",
                 DE: "Ziel<font class='ex'>　❙ Voreinstellung ❯ Segoe UI</font>",
                 CN: "目标<font class='ex'>　❙ 默认值 ❯ Segoe UI</font>",
+                ES: "Objetivo<font class='ex'>　❙ Por defecto ❯ Segoe UI</font>",
             },
             e: 'li_pn',
             ul: 1
@@ -1270,6 +1368,7 @@ l = {
                 FR: "Données<font class='ex'>　❙ Default ❯ Roboto Condensed</font>",
                 DE: "Daten<font class='ex'>　❙ Voreinstellung ❯ Roboto Condensed</font>",
                 CN: "数据<font class='ex'>　❙ 默认值 ❯ Roboto Condensed</font>",
+                ES: "Dato<font class='ex'>　❙ Por defecto ❯ Roboto Condensed</font>",
             },
             e: 'li_pn',
             ul: 1
@@ -1283,6 +1382,7 @@ l = {
                 FR: "Entête tableau<font class='ex'>　❙ Default ❯ Roboto Condensed</font>",
                 DE: "Tabellenkopf<font class='ex'>　❙ Voreinstellung ❯ Roboto Condensed</font>",
                 CN: "表头<font class='ex'>　❙ 默认值 ❯ Roboto Condensed</font>",
+                ES: "Cabecera de la tabla<font class='ex'>　❙ Por defecto ❯ Roboto Condensed</font>",
             },
             e: 'li_pn',
             ul: 1
@@ -1296,6 +1396,7 @@ l = {
                 FR: "Corps tableau<font class='ex'>　❙ Default ❯ Segoe UI</font>",
                 DE: "Tabellenkörper<font class='ex'>　❙ Voreinstellung ❯ Segoe UI</font>",
                 CN: "表体<font class='ex'>　❙ 默认值 ❯ Segoe UI</font>",
+                ES: "Cuerpo de la tabla<font class='ex'>　❙ Por defecto ❯ Segoe UI</font>",
             },
             e: 'li_pn',
             ul: 1
@@ -1335,6 +1436,7 @@ l = {
                         FR: "Temps, Icône<font class='ex'>　❙ Couleur d\'accent</font>",
                         DE: "Zeit, Symbole<font class='ex'>　❙ Farb Akzent</font>",
                         CN: "时间，图标<font class='ex'>　❙ 强调色</font>",
+                        ES: "Tiempo, Icono<font class='ex'>　❙ Acentuar el color</font>",
                     },
                     i: "highlight",
                     e: "li_color",
@@ -1388,6 +1490,7 @@ l = {
                             FR: "Brillant",
                             DE: "Leuchten",
                             CN: "发光",
+                            ES: "Resplandor",
                         },
                         antique: {
                             KR: "앤틱",
@@ -1396,6 +1499,7 @@ l = {
                             FR: "Antique",
                             DE: "Antik",
                             CN: "古董",
+                            ES: "Antiguo",
                         },
                         frame: {
                             KR: "프레임",
@@ -1404,6 +1508,7 @@ l = {
                             FR: "Cadre",
                             DE: "Rahmen",
                             CN: "帧",
+                            ES: "Cuadro",
                         },
                         gear: {
                             KR: "기어",
@@ -1412,6 +1517,7 @@ l = {
                             FR: "Equipement",
                             DE: "Zahnrad",
                             CN: "齿轮",
+                            ES: "Equipamiento",
                         },
                         black: {
                             KR: "칠흑색",
@@ -1420,6 +1526,7 @@ l = {
                             FR: "Noir de jais",
                             DE: "Rabenschwarzer",
                             CN: "煤玉黑",
+                            ES: "Negro Azabache",
                         },
                         gold: {
                             KR: "반짝이는 금색",
@@ -1428,6 +1535,7 @@ l = {
                             FR: "Or métallique",
                             DE: "Metallic goldener",
                             CN: "闪耀金",
+                            ES: "Oro metálico",
                         },
                         silver: {
                             KR: "반짝이는 은색",
@@ -1436,6 +1544,7 @@ l = {
                             FR: "Argent métallique",
                             DE: "Metallic silberner",
                             CN: "闪耀银",
+                            ES: "Plata metálica",
                         },
                         red: {
                             KR: "달라가브색",
@@ -1444,6 +1553,7 @@ l = {
                             FR: "Rouge Dalamud",
                             DE: "Dalamudroter Farbe",
                             CN: "卫月红",
+                            ES: "Rojo Dalamud",
                         },
                         orange: {
                             KR: "노을색",
@@ -1452,6 +1562,7 @@ l = {
                             FR: "Lueur Orange",
                             DE: "Abendroter",
                             CN: "日落橙",
+                            ES: "Naranja",
                         },
                         green: {
                             KR: "라임색",
@@ -1460,6 +1571,7 @@ l = {
                             FR: "Vert Citron",
                             DE: "Limettengrüner",
                             CN: "青柠绿",
+                            ES: "Verde lima",
                         },
                         blue: {
                             KR: "오사드 바다색",
@@ -1468,6 +1580,7 @@ l = {
                             FR: "Bleu Othard",
                             DE: "Othardblauer",
                             CN: "东洲蓝",
+                            ES: "Azul oscuro"
                         },
                         purple: {
                             KR: "포도색",
@@ -1476,6 +1589,7 @@ l = {
                             FR: "Violet Raisin",
                             DE: "Weintraubenvioletter",
                             CN: "葡萄紫",
+                            ES: "Púrpura"
                         }
                     },
                     i: "mood",
@@ -1491,6 +1605,7 @@ l = {
                         FR: "Nom, Nombre<font class='ex'>　❙ Mon personnage</font>",
                         DE: "Namen, Zahlen<font class='ex'>　❙ Eigenen Charakter</font>",
                         CN: "名称，数字<font class='ex'>　❙ 自己角色</font>",
+                        ES: "Nombre, Número<font class='ex'>　❙ Mi personaje</font>",
                     },
                     i: "format_color_text",
                     e: "li_color",
@@ -1504,6 +1619,7 @@ l = {
                         FR: "Unité, Nom d'action<font class='ex'>　❙ Mon personnage</font>",
                         DE: "Unit, Fähigkeitsnamen<font class='ex'>　❙ Eigenen Charakter</font>",
                         CN: "单位，技能名<font class='ex'>　❙ 自己角色</font>",
+                        ES: "Unidad, Nombre de acción<font class='ex'>　❙ Mi personaje</font>",
                     },
                     i: "format_color_text",
                     e: "li_color",
@@ -1517,6 +1633,7 @@ l = {
                         FR: "Bordure texte<font class='ex'>　❙ Mon personnage</font>",
                         DE: "Text Border<font class='ex'>　❙ Eigener Charakter</font>",
                         CN: "文字边框<font class='ex'>　❙ 自己角色</font>",
+                        ES: "Grosor del texto<font class='ex'>　❙ Mi personaje</font>",
                     },
                     i: "border_color",
                     e: "li_color",
@@ -1530,6 +1647,7 @@ l = {
                         FR: "Nom, Nombre<font class='ex'>　❙ Autre personnage</font>",
                         DE: "Namen, Zahlen<font class='ex'>　❙ Andere Charaktere</font>",
                         CN: "名称，数字<font class='ex'>　❙ 其他角色</font>",
+                        ES: "Nombre, Número<font class='ex'>　❙ Otro personaje</font>",
                     },
                     i: "format_color_text",
                     e: "li_color",
@@ -1543,6 +1661,7 @@ l = {
                         FR: "Unité, Nom d'action<font class='ex'>　❙ Autre personnage</font>",
                         DE: "Unit, Fähigkeitsnamen<font class='ex'>　❙ Andere Charaktere</font>",
                         CN: "单位，技能名<font class='ex'>　❙ 其他角色</font>",
+                        ES: "Unidad, Nombre de acción<font class='ex'>　❙ Otro personaje</font>",
                     },
                     i: "format_color_text",
                     e: "li_color",
@@ -1556,6 +1675,7 @@ l = {
                         FR: "Bordure texte<font class='ex'>　❙ Autre personnage</font>",
                         DE: "Text Border<font class='ex'>　❙ Andere Charaktere</font>",
                         CN: "文字边框<font class='ex'>　❙ 其他角色</font>",
+                        ES: "Grosor del texto<font class='ex'>　❙ Otro personaje</font>",
                     },
                     i: "border_color",
                     e: "li_color",
@@ -1595,6 +1715,7 @@ l = {
                     FR: "Paladin & Gladiateur",
                     DE: "Paladin & Gladiator",
                     CN: "骑士 & 剑术师",
+                    ES: "Paladín & Gladiador",
                 },
                 i: "<img src='./images/icon/frame/PLD.png'/>",
                 e: "li_color",
@@ -1608,6 +1729,7 @@ l = {
                     FR: "Guerrier & Maraudeur",
                     DE: "Krieger & Marodeur",
                     CN: "战士 & 斧术师",
+                    ES: "Guerrero & Marauder",
                 },
                 i: "<img src='./images/icon/frame/WAR.png'/>",
                 e: "li_color",
@@ -1621,6 +1743,7 @@ l = {
                     FR: "Chevalier Noir",
                     DE: "Dunkelritter",
                     CN: "暗黑骑士",
+                    ES: "Caballero oscuro",
                 },
                 i: "<img src='./images/icon/frame/DRK.png'/>",
                 e: "li_color",
@@ -1634,6 +1757,7 @@ l = {
                     FR: "PistoSabreur",
                     DE: "Revolverklinge",
                     CN: "绝枪战士",
+                    ES: "Sablepistola",
                 },
                 i: "<img src='./images/icon/frame/GNB.png'/>",
                 e: "li_color",
@@ -1647,6 +1771,7 @@ l = {
                     FR: "Mage blanc & Elémentaliste",
                     DE: "Weißmagier & Druide",
                     CN: "白魔法师 & 幻术师",
+                    ES: "Mago blanco & Conjurador",
                 },
                 i: "<img src='./images/icon/frame/WHM.png'/>",
                 e: "li_color",
@@ -1660,6 +1785,7 @@ l = {
                     FR: "Erudit",
                     DE: "Gelehrter",
                     CN: "学者",
+                    ES: "Escolar",
                 },
                 i: "<img src='./images/icon/frame/SCH.png'/>",
                 e: "li_color",
@@ -1673,6 +1799,7 @@ l = {
                     FR: "Astromancien",
                     DE: "Astrologe",
                     CN: "占星术士",
+                    ES: "Astrologo",
                 },
                 i: "<img src='./images/icon/frame/AST.png'/>",
                 e: "li_color",
@@ -1686,6 +1813,7 @@ l = {
                     FR: "Sage",
                     DE: "Weise",
                     CN: "贤者",
+                    ES: "Sabio",
                 },
                 i: "<img src='./images/icon/frame/SGE.png'/>",
                 e: "li_color",
@@ -1699,6 +1827,7 @@ l = {
                     FR: "Moine & Pugiliste",
                     DE: "Mönch & Faustkämpfer",
                     CN: "武僧 & 格斗家",
+                    ES: "Monje & Pugilista",
                 },
                 i: "<img src='./images/icon/frame/MNK.png'/>",
                 e: "li_color",
@@ -1711,7 +1840,8 @@ l = {
                     EN: "Dragoon & Lancer",
                     FR: "Dragon & Maître d\'hast",
                     DE: "Dragoon & Pikenier",
-                    CN: "龙骑士 & 枪术师"
+                    CN: "龙骑士 & 枪术师",
+                    ES: "Dragón & Lancero",
                 },
                 i: "<img src='./images/icon/frame/DRG.png'/>",
                 e: "li_color",
@@ -1725,6 +1855,7 @@ l = {
                     FR: "Ninja & Voleur",
                     DE: "Ninja & Schurke",
                     CN: "忍者 & 双剑师",
+                    ES: "Ninja & Picaro",
                 },
                 i: "<img src='./images/icon/frame/NIN.png'/>",
                 e: "li_color",
@@ -1738,6 +1869,7 @@ l = {
                     FR: "Samouraï",
                     DE: "Samurai",
                     CN: "武士",
+                    ES: "Samurai",
                 },
                 i: "<img src='./images/icon/frame/SAM.png'/>",
                 e: "li_color",
@@ -1751,6 +1883,7 @@ l = {
                     FR: "Faucheur",
                     DE: "Schnitter",
                     CN: "钐镰客",
+                    ES: "Segador",
                 },
                 i: "<img src='./images/icon/frame/RPR.png'/>",
                 e: "li_color",
@@ -1764,6 +1897,7 @@ l = {
                     FR: "Rôdeur Vipère",
                     DE: "Viper",
                     CN: "Viper",
+                    ES: "Viper",
                 },
                 i: "<img src='./images/icon/frame/VIP.png'/>",
                 e: "li_color",
@@ -1776,7 +1910,8 @@ l = {
                     EN: "Bard & Archer",
                     FR: "Barde & Archer",
                     DE: "Barde & Waldläufer",
-                    CN: "吟游诗人 & 弓箭手"
+                    CN: "吟游诗人 & 弓箭手",
+                    ES: "Bardo & Arquero",
                 },
                 i: "<img src='./images/icon/frame/BRD.png'/>",
                 e: "li_color",
@@ -1789,7 +1924,8 @@ l = {
                     EN: "Machinist",
                     FR: "Machiniste",
                     DE: "Maschinist",
-                    CN: "机工士"
+                    CN: "机工士",
+                    ES: "Maquinista"
                 },
                 i: "<img src='./images/icon/frame/MCH.png'/>",
                 e: "li_color",
@@ -1802,7 +1938,8 @@ l = {
                     EN: "Dancer",
                     FR: "Danseur",
                     DE: "Tänzer",
-                    CN: "舞者"
+                    CN: "舞者",
+                    ES: "Bailador",
                 },
                 i: "<img src='./images/icon/frame/DNC.png'/>",
                 e: "li_color",
@@ -1816,6 +1953,7 @@ l = {
                     FR: "Mage noir & Occuliste",
                     DE: "Schwarzmagier & Thaumaturg",
                     CN: "黑魔法师 & 咒术师",
+                    ES: "Mago negro & Taumaturgo",
                 },
                 i: "<img src='./images/icon/frame/BLM.png'/>",
                 e: "li_color",
@@ -1829,6 +1967,7 @@ l = {
                     FR: "Invocateur & Arcaniste",
                     DE: "Beschwörer & Hermetiker",
                     CN: "召唤师 & 秘术师",
+                    ES: "Invocador & Arcanista",
                 },
                 i: "<img src='./images/icon/frame/SMN.png'/>",
                 e: "li_color",
@@ -1842,6 +1981,7 @@ l = {
                     FR: "Mage rouge",
                     DE: "Rotmagier",
                     CN: "赤魔法师",
+                    ES: "Mago rojo",
                 },
                 i: "<img src='./images/icon/frame/RDM.png'/>",
                 e: "li_color",
@@ -1855,6 +1995,7 @@ l = {
                     FR: "Pictomancien",
                     DE: "Piktomant",
                     CN: "Pictomancer",
+                    ES: "Pictomancer",
                 },
                 i: "<img src='./images/icon/frame/PIC.png'/>",
                 e: "li_color",
@@ -1868,6 +2009,7 @@ l = {
                     FR: "Mage bleu",
                     DE: "Blaumagier",
                     CN: "靑魔法师",
+                    ES: "Mago azul",
                 },
                 i: "<img src='./images/icon/frame/BLU.png'/>",
                 e: "li_color",
@@ -1901,6 +2043,7 @@ l = {
                     FR: "Menuisier",
                     DE: "Zimmerer",
                     CN: "刻木匠",
+                    ES: "Carpintero",
                 },
                 i: "<img src='./images/icon/frame/CRP.png'/>",
                 e: "li_color",
@@ -1914,6 +2057,7 @@ l = {
                     FR: "Forgeron",
                     DE: "Grobschmied",
                     CN: "锻铁匠",
+                    ES: "Herrero",
                 },
                 i: "<img src='./images/icon/frame/BSM.png'/>",
                 e: "li_color",
@@ -1927,6 +2071,7 @@ l = {
                     FR: "Armurier",
                     DE: "Plattner",
                     CN: "铸甲匠",
+                    ES: "Armero",
                 },
                 i: "<img src='./images/icon/frame/ARM.png'/>",
                 e: "li_color",
@@ -1940,6 +2085,7 @@ l = {
                     FR: "Orfèvre",
                     DE: "Goldschmied",
                     CN: "雕金匠",
+                    ES: "Joyero",
                 },
                 i: "<img src='./images/icon/frame/GSM.png'/>",
                 e: "li_color",
@@ -1953,6 +2099,7 @@ l = {
                     FR: "Tanneur",
                     DE: "Gerber",
                     CN: "制革匠",
+                    ES: "Peletero",
                 },
                 i: "<img src='./images/icon/frame/LTW.png'/>",
                 e: "li_color",
@@ -1966,6 +2113,7 @@ l = {
                     FR: "Couturier",
                     DE: "Weber",
                     CN: "裁衣匠",
+                    ES: "Tejedor",
                 },
                 i: "<img src='./images/icon/frame/WVR.png'/>",
                 e: "li_color",
@@ -1979,6 +2127,7 @@ l = {
                     FR: "Alchimiste",
                     DE: "Alchemist",
                     CN: "炼金术士",
+                    ES: "Alquimista",
                 },
                 i: "<img src='./images/icon/frame/ALC.png'/>",
                 e: "li_color",
@@ -1992,6 +2141,7 @@ l = {
                     FR: "Cuisinier",
                     DE: "Gourmet",
                     CN: "烹调师",
+                    ES: "Cocinero",
                 },
                 i: "<img src='./images/icon/frame/CUL.png'/>",
                 e: "li_color",
@@ -2005,6 +2155,7 @@ l = {
                     FR: "Mineur",
                     DE: "Minenarbeiter",
                     CN: "采矿工",
+                    ES: "Minero",
                 },
                 i: "<img src='./images/icon/frame/MIN.png'/>",
                 e: "li_color",
@@ -2018,6 +2169,7 @@ l = {
                     FR: "Botaniste",
                     DE: "Gärtner",
                     CN: "园艺工",
+                    ES: "Herborista",
                 },
                 i: "<img src='./images/icon/frame/BTN.png'/>",
                 e: "li_color",
@@ -2031,6 +2183,7 @@ l = {
                     FR: "Pêcheur",
                     DE: "Fischer",
                     CN: "捕鱼人",
+                    ES: "Pescador",
                 },
                 i: "<img src='./images/icon/frame/FSH.png'/>",
                 e: "li_color",
@@ -2087,6 +2240,7 @@ l = {
                     FR: "Disciples de la Main",
                     DE: "Handwerker",
                     CN: "能工巧匠",
+                    ES: "Discipulos de la mano",
                 },
                 i: "<img src='./images/icon/frame/CRP.png'/>",
                 e: "li_color",
@@ -2100,6 +2254,7 @@ l = {
                     FR: "Disciple de la Terre",
                     DE: "Sammler",
                     CN: "大地使者",
+                    ES: "Discipulos de la tierra",
                 },
                 i: "<img src='./images/icon/frame/BTN.png'/>",
                 e: "li_color",
@@ -2122,6 +2277,7 @@ l = {
                     FR: "Autre personnage",
                     DE: "Andere Charaktere",
                     CN: "其他角色",
+                    ES: "Otro personaje",
                 },
                 i: "people",
                 e: "li_color",
@@ -2252,6 +2408,7 @@ l = {
                         FR: "Icône, Texte<font class='ex'>　❙ Mon personnage</font>",
                         DE: "Symbole, Text<font class='ex'>　❙ Eigenen Charakter</font>",
                         CN: "图标，文字<font class='ex'>　❙ 自己角色</font>",
+                        ES: "Icono, Texto<font class='ex'>　❙ Mi Personaje</font>",
                     },
                     min: 0,
                     max: 100,
@@ -2267,6 +2424,7 @@ l = {
                         FR: "Icône, Texte<font class='ex'>　❙ Autre personnage</font>",
                         DE: "Symbole, Text<font class='ex'>　❙ Andere Charaktere</font>",
                         CN: "图标，文字<font class='ex'>　❙ 其他角色</font>",
+                        ES: "Icono, Texto<font class='ex'>　❙ Otro Personaje</font>",
                     },
                     min: 0,
                     max: 100,
@@ -2404,6 +2562,7 @@ l = {
                         FR: "Interligne",
                         DE: "Zeilenabstand",
                         CN: "行距",
+                        ES: "Espaciado",
                     },
                     min: 0,
                     max: 100,
@@ -2427,6 +2586,7 @@ l = {
                         FR: "Entête<font class='ex'>　❙ Entête >= Texte entête</font>",
                         DE: "Kopf<font class='ex'>　❙ Header >= Überschrift</font>",
                         CN: "头部<font class='ex'>　❙ 头部 >= 头部文字</font>",
+                        ES: "Cabecera<font class='ex'>　❙ Cabecera >= Texto de la cabecera</font>",
                     },
                     min: 0,
                     max: 50,
@@ -2466,6 +2626,7 @@ l = {
                         FR: "Corps de texte",
                         DE: "Text im Hauptteil",
                         CN: "主体文字",
+                        ES: "Texto del cuerpo",
                     },
                     min: 8,
                     max: 50,
@@ -2497,6 +2658,7 @@ l = {
                         FR: "Espacement de l\'entête",
                         DE: "Abstand der Kopfzeile",
                         CN: "头部间距",
+                        ES: "Espaciado de la cabecera",
                     },
                     min: 0,
                     max: 100,
@@ -2512,6 +2674,7 @@ l = {
                         FR: "Espacement du tableau DPS",
                         DE: "Abstand der DPS Tabelle",
                         CN: "DPS表间距",
+                        ES: "Espaciado de la tabla DPS",
                     },
                     min: 0,
                     max: 100,
@@ -2527,6 +2690,7 @@ l = {
                         FR: "Espacement du tableau HPS",
                         DE: "Abstand der HPS Tabelle",
                         CN: "HPS表间距",
+                        ES: "Espaciado de la tabla HPS",
                     },
                     min: 0,
                     max: 100,
@@ -2542,6 +2706,7 @@ l = {
                         FR: "Nombre de colonnes dans le tableau DPS<font class='ex'>　❙ Ajuster zone de défilement</font>",
                         DE: "Anzahl der Zeilen in der DPS Tabelle<font class='ex'>　❙ Adjust Scroll Area</font>",
                         CN: "DPS表行数<font class='ex'>　❙ 调整滚动区域</font>",
+                        ES: "Número de filas en la tabla de DPS<font class='ex'>　❙ Ajustar zona de desplazamiento</font>",
                     },
                     min: 1,
                     max: 25,
@@ -2557,6 +2722,7 @@ l = {
                         FR: "Nombre de colonnes dans le tableau HPS<font class='ex'>　❙ Ajuster zone de défilement</font>",
                         DE: "Anzahl der Zeilen in der HPS Tabelle<font class='ex'>　❙ Adjust Scroll Area</font>",
                         CN: "HPS表行数<font class='ex'>　❙ 调整滚动区域</font>",
+                        ES: "Número de filas en la tabla de HPS<font class='ex'>　❙ Ajustar zona de desplazamiento</font>",
                     },
                     min: 1,
                     max: 25,
@@ -2631,6 +2797,7 @@ l = {
                 FR: "Largeur",
                 DE: "Breite",
                 CN: "宽",
+                ES: "Ancho",
             },
             e: "tab_btn",
             w: 25,
@@ -2644,6 +2811,7 @@ l = {
                 FR: "Marge",
                 DE: "Rand",
                 CN: "边距",
+                ES: "Margen",
             },
             e: "tab_btn",
             w: 25,
@@ -2657,6 +2825,7 @@ l = {
                 FR: "Aligné",
                 DE: "Ausrichten",
                 CN: "对齐",
+                ES: "Alineación",
             },
             e: "tab_btn",
             w: 25,
@@ -2691,6 +2860,7 @@ l = {
                         FR: "Couverture",
                         DE: "Abdeckung",
                         CN: "覆盖",
+                        ES: "Cobertura",
                     },
                     m: {
                         1: d.header,
@@ -2738,6 +2908,7 @@ l = {
                         FR: "Modèle d\'arrière plan",
                         DE: "Hintergrundmuster",
                         CN: "背景图案",
+                        ES: "Patrón de fondo"
                     },
                     m: {
                         "noUse": d.noUse,
@@ -2748,6 +2919,7 @@ l = {
                             FR: "Hachures en croix",
                             DE: "Kreuzstreifen",
                             CN: "方格纹",
+                            ES: "Rayas cruzadas",
                         },
                         "hStripe": {
                             KR: "가로 줄무늬",
@@ -2756,6 +2928,7 @@ l = {
                             FR: "Hachures horizontales",
                             DE: "Horizontale Streifen",
                             CN: "横条纹",
+                            ES: "Rayas horizontales",
                         },
                         "vStripe": {
                             KR: "세로 줄무늬",
@@ -2764,6 +2937,7 @@ l = {
                             FR: "Hachures verticales",
                             DE: "Vertikale Streifen",
                             CN: "竖条纹",
+                            ES: "Rayas verticales",
                         },
                         "leftDig": {
                             KR: "사선 무늬 (좌상단 ❯ 우하단)",
@@ -2772,6 +2946,7 @@ l = {
                             FR: "Hachures diagonales (Haut-Gauche ❯ Bas-Droite)",
                             DE: "Diagonale Streifen (Oben-Links ❯ Unten-Rechts)",
                             CN: "斜条纹（左上 ❯ 右下）",
+                            ES: "Rayas diagonales (arriba a la izquierda ❯ abajo a la derecha)",
                         },
                         "rightDig": {
                             KR: "사선 무늬 (우상단 ❯ 좌하단)",
@@ -2780,6 +2955,7 @@ l = {
                             FR: "Hachures diagonales (Haut-Droite ❯ Bas-Gauche)",
                             DE: "Diagonale Streifen (Oben-Rechts ❯ Unten-Links)",
                             CN: "斜条纹（右上 ❯ 左下）",
+                            ES: "Rayas diagonales (arriba a la derecha ❯ abajo a la izquierda)",
                         }
                     },
                     e: "li_radio",
@@ -2795,6 +2971,7 @@ l = {
                         FR: "Type de bordure",
                         DE: "Randtyp",
                         CN: "边框类型",
+                        ES: "Tipo de borde",
                     },
                     m: {
                         "solid": {
@@ -2804,6 +2981,7 @@ l = {
                             FR: "Ligne continue",
                             DE: "Durchgehende Linie",
                             CN: "实线",
+                            ES: "Linea solida",
                         },
                         "dashed": {
                             KR: "긴 점선",
@@ -2812,6 +2990,7 @@ l = {
                             FR: "Ligne tiret",
                             DE: "Gestrichelte Linie",
                             CN: "虚线",
+                            ES: "Linea discontinua",
                         },
                         "dotted": {
                             KR: "짧은 점선",
@@ -2820,6 +2999,7 @@ l = {
                             FR: "Ligne pointillée",
                             DE: "Gepunktete Linie",
                             CN: "点线",
+                            ES: "Linea de puntos",
                         },
                         "double": {
                             KR: "겹선",
@@ -2828,6 +3008,7 @@ l = {
                             FR: "Double ligne",
                             DE: "Doppelte Linie",
                             CN: "双线",
+                            ES: "Linea doble",
                         },
                         "ridge": {
                             KR: "입체선",
@@ -2836,6 +3017,7 @@ l = {
                             FR: "Zigzag",
                             DE: "Durchgezogene Linie",
                             CN: "立体线",
+                            ES: "Linea de cresta",
                         }
                     },
                     e: "li_radio",
@@ -2851,6 +3033,7 @@ l = {
                         FR: "Bouton Capture fixe",
                         DE: "Zeige den Screenshot-Button immer",
                         CN: "固定截图按钮",
+                        ES: "Botón fijo de captura",
                     },
                     e: "li_checkbox",
                     i: "camera",
@@ -2864,6 +3047,7 @@ l = {
                         FR: "Bouton Historique fixe",
                         DE: "Zeige den Historie-Button immer",
                         CN: "固定历史按钮",
+                        ES: "Botón fijo de historial",
                     },
                     e: "li_checkbox",
                     i: "history",
@@ -2877,6 +3061,7 @@ l = {
                         FR: "Bouton de fin de combat fixe",
                         DE: "Zeige den Stopp Button immer",
                         CN: "固定战斗统计结束按钮",
+                        ES: "Botón fijo de finalizar encuentro",
                     },
                     e: "li_checkbox",
                     i: "timer_off",
@@ -2890,6 +3075,7 @@ l = {
                         FR: "Affichage Données Type de combatant",
                         DE: "Anzeige der allgemeinen Kampfdaten",
                         CN: "战斗数据类型显示",
+                        ES: "Mostrar tipo de datos de combatientes",
                     },
                     m: {
                         1: {
@@ -2899,6 +3085,7 @@ l = {
                             FR: "Sur une ligne",
                             DE: "alles auf einer Linie",
                             CN: "1行",
+                            ES: "1 Linea",
                         },
                         2: {
                             KR: "2줄",
@@ -2907,6 +3094,7 @@ l = {
                             FR: "2 lignes",
                             DE: "2 Linien",
                             CN: "2行",
+                            ES: "2 Lineas",
                         }
                     },
                     e: "li_radio",
@@ -2922,6 +3110,7 @@ l = {
                         FR: "Total DPS",
                         DE: "Total DPS",
                         CN: "Total DPS",
+                        ES: "Total DPS",
                     },
                     e: "li_checkbox",
                     i: "looks_one",
@@ -2935,6 +3124,7 @@ l = {
                         FR: "Total HPS",
                         DE: "Total HPS",
                         CN: "Total HPS",
+                        ES: "Total HPS",
                     },
                     e: "li_checkbox",
                     i: "looks_two",
@@ -2948,6 +3138,7 @@ l = {
                         FR: "My DPS",
                         DE: "My DPS",
                         CN: "My DPS",
+                        ES: "Mi DPS",
                     },
                     e: "li_checkbox",
                     i: "looks_3",
@@ -2961,6 +3152,7 @@ l = {
                         FR: "My HPS",
                         HE: "My HPS",
                         CN: "My HPS",
+                        ES: "Mi HPS",
                     },
                     e: "li_checkbox",
                     i: "looks_4",
@@ -2974,6 +3166,7 @@ l = {
                         FR: "Rang<font class='ex'>　❙ Rang DPS / Rang HPS / Nombre total de combatant</font>",
                         DE: "Rank<font class='ex'>　❙ DPS Rang / HPS Rang / Anzahl der Teilnehmer</font>",
                         CN: "Rank<font class='ex'>　❙ DPS 顺序 / HPS 顺序 / 总人数</font>",
+                        ES: "Rank<font class='ex'>　❙ DPS Ranking / HPS Ranking / Número total de combatientes</font>",
                     },
                     e: "li_checkbox",
                     i: "looks_5",
@@ -2987,6 +3180,7 @@ l = {
                         FR: "MaxHit, MaxHeal<font class='ex'>　❙ Mon personnage</font>",
                         DE: "MaxHit, MaxHeal<font class='ex'>　❙ Eigenen Charakter</font>",
                         CN: "MaxHit，MaxHeal<font class='ex'>　❙ 自己角色</font>",
+                        ES: "MaxHit, MaxHeal<font class='ex'>　❙ Mi personaje</font>",
                     },
                     e: "li_checkbox",
                     i: "looks_6",
@@ -3000,6 +3194,7 @@ l = {
                         FR: "Italique<font class='ex'>　❙ Temps</font>",
                         DE: "Kursiv<font class='ex'>　❙ Zeit</font>",
                         CN: "斜体<font class='ex'>　❙ 时间</font>",
+                        ES: "Italic<font class='ex'>　❙ Tiempo</font>",
                     },
                     e: "li_checkbox",
                     i: "format_italic",
@@ -3013,6 +3208,7 @@ l = {
                         FR: "Italique<font class='ex'>　❙ Cible</font>",
                         DE: "Kursiv<font class='ex'>　❙ Ziel</font>",
                         CN: "斜体<font class='ex'>　❙ 目标</font>",
+                        ES: "Italic<font class='ex'>　❙ Objetivo</font>",
                     },
                     e: "li_checkbox",
                     i: "format_italic",
@@ -3026,6 +3222,7 @@ l = {
                         FR: "Italique<font class='ex'>　❙ Données</font>",
                         DE: "Kursiv<font class='ex'>　❙ Daten</font>",
                         CN: "斜体<font class='ex'>　❙ 数据</font>",
+                        ES: "Italic<font class='ex'>　❙ Datos</font>",
                     },
                     e: "li_checkbox",
                     i: "format_italic",
@@ -3047,6 +3244,7 @@ l = {
                         FR: "Tri du tableau<font class='ex'>　❙ Taille ❯ Espacement du Tableau</font>",
                         DE: "Reihenfolge der Tabellen<font class='ex'>　❙ Size ❯ Spacing of Table</font>",
                         CN: "表顺序<font class='ex'>　❙ 大小 ❯ 表间距</font>",
+                        ES: "Orden de la tabla<font class='ex'>　❙ Tamaño ❯ Espaciado de la Tabla</font>",
                     },
                     m: {
                         1: {
@@ -3056,6 +3254,7 @@ l = {
                             FR: "Tableau DPS ❯ Tableau HPS",
                             DE: "DPS Tabellen ❯ HPS Tabellen",
                             CN: "DPS 表 ❯ HPS 表",
+                            ES: "Tabla DPS ❯ Tabla HPS",
                         },
                         2: {
                             KR: "HPS 테이블 ❯ DPS 테이블",
@@ -3064,6 +3263,7 @@ l = {
                             FR: "Tableau HPS ❯ Tableau DPS",
                             DE: "HPS Tabellen ❯ DPS Tabellen",
                             CN: "HPS 表 ❯ DPS 表",
+                            ES: "Tabla HPS ❯ Tabla DPS",
                         }
                     },
                     e: "li_radio",
@@ -3091,6 +3291,7 @@ l = {
                         FR: "Gras<font class='ex'>　❙ Mon personnage</font>",
                         DE: "Fette Buchstaben<font class='ex'>　❙ Eigenen Charakter</font>",
                         CN: "粗体<font class='ex'>　❙ 自己角色</font>",
+                        ES: "Letras en negrita<font class='ex'>　❙ Mi personaje</font>",
                     },
                     e: "li_checkbox",
                     i: "format_bold",
@@ -3104,6 +3305,7 @@ l = {
                         FR: "Gras<font class='ex'>　❙ Autre personnage personnage</font>",
                         DE: "Fette Buchstaben<font class='ex'>　❙ Andere Charaktere</font>",
                         CN: "粗体<font class='ex'>　❙ 其他角色</font>",
+                        ES: "Letras en negrita<font class='ex'>　❙ Otro personaje</font>",
                     },
                     e: "li_checkbox",
                     i: "format_bold",
@@ -3117,6 +3319,7 @@ l = {
                         FR: "Italique<font class='ex'>　❙ Entête</font>",
                         DE: "Kursiv<font class='ex'>　❙ Kopf</font>",
                         CN: "斜体<font class='ex'>　❙ 头部</font>",
+                        ES: "Italic<font class='ex'>　❙ Cabecera</font>",
                     },
                     e: "li_checkbox",
                     i: "format_italic",
@@ -3130,6 +3333,7 @@ l = {
                         FR: "Italique<font class='ex'>　❙ Corps</font>",
                         DE: "Kursiv<font class='ex'>　❙ Körper</font>",
                         CN: "斜体<font class='ex'>　❙ 主体</font>",
+                        ES: "Italic<font class='ex'>　❙ Cuerpo</font>",
                     },
                     e: "li_checkbox",
                     i: "format_italic",
@@ -3143,6 +3347,7 @@ l = {
                         FR: "Type de bordure de texte",
                         DE: "Typ des Textrahmes",
                         CN: "文字边框类型",
+                        ES: "Tipo de borde de texto",
                     },
                     m: {
                         shadow: {
@@ -3152,6 +3357,7 @@ l = {
                             FR: "Ombré",
                             DE: "Schatten",
                             CN: "阴影",
+                            ES: "Sombreado",
                         },
                         outline: {
                             KR: "외곽선",
@@ -3160,6 +3366,7 @@ l = {
                             FR: "Extérieur",
                             DE: "Umriss",
                             CN: "轮廓",
+                            ES: "Contorno",
                         }
                     },
                     e: "li_radio",
@@ -3201,6 +3408,7 @@ l = {
                         FR: "Transitions animées",
                         DE: "Weicher, Animierter Übergang",
                         CN: "动画效果",
+                        ES: "Efecto de transición animado",
                     },
                     e: "li_checkbox",
                     i: "waves",
@@ -3214,6 +3422,7 @@ l = {
                         FR: "Effet gradient",
                         DE: "Gradient Effekt",
                         CN: "渐变效果",
+                        ES: "Efecto gradiente",
                     },
                     e: "li_checkbox",
                     i: "gradient",
@@ -3227,6 +3436,7 @@ l = {
                         FR: "Direction du gradient",
                         DE: "Gradient Richtung",
                         CN: "渐变方向",
+                        ES: "Dirección del gradiente",
                     },
                     m: {
                         top: {
@@ -3236,6 +3446,7 @@ l = {
                             FR: "vers le haut",
                             DE: "nach Oben",
                             CN: "向上",
+                            ES: "hacia arriba",
                         },
                         bottom: {
                             KR: "아래쪽으로",
@@ -3244,6 +3455,7 @@ l = {
                             FR: "vers le bas",
                             DE: "nach Unten",
                             CN: "向下",
+                            ES: "hacia abajo",
                         },
                         left: {
                             KR: "왼쪽으로",
@@ -3252,6 +3464,7 @@ l = {
                             FR: "vers la gauche",
                             DE: "nach Links",
                             CN: "向左",
+                            ES: "hacia la izquierda",
                         },
                         right: {
                             KR: "오른쪽으로",
@@ -3260,6 +3473,7 @@ l = {
                             FR: "vers la droite",
                             DE: "nach Rechts",
                             CN: "向右",
+                            ES: "hacia la derecha",
                         }
                     },
                     e: "li_radio",
@@ -3275,6 +3489,7 @@ l = {
                         FR: "Alignement graphique DPS",
                         DE: "DPS Graph ausrichtung",
                         CN: "DPS 图形对齐",
+                        ES: "Alinear la gráfica de DPS",
                     },
                     m: {
                         left: d.direction.left,
@@ -3293,6 +3508,7 @@ l = {
                         FR: "Alignement graphique HPS",
                         DE: "HPS Graph ausrichtung",
                         CN: "HPS 图形对齐",
+                        ES: "Alinear la gráfica de HPS",
                     },
                     m: {
                         left: d.direction.left,
@@ -3321,6 +3537,7 @@ l = {
                         FR: "Mode Raid",
                         DE: "Raid Modus",
                         CN: "副本模式",
+                        ES: "Modo raid",
                     },
                     msg: {
                         KR: "파티원이 ★명 이상일 때 테이블을 간단히 표시",
@@ -3329,6 +3546,7 @@ l = {
                         FR: "Affiche le tableau simplifié quand il y a ★ ou plus combatants",
                         DE: "Automatische Anpassung der Graphen, falls die Anzahl der Kämpfer > ★ beträgt.",
                         CN: "当队伍有★人或更多时简化表格",
+                        ES: "Mostrar la tabla simple cuando hay ★ o mas combatientes",
                     },
                     m: {
                         1: {
@@ -3338,6 +3556,7 @@ l = {
                             FR: "1",
                             DE: "1",
                             CN: "1",
+                            ES: "1",
                         },
                         6: {
                             KR: "6",
@@ -3346,6 +3565,7 @@ l = {
                             FR: "6",
                             DE: "6",
                             CN: "6",
+                            ES: "6",
                         },
                         14: {
                             KR: "14",
@@ -3354,6 +3574,7 @@ l = {
                             FR: "14",
                             DE: "14",
                             CN: "14",
+                            ES: "14",
                         }
                     },
                     e: "li_radio_change",
@@ -3371,6 +3592,7 @@ l = {
                 FR: "Couleur",
                 DE: "Farbe",
                 CN: "颜色",
+                ES: "Color",
             },
             e: "tab_btn",
             w: 25,
@@ -3389,7 +3611,8 @@ l = {
                         EN: "Text<font class='ex'>　❙ My Character</font>",
                         FR: "Texte<font class='ex'>　❙ Mon personnage</font>",
                         DE: "Text<font class='ex'>　❙ Eigenen Charakter</font>",
-                        CN: "文字<font class='ex'>　❙ 自己角色</font>"
+                        CN: "文字<font class='ex'>　❙ 自己角色</font>",
+                        ES: "Texto<font class='ex'>　❙ Mi personaje</font>",
                     },
                     i: "format_color_text",
                     e: "li_color",
@@ -3408,7 +3631,8 @@ l = {
                         EN: "Text<font class='ex'>　❙ Other Character</font>",
                         FR: "Texte<font class='ex'>　❙ Autre personnage</font>",
                         DE: "Text<font class='ex'>　❙ Andere Charaktere</font>",
-                        CN: "文字<font class='ex'>　❙ 其他角色</font>"
+                        CN: "文字<font class='ex'>　❙ 其他角色</font>",
+                        ES: "Texto<font class='ex'>　❙ Otro personaje</font>",
                     },
                     i: "format_color_text",
                     e: "li_color",
@@ -3424,6 +3648,7 @@ l = {
                 FR: "Opacité",
                 DE: "Deckkraft",
                 CN: "透明度",
+                ES: "Opacidad",
             },
             e: "tab_btn",
             w: 25,
@@ -3471,6 +3696,7 @@ l = {
                 FR: "Taille",
                 DE: "Größe",
                 CN: "大小",
+                ES: "Tamaño",
             },
             e: "tab_btn",
             w: 25,
@@ -3484,6 +3710,7 @@ l = {
                         FR: "Couper Colonne",
                         DE: "Zeile Teilen",
                         CN: "行拆分",
+                        ES: "Dividir fila",
                     },
                     min: 1,
                     max: 25,
@@ -3499,6 +3726,7 @@ l = {
                         FR: "Hauteur de colonne",
                         DE: "Zeilenhöhe",
                         CN: "行高",
+                        ES: "Altura de fila",
                     },
                     min: 35,
                     max: 100,
@@ -3514,6 +3742,7 @@ l = {
                         FR: "Index",
                         DE: "Index",
                         CN: "索引",
+                        ES: "Índice",
                     },
                     min: 0,
                     max: 50,
@@ -3537,6 +3766,7 @@ l = {
                         FR: "Texte<font class='ex'>　❙ Nom du combatant.</font>",
                         DE: "Text<font class='ex'>　❙ Kämpfername.</font>",
                         CN: "文字<font class='ex'>　❙ 角色名称</font>",
+                        ES: "Texto<font class='ex'>　❙ Nombre de los combatientes.</font>",
                     },
                     min: 8,
                     max: 50,
@@ -3552,6 +3782,7 @@ l = {
                         FR: "Texte<font class='ex'>　❙ Données</font>",
                         DE: "Text<font class='ex'>　❙ Daten</font>",
                         CN: "文字<font class='ex'>　❙ 数据</font>",
+                        ES: "Texto<font class='ex'>　❙ Datos</font>",
                     },
                     min: 8,
                     max: 50,
@@ -3571,6 +3802,7 @@ l = {
                 FR: "Résolution",
                 DE: "Auflösung",
                 CN: "分辨率",
+                ES: "Resolución",
             },
             m: {
                 '55.5%': {
@@ -3580,6 +3812,7 @@ l = {
                     FR: "55.5%",
                     DE: "55.5%",
                     CN: "55.5%",
+                    ES: "55.5%",
                 },
                 '62.5%': {
                     KR: "62.5%",
@@ -3588,6 +3821,7 @@ l = {
                     FR: "62.5%",
                     DE: "62.5%",
                     CN: "62.5%",
+                    ES: "62.5%",
                 },
                 '75%': {
                     KR: "75%",
@@ -3596,6 +3830,7 @@ l = {
                     FR: "75%",
                     DE: "75%",
                     CN: "75%",
+                    ES: "75%",
                 },
                 '100%': {
                     KR: "100%",
@@ -3604,6 +3839,7 @@ l = {
                     FR: "100%",
                     DE: "100%",
                     CN: "100%",
+                    ES: "100%",
                 },
                 '125%': {
                     KR: "125%",
@@ -3612,6 +3848,7 @@ l = {
                     FR: "125%",
                     DE: "125%",
                     CN: "125%",
+                    ES: "125%",
                 },
                 '150%': {
                     KR: "150%",
@@ -3620,6 +3857,7 @@ l = {
                     FR: "150%",
                     DE: "150%",
                     CN: "150%",
+                    ES: "150%",
                 },
                 '175%': {
                     KR: "175%",
@@ -3628,6 +3866,7 @@ l = {
                     FR: "175%",
                     DE: "175%",
                     CN: "175%",
+                    ES: "175%",
                 },
                 '200%': {
                     KR: "200%",
@@ -3636,6 +3875,7 @@ l = {
                     FR: "200%",
                     DE: "200%",
                     CN: "200%",
+                    ES: "200%",
                 }
             },
             i: "zoom_out_map",
@@ -3651,6 +3891,7 @@ l = {
                 FR: "Mode veille",
                 DE: "Standby",
                 CN: "待机模式",
+                ES: "Modo en espera"
             },
             m: {
                 KR: "전투 종료 후 대기 시간이 경과하면 테이블을 숨김",
@@ -3659,6 +3900,7 @@ l = {
                 FR: "Cacher les tableaux après une période d\'inactivité hors combat",
                 DE: "Versteckt die Tabelle, wenn kein Kampf für Standby-Zeit stattfindet.",
                 CN: "战斗结束后经过待机时间自动隐藏表格",
+                ES: "Ocultar la tabla despues del tiempo de inactividad si no estas en combate.",
             },
             i: "blur_on",
             e: "li_2line_checkbox_normal",
@@ -3672,6 +3914,7 @@ l = {
                 FR: "Temps de mise en veille",
                 DE: "Standby-Zeit",
                 CN: "待机时间",
+                ES: "Tiempo de espera",
             },
             min: 1,
             max: 30,
@@ -3687,6 +3930,7 @@ l = {
                 FR: "Image d\'arrière plan",
                 DE: "Hintergrundbild",
                 CN: "背景图片",
+                ES: "Imagen de fondo",
             },
             i: "image",
             e: "li_checkbox",
@@ -3700,6 +3944,7 @@ l = {
                 FR: "Parcourir ...",
                 DE: "Durchsuchen...",
                 CN: "浏览",
+                ES: "Examinar...",
             },
             e: "li_file",
             ul: 0
@@ -3712,6 +3957,7 @@ l = {
                 FR: "Taille de l\'image de fond",
                 DE: "Größe des Hintergrundbildes",
                 CN: "背景图像大小",
+                ES: "Tamaño de la imagen de fondo",
             },
             m: {
                 auto: {
@@ -3721,6 +3967,7 @@ l = {
                     FR: "Original",
                     DE: "Original",
                     CN: "原始大小",
+                    ES: "Original",
                 },
                 contain: {
                     KR: "폭 맞춤",
@@ -3729,6 +3976,7 @@ l = {
                     FR: "Ajusté",
                     DE: "Skaliert",
                     CN: "宽度自适应",
+                    ES: "Ajustada",
                 },
                 cover: {
                     KR: "채우기",
@@ -3737,6 +3985,7 @@ l = {
                     FR: "Remplissage",
                     DE: "Ausfüllend",
                     CN: "填充",
+                    ES: "Rellenar",
                 }
             },
             e: "li_radio",
@@ -3752,6 +4001,7 @@ l = {
                 FR: "Répéter l\'image de fond",
                 DE: "Hintergrundbild wiederholen",
                 CN: "重置背景图片",
+                ES: "Repetir la imagen de fondo",
             },
             m: {
                 'no-repeat': d.noUse,
@@ -3762,6 +4012,7 @@ l = {
                     FR: "Axe horizontal",
                     DE: "Horizontale Achse",
                     CN: "横轴",
+                    ES: "En horizontal",
                 },
                 'repeat-y': {
                     KR: "세로축",
@@ -3770,6 +4021,7 @@ l = {
                     FR: "Axe vertical",
                     DE: "Vertikale Achse",
                     CN: "纵轴",
+                    ES: "En vertical",
                 },
                 'repeat': {
                     KR: "바둑판식 배열",
@@ -3778,6 +4030,7 @@ l = {
                     FR: "Titre",
                     DE: "Kachel",
                     CN: "平铺",
+                    ES: "Repetir",
                 }
             },
             e: "li_radio",
@@ -3793,6 +4046,7 @@ l = {
                 FR: "Flèche de redimensionnement",
                 DE: "Pfeil zur Größenveränderung des Fensters",
                 CN: "缩放大小箭头",
+                ES: "Flecha de cambio de tamaño",
             },
             i: "signal_cellular_4_bar",
             e: "li_checkbox",
@@ -3806,6 +4060,7 @@ l = {
                 FR: "Bulle d\'aide",
                 DE: "Kurzhinweise",
                 CN: "提示框",
+                ES: "Información sobre herramientas",
             },
             i: "textsms",
             e: "li_checkbox",
@@ -3819,6 +4074,7 @@ l = {
                 FR: "Message popup",
                 DE: "Pop-Up-Benachrichtigungen",
                 CN: "弹出式消息",
+                ES: "Mensaje popup",
             },
             i: "textsms",
             e: "li_checkbox",
@@ -3834,6 +4090,7 @@ l = {
                 FR: "Reset",
                 DE: "Zurücksetzen",
                 CN: "初始化",
+                ES: "Reset",
             },
             m: {
                 KR: '초기 설정으로 복원',
@@ -3842,6 +4099,7 @@ l = {
                 FR: 'Restaurer les paramètres initiaux',
                 DE: 'Wiederherstellen der ursprünglichen Einstellungen.',
                 CN: "恢复到初始设置",
+                ES: "Restaurar parametros iniciales",
             },
             i: "delete_sweep",
             e: "li_2line",
@@ -3855,6 +4113,7 @@ l = {
                 FR: "Rafraîchir",
                 DE: "Auffrischen",
                 CN: "刷新",
+                ES: "Refrescar",
             },
             m: {
                 KR: '오버레이의 동작이 원활하지 않을 때 권장',
@@ -3863,6 +4122,7 @@ l = {
                 FR: 'Recommandation lorsque l\'overlay ne fonctionne pas correctement.',
                 DE: 'Nutze diese Option, falls das Overlay nicht richtig funktioniert.',
                 CN: "当Overlay不正常时建议使用",
+                ES: "Recomendado cuando el overlay no funciona bien.",
             },
             i: "refresh",
             e: "li_2line",
@@ -3876,6 +4136,7 @@ l = {
                 FR: "Sauvegarder",
                 DE: "Sicherung",
                 CN: "备份",
+                ES: "Copia de seguridad",
             },
             i: "cloud_upload",
             e: "li_2line_empty",
@@ -3889,6 +4150,7 @@ l = {
                 FR: "Restaurer",
                 DE: "Wiederherstellen",
                 CN: "还原",
+                ES: "Restaurar",
             },
             m: {
                 KR: '설정을 이전에 백업한 데이터로 되돌림',
@@ -3897,6 +4159,7 @@ l = {
                 FR: 'Restaure les paramètres préalablement sauvegardés.',
                 DE: 'Restore settings to previously backed up data.',
                 CN: "还原到以前的备份设置",
+                ES: "Restaurar las opciones de la copia de seguridad",
             },
             i: "cloud_download",
             e: "li_2line",
@@ -3910,6 +4173,7 @@ l = {
                 FR: "Données personnalisé de l\'interface",
                 DE: "Benutzerdefinierte UI-Daten",
                 CN: "自定义UI数据",
+                ES: "Datos de la UI custom",
             },
             i: "folder_shared",
             e: "li_link",
@@ -3932,6 +4196,7 @@ l = {
                 FR: "Partager",
                 DE: "Teilen",
                 CN: "分享",
+                ES: "Compartir",
             },
             m: {
                 KR: '아래 코드를 복사(Ctrl+C)합니다. 일부 설정은 포함하지 않습니다.',
@@ -3940,6 +4205,7 @@ l = {
                 FR: 'Copier le code (Ctrl+C). Certains paramètres ne sont pas inclus.',
                 DE: 'Kopiere den unteren Code (Strg+C). Manche Daten sind nicht enthalten.',
                 CN: "复制（Ctrl+C）以下代码。某些设置不包含在内。",
+                ES: "Copia el código (Ctrl+C). Algunas opciones no están incluidas.",
             },
             i: "arrow_right",
             e: "li_pn",
@@ -3953,6 +4219,7 @@ l = {
                 FR: '',
                 DE: '',
                 CN: '',
+                ES: '',
             },
             i: "share",
             e: "li_text",
@@ -3966,6 +4233,7 @@ l = {
                 FR: "Appliquer",
                 DE: "Anwenden",
                 CN: "应用",
+                ES: "Aplicar",
             },
             m: {
                 KR: '코드를 아래에 붙여 넣고(Ctrl+V), 엔터 키 또는 버튼을 누릅니다.',
@@ -3974,6 +4242,7 @@ l = {
                 FR: 'Coller le code (Ctrl+V) et valider avec Entrée.',
                 DE: 'Füge den kopierten Code unten ein (Strg+V) und drücke die Eingabetaste.',
                 CN: "请把代码粘贴（Ctrl+V）到下方，按回车或者应用确认。",
+                ES: "Pegar el codigo a aplicar (Ctrl+V), y presiona la tecla Enter.",
             },
             i: "arrow_right",
             e: "li_pn",
@@ -3987,6 +4256,7 @@ l = {
                 FR: '{Clé:Valeur … Clé:Valeur}',
                 DE: '{Schlüssel:Werte … Schlüssel:Werte}',
                 CN: "{键:值 … 键:值}",
+                ES: '{Tecla:Valpr … Tecla:Valor}',
             },
             i: "code",
             e: "li_text_inbtn",
