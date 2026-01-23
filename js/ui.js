@@ -148,7 +148,8 @@ function resizeWindow(flag) {
         } else
             $('.rRow .rCell').css('width', parseFloat(100 / init.Range.size24TableSlice) + '%')
         */
-        $('.rRow').css({display: 'grid', 'grid-template-columns': 'repeat(auto-fit, minmax(0, 1fr))'});
+        $('.rRow').css({display: 'grid', 'grid-template-columns': `repeat(${init.Range.size24TableSlice}, 1fr)`});
+        $('.rRow .rCell').css({width: '100%'});
     }
     if (flag == 'settings') {
         $('.scrollArea').css('height', '-webkit-calc(100vh - ' + $('nav[name=settings]')[0].offsetHeight + 'px - ' + $('.previewArea')[0].offsetHeight + 'px - ' + $('.tabArea')[0].offsetHeight + 'px)')
@@ -1554,6 +1555,7 @@ function ui() {
     $('.rRow .rCell').css('width', parseFloat(100 / init.Range.size24TableSlice) + '%')
     resizeWindow(view)
 }
+
 
 
 
