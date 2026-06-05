@@ -7,15 +7,57 @@ var barSize = new Array(),
     encounterCount = 1;
 
 var onStopFlag = false;
+var localTimerId = null;
+var startTime = 0;
+var combatActive = false;
+var lastDisplayedTime = "";
+
+function formatDuration(totalSeconds) {
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = Math.floor(totalSeconds % 60);
+    var minStr = minutes < 10 ? '0' + minutes : minutes;
+    var secStr = seconds < 10 ? '0' + seconds : seconds;
+    return minStr + ':' + secStr;
+}
+
+function startLocalTimer() {
+    if (localTimerId) return;
+    
+    function tick() {
+        if (!combatActive || !startTime) {
+            localTimerId = null;
+            return;
+        }
+        var currentSeconds = (Date.now() - startTime) / 1000;
+        var formatted = formatDuration(currentSeconds);
+        if (formatted !== lastDisplayedTime) {
+            $('[name=time]').text(formatted);
+            lastDisplayedTime = formatted;
+        }
+        localTimerId = requestAnimationFrame(tick);
+    }
+    localTimerId = requestAnimationFrame(tick);
+}
 
 function onOverlayDataUpdate(e) {
-    lastDPS = lastCombat
+    lastDPS = lastCombat;
     lastHPS = new Combatant(e, 'enchps');
 
     //console.log(lastDPS.isActive)
     //console.log(onStopFlag)
 
     if (lastDPS.isActive == "true") {
+        combatActive = true;
+        var actDurationSeconds = parseInt(lastDPS.Encounter.DURATION) || 0;
+        if (!startTime) {
+            startTime = Date.now() - (actDurationSeconds * 1000);
+        } else {
+            var localEstimate = (Date.now() - startTime) / 1000;
+            if (Math.abs(localEstimate - actDurationSeconds) > 1.5) {
+                startTime = Date.now() - (actDurationSeconds * 1000);
+            }
+        }
+        startLocalTimer();
         if (view != 'settings') {
             if (!firstCombat) {
                 $('[name=notice], [name=history]').fadeOut(0)
@@ -29,6 +71,13 @@ function onOverlayDataUpdate(e) {
         onStopFlag = true;
     }
     else {
+        combatActive = false;
+        startTime = 0;
+        lastDisplayedTime = "";
+        if (localTimerId) {
+            cancelAnimationFrame(localTimerId);
+            localTimerId = null;
+        }
         if (!onStopFlag)
             return;
         else {
@@ -76,7 +125,9 @@ function update(lastDPS, lastHPS) {
         $('nav table[name=ACT_1line]').fadeIn(0)
     }    
     $('[name=target]').text(lastDPS.Encounter.title)
-    $('[name=time]').text(lastDPS.Encounter.duration)
+        if (!combatActive) {
+            $('[name=time]').text(lastDPS.Encounter.duration)
+        }
     if (init.q.tableOrder == 1)
         $('div[name=main' + _ + ']').html('<div id="DPSHeader' + _ + '"><div id="DPSoldHeader' + _ + '"></div></div><div id="DPSBody' + _ + '"><div id="DPSoldBody' + _ + '"></div></div><div id="HPSHeader' + _ + '"><div id="HPSoldHeader' + _ + '"></div></div><div id="HPSBody' + _ + '"><div id="HPSoldBody' + _ + '"></div></div>')
     else
